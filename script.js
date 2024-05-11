@@ -23,7 +23,7 @@ function loadSubclasses(condition) {
         .then(response => response.json())
         .then(data => {
             const container = document.getElementById('grid-container');
-            container.className = 'grid-container grid-container-vertical';  // Use vertical for subclass buttons
+            container.className = 'grid-container grid-container-vertical';
             container.innerHTML = '';
 
             const backButton = document.getElementById('back-button');
@@ -34,7 +34,7 @@ function loadSubclasses(condition) {
                 const button = document.createElement('button');
                 button.className = 'subclass-button';
                 button.innerText = subclass.name;
-                button.onclick = () => alert('Load details for ' + subclass.name);
+                button.onclick = () => loadGuidelines(subclass.guidelines);
                 container.appendChild(button);
             });
         })
@@ -44,4 +44,21 @@ function loadSubclasses(condition) {
         });
 }
 
+
 document.addEventListener('DOMContentLoaded', loadMainConditions);
+
+
+function loadGuidelines(guidelines) {
+    const container = document.getElementById('grid-container');
+    container.innerHTML = '';  // Clear the container for guideline buttons
+
+    guidelines.forEach(guide => {
+        const button = document.createElement('button');
+        button.className = 'subclass-button';
+        button.innerText = guide.level; // Assumes 'guide.level' is a property containing the text
+        button.onclick = () => {
+            console.log(`Details for ${guide.level}`); // Placeholder for detailed view
+        };
+        container.appendChild(button);
+    });
+}

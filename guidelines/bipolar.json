@@ -3,16 +3,59 @@
     "description": "Overview of Bipolar Disorder including symptoms and treatment options.",
     "subclasses": [
       {
-        "name": "DB1",
-        "description": "Detailed information about Bipolar I Disorder."
+        "name": "DB1 Maintenance",
+        "description": "Detailed information about Bipolar I Disorder.",
+        "guidelines": [
+          {"level": "First Line"},
+          {"level": "Second Line"},
+          {"level": "Third Line"},
+          {"level": "Not Recommended"}
+        ]
       },
+
       {
-        "name": "DB2",
-        "description": "Detailed information about Bipolar II Disorder."
+        "name": "DB2 Depression",
+        "description": "Detailed information about Bipolar I Disorder.",
+        "guidelines": [
+          {"level": "First Line"},
+          {"level": "Second Line"},
+          {"level": "Third Line"},
+          {"level": "Not Recommended"}
+        ]
       },
+
+      {
+        "name": "DB2 Maintenance",
+        "description": "Detailed information about Bipolar I Disorder.",
+        "guidelines": [
+          {"level": "First Line"},
+          {"level": "Second Line"},
+          {"level": "Third Line"},
+          {"level": "Not Recommended"}
+        ]
+      },
+
       {
         "name": "Special Populations",
-        "description": "Information on managing Bipolar Disorder in special populations such as pregnant women or adolescents."
+        "description": "Detailed information about Bipolar I Disorder.",
+        "guidelines": [
+          {"level": "First Line"},
+          {"level": "Second Line"},
+          {"level": "Third Line"},
+          {"level": "Not Recommended"}
+        ]
+      },
+
+      
+      {
+        "name": "Safety and Monitoring",
+        "description": "Detailed information about Bipolar I Disorder.",
+        "guidelines": [
+          {"level": "First Line"},
+          {"level": "Second Line"},
+          {"level": "Third Line"},
+          {"level": "Not Recommended"}
+        ]
       }
     ]
   }
