@@ -12,7 +12,7 @@ html, body {
 header {
     text-align: center;
     width: 100%; /* Full width of the header */
-    background-color: #0056b3; /* Darker blue for header */
+    background-color: #002955; /* Darker blue for header */
     color: white; /* White text in the header */
 }
 
@@ -35,6 +35,32 @@ main {
     width: 100%; /* Adjusts the container width to fit screen size */
     max-width: 600px; /* Limits max width for large screens */
 }
+
+/* For the main condition buttons, centered alignment */
+.grid-container-centered {
+    display: flex;
+    flex-direction: row;  /* Horizontal direction */
+    flex-wrap: wrap;
+    justify-content: center; /* Center alignment for primary buttons */
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* For the subclass buttons, vertical stack and centered */
+.grid-container-vertical {
+    display: flex;
+    flex-direction: column;  /* Vertical stacking */
+    justify-content: center; /* Center alignment, vertically */
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
 
 .grid-item {
     background-color: #007BFF; /* Vibrant blue for the condition buttons */
@@ -67,7 +93,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px; /* Adds padding on the sides of the header */
 }
 
 h1 {
@@ -117,21 +142,45 @@ header {
 }
 
 .grid-item {
-    background-color: #007BFF;
+    background-color: #007BFF; /* Consistent vibrant blue for the main condition buttons */
     color: white;
     border: none;
     padding: 15px 30px;
     font-size: 18px;
     cursor: pointer;
-    margin: 10px;
+    width: 180px; /* Fixed width to ensure uniform size */
+    text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Hover effect for both main and subclass buttons */
 .grid-item:hover, .back-button:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
+
+/* subclass */
+.subclass-button {
+    background-color: #0052aa; /* A distinct color for subclass buttons */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 160px; /* Slightly smaller width */
+    height: 60px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    margin: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
 /* Media Queries for Responsive Adjustments */
 @media (max-height: 600px) {
     main {

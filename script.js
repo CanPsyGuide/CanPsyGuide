@@ -1,7 +1,7 @@
-// Function to load initial condition buttons
 function loadMainConditions() {
     const container = document.getElementById('grid-container');
-    container.innerHTML = '';  // Clears the existing content
+    container.className = 'grid-container grid-container-centered';  // Use centered for main buttons
+    container.innerHTML = '';
 
     const conditions = ['depression', 'anxiety', 'bipolar', 'schizophrenia'];
     conditions.forEach(condition => {
@@ -13,10 +13,9 @@ function loadMainConditions() {
     });
 
     const backButton = document.getElementById('back-button');
-    backButton.style.display = 'none'; // Hide the back button
+    backButton.style.display = 'none'; // Hide the back button when viewing main conditions
 }
 
-// Function to load subclasses and show the back button
 function loadSubclasses(condition) {
     const filePath = `guidelines/${condition}.json`;
 
@@ -24,15 +23,16 @@ function loadSubclasses(condition) {
         .then(response => response.json())
         .then(data => {
             const container = document.getElementById('grid-container');
-            container.innerHTML = '';  // Clears the existing condition buttons
+            container.className = 'grid-container grid-container-vertical';  // Use vertical for subclass buttons
+            container.innerHTML = '';
 
             const backButton = document.getElementById('back-button');
-            backButton.style.display = 'block'; // Show the back button
-            backButton.onclick = loadMainConditions; // Attach event handler every time it's shown
+            backButton.style.display = 'block';
+            backButton.onclick = loadMainConditions;
 
             data.subclasses.forEach(subclass => {
                 const button = document.createElement('button');
-                button.className = 'grid-item';
+                button.className = 'subclass-button';
                 button.innerText = subclass.name;
                 button.onclick = () => alert('Load details for ' + subclass.name);
                 container.appendChild(button);
@@ -44,5 +44,4 @@ function loadSubclasses(condition) {
         });
 }
 
-// Initial load of main conditions
 document.addEventListener('DOMContentLoaded', loadMainConditions);
