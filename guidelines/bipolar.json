@@ -1,0 +1,19 @@
+{
+    "condition": "Bipolar",
+    "description": "Overview of Bipolar Disorder including symptoms and treatment options.",
+    "subclasses": [
+      {
+        "name": "DB1",
+        "description": "Detailed information about Bipolar I Disorder."
+      },
+      {
+        "name": "DB2",
+        "description": "Detailed information about Bipolar II Disorder."
+      },
+      {
+        "name": "Special Populations",
+        "description": "Information on managing Bipolar Disorder in special populations such as pregnant women or adolescents."
+      }
+    ]
+  }
+  

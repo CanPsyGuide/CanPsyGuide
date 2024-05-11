@@ -10,17 +10,22 @@
     <header>
         <h1>CanPsyGuide</h1>
     </header>
+    <div class="navigation">
+        <button id="back-button" class="back-button" style="display:none;">Back to Home</button>
+    </div>
     <main>
-        <div class="grid-container">
-            <button class="grid-item">Depression</button>
-            <button class="grid-item">Anxiety</button>
-            <button class="grid-item">Bipolar</button>
-            <button class="grid-item">Schizophrenia</button>
+        <div id="grid-container" class="grid-container">
+            <button class="grid-item" onclick="loadSubclasses('depression')">Depression</button>
+            <button class="grid-item" onclick="loadSubclasses('anxiety')">Anxiety</button>
+            <button class="grid-item" onclick="loadSubclasses('bipolar')">Bipolar</button>
+            <button class="grid-item" onclick="loadSubclasses('schizophrenia')">Schizophrenia</button>
         </div>
     </main>
     <footer>
         <p>&copy; Development supported by UBC Psychiatry PGME CanMEDS Award.</p>
         <p>Contact to contribute to updates/development</p>
     </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>

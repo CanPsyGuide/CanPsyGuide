@@ -38,19 +38,19 @@ main {
 }
 
 .grid-item {
-    background-color: #007BFF; /* Vibrant blue for the buttons */
+    background-color: #007BFF; /* Vibrant blue for the condition buttons */
     color: white;
     border: none;
-    padding: 20px;
+    padding: 15px 30px;
     font-size: 18px;
     cursor: pointer;
-    width: calc(50% - 40px); /* Adjust for exact button width taking gap into account */
+    width: auto; /* Adjusts automatically to text size */
     text-align: center;
     border-radius: 10px; /* Rounds the corners of the buttons */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds depth with a stronger shadow */
-    transition: transform 0.3s ease-in-out; /* Smooth transformation for interaction */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out;
+    margin: 10px; /* Adds some margin around the buttons */
 }
-
 .grid-item:hover {
     transform: scale(1.05); /* Slightly enlarges the button on hover */
     box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Enhances the shadow on hover */
@@ -64,6 +64,74 @@ footer {
     color: black; /* Ensuring text is visible */
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Adds padding on the sides of the header */
+}
+
+h1 {
+    margin: 0; /* Removes default margin */
+    flex-grow: 1; /* Allows the title to take up the necessary space pushing the button right */
+}
+
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Wrapping the header and back button in a container for better alignment control */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end; /* Aligns the button to the right */
+    padding: 0 20px;
+    margin-bottom: 20px; /* Ensures separation from main content */
+}
+
+.back-button {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.grid-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-item {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.grid-item:hover, .back-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
 /* Media Queries for Responsive Adjustments */
 @media (max-height: 600px) {
     main {
