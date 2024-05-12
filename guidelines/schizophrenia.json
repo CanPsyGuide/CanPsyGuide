@@ -1,19 +1,24 @@
 {
-    "condition": "Schizophrenia",
-    "description": "Overview of Schizophrenia including symptoms, diagnosis, and treatment approaches.",
+    "condition": "Depression",
+    "description": "Overview of treatment options for Depression.",
     "subclasses": [
-      {
-        "name": "Paranoid Schizophrenia",
-        "description": "Characteristics and treatment options for Paranoid Schizophrenia."
-      },
-      {
-        "name": "Catatonic Schizophrenia",
-        "description": "Understanding Catatonic Schizophrenia and its management."
-      },
-      {
-        "name": "Undifferentiated Schizophrenia",
-        "description": "Details on Undifferentiated Schizophrenia and care guidelines."
-      }
+        {
+            "name": "Pharmacotherapy",
+            "description": "Detailed information about Pharmacotherapy treatments for Depression.",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {
+                            "name": "Citalopram",
+                            "id": "citalopram",
+                            "drugclass": "SSRI",
+                            "dose": "20-40 mg",
+                            "LOE":"1"
+                        }
+                    ]
+                }
+            ]
+        }
     ]
-  }
-  
+}

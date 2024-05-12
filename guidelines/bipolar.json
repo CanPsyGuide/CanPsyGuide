@@ -1,17 +1,24 @@
 {
-    "condition": "Bipolar",
-    "description": "Overview of Bipolar Disorder including symptoms and treatment options.",
+    "condition": "Depression",
+    "description": "Overview of treatment options for Depression.",
     "subclasses": [
-      {
-        "name": "DB1 Maintenance",
-        "description": "Detailed information about Bipolar I Disorder.",
-        "guidelines": [
-          {"level": "First Line"},
-          {"level": "Second Line"},
-          {"level": "Third Line"},
-          {"level": "Not Recommended"}
-        ]
-      }
+        {
+            "name": "Pharmacotherapy",
+            "description": "Detailed information about Pharmacotherapy treatments for Depression.",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {
+                            "name": "Citalopram",
+                            "id": "citalopram",
+                            "drugclass": "SSRI",
+                            "dose": "20-40 mg",
+                            "LOE":"1"
+                        }
+                    ]
+                }
+            ]
+        }
     ]
-  }
-  
+}
