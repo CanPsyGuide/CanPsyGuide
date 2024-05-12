@@ -54,29 +54,33 @@ function loadGuidelines(guidelines) {
 
     guidelines.forEach(guide => {
         const guidelineButton = document.createElement('button');
-        guidelineButton.className = 'subclass-button';
-        guidelineButton.innerText = guide.level; // Assumes 'guide.level' is a property containing the text
-        guidelineButton.onclick = () => {
-            // Instead of logging, call loadDrugs passing the drugs for the selected guideline
-            loadDrugs(guide.drugs); // Assuming guide.drugs is an array of drugs
-        };
+        guidelineButton.className = 'accordion';
+        guidelineButton.innerText = guide.level;
         container.appendChild(guidelineButton);
+
+        const drugsContainer = document.createElement('div');
+        drugsContainer.className = 'panel';
+        guide.drugs.forEach(drug => {
+            const drugButton = document.createElement('button');
+            drugButton.className = 'drug-button';
+            drugButton.innerText = drug.name;
+            drugButton.onclick = () => openDrugDetailsModal(drug);
+            drugsContainer.appendChild(drugButton);
+        });
+        container.appendChild(drugsContainer);
+
+        guidelineButton.onclick = function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        };
     });
 }
 
-
-function loadDrugs(drugs) {
-    const container = document.getElementById('grid-container');
-    container.innerHTML = '';  // Clear the container for drug buttons
-
-    drugs.forEach(drug => {
-        const drugButton = document.createElement('button');
-        drugButton.className = 'drug-button'; 
-        drugButton.innerText = drug.name; // Display the drug name on the button
-        drugButton.onclick = () => openDrugDetailsModal(drug);
-        container.appendChild(drugButton);
-    });
-}
 
 function openDrugDetailsModal(drug) {
     const modal = document.getElementById('drugModal');

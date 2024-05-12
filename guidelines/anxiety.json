@@ -17,6 +17,31 @@
                             "LOE":"1"
                         }
                     ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {
+                            "name": "Reboxetine",
+                            "id": "citalopram",
+                            "drugclass": "SSRI",
+                            "dose": "20-40 mg",
+                            "LOE":"1"
+                        }
+                    ]
+                },
+
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {
+                            "name": "Bupropion SR",
+                            "id": "citalopram",
+                            "drugclass": "SSRI",
+                            "dose": "20-40 mg",
+                            "LOE":"1"
+                        }
+                    ]
                 }
             ]
         }
