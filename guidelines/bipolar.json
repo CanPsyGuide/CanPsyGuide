@@ -11,51 +11,6 @@
           {"level": "Third Line"},
           {"level": "Not Recommended"}
         ]
-      },
-
-      {
-        "name": "DB2 Depression",
-        "description": "Detailed information about Bipolar I Disorder.",
-        "guidelines": [
-          {"level": "First Line"},
-          {"level": "Second Line"},
-          {"level": "Third Line"},
-          {"level": "Not Recommended"}
-        ]
-      },
-
-      {
-        "name": "DB2 Maintenance",
-        "description": "Detailed information about Bipolar I Disorder.",
-        "guidelines": [
-          {"level": "First Line"},
-          {"level": "Second Line"},
-          {"level": "Third Line"},
-          {"level": "Not Recommended"}
-        ]
-      },
-
-      {
-        "name": "Special Populations",
-        "description": "Detailed information about Bipolar I Disorder.",
-        "guidelines": [
-          {"level": "First Line"},
-          {"level": "Second Line"},
-          {"level": "Third Line"},
-          {"level": "Not Recommended"}
-        ]
-      },
-
-      
-      {
-        "name": "Safety and Monitoring",
-        "description": "Detailed information about Bipolar I Disorder.",
-        "guidelines": [
-          {"level": "First Line"},
-          {"level": "Second Line"},
-          {"level": "Third Line"},
-          {"level": "Not Recommended"}
-        ]
       }
     ]
   }

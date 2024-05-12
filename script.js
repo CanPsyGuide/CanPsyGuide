@@ -53,12 +53,59 @@ function loadGuidelines(guidelines) {
     container.innerHTML = '';  // Clear the container for guideline buttons
 
     guidelines.forEach(guide => {
-        const button = document.createElement('button');
-        button.className = 'subclass-button';
-        button.innerText = guide.level; // Assumes 'guide.level' is a property containing the text
-        button.onclick = () => {
-            console.log(`Details for ${guide.level}`); // Placeholder for detailed view
+        const guidelineButton = document.createElement('button');
+        guidelineButton.className = 'subclass-button';
+        guidelineButton.innerText = guide.level; // Assumes 'guide.level' is a property containing the text
+        guidelineButton.onclick = () => {
+            // Instead of logging, call loadDrugs passing the drugs for the selected guideline
+            loadDrugs(guide.drugs); // Assuming guide.drugs is an array of drugs
         };
-        container.appendChild(button);
+        container.appendChild(guidelineButton);
     });
+}
+
+
+function loadDrugs(drugs) {
+    const container = document.getElementById('grid-container');
+    container.innerHTML = '';  // Clear the container for drug buttons
+
+    drugs.forEach(drug => {
+        const drugButton = document.createElement('button');
+        drugButton.className = 'drug-button'; 
+        drugButton.innerText = drug.name; // Display the drug name on the button
+        drugButton.onclick = () => openDrugDetailsModal(drug);
+        container.appendChild(drugButton);
+    });
+}
+
+function openDrugDetailsModal(drug) {
+    const modal = document.getElementById('drugModal');
+    const nameElement = document.getElementById('drugName');
+    const attributesElement = document.getElementById('drugAttributes');
+
+    nameElement.textContent = drug.name;
+    attributesElement.innerHTML = ''; // Clear previous content
+
+    // Dynamically create a list of attributes
+    for (const [key, value] of Object.entries(drug)) {
+        if (key !== 'name') { // Avoid repeating the drug name
+            const detailItem = document.createElement('p');
+            detailItem.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`;
+            attributesElement.appendChild(detailItem);
+        }
+    }
+
+    modal.style.display = 'block'; // Display the modal
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const closeButton = document.querySelector('.modal .close');
+    if (closeButton) {
+        closeButton.onclick = closeModal;
+    }
+});
+
+function closeModal() {
+    const modal = document.getElementById('drugModal');
+    modal.style.display = 'none';
 }
