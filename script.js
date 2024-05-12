@@ -60,16 +60,19 @@ function loadGuidelines(guidelines) {
 
         const drugsContainer = document.createElement('div');
         drugsContainer.className = 'panel';
+
         guide.drugs.forEach(drug => {
-            const drugButton = document.createElement('button');
-            drugButton.className = 'drug-button';
-            drugButton.innerText = drug.name;
-            drugButton.onclick = () => openDrugDetailsModal(drug);
-            drugsContainer.appendChild(drugButton);
+            const drugLink = document.createElement('div');  // Changed from button to div for better integration
+            drugLink.className = 'drug-menu-item';
+            drugLink.innerText = drug.name;
+            drugLink.onclick = () => openDrugDetailsModal(drug);
+            drugsContainer.appendChild(drugLink);
         });
+
         container.appendChild(drugsContainer);
 
-        guidelineButton.onclick = function() {
+        guidelineButton.addEventListener("click", function() {
+            // This function only toggles the clicked accordion without affecting others
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
             if (panel.style.maxHeight) {
@@ -77,9 +80,10 @@ function loadGuidelines(guidelines) {
             } else {
                 panel.style.maxHeight = panel.scrollHeight + "px";
             }
-        };
+        });
     });
 }
+
 
 
 function openDrugDetailsModal(drug) {
@@ -113,3 +117,7 @@ function closeModal() {
     const modal = document.getElementById('drugModal');
     modal.style.display = 'none';
 }
+
+
+// for lst clicked guideline
+

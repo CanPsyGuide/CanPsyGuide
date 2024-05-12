@@ -180,7 +180,7 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
-.subclass-button, .guideline-button, .drug-button {
+.subclass-button, .guideline-button {
     background-color: #0052aa; /* A distinct color for subclass buttons */
     color: white;
     border: none;
@@ -235,41 +235,58 @@ header {
 }
 
 .accordion {
-    background-color: #eee;
-    color: #444;
+    background-color: #0052aa;  /* Dark blue, similar to subclass buttons */
+    color: white;
     cursor: pointer;
-    padding: 18px;
+    padding: 12px 25px;  /* Similar padding to your subclass buttons */
     width: 100%;
     border: none;
-    text-align: left;
+    text-align: center;
     outline: none;
-    font-size: 15px;
+    font-size: 16px;
     transition: 0.4s;
+    border-radius: 8px;  /* Rounded edges similar to other buttons */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);  /* Consistent shadow effect */
+    margin: 8px 0;  /* Adds vertical spacing */
 }
 
-.active, .accordion:hover {
-    background-color: #ccc;
+.accordion:hover, .accordion.active {
+    background-color: #004080;  /* A darker shade on hover and active */
 }
+
+.active {
+    background-color: #ccc; /* Active color */
+}
+
 
 .panel {
-    padding: 0 18px;
+    padding: 0;  /* Remove padding that might clip the corners */
     background-color: white;
     max-height: 0;
-    overflow: hidden;
+    overflow: hidden;  /* Check if overflow is clipping the borders */
     transition: max-height 0.2s ease-out;
+    width: 100%;  /* Ensure panel also spans full width */
 }
 
-.drug-button {
-    display: block;
-    width: 100%;
-    text-align: left;
+
+.drug-menu-item {
     padding: 10px;
-    border: none;
-    background-color: #f2f2f2;
+    background-color: #e8e8e8;  /* Light grey for a softer appearance */
     color: black;
-    text-align: left;
     cursor: pointer;
+    border: none;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;  /* Ensures padding is included in width calculation */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);  /* Subtle shadow for depth */
+    margin-top: 2px;  /* Slight separation from the accordion header */
+    border-radius: 5px;  /* Ensures all corners are rounded */
 }
+
+.drug-menu-item:hover {
+    background-color: #d0d0d0;  /* Slightly darker on hover for interactivity */
+}
+
 
 
 /* Media Queries for Responsive Adjustments */

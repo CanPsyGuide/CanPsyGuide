@@ -27,6 +27,13 @@
                             "drugclass": "SSRI",
                             "dose": "20-40 mg",
                             "LOE":"1"
+                        },
+                        {
+                            "name": "Mirtazapine",
+                            "id": "citalopram",
+                            "drugclass": "SSRI",
+                            "dose": "20-40 mg",
+                            "LOE":"1"
                         }
                     ]
                 },
@@ -35,7 +42,7 @@
                     "level": "Third Line",
                     "drugs": [
                         {
-                            "name": "Bupropion SR",
+                            "name": "Clomipramine",
                             "id": "citalopram",
                             "drugclass": "SSRI",
                             "dose": "20-40 mg",
