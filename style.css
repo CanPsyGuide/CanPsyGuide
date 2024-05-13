@@ -12,7 +12,7 @@ html, body {
 header {
     text-align: center;
     width: 100%; /* Full width of the header */
-    background-color: #002955; /* Darker blue for header */
+    background-color: #0052aa; /* Darker blue for header */
     color: white; /* White text in the header */
 }
 
@@ -62,24 +62,36 @@ main {
 }
 
 
+.grid-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .grid-item {
-    background-color: #007BFF; /* Vibrant blue for the condition buttons */
+    background-color: #0052aa; /* Consistent vibrant blue for the main condition buttons */
     color: white;
     border: none;
     padding: 15px 30px;
     font-size: 18px;
     cursor: pointer;
-    width: auto; /* Adjusts automatically to text size */
+    width: 180px; /* Fixed width to ensure uniform size */
     text-align: center;
-    border-radius: 10px; /* Rounds the corners of the buttons */
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 10px;
     transition: transform 0.3s ease-in-out;
-    margin: 10px; /* Adds some margin around the buttons */
 }
-.grid-item:hover {
-    transform: scale(1.05); /* Slightly enlarges the button on hover */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Enhances the shadow on hover */
+
+/* Hover effect for both main and subclass buttons */
+.grid-item:hover, .back-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
+
+
 
 footer {
     text-align: center;
@@ -104,7 +116,7 @@ h1 {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #0056b3;
+    background-color: #0052aa;
     color: white;
 }
 
@@ -123,8 +135,8 @@ header {
 }
 
 .back-button {
-    margin-top:20px;
-    background-color: #FF5722;
+    margin-top:10px;
+    background-color: #00aa03; /* Main theme color */
     color: white;
     padding: 10px 20px;
     font-size: 16px;
@@ -132,35 +144,15 @@ header {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     cursor: pointer;
+    margin-right: 10px; /* Spacing between buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.grid-container {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.back-button:hover {
+    background-color: #0052aa; /* Darker shade for hover effect */
 }
 
-.grid-item {
-    background-color: #007BFF; /* Consistent vibrant blue for the main condition buttons */
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    width: 180px; /* Fixed width to ensure uniform size */
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    margin: 10px;
-    transition: transform 0.3s ease-in-out;
-}
 
-/* Hover effect for both main and subclass buttons */
-.grid-item:hover, .back-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-}
 
 
 /* subclass */

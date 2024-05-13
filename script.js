@@ -1,6 +1,6 @@
 function loadMainConditions() {
     const container = document.getElementById('grid-container');
-    container.className = 'grid-container grid-container-centered';  // Use centered for main buttons
+    container.className = 'grid-container grid-container-centered'; 
     container.innerHTML = '';
 
     const conditions = ['depression', 'anxiety', 'bipolar', 'schizophrenia'];
@@ -13,12 +13,12 @@ function loadMainConditions() {
     });
 
     const backButton = document.getElementById('back-button');
-    backButton.style.display = 'none'; // Hide the back button when viewing main conditions
+    backButton.style.display = 'none';
 }
+
 
 function loadSubclasses(condition) {
     const filePath = `guidelines/${condition}.json`;
-
     fetch(filePath)
         .then(response => response.json())
         .then(data => {
@@ -30,11 +30,14 @@ function loadSubclasses(condition) {
             backButton.style.display = 'block';
             backButton.onclick = loadMainConditions;
 
+            const backToSubclassesButton = document.getElementById('back-to-subclasses-button');
+            backToSubclassesButton.style.display = 'none';
+
             data.subclasses.forEach(subclass => {
                 const button = document.createElement('button');
                 button.className = 'subclass-button';
                 button.innerText = subclass.name;
-                button.onclick = () => loadGuidelines(subclass.guidelines);
+                button.onclick = () => loadGuidelines(subclass.guidelines, condition);
                 container.appendChild(button);
             });
         })
@@ -48,9 +51,17 @@ function loadSubclasses(condition) {
 document.addEventListener('DOMContentLoaded', loadMainConditions);
 
 
-function loadGuidelines(guidelines) {
+function loadGuidelines(guidelines, condition) {
     const container = document.getElementById('grid-container');
-    container.innerHTML = '';  // Clear the container for guideline buttons
+    container.innerHTML = '';
+
+    const backButton = document.getElementById('back-button');
+    backButton.style.display = 'block';
+    backButton.onclick = () => loadMainConditions();
+
+    const backToSubclassesButton = document.getElementById('back-to-subclasses-button');
+    backToSubclassesButton.style.display = 'block';
+    backToSubclassesButton.onclick = () => loadSubclasses(condition);
 
     guidelines.forEach(guide => {
         const guidelineButton = document.createElement('button');
@@ -62,7 +73,7 @@ function loadGuidelines(guidelines) {
         drugsContainer.className = 'panel';
 
         guide.drugs.forEach(drug => {
-            const drugLink = document.createElement('div');  // Changed from button to div for better integration
+            const drugLink = document.createElement('div');
             drugLink.className = 'drug-menu-item';
             drugLink.innerText = drug.name;
             drugLink.onclick = () => openDrugDetailsModal(drug);
@@ -72,7 +83,6 @@ function loadGuidelines(guidelines) {
         container.appendChild(drugsContainer);
 
         guidelineButton.addEventListener("click", function() {
-            // This function only toggles the clicked accordion without affecting others
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
             if (panel.style.maxHeight) {
@@ -83,7 +93,6 @@ function loadGuidelines(guidelines) {
         });
     });
 }
-
 
 
 function openDrugDetailsModal(drug) {
