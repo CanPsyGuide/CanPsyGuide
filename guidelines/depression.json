@@ -14,39 +14,49 @@
                             "id": "citalopram",
                             "drugclass": "SSRI",
                             "dose": "20-40 mg",
-                            "LOE":"1"
+                            "LOE": "1"
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "name": "Psychotherapy",
+            "description": "Exploring cognitive behavioral therapy and other psychological treatments.",
+            "guidelines": [
                 {
-                    "level": "Second Line",
-                    "drugs": [
+                    "level": "Recommended",
+                    "therapies": [
                         {
-                            "name": "Reboxetine",
-                            "id": "citalopram",
-                            "drugclass": "SSRI",
-                            "dose": "20-40 mg",
-                            "LOE":"1"
+                            "name": "Cognitive Behavioral Therapy",
+                            "effectiveness": "High",
+                            "notes": "No side effects and long-term benefits"
                         },
                         {
-                            "name": "Mirtazapine",
-                            "id": "citalopram",
-                            "drugclass": "SSRI",
-                            "dose": "20-40 mg",
-                            "LOE":"1"
+                            "name": "Interpersonal Therapy",
+                            "effectiveness": "Moderate",
+                            "notes": "Useful in treating relationship-focused issues"
                         }
                     ]
-                },
-
+                }
+            ]
+        },
+        {
+            "name": "Alternative Treatments",
+            "description": "Use of natural and alternative methods for managing depression.",
+            "guidelines": [
                 {
-                    "level": "Third Line",
-                    "drugs": [
+                    "level": "Supplementary",
+                    "treatments": [
                         {
-                            "name": "Clomipramine",
-                            "id": "citalopram",
-                            "drugclass": "SSRI",
-                            "dose": "20-40 mg",
-                            "LOE":"1"
+                            "name": "St. John’s Wort",
+                            "effectiveness": "Varied",
+                            "notes": "Conflicts with several pharmaceuticals"
+                        },
+                        {
+                            "name": "Exercise",
+                            "effectiveness": "High",
+                            "notes": "Improves mood and physical health"
                         }
                     ]
                 }

@@ -1,52 +1,55 @@
 {
-    "condition": "Depression",
-    "description": "Overview of treatment options for Depression.",
-    "subclasses": [
+    "conditions": [
         {
-            "name": "Pharmacotherapy",
-            "description": "Detailed information about Pharmacotherapy treatments for Depression.",
-            "guidelines": [
+            "condition": "Depression",
+            "description": "Overview of treatment options for Depression.",
+            "subclasses": [
                 {
-                    "level": "First Line",
-                    "drugs": [
+                    "name": "Pharmacotherapy",
+                    "description": "Detailed information about Pharmacotherapy treatments for Depression.",
+                    "guidelines": [
                         {
-                            "name": "Citalopram",
-                            "id": "citalopram",
-                            "drugclass": "SSRI",
-                            "dose": "20-40 mg",
-                            "LOE":"1"
+                            "level": "First Line",
+                            "drugs": [
+                                {
+                                    "name": "Citalopram",
+                                    "id": "citalopram",
+                                    "drugclass": "SSRI",
+                                    "dose": "20-40 mg",
+                                    "LOE": "1"
+                                }
+                            ]
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "condition": "Anxiety",
+            "description": "Overview of treatment options for Anxiety.",
+            "subclasses": [
                 {
-                    "level": "Second Line",
-                    "drugs": [
+                    "name": "Pharmacotherapy",
+                    "description": "Detailed information about Pharmacotherapy treatments for Anxiety.",
+                    "guidelines": [
                         {
-                            "name": "Reboxetine",
-                            "id": "citalopram",
-                            "drugclass": "SSRI",
-                            "dose": "20-40 mg",
-                            "LOE":"1"
-                        },
-                        {
-                            "name": "Mirtazapine",
-                            "id": "citalopram",
-                            "drugclass": "SSRI",
-                            "dose": "20-40 mg",
-                            "LOE":"1"
-                        }
-                    ]
-                },
-
-                {
-                    "level": "Third Line",
-                    "drugs": [
-                        {
-                            "name": "Clomipramine",
-                            "id": "citalopram",
-                            "drugclass": "SSRI",
-                            "dose": "20-40 mg",
-                            "LOE":"1"
+                            "level": "First Line",
+                            "drugs": [
+                                {
+                                    "name": "Escitalopram",
+                                    "id": "escitalopram",
+                                    "drugclass": "SSRI",
+                                    "dose": "10-20 mg",
+                                    "LOE": "1"
+                                },
+                                {
+                                    "name": "Sertraline",
+                                    "id": "sertraline",
+                                    "drugclass": "SSRI",
+                                    "dose": "25-200 mg",
+                                    "LOE": "1"
+                                }
+                            ]
                         }
                     ]
                 }

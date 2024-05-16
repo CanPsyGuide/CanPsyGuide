@@ -1,56 +1,419 @@
 {
-    "condition": "Depression",
-    "description": "Overview of treatment options for Depression.",
+    "condition": "Depression",  
+    "description": "Overview of treatment options for mental health disorders including Panic Disorder and Social Anxiety Disorder.",
     "subclasses": [
         {
-            "name": "Pharmacotherapy",
-            "description": "Detailed information about Pharmacotherapy treatments for Depression.",
+            "name": "Panic Disorder",
+            "description": "Treatment options for Panic Disorder.",
             "guidelines": [
                 {
                     "level": "First Line",
                     "drugs": [
-                        {
-                            "name": "Citalopram",
-                            "id": "citalopram",
-                            "drugclass": "SSRI",
-                            "dose": "20-40 mg",
-                            "LOE":"1"
-                        }
+                        {"name": "Citalopram", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Escitalopram", "drugclass": "SSRI", "LOE": "2"},
+                        {"name": "Fluoxetine", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Fluvoxamine", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Paroxetine", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Paroxetine CR", "drugclass": "SSRI", "LOE": "2"},
+                        {"name": "Sertraline", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Venlafaxine XR", "drugclass": "SNRI", "LOE": "1"}
                     ]
                 },
                 {
                     "level": "Second Line",
                     "drugs": [
-                        {
-                            "name": "Reboxetine",
-                            "id": "citalopram",
-                            "drugclass": "SSRI",
-                            "dose": "20-40 mg",
-                            "LOE":"1"
-                        },
-                        {
-                            "name": "Mirtazapine",
-                            "id": "citalopram",
-                            "drugclass": "SSRI",
-                            "dose": "20-40 mg",
-                            "LOE":"1"
-                        }
+                        {"name": "Reboxetine", "drugclass": "NRI", "LOE": "1"},
+                        {"name": "Mirtazapine", "drugclass": "NaSSA", "LOE": "2"},
+                        {"name": "Clomipramine", "drugclass": "Tricyclic", "LOE": "1"},
+                        {"name": "Imipramine", "drugclass": "Tricyclic", "LOE": "1"}
+                    ]
+                }
+                
+            ]
+        },
+        {
+            "name": "Social Anxiety Disorder",
+            "description": "Treatment options for Social Anxiety Disorder.",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {"name": "Escitalopram", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Fluvoxamine (IR/CR)", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Sertraline", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Paroxetine", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Paroxetine CR", "drugclass": "SSRI", "LOE": "2"},
+                        {"name": "Venlafaxine XR", "drugclass": "SNRI", "LOE": "1"},
+                        {"name": "Pregabalin", "drugclass": "Anticonvulsant", "LOE": "1"}
                     ]
                 },
-
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {"name": "Citalopram", "drugclass": "SSRI", "LOE": "2"},
+                        {"name": "Phenelzine", "drugclass": "MAOI", "LOE": "1"},
+                        {"name": "Gabapentin", "drugclass": "Anticonvulsant", "LOE": "2"},
+                        {"name": "Clonazepam", "drugclass": "Benzodiazepine", "LOE": "1"},
+                        {"name": "Alprazolam", "drugclass": "Benzodiazepine", "LOE": "2"},
+                        {"name": "Bromazepam", "drugclass": "Benzodiazepine", "LOE": "2"}
+                    ]
+                },
                 {
                     "level": "Third Line",
                     "drugs": [
-                        {
-                            "name": "Clomipramine",
-                            "id": "citalopram",
-                            "drugclass": "SSRI",
-                            "dose": "20-40 mg",
-                            "LOE":"1"
-                        }
+                        {"name": "Fluoxetine", "drugclass": "SSRI", "LOE": "1", "notes": "Conflicting Data"},
+                        {"name": "Mirtazapine", "drugclass": "NaSSA", "LOE": "1", "notes": "Conflicting Data"},
+                        {"name": "Atomoxetine", "drugclass": "NRI", "LOE": "1"},
+                        {"name": "Bupropion SR", "drugclass": "NDRI", "LOE": "3"},
+                        {"name": "Clomipramine", "drugclass": "Tricyclic", "LOE": "3"},
+                        {"name": "Moclobemide", "drugclass": "MAOI", "LOE": "1", "notes": "Conflicting Data"},
+                        {"name": "Selegiline", "drugclass": "MAOI", "LOE": "3"},
+                        {"name": "Divalproex", "drugclass": "Anticonvulsant", "LOE": "3"},
+                        {"name": "Tiagabine", "drugclass": "Anticonvulsant", "LOE": "3"},
+                        {"name": "Topiramate", "drugclass": "Anticonvulsant", "LOE": "3"}
+                    ]
+                },
+                {
+                    "level": "Third Line Adjunctive",
+                    "drugs": [
+                        {"name": "Paroxetine", "drugclass": "SSRI", "LOE": "3"},
+                        {"name": "Buspirone", "drugclass": "5HT1A Agonist", "LOE": "3"},
+                        {"name": "Aripiprazole", "drugclass": "Antipsychotic", "LOE": "3"},
+                        {"name": "Risperidone", "drugclass": "Antipsychotic", "LOE": "3"}
+                    ]
+                },
+                {
+                    "level": "Not Recommended",
+                    "drugs": [
+                        {"name": "Buspirone", "drugclass": "5HT1A Agonist", "LOE": "-1"},
+                        {"name": "Imipramine", "drugclass": "Tricyclic", "LOE": "-3"},
+                        {"name": "Quetiapine", "drugclass": "Antipsychotic", "LOE": "-2"},
+                        {"name": "Atenolol", "drugclass": "Beta-Blocker", "LOE": "-1", "notes": "Beta-blockers have been used in clinical practice for performance situations such as public speaking."},
+                        {"name": "Propranolol", "drugclass": "Beta-Blocker", "LOE": "-1", "notes": "Beta-blockers have been used in clinical practice for performance situations such as public speaking."},
+                        {"name": "Levetiracetam", "drugclass": "Anticonvulsant", "LOE": "-2"}
+                    ]
+                },
+                {
+                    "level": "Not Recommended Adjunct",
+                    "drugs": [
+                        {"name": "Pindolol", "drugclass": "Beta-Blocker", "LOE": "-2"},
+                        {"name": "Clonazepam", "drugclass": "Benzodiazepine", "LOE": "-2"}
                     ]
                 }
             ]
-        }
+        },
+        {
+            "name": "GAD",
+            "description": "Treatment options for Generalized Anxiety Disorder.",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {"name": "Escitalopram", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Sertraline", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Paroxetine", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Paroxetine CR", "drugclass": "SSRI", "LOE": "3"},
+                        {"name": "Venlafaxine XR", "drugclass": "SNRI", "LOE": "1"},
+                        {"name": "Duloxetine", "drugclass": "SNRI", "LOE": "1"},
+                        {"name": "Agomelatine", "drugclass": "Melatonin Receptor Agonist", "LOE": "1"},
+                        {"name": "Pregabalin", "drugclass": "Anticonvulsant", "LOE": "1"}
+                    ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {"name": "Vortioxetine", "drugclass": "Serotonin Modulator", "LOE": "1", "notes": "Conflicting Data"},
+                        {"name": "Buspirone", "drugclass": "5HT1A Agonist", "LOE": "1"},
+                        {"name": "Bupropion XL", "drugclass": "NDRI", "LOE": "2"},
+                        {"name": "Imipramine", "drugclass": "Tricyclic", "LOE": "1"},
+                        {"name": "Quetiapine XR", "drugclass": "Antipsychotic", "LOE": "1"},
+                        {"name": "Hydroxyzine", "drugclass": "H1 Antagonist", "LOE": "1"},
+                        {"name": "Alprazolam", "drugclass": "Benzodiazepine", "LOE": "1"},
+                        {"name": "Bromazepam", "drugclass": "Benzodiazepine", "LOE": "1"},
+                        {"name": "Diazepam", "drugclass": "Benzodiazepine", "LOE": "1"},
+                        {"name": "Lorazepam", "drugclass": "Benzodiazepine", "LOE": "1"}
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {"name": "Citalopram", "drugclass": "SSRI", "LOE": "3"},
+                        {"name": "Fluoxetine", "drugclass": "SSRI", "LOE": "3"},
+                        {"name": "Mirtazapine", "drugclass": "NaSSA", "LOE": "3"},
+                        {"name": "Trazodone", "drugclass": "SARI", "LOE": "2", "notes": "At low doses, antagonizes 5-HT-2A, H1, and alpha-1 receptors; at higher doses antagonizes SERT (SRI) and 5HT2C"},
+                        {"name": "Divalproex Chrono", "drugclass": "Anticonvulsant", "LOE": "2"}
+                    ]
+                },
+                {
+                    "level": "Third Line Adjunctive",
+                    "drugs": [
+                        {"name": "Quetiapine", "drugclass": "Antipsychotic", "LOE": "1", "notes": "Conflicting Data"},
+                        {"name": "Risperidone", "drugclass": "Antipsychotic", "LOE": "1", "notes": "Conflicting Data"},
+                        {"name": "Olanzapine", "drugclass": "Antipsychotic", "LOE": "2"},
+                        {"name": "Aripiprazole", "drugclass": "Antipsychotic", "LOE": "3"},
+                        {"name": "Quetiapine XR", "drugclass": "Antipsychotic", "LOE": "3"}
+                    ]
+                },
+                {
+                    "level": "Not Recommended",
+                    "drugs": [
+                        {"name": "Propranolol", "drugclass": "Beta-Blocker", "LOE": "-2"},
+                        {"name": "Tiagabine", "drugclass": "Anticonvulsant", "LOE": "-1"},
+                        {"name": "Pexacerfont", "drugclass": "CRF1 Antagonist", "LOE": "-2"},
+                        {"name": "Ziprazidone", "drugclass": "Antipsychotic", "LOE": "-2"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "OCD",
+            "description": "Treatment options for Obsessive-Compulsive Disorder.",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {"name": "Escitalopram", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Fluoxetine", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Fluvoxamine", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Paroxetine", "drugclass": "SSRI", "LOE": "1"},
+                        {"name": "Sertraline", "drugclass": "SSRI", "LOE": "1"}
+                    ]
+                },
+                {
+                    "level": "First Line Adjunctive",
+                    "drugs": [
+                        {"name": "Aripiprazole", "drugclass": "Antipsychotic", "LOE": "1"},
+                        {"name": "Risperidone", "drugclass": "Antipsychotic", "LOE": "1", "notes": "Conflicting Data"}
+                    ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {"name": "Citalopram", "drugclass": "SSRI", "LOE": "2"},
+                        {"name": "Venlafaxine XR", "drugclass": "SNRI", "LOE": "2"},
+                        {"name": "Mirtazapine", "drugclass": "NaSSA", "LOE": "2"},
+                        {"name": "Clomipramine", "drugclass": "Tricyclic", "LOE": "1"}
+                    ]
+                },
+                {
+                    "level": "Second Line Adjunctive",
+                    "drugs": [
+                        {"name": "Quetiapine", "drugclass": "Antipsychotic", "LOE": "1", "notes": "Conflicting Data"},
+                        {"name": "Topiramate", "drugclass": "Anticonvulsant", "LOE": "1"},
+                        {"name": "Memantine", "drugclass": "NMDA Antagonist", "LOE": "2"}
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {"name": "Citalopram IV", "drugclass": "SSRI", "LOE": "3"},
+                        {"name": "Duloxetine", "drugclass": "SNRI", "LOE": "4"},
+                        {"name": "Clomipramine IV", "drugclass": "Tricyclic", "LOE": "2"},
+                        {"name": "Phenelzine", "drugclass": "MAOI", "LOE": "2"},
+                        {"name": "Tranylcypromine", "drugclass": "MAOI", "LOE": "4"},
+                        {"name": "Tramadol", "drugclass": "Opioid", "LOE": "4"}
+                    ]
+                },
+                {
+                    "level": "Third Line Adjunctive",
+                    "drugs": [
+                        {"name": "Olanzapine", "drugclass": "Antipsychotic", "LOE": "1"},
+                        {"name": "Haloperidol", "drugclass": "Antipsychotic", "LOE": "2", "notes": "Conflicting Data"},
+                        {"name": "Amisulpride", "drugclass": "Antipsychotic", "LOE": "3"},
+                        {"name": "Ziprasidone", "drugclass": "Antipsychotic", "LOE": "4"},
+                        {"name": "N-Acetylcysteine", "drugclass": "Other", "LOE": "2"},
+                        {"name": "Celexocib", "drugclass": "NSAID", "LOE": "2"},
+                        {"name": "Citalopram", "drugclass": "SSRI", "LOE": "3"},
+                        {"name": "Mirtazapine", "drugclass": "NaSSA", "LOE": "3"},
+                        {"name": "Pregabalin", "drugclass": "Anticonvulsant", "LOE": "3"},
+                        {"name": "Pindolol", "drugclass": "Beta-Blocker", "LOE": "1", "notes": "Conflicting Data"},
+                        {"name": "Ondansetron", "drugclass": "5HT3 Antagonist", "LOE": "2"},
+                        {"name": "Granisetron", "drugclass": "5HT3 Antagonist", "LOE": "2"},
+                        {"name": "Ketamine IV", "drugclass": "NMDA Antagonist", "LOE": "2"},
+                        {"name": "Riluzole", "drugclass": "Other", "LOE": "3"}
+                    ]
+                },
+                {
+                    "level": "Not Recommended",
+                    "drugs": [
+                        {"name": "Desipramine", "drugclass": "Tricyclic", "LOE": "-2"},
+                        {"name": "Clonazepam", "drugclass": "Benzodiazepine", "LOE": "-2"},
+                        {"name": "Clonidine", "drugclass": "Alpha 2 Agonist", "LOE": "-2"}
+                    ]
+                },
+                {
+                    "level": "Not Recommended Adjunct",
+                    "drugs": [
+                        {"name": "Buspirone", "drugclass": "5HT1A Agonist", "LOE": "-2"},
+                        {"name": "Clonazepam", "drugclass": "Benzodiazepine", "LOE": "-2"},
+                        {"name": "Lithium", "drugclass": "Other", "LOE": "-2"},
+                        {"name": "Morphine", "drugclass": "Opioid", "LOE": "2"}
+                    ]
+                }
+            ]
+        },
+
+        {
+        "name": "PTSD",
+        "description": "Treatment options for Post-Traumatic Stress Disorder.",
+        "guidelines": [
+            {
+                "level": "First Line",
+                "drugs": [
+                    {"name": "Paroxetine", "drugclass": "SSRI", "LOE": "1"},
+                    {"name": "Fluoxetine", "drugclass": "SSRI", "LOE": "1", "notes": "Conflicting Data"},
+                    {"name": "Sertraline", "drugclass": "SSRI", "LOE": "1", "notes": "Conflicting Data"},
+                    {"name": "Venlafaxine XR", "drugclass": "SNRI", "LOE": "1"}
+                ]
+            },
+            {
+                "level": "Second Line",
+                "drugs": [
+                    {"name": "Fluvoxamine", "drugclass": "SSRI", "LOE": "2"},
+                    {"name": "Mirtazapine", "drugclass": "NaSSA", "LOE": "2"},
+                    {"name": "Phenelzine", "drugclass": "MAOI", "LOE": "1", "notes": "Conflicting Data"}
+                ]
+            },
+            {
+                "level": "Second Line Adjunctive",
+                "drugs": [
+                    {"name": "Risperidone", "drugclass": "Antipsychotic", "LOE": "1", "notes": "Conflicting Data"},
+                    {"name": "Olanzapine", "drugclass": "Antipsychotic", "LOE": "2"},
+                    {"name": "Eszopiclone", "drugclass": "Z-Drug", "LOE": "2"}
+                ]
+            },
+            {
+                "level": "Third Line",
+                "drugs": [
+                    {"name": "Reboxetine", "drugclass": "NRI", "LOE": "2"},
+                    {"name": "Escitalopram", "drugclass": "SSRI", "LOE": "3"},
+                    {"name": "Duloxetine", "drugclass": "SNRI", "LOE": "4"},
+                    {"name": "Bupropion SR", "drugclass": "NDRI", "LOE": "3"},
+                    {"name": "Imipramine", "drugclass": "Tricyclic", "LOE": "1"},
+                    {"name": "Amitriptyline", "drugclass": "Tricyclic", "LOE": "2"},
+                    {"name": "Desipramine", "drugclass": "Tricyclic", "LOE": "2", "notes": "Conflicting Data"},
+                    {"name": "Tianeptine", "drugclass": "Tricyclic", "LOE": "3"},
+                    {"name": "Trazodone", "drugclass": "SARI", "LOE": "4", "notes": "At low doses, antagonizes 5-HT-2A, H1, and alpha-1 receptors; at higher doses antagonizes SERT (SRI) and 5HT2C"},
+                    {"name": "Buspirone", "drugclass": "5HT1A Agonist", "LOE": "4"},
+                    {"name": "Moclobemide", "drugclass": "MAOI", "LOE": "3"},
+                    {"name": "Risperidone", "drugclass": "Antipsychotic", "LOE": "2"},
+                    {"name": "Aripiprazole", "drugclass": "Antipsychotic", "LOE": "3"},
+                    {"name": "Quetiapine", "drugclass": "Antipsychotic", "LOE": "3"},
+                    {"name": "Topiramate", "drugclass": "Anticonvulsant", "LOE": "1", "notes": "Conflicting Data"},
+                    {"name": "Lamotrigine", "drugclass": "Anticonvulsant", "LOE": "2"},
+                    {"name": "Carbamazepine", "drugclass": "Anticonvulsant", "LOE": "3"},
+                    {"name": "Memantine", "drugclass": "NMDA Antagonist", "LOE": "4"}
+                ]
+            },
+            {
+                "level": "Third Line Adjunctive",
+                "drugs": [
+                    {"name": "Aripiprazole", "drugclass": "Antipsychotic", "LOE": "3"},
+                    {"name": "Quetiapine", "drugclass": "Antipsychotic", "LOE": "3"},
+                    {"name": "Clonidine", "drugclass": "Alpha 2 Agonist", "LOE": "3"},
+                    {"name": "Gabapentin", "drugclass": "Anticonvulsant", "LOE": "4"},
+                    {"name": "Pregabalin", "drugclass": "Anticonvulsant", "LOE": "4"},
+                    {"name": "Levetiracetam", "drugclass": "Anticonvulsant", "LOE": "4"},
+                    {"name": "Tiagabine", "drugclass": "Anticonvulsant", "LOE": "4"},
+                    {"name": "Reboxetine", "drugclass": "NRI", "LOE": "?", "notes": "LOE as adjunct not reported"}
+                ]
+            },
+            {
+                "level": "Not Recommended",
+                "drugs": [
+                    {"name": "Citalopram", "drugclass": "SSRI", "LOE": "-2"},
+                    {"name": "Olanzapine", "drugclass": "Antipsychotic", "LOE": "-2"},
+                    {"name": "Divalproex", "drugclass": "Anticonvulsant", "LOE": "-1"},
+                    {"name": "Tiagabine", "drugclass": "Anticonvulsant", "LOE": "-2"},
+                    {"name": "Alprazolam", "drugclass": "Benzodiazepine", "LOE": "-2"},
+                    {"name": "Clonazepam", "drugclass": "Benzodiazepine", "LOE": "-3"}
+                ]
+            },
+            {
+                "level": "Not Recommended Adjunct",
+                "drugs": [
+                    {"name": "Bupropion SR", "drugclass": "NDRI", "LOE": "-2"},
+                    {"name": "Guanfacine", "drugclass": "Alpha 2 Agonist", "LOE": "-1"},
+                    {"name": "Topiramate", "drugclass": "Anticonvulsant", "LOE": "-2"},
+                    {"name": "Zolpidem", "drugclass": "Z Drug", "LOE": "-2"}
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Child & Adolescent",
+        "description": "Treatment options for various mental health disorders in children and adolescents, categorized by disorder and treatment level.",
+        "guidelines": [
+            {
+                "level": "Separation Anxiety Disorder",
+                "drugs": [
+                    {"name": "Fluoxetine", "drugclass": "SSRI", "LOE": "2"},
+                    {"name": "Fluvoxamine", "drugclass": "SSRI", "LOE": "2"},
+                    {"name": "Clonazepam", "drugclass": "Benzodiazepine", "LOE": "-2"}
+                ]
+            },
+            {
+                "level": "School-refusal",
+                "drugs": [
+                    {"name": "Citalopram", "drugclass": "SSRI", "LOE": "4"},
+                    {"name": "Adjunctive Imipramine", "drugclass": "Tricyclic", "LOE": "2"},
+                    {"name": "Alprazolam", "drugclass": "Benzodiazepine", "LOE": "-2"}
+                ]
+            },
+            {
+                "level": "Social Anxiety Disorder",
+                "drugs": [
+                    {"name": "Fluoxetine", "drugclass": "SSRI", "LOE": "1"},
+                    {"name": "Fluvoxamine", "drugclass": "SSRI", "LOE": "2"},
+                    {"name": "Paroxetine", "drugclass": "SSRI", "LOE": "2"},
+                    {"name": "Escitalopram", "drugclass": "SSRI", "LOE": "3"},
+                    {"name": "Sertraline", "drugclass": "SSRI", "LOE": "3"},
+                    {"name": "Venlafaxine XR", "drugclass": "SNRI", "LOE": "2"},
+                    {"name": "Mirtazapine", "drugclass": "NaSSA", "LOE": "3"},
+                    {"name": "Alprazolam", "drugclass": "Benzodiazepine", "LOE": "-2"}
+                ]
+            },
+            {
+                "level": "Generalized Anxiety Disorder",
+                "drugs": [
+                    {"name": "Fluoxetine", "drugclass": "SSRI", "LOE": "2"},
+                    {"name": "Fluvoxamine", "drugclass": "SSRI", "LOE": "2"},
+                    {"name": "Sertraline", "drugclass": "SSRI", "LOE": "2"},
+                    {"name": "Alprazolam", "drugclass": "Benzodiazepine", "LOE": "-2"}
+                ]
+            },
+            {
+                "level": "OCD",
+                "drugs": [
+                    {"name": "Fluoxetine", "drugclass": "SSRI", "LOE": "1"},
+                    {"name": "Citalopram", "drugclass": "SSRI", "LOE": "2"},
+                    {"name": "Fluvoxamine", "drugclass": "SSRI", "LOE": "2"},
+                    {"name": "Paroxetine", "drugclass": "SSRI", "LOE": "2"},
+                    {"name": "Sertraline", "drugclass": "SSRI", "LOE": "2"},
+                    {"name": "Clomipramine", "drugclass": "Tricyclic", "LOE": "1"},
+                    {"name": "Adjunctive Aripiprazole", "drugclass": "Antipsychotic", "LOE": "3"},
+                    {"name": "Riluzole", "drugclass": "Other", "LOE": "4"}
+                ]
+            },
+            {
+                "level": "PTSD",
+                "drugs": [
+                    {"name": "Sertraline", "drugclass": "SSRI", "LOE": "-2"},
+                    {"name": "Adjunctive Sertraline", "drugclass": "SSRI", "LOE": "-2"}
+                ]
+            },
+            {
+                "level": "Panic Disorder",
+                "drugs": [
+                    {"name": "Clonazepam", "drugclass": "Benzodiazepine", "LOE": "4"},
+                    {"name": "Alprazolam", "drugclass": "Benzodiazepine", "LOE": "4"}
+                ]
+            }
+        ]
+    }
+    
+
+        
+        
     ]
 }

@@ -155,22 +155,7 @@ header {
 
 
 
-/* subclass */
-.subclass-button {
-    background-color: #0052aa; /* A distinct color for subclass buttons */
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 160px; /* Slightly smaller width */
-    height: 60px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
-    margin: 8px;
-    transition: transform 0.3s ease-in-out;
-}
+
 
 .subclass-button, .guideline-button {
     background-color: #0052aa; /* A distinct color for subclass buttons */
@@ -180,7 +165,7 @@ header {
     font-size: 16px;
     cursor: pointer;
     width: 160px; /* Slightly smaller width */
-    height: 60px;
+    height: 65px;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.25);
