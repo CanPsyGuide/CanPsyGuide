@@ -129,6 +129,9 @@ function loadDrugDetails(drug) {
 
     // Draw pie chart
     drawPieChart(pieChartCanvas, 75); // Example with 75% effectiveness
+
+    // Add swipe event listeners
+    addSwipeListeners(drugDetailsContainer);
 }
 
 function drawPieChart(canvas, percentage) {
@@ -153,6 +156,29 @@ function drawPieChart(canvas, percentage) {
     ctx.lineTo(x, y);
     ctx.fillStyle = percentage >= 50 ? '#00aa03' : '#ff0000'; // Green for >= 50%, red for < 50%
     ctx.fill();
+}
+
+function addSwipeListeners(element) {
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    element.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    element.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleSwipe();
+    }, false);
+
+    function handleSwipe() {
+        if (touchendX < touchstartX) {
+            element.remove();
+        }
+        if (touchendX > touchstartX) {
+            element.remove();
+        }
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
