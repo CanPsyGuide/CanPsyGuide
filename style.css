@@ -220,7 +220,7 @@ footer {
     background-color: #d0d0d0;
 }
 
-@media (max-height: 600px) {
+@media (max-height: 720px) {
     main {
         justify-content: center;
     }
