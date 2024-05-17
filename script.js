@@ -73,7 +73,7 @@ function loadGuidelines(guidelines, condition) {
             const drugLink = document.createElement('div');
             drugLink.className = 'drug-menu-item';
             drugLink.innerText = drug.name;
-            drugLink.onclick = () => openDrugDetailsModal(drug);
+            drugLink.onclick = () => loadDrugDetails(drug);
             drugsContainer.appendChild(drugLink);
         });
 
@@ -92,24 +92,67 @@ function loadGuidelines(guidelines, condition) {
     });
 }
 
-function openDrugDetailsModal(drug) {
-    const modal = document.getElementById('drugModal');
-    const nameElement = document.getElementById('drugName');
-    const attributesElement = document.getElementById('drugAttributes');
+function loadDrugDetails(drug) {
+    const container = document.getElementById('grid-container');
+    const drugDetailsContainer = document.createElement('div');
+    drugDetailsContainer.className = 'drug-details';
 
-    nameElement.textContent = drug.name;
-    attributesElement.innerHTML = ''; // Clear previous content
+    // Display drug name
+    const drugName = document.createElement('h3');
+    drugName.textContent = drug.name;
+    drugDetailsContainer.appendChild(drugName);
 
-    // Dynamically create a list of attributes
+    // Display drug attributes
+    const drugAttributes = document.createElement('div');
+    drugAttributes.className = 'drug-attributes';
     for (const [key, value] of Object.entries(drug)) {
-        if (key !== 'name') { // Avoid repeating the drug name
+        if (key !== 'name') {
             const detailItem = document.createElement('p');
             detailItem.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`;
-            attributesElement.appendChild(detailItem);
+            drugAttributes.appendChild(detailItem);
         }
     }
 
-    modal.style.display = 'block'; // Display the modal
+    // Display pie chart (example with static percentage, replace with actual data if available)
+    const pieChart = document.createElement('div');
+    pieChart.className = 'pie-chart';
+    pieChart.textContent = 'Effectiveness:';
+    const pieChartCanvas = document.createElement('canvas');
+    pieChartCanvas.width = 100;
+    pieChartCanvas.height = 100;
+    pieChart.appendChild(pieChartCanvas);
+    drugAttributes.appendChild(pieChart);
+
+    // Append attributes and pie chart to the details container
+    drugDetailsContainer.appendChild(drugAttributes);
+    container.appendChild(drugDetailsContainer);
+
+    // Draw pie chart
+    drawPieChart(pieChartCanvas, 75); // Example with 75% effectiveness
+}
+
+function drawPieChart(canvas, percentage) {
+    const ctx = canvas.getContext('2d');
+    const radius = canvas.width / 2;
+    const x = radius;
+    const y = radius;
+    const endAngle = (percentage / 100) * 2 * Math.PI;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw background circle
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, 2 * Math.PI);
+    ctx.fillStyle = '#ddd';
+    ctx.fill();
+
+    // Draw foreground arc
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.arc(x, y, radius, 0, endAngle);
+    ctx.lineTo(x, y);
+    ctx.fillStyle = percentage >= 50 ? '#00aa03' : '#ff0000'; // Green for >= 50%, red for < 50%
+    ctx.fill();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
