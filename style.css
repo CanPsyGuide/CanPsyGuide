@@ -1,29 +1,32 @@
 html, body {
-    height: 100%; /* Ensures the full height of the viewport is used */
+    height: 100%; 
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Keeps header, main, and footer vertically aligned */
-    justify-content: center; /* Centers content vertically when possible */
-    align-items: center; /* Horizontally centers all content */
+    flex-direction: column; 
     font-family: Arial, sans-serif;
 }
 
 header {
     text-align: center;
-    width: 100%; /* Full width of the header */
-    background-color: #0052aa; /* Darker blue for header */
-    color: white; /* White text in the header */
+    width: 100%; 
+    background-color: #0052aa; 
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 main {
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Switches to column to better manage space */
-    justify-content: center; /* Starts content from the top */
-    align-items: center; /* Centers items horizontally */
-    width: 100%; /* Full width of the main to align with the rest of the content */
-    flex: 1; /* Allows the main content to expand and use available space */
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    width: 100%; 
     padding: 20px;
+    overflow-y: auto;
 }
 
 .grid-container {
@@ -31,17 +34,16 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px; /* Spacing between buttons */
-    width: 100%; /* Adjusts the container width to fit screen size */
-    max-width: 600px; /* Limits max width for large screens */
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
 }
 
-/* For the main condition buttons, centered alignment */
 .grid-container-centered {
     display: flex;
-    flex-direction: row;  /* Horizontal direction */
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center; /* Center alignment for primary buttons */
+    justify-content: center;
     align-items: center;
     gap: 20px;
     width: 100%;
@@ -49,11 +51,10 @@ main {
     padding: 20px;
 }
 
-/* For the subclass buttons, vertical stack and centered */
 .grid-container-vertical {
     display: flex;
-    flex-direction: column;  /* Vertical stacking */
-    justify-content: center; /* Center alignment, vertically */
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     width: 100%;
@@ -61,22 +62,14 @@ main {
     padding: 20px;
 }
 
-
-.grid-container {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .grid-item {
-    background-color: #0052aa; /* Consistent vibrant blue for the main condition buttons */
+    background-color: #0052aa;
     color: white;
     border: none;
     padding: 15px 30px;
     font-size: 18px;
     cursor: pointer;
-    width: 180px; /* Fixed width to ensure uniform size */
+    width: 180px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -84,59 +77,32 @@ main {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Hover effect for both main and subclass buttons */
-.grid-item:hover, .back-button:hover {
+.grid-item:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
-
-
-
 
 footer {
     text-align: center;
     width: 100%;
     padding: 20px;
-    background-color: #f3f3f3; /* Light gray background for the footer */
-    color: black; /* Ensuring text is visible */
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-h1 {
-    margin: 0; /* Removes default margin */
-    flex-grow: 1; /* Allows the title to take up the necessary space pushing the button right */
-}
-
-
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #0052aa;
-    color: white;
-}
-
-/* Wrapping the header and back button in a container for better alignment control */
-.header-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    background-color: #f3f3f3; 
+    color: black;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
 }
 
 .navigation {
     display: flex;
-    justify-content: flex-end; /* Aligns the button to the right */
+    justify-content: flex-end;
     padding: 0 20px;
-    margin-bottom: 20px; /* Ensures separation from main content */
+    margin-bottom: 20px;
 }
 
 .back-button {
-    margin-top:10px;
-    background-color: #00aa03; /* Main theme color */
+    margin-top: 10px;
+    background-color: #00aa03; 
     color: white;
     padding: 10px 20px;
     font-size: 16px;
@@ -144,27 +110,22 @@ header {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     cursor: pointer;
-    margin-right: 10px; /* Spacing between buttons */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .back-button:hover {
-    background-color: #0052aa; /* Darker shade for hover effect */
+    background-color: #0052aa; 
 }
 
-
-
-
-
-
 .subclass-button, .guideline-button {
-    background-color: #0052aa; /* A distinct color for subclass buttons */
+    background-color: #0052aa;
     color: white;
     border: none;
     padding: 12px 25px;
     font-size: 16px;
     cursor: pointer;
-    width: 160px; /* Slightly smaller width */
+    width: 160px;
     height: 65px;
     text-align: center;
     border-radius: 8px;
@@ -173,13 +134,10 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
-
-
-/* The Modal (background) */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1001;
     left: 0;
     top: 0;
     width: 100%;
@@ -212,69 +170,64 @@ header {
 }
 
 .accordion {
-    background-color: #0052aa;  /* Dark blue, similar to subclass buttons */
+    background-color: #0052aa;
     color: white;
     cursor: pointer;
-    padding: 12px 25px;  /* Similar padding to your subclass buttons */
+    padding: 12px 25px;
     width: 100%;
     border: none;
     text-align: center;
     outline: none;
     font-size: 16px;
     transition: 0.4s;
-    border-radius: 8px;  /* Rounded edges similar to other buttons */
-    box-shadow: 0 3px 6px rgba(0,0,0,0.25);  /* Consistent shadow effect */
-    margin: 8px 0;  /* Adds vertical spacing */
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    margin: 8px 0;
 }
 
 .accordion:hover, .accordion.active {
-    background-color: #004080;  /* A darker shade on hover and active */
+    background-color: #004080;
 }
 
 .active {
-    background-color: #ccc; /* Active color */
+    background-color: #ccc;
 }
-
 
 .panel {
-    padding: 0;  /* Remove padding that might clip the corners */
+    padding: 0;
     background-color: white;
     max-height: 0;
-    overflow: hidden;  /* Check if overflow is clipping the borders */
+    overflow: hidden;
     transition: max-height 0.2s ease-out;
-    width: 100%;  /* Ensure panel also spans full width */
+    width: 100%;
 }
-
 
 .drug-menu-item {
     padding: 10px;
-    background-color: #e8e8e8;  /* Light grey for a softer appearance */
+    background-color: #e8e8e8;
     color: black;
     cursor: pointer;
     border: none;
     text-align: center;
     width: 100%;
-    box-sizing: border-box;  /* Ensures padding is included in width calculation */
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);  /* Subtle shadow for depth */
-    margin-top: 2px;  /* Slight separation from the accordion header */
-    border-radius: 5px;  /* Ensures all corners are rounded */
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    margin-top: 2px;
+    border-radius: 5px;
 }
 
 .drug-menu-item:hover {
-    background-color: #d0d0d0;  /* Slightly darker on hover for interactivity */
+    background-color: #d0d0d0;
 }
 
-
-
-/* Media Queries for Responsive Adjustments */
 @media (max-height: 600px) {
     main {
-        justify-content: center; /* Centers content vertically on small screens */
+        justify-content: center;
     }
     .grid-container {
-        gap: 10px; /* Reduces gap between buttons on smaller screens */
+        gap: 10px;
     }
     .grid-item {
-        padding: 15px; /* Reduces padding inside buttons */
+        padding: 15px;
     }
 }

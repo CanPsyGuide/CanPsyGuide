@@ -16,7 +16,6 @@ function loadMainConditions() {
     backButton.style.display = 'none';
 }
 
-
 function loadSubclasses(condition) {
     const filePath = `guidelines/${condition}.json`;
     fetch(filePath)
@@ -47,9 +46,7 @@ function loadSubclasses(condition) {
         });
 }
 
-
 document.addEventListener('DOMContentLoaded', loadMainConditions);
-
 
 function loadGuidelines(guidelines, condition) {
     const container = document.getElementById('grid-container');
@@ -89,11 +86,11 @@ function loadGuidelines(guidelines, condition) {
                 panel.style.maxHeight = null;
             } else {
                 panel.style.maxHeight = panel.scrollHeight + "px";
+                panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
 }
-
 
 function openDrugDetailsModal(drug) {
     const modal = document.getElementById('drugModal');
@@ -126,7 +123,3 @@ function closeModal() {
     const modal = document.getElementById('drugModal');
     modal.style.display = 'none';
 }
-
-
-// for lst clicked guideline
-
