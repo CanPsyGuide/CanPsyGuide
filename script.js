@@ -1,6 +1,6 @@
 function loadMainConditions() {
     const container = document.getElementById('grid-container');
-    container.className = 'grid-container grid-container-centered'; 
+    container.className = 'grid-container grid-container-centered';
     container.innerHTML = '';
 
     const conditions = ['depression', 'anxiety', 'bipolar', 'schizophrenia'];
@@ -73,7 +73,7 @@ function loadGuidelines(guidelines, condition) {
             const drugLink = document.createElement('div');
             drugLink.className = 'drug-menu-item';
             drugLink.innerText = drug.name;
-            drugLink.onclick = () => loadDrugDetails(drug);
+            drugLink.onclick = () => toggleDrugDetails(drug, drugLink);
             drugsContainer.appendChild(drugLink);
         });
 
@@ -92,19 +92,19 @@ function loadGuidelines(guidelines, condition) {
     });
 }
 
-function loadDrugDetails(drug) {
-    const container = document.getElementById('grid-container');
+function toggleDrugDetails(drug, drugLink) {
+    let existingDetails = drugLink.nextElementSibling;
+    if (existingDetails && existingDetails.classList.contains('drug-details')) {
+        existingDetails.remove();
+        return;
+    }
+
     const drugDetailsContainer = document.createElement('div');
     drugDetailsContainer.className = 'drug-details';
 
-    // Display drug name
-    const drugName = document.createElement('h3');
-    drugName.textContent = drug.name;
-    drugDetailsContainer.appendChild(drugName);
-
-    // Display drug attributes
     const drugAttributes = document.createElement('div');
     drugAttributes.className = 'drug-attributes';
+
     for (const [key, value] of Object.entries(drug)) {
         if (key !== 'name') {
             const detailItem = document.createElement('p');
@@ -113,7 +113,6 @@ function loadDrugDetails(drug) {
         }
     }
 
-    // Display pie chart (example with static percentage, replace with actual data if available)
     const pieChart = document.createElement('div');
     pieChart.className = 'pie-chart';
     pieChart.textContent = 'Effectiveness:';
@@ -123,15 +122,20 @@ function loadDrugDetails(drug) {
     pieChart.appendChild(pieChartCanvas);
     drugAttributes.appendChild(pieChart);
 
-    // Append attributes and pie chart to the details container
     drugDetailsContainer.appendChild(drugAttributes);
-    container.appendChild(drugDetailsContainer);
+    drugLink.after(drugDetailsContainer);
 
-    // Draw pie chart
-    drawPieChart(pieChartCanvas, 75); // Example with 75% effectiveness
+    drawPieChart(pieChartCanvas, 75);
 
-    // Add swipe event listeners
     addSwipeListeners(drugDetailsContainer);
+
+    var panel = drugLink.nextElementSibling;
+    if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+    } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 function drawPieChart(canvas, percentage) {
@@ -143,18 +147,16 @@ function drawPieChart(canvas, percentage) {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw background circle
     ctx.beginPath();
     ctx.arc(x, y, radius, 0, 2 * Math.PI);
     ctx.fillStyle = '#ddd';
     ctx.fill();
 
-    // Draw foreground arc
     ctx.beginPath();
     ctx.moveTo(x, y);
     ctx.arc(x, y, radius, 0, endAngle);
     ctx.lineTo(x, y);
-    ctx.fillStyle = percentage >= 50 ? '#00aa03' : '#ff0000'; // Green for >= 50%, red for < 50%
+    ctx.fillStyle = percentage >= 50 ? '#00aa03' : '#ff0000';
     ctx.fill();
 }
 
@@ -172,10 +174,7 @@ function addSwipeListeners(element) {
     }, false);
 
     function handleSwipe() {
-        if (touchendX < touchstartX) {
-            element.remove();
-        }
-        if (touchendX > touchstartX) {
+        if (touchendX < touchstartX || touchendX > touchstartX) {
             element.remove();
         }
     }
