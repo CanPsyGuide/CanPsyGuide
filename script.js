@@ -96,7 +96,10 @@ function toggleDrugDetails(drug, drugLink) {
     let existingDetails = drugLink.nextElementSibling;
     if (existingDetails && existingDetails.classList.contains('drug-details')) {
         existingDetails.style.maxHeight = 0; // Start the transition
-        setTimeout(() => existingDetails.remove(), 300); // Wait for the transition to complete before removing
+        existingDetails.addEventListener('transitionend', function handleTransitionEnd() {
+            existingDetails.remove();
+            existingDetails.removeEventListener('transitionend', handleTransitionEnd);
+        });
         return;
     }
 
@@ -144,6 +147,7 @@ function toggleDrugDetails(drug, drugLink) {
         panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
+
 
 
 function drawPieChart(canvas, percentage) {
