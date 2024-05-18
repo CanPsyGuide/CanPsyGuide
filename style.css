@@ -103,8 +103,18 @@ footer {
     display: flex;
     justify-content: flex-end;
     padding: 0 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
+
+.navbar {
+    margin-bottom: 1rem; /* Responsive unit */
+  }
+  
+  .main-content {
+    margin-top: 1rem; /* Responsive unit */
+  }
+  
+
 
 .back-button {
     margin-top: 10px;
@@ -233,14 +243,6 @@ footer {
 }
 
 
-.pie-chart {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    width: 50px;
-    height: 50px;
-}
 
 
 
@@ -276,3 +278,9 @@ footer,
         font-size: 0.8em; /* Adjust font size if needed */
     }
 }
+
+
+* {
+    box-sizing: border-box;
+  }
+  
