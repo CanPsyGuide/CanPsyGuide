@@ -113,26 +113,31 @@ function toggleDrugDetails(drug, drugLink) {
     drugAttributes.className = 'drug-attributes';
 
     for (const [key, value] of Object.entries(drug)) {
-        if (key !== 'name') {
+        if (key !== 'name' && key !== 'LOE') {
+            const title = document.createElement('h4');
+            title.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}`;
             const detailItem = document.createElement('p');
-            detailItem.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`;
+            detailItem.textContent = value;
+            drugAttributes.appendChild(title);
             drugAttributes.appendChild(detailItem);
         }
     }
 
+    const loeTitle = document.createElement('h4');
+    loeTitle.textContent = 'Level of Evidence';
     const pieChart = document.createElement('div');
     pieChart.className = 'pie-chart';
-    pieChart.textContent = 'Effectiveness:';
     const pieChartCanvas = document.createElement('canvas');
-    pieChartCanvas.width = 100;
-    pieChartCanvas.height = 100;
+    pieChartCanvas.width = 50;
+    pieChartCanvas.height = 50;
     pieChart.appendChild(pieChartCanvas);
+    drugAttributes.appendChild(loeTitle);
     drugAttributes.appendChild(pieChart);
 
     drugDetailsContainer.appendChild(drugAttributes);
     drugLink.after(drugDetailsContainer);
 
-    drawPieChart(pieChartCanvas, 75);
+    drawChart(pieChartCanvas, drug.LOE);
 
     addSwipeListeners(drugDetailsContainer);
 
@@ -151,27 +156,109 @@ function toggleDrugDetails(drug, drugLink) {
     }
 }
 
-function drawPieChart(canvas, percentage) {
+function drawChart(canvas, loe) {
+    canvas.width = 60;  // Increased size to allow for padding
+    canvas.height = 60; // Increased size to allow for padding
+
     const ctx = canvas.getContext('2d');
-    const radius = canvas.width / 2;
-    const x = radius;
-    const y = radius;
-    const endAngle = (percentage / 100) * 2 * Math.PI;
+    const width = canvas.width;
+    const height = canvas.height;
+    const radius = width / 2 - 2; // Adjust radius to allow for padding
+    const centerX = width / 2;
+    const centerY = height / 2;
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // Convert LOE to a number
+    const loeValue = parseInt(loe, 10);
 
-    ctx.beginPath();
-    ctx.arc(x, y, radius, 0, 2 * Math.PI);
-    ctx.fillStyle = '#ddd';
-    ctx.fill();
+    ctx.clearRect(0, 0, width, height);
 
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.arc(x, y, radius, 0, endAngle);
-    ctx.lineTo(x, y);
-    ctx.fillStyle = percentage >= 50 ? '#00aa03' : '#ff0000';
-    ctx.fill();
+    if (loeValue > 0) {
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+
+        switch (loeValue) {
+            case 1:
+                // Full circle
+                ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+                break;
+            case 2:
+                // Three-quarters circle (leave out top right quadrant)
+                ctx.arc(centerX, centerY, radius, 0, 1.5 * Math.PI);
+                break;
+            case 3:
+                // Half circle (leave out right half)
+                ctx.arc(centerX, centerY, radius, 0.5 * Math.PI, 1.5 * Math.PI);
+                break;
+            case 4:
+                // Quarter circle (leave out top right and bottom right quadrants, fill top left)
+                ctx.arc(centerX, centerY, radius, 0.5 * Math.PI, -0.5 * Math.PI);
+                break;
+        }
+
+        ctx.lineTo(centerX, centerY);
+        ctx.fillStyle = '#00aa03';
+        ctx.fill();
+
+        // Draw the outline
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = '#00aa03';
+        ctx.stroke();
+    } else {
+        ctx.beginPath();
+        switch (loeValue) {
+            case -1:
+                // Full square
+                ctx.rect(0, 0, width, height);
+                ctx.fillStyle = '#ff0000';
+                ctx.fill();
+                break;
+            case -2:
+                // Exclude the bottom right quadrant
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(width, centerY);
+                ctx.lineTo(width, height);
+                ctx.lineTo(0, height);
+                ctx.lineTo(0, 0);
+                ctx.lineTo(centerX, 0);
+                ctx.closePath();
+                ctx.fillStyle = '#ff0000';
+                ctx.fill();
+                break;
+            case -3:
+                // Exclude the bottom half
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(width, centerY);
+                ctx.lineTo(width, height);
+                ctx.lineTo(0, height);
+                ctx.lineTo(0, centerY);
+                ctx.closePath();
+                ctx.fillStyle = '#ff0000';
+                ctx.fill();
+                break;
+            case -4:
+                // Only the top left quadrant
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(centerX, 0);
+                ctx.lineTo(0, 0);
+                ctx.lineTo(0, centerY);
+                ctx.closePath();
+                ctx.fillStyle = '#ff0000';
+                ctx.fill();
+                break;
+        }
+        // Draw the outline
+        ctx.beginPath();
+        ctx.rect(0, 0, width, height);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = '#ff0000';
+        ctx.stroke();
+    }
 }
+
+
+
 
 function addSwipeListeners(element) {
     let touchstartX = 0;
