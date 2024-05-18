@@ -148,8 +148,6 @@ function toggleDrugDetails(drug, drugLink) {
     }
 }
 
-
-
 function drawPieChart(canvas, percentage) {
     const ctx = canvas.getContext('2d');
     const radius = canvas.width / 2;
@@ -174,20 +172,33 @@ function drawPieChart(canvas, percentage) {
 
 function addSwipeListeners(element) {
     let touchstartX = 0;
+    let touchstartY = 0;
     let touchendX = 0;
+    let touchendY = 0;
 
     element.addEventListener('touchstart', function(event) {
         touchstartX = event.changedTouches[0].screenX;
+        touchstartY = event.changedTouches[0].screenY;
     }, false);
 
     element.addEventListener('touchend', function(event) {
         touchendX = event.changedTouches[0].screenX;
+        touchendY = event.changedTouches[0].screenY;
         handleSwipe();
     }, false);
 
     function handleSwipe() {
-        if (touchendX < touchstartX || touchendX > touchstartX) {
-            element.remove();
+        const dx = touchendX - touchstartX;
+        const dy = touchendY - touchstartY;
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+            // Horizontal swipe detected
+            if (dx > 0 || dx < 0) {
+                element.style.maxHeight = 0; // Start the transition
+                element.addEventListener('transitionend', function handleTransitionEnd() {
+                    element.remove();
+                    element.removeEventListener('transitionend', handleTransitionEnd);
+                });
+            }
         }
     }
 }
