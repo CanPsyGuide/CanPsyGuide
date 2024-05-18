@@ -129,7 +129,6 @@ function toggleDrugDetails(drug, drugLink) {
 
     addSwipeListeners(drugDetailsContainer);
 
-    drugDetailsContainer.style.maxHeight = drugDetailsContainer.scrollHeight + "px";
     adjustHeight(drugLink);
 }
 

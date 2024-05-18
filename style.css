@@ -39,7 +39,7 @@ main {
     gap: 20px;
     width: 100%;
     max-width: 600px;
-    overflow-y: visible; /* Allow content to overflow */
+    overflow-y: auto;
 }
 
 .grid-container-centered {
@@ -64,6 +64,7 @@ main {
     max-width: 600px;
     padding: 20px;
     overflow-y: visible; /* Allow content to overflow */
+    
 }
 
 .grid-item {
