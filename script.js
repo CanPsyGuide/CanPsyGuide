@@ -96,6 +96,7 @@ function toggleDrugDetails(drug, drugLink) {
     let existingDetails = drugLink.nextElementSibling;
     if (existingDetails && existingDetails.classList.contains('drug-details')) {
         existingDetails.style.maxHeight = 0; // Start the transition
+        existingDetails.style.padding = '0 20px'; // Adjust padding for transition
         existingDetails.addEventListener('transitionend', function handleTransitionEnd() {
             existingDetails.remove();
             existingDetails.removeEventListener('transitionend', handleTransitionEnd);
@@ -106,6 +107,7 @@ function toggleDrugDetails(drug, drugLink) {
     const drugDetailsContainer = document.createElement('div');
     drugDetailsContainer.className = 'drug-details';
     drugDetailsContainer.style.maxHeight = 0; // Start with zero height for animation
+    drugDetailsContainer.style.padding = '0 20px'; // Adjust padding for transition
 
     const drugAttributes = document.createElement('div');
     drugAttributes.className = 'drug-attributes';
@@ -136,6 +138,7 @@ function toggleDrugDetails(drug, drugLink) {
 
     setTimeout(() => {
         drugDetailsContainer.style.maxHeight = drugDetailsContainer.scrollHeight + "px";
+        drugDetailsContainer.style.padding = '20px'; // Adjust padding for transition
         adjustHeight(drugLink);
     }, 10); // Allow a brief pause to apply the maxHeight
 
@@ -172,33 +175,25 @@ function drawPieChart(canvas, percentage) {
 
 function addSwipeListeners(element) {
     let touchstartX = 0;
-    let touchstartY = 0;
     let touchendX = 0;
-    let touchendY = 0;
 
     element.addEventListener('touchstart', function(event) {
         touchstartX = event.changedTouches[0].screenX;
-        touchstartY = event.changedTouches[0].screenY;
     }, false);
 
     element.addEventListener('touchend', function(event) {
         touchendX = event.changedTouches[0].screenX;
-        touchendY = event.changedTouches[0].screenY;
         handleSwipe();
     }, false);
 
     function handleSwipe() {
-        const dx = touchendX - touchstartX;
-        const dy = touchendY - touchstartY;
-        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
-            // Horizontal swipe detected
-            if (dx > 0 || dx < 0) {
-                element.style.maxHeight = 0; // Start the transition
-                element.addEventListener('transitionend', function handleTransitionEnd() {
-                    element.remove();
-                    element.removeEventListener('transitionend', handleTransitionEnd);
-                });
-            }
+        if (touchendX < touchstartX || touchendX > touchstartX) {
+            element.style.maxHeight = 0; // Start the transition
+            element.style.padding = '0 20px'; // Adjust padding for transition
+            element.addEventListener('transitionend', function handleTransitionEnd() {
+                element.remove();
+                element.removeEventListener('transitionend', handleTransitionEnd);
+            });
         }
     }
 }
@@ -208,16 +203,4 @@ function adjustHeight(drugLink) {
     const guidelineButton = parentPanel.previousElementSibling;
     parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
     guidelineButton.classList.add('active');
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    const closeButton = document.querySelector('.modal .close');
-    if (closeButton) {
-        closeButton.onclick = closeModal;
-    }
-});
-
-function closeModal() {
-    const modal = document.getElementById('drugModal');
-    modal.style.display = 'none';
 }
