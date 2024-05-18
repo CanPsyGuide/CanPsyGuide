@@ -129,13 +129,8 @@ function toggleDrugDetails(drug, drugLink) {
 
     addSwipeListeners(drugDetailsContainer);
 
-    var panel = drugLink.nextElementSibling;
-    if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-    } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    drugDetailsContainer.style.maxHeight = drugDetailsContainer.scrollHeight + "px";
+    adjustHeight(drugLink);
 }
 
 function drawPieChart(canvas, percentage) {
@@ -178,6 +173,13 @@ function addSwipeListeners(element) {
             element.remove();
         }
     }
+}
+
+function adjustHeight(drugLink) {
+    const parentPanel = drugLink.closest('.panel');
+    const guidelineButton = parentPanel.previousElementSibling;
+    parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
+    guidelineButton.classList.add('active');
 }
 
 document.addEventListener('DOMContentLoaded', function() {

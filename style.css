@@ -1,16 +1,16 @@
 html, body {
-    height: 100%; 
+    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     font-family: Arial, sans-serif;
 }
 
 header {
     text-align: center;
-    width: 100%; 
-    background-color: #0052aa; 
+    width: 100%;
+    background-color: #0052aa;
     color: white;
     padding: 20px;
     position: sticky;
@@ -21,19 +21,17 @@ header {
 main {
     flex: 1;
     display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: center; 
-    width: 100%; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
     padding: 20px;
     overflow-y: auto;
 }
 
 .grid-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
     width: 100%;
     max-width: 600px;
@@ -86,7 +84,7 @@ footer {
     text-align: center;
     width: 100%;
     padding: 20px;
-    background-color: #f3f3f3; 
+    background-color: #f3f3f3;
     color: black;
     position: sticky;
     bottom: 0;
@@ -102,7 +100,7 @@ footer {
 
 .back-button {
     margin-top: 10px;
-    background-color: #00aa03; 
+    background-color: #00aa03;
     color: white;
     padding: 10px 20px;
     font-size: 16px;
@@ -115,7 +113,7 @@ footer {
 }
 
 .back-button:hover {
-    background-color: #0052aa; 
+    background-color: #0052aa;
 }
 
 .subclass-button, .guideline-button {
