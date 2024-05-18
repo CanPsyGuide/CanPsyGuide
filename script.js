@@ -95,12 +95,14 @@ function loadGuidelines(guidelines, condition) {
 function toggleDrugDetails(drug, drugLink) {
     let existingDetails = drugLink.nextElementSibling;
     if (existingDetails && existingDetails.classList.contains('drug-details')) {
-        existingDetails.remove();
+        existingDetails.style.maxHeight = 0; // Start the transition
+        setTimeout(() => existingDetails.remove(), 300); // Wait for the transition to complete before removing
         return;
     }
 
     const drugDetailsContainer = document.createElement('div');
     drugDetailsContainer.className = 'drug-details';
+    drugDetailsContainer.style.maxHeight = 0; // Start with zero height for animation
 
     const drugAttributes = document.createElement('div');
     drugAttributes.className = 'drug-attributes';
@@ -129,8 +131,20 @@ function toggleDrugDetails(drug, drugLink) {
 
     addSwipeListeners(drugDetailsContainer);
 
-    adjustHeight(drugLink);
+    setTimeout(() => {
+        drugDetailsContainer.style.maxHeight = drugDetailsContainer.scrollHeight + "px";
+        adjustHeight(drugLink);
+    }, 10); // Allow a brief pause to apply the maxHeight
+
+    var panel = drugLink.nextElementSibling;
+    if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+    } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
+
 
 function drawPieChart(canvas, percentage) {
     const ctx = canvas.getContext('2d');
