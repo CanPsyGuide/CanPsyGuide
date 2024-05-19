@@ -5,7 +5,8 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
 }
 
 header {
@@ -36,7 +37,6 @@ footer {
     box-shadow: 0 -2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
 }
 
-
 main {
     flex: 1;
     display: flex;
@@ -59,7 +59,8 @@ main {
     width: 100%;
     max-width: 600px;
     padding: 20px;
-    overflow-y: visible;
+    overflow-y: visible; /* Allow vertical overflow */
+    overflow-x: hidden; /* Prevent horizontal overflow */
     margin-top: 0;
 }
 
@@ -82,7 +83,6 @@ main {
     background-color: #003f7f;
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
-
 
 .navigation {
     display: flex;
@@ -149,7 +149,8 @@ main {
     padding: 0;
     background-color: white;
     max-height: 0;
-    overflow: hidden;
+    overflow-y: auto; /* Allow vertical scrolling within the panel */
+    overflow-x: hidden; /* Prevent horizontal overflow */
     transition: max-height 0.2s ease-out;
     width: 100%;
 }
