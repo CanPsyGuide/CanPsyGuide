@@ -90,7 +90,7 @@ function loadGuidelines(guidelines, subclass, condition) {
             const drugLink = document.createElement('div');
             drugLink.className = 'drug-menu-item';
             drugLink.innerText = drug.name;
-            drugLink.onclick = () => toggleDrugDetails(drug, drugLink);
+            drugLink.onclick = (event) => toggleDrugDetails(drug, drugLink, event);
             drugsContainer.appendChild(drugLink);
         });
 
@@ -109,67 +109,70 @@ function loadGuidelines(guidelines, subclass, condition) {
     });
 }
 
-function toggleDrugDetails(drug, drugLink) {
-    let existingDetails = drugLink.nextElementSibling;
-    if (existingDetails && existingDetails.classList.contains('drug-details')) {
-        existingDetails.style.maxHeight = 0; // Start the transition
-        existingDetails.style.padding = '0 20px'; // Adjust padding for transition
-        existingDetails.addEventListener('transitionend', function handleTransitionEnd() {
-            existingDetails.remove();
-            existingDetails.removeEventListener('transitionend', handleTransitionEnd);
-        });
-        return;
-    }
-
-    const drugDetailsContainer = document.createElement('div');
-    drugDetailsContainer.className = 'drug-details';
-    drugDetailsContainer.style.maxHeight = 0; // Start with zero height for animation
-    drugDetailsContainer.style.padding = '0 20px'; // Adjust padding for transition
-
-    const drugAttributes = document.createElement('div');
-    drugAttributes.className = 'drug-attributes';
-
-    for (const [key, value] of Object.entries(drug)) {
-        if (key !== 'name' && key !== 'LOE') {
-            const title = document.createElement('h4');
-            title.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}`;
-            const detailItem = document.createElement('p');
-            detailItem.textContent = value;
-            drugAttributes.appendChild(title);
-            drugAttributes.appendChild(detailItem);
+function toggleDrugDetails(drug, drugLink, event) {
+    // Prevent the toggle if the click was part of a scroll
+    if (event.type === 'click') {
+        let existingDetails = drugLink.nextElementSibling;
+        if (existingDetails && existingDetails.classList.contains('drug-details')) {
+            existingDetails.style.maxHeight = 0; // Start the transition
+            existingDetails.style.padding = '0 20px'; // Adjust padding for transition
+            existingDetails.addEventListener('transitionend', function handleTransitionEnd() {
+                existingDetails.remove();
+                existingDetails.removeEventListener('transitionend', handleTransitionEnd);
+            });
+            return;
         }
-    }
 
-    const loeTitle = document.createElement('h4');
-    loeTitle.textContent = 'Level of Evidence';
-    const pieChart = document.createElement('div');
-    pieChart.className = 'pie-chart';
-    const pieChartCanvas = document.createElement('canvas');
-    pieChartCanvas.width = 50;
-    pieChartCanvas.height = 50;
-    pieChart.appendChild(pieChartCanvas);
-    drugAttributes.appendChild(loeTitle);
-    drugAttributes.appendChild(pieChart);
+        const drugDetailsContainer = document.createElement('div');
+        drugDetailsContainer.className = 'drug-details';
+        drugDetailsContainer.style.maxHeight = 0; // Start with zero height for animation
+        drugDetailsContainer.style.padding = '0 20px'; // Adjust padding for transition
 
-    drugDetailsContainer.appendChild(drugAttributes);
-    drugLink.after(drugDetailsContainer);
+        const drugAttributes = document.createElement('div');
+        drugAttributes.className = 'drug-attributes';
 
-    drawChart(pieChartCanvas, drug.LOE);
+        for (const [key, value] of Object.entries(drug)) {
+            if (key !== 'name' && key !== 'LOE') {
+                const title = document.createElement('h4');
+                title.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}`;
+                const detailItem = document.createElement('p');
+                detailItem.textContent = value;
+                drugAttributes.appendChild(title);
+                drugAttributes.appendChild(detailItem);
+            }
+        }
 
-    addSwipeListeners(drugDetailsContainer);
+        const loeTitle = document.createElement('h4');
+        loeTitle.textContent = 'Level of Evidence';
+        const pieChart = document.createElement('div');
+        pieChart.className = 'pie-chart';
+        const pieChartCanvas = document.createElement('canvas');
+        pieChartCanvas.width = 50;
+        pieChartCanvas.height = 50;
+        pieChart.appendChild(pieChartCanvas);
+        drugAttributes.appendChild(loeTitle);
+        drugAttributes.appendChild(pieChart);
 
-    setTimeout(() => {
-        drugDetailsContainer.style.maxHeight = drugDetailsContainer.scrollHeight + "px";
-        drugDetailsContainer.style.padding = '20px'; // Adjust padding for transition
-        adjustHeight(drugLink);
-    }, 10); // Allow a brief pause to apply the maxHeight
+        drugDetailsContainer.appendChild(drugAttributes);
+        drugLink.after(drugDetailsContainer);
 
-    var panel = drugLink.nextElementSibling;
-    if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-    } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        drawChart(pieChartCanvas, drug.LOE);
+
+        addSwipeListeners(drugDetailsContainer);
+
+        setTimeout(() => {
+            drugDetailsContainer.style.maxHeight = drugDetailsContainer.scrollHeight + "px";
+            drugDetailsContainer.style.padding = '20px'; // Adjust padding for transition
+            adjustHeight(drugLink);
+        }, 10); // Allow a brief pause to apply the maxHeight
+
+        var panel = drugLink.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     }
 }
 
