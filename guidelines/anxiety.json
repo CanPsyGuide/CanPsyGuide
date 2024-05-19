@@ -140,7 +140,7 @@
                         {"name": "Citalopram", "drugclass": "SSRI", "LOE": "3"},
                         {"name": "Fluoxetine", "drugclass": "SSRI", "LOE": "3"},
                         {"name": "Mirtazapine", "drugclass": "NaSSA", "LOE": 3},
-                        {"name": "Trazodone", "drugclass": "SARI", "LOE": 2, "notes": "At low doses, antagonizes 5-HT-2A, H1, and alpha-1 receptors; at higher doses antagonizes SERT (SRI) and 5HT2C"},
+                        {"name": "Trazodone", "drugclass": "SARI", "LOE": "2", "notes": "At low doses, antagonizes 5-HT-2A, H1, and alpha-1 receptors; at higher doses antagonizes SERT (SRI) and 5HT2C"},
                         {"name": "Divalproex Chrono", "drugclass": "Anticonvulsant", "LOE": "2"}
                     ]
                 },
