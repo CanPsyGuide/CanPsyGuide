@@ -9,7 +9,9 @@ html, body {
 }
 
 header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 75px;
     background-color: #0052aa;
@@ -18,7 +20,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    margin-bottom: 0;
     box-sizing: border-box; /* Include padding and border in element's total width */
 }
 
@@ -32,7 +33,6 @@ footer {
     position: sticky;
     bottom: 0;
     z-index: 1000;
-    margin-top: 0;
     box-sizing: border-box; /* Include padding and border in element's total width */
 }
 
@@ -56,7 +56,6 @@ main {
     width: 100%;
     max-width: 600px;
     overflow-y: auto;
-    margin-top: 0;
 }
 
 .grid-container-centered {
@@ -81,7 +80,6 @@ main {
     max-width: 600px;
     padding: 20px;
     overflow-y: visible; /* Allow content to overflow */
-    margin-top: 0;
 }
 
 .grid-item, .subclass-button, .guideline-button, .accordion, .drug-menu-item {
