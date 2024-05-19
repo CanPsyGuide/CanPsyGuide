@@ -8,12 +8,17 @@ function loadMainConditions() {
         const button = document.createElement('button');
         button.className = 'grid-item';
         button.innerText = condition.charAt(0).toUpperCase() + condition.slice(1);
-        button.onclick = () => loadSubclasses(condition);
+        button.onclick = () => {
+            loadSubclasses(condition);
+            updateHeaderTitle(condition.charAt(0).toUpperCase() + condition.slice(1));
+        };
         container.appendChild(button);
     });
 
     const backButton = document.getElementById('back-button');
     backButton.style.display = 'none';
+    const backToSubclassesButton = document.getElementById('back-to-subclasses-button');
+    backToSubclassesButton.style.display = 'none';
 }
 
 function loadSubclasses(condition) {
@@ -27,7 +32,10 @@ function loadSubclasses(condition) {
 
             const backButton = document.getElementById('back-button');
             backButton.style.display = 'block';
-            backButton.onclick = loadMainConditions;
+            backButton.onclick = () => {
+                loadMainConditions();
+                updateHeaderTitle('CanPsyGuide');
+            };
 
             const backToSubclassesButton = document.getElementById('back-to-subclasses-button');
             backToSubclassesButton.style.display = 'none';
@@ -36,7 +44,10 @@ function loadSubclasses(condition) {
                 const button = document.createElement('button');
                 button.className = 'subclass-button';
                 button.innerText = subclass.name;
-                button.onclick = () => loadGuidelines(subclass.guidelines, condition);
+                button.onclick = () => {
+                    loadGuidelines(subclass.guidelines, subclass.name, condition);
+                    updateHeaderTitle(subclass.name);
+                };
                 container.appendChild(button);
             });
         })
@@ -48,17 +59,23 @@ function loadSubclasses(condition) {
 
 document.addEventListener('DOMContentLoaded', loadMainConditions);
 
-function loadGuidelines(guidelines, condition) {
+function loadGuidelines(guidelines, subclass, condition) {
     const container = document.getElementById('grid-container');
     container.innerHTML = '';
 
     const backButton = document.getElementById('back-button');
     backButton.style.display = 'block';
-    backButton.onclick = () => loadMainConditions();
+    backButton.onclick = () => {
+        loadMainConditions();
+        updateHeaderTitle('CanPsyGuide');
+    };
 
     const backToSubclassesButton = document.getElementById('back-to-subclasses-button');
     backToSubclassesButton.style.display = 'block';
-    backToSubclassesButton.onclick = () => loadSubclasses(condition);
+    backToSubclassesButton.onclick = () => {
+        loadSubclasses(condition);
+        updateHeaderTitle(condition.charAt(0).toUpperCase() + condition.slice(1));
+    };
 
     guidelines.forEach(guide => {
         const guidelineButton = document.createElement('button');
@@ -155,7 +172,6 @@ function toggleDrugDetails(drug, drugLink) {
         panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
-
 
 function drawChart(canvas, loe) {
     canvas.width = 60;  // Increased size to allow for padding
@@ -258,8 +274,10 @@ function drawChart(canvas, loe) {
     }
 }
 
-
-
+function updateHeaderTitle(title) {
+    const header = document.querySelector('header h1');
+    header.textContent = title;
+}
 
 function addSwipeListeners(element) {
     let touchstartX = 0;

@@ -11,26 +11,31 @@ html, body {
 header {
     text-align: center;
     width: 100%;
-    height: 60px; /* Reduced height */
-    background-color: #0052aa;
+    height: 75px;
+    background: linear-gradient(90deg, #0052aa, #003f7f); /* Gradient background */
     color: white;
-    padding: 10px; /* Reduced padding */
+    padding: 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    margin-bottom: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
 }
 
 footer {
     text-align: center;
     width: 100%;
-    height: 40px; /* Reduced height */
-    padding: 10px; /* Reduced padding */
-    background-color: #f3f3f3;
+    height: 45px;
+    padding: 20px;
+    background: linear-gradient(90deg, #f3f3f3, #d0d0d0); /* Gradient background */
     color: black;
     position: sticky;
     bottom: 0;
     z-index: 1000;
+    margin-top: 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
 }
+
 
 main {
     flex: 1;
@@ -39,34 +44,13 @@ main {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    padding: 10px; /* Reduced padding */
-    overflow-y: auto; /* Allow main content to scroll */
-}
-
-.grid-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
-    max-width: 600px;
+    padding: 20px;
     overflow-y: auto;
+    background: #f3f3f3; /* Light background for contrast */
+    margin-top: 0; /* Add margin to separate from header */
 }
 
-.grid-container-centered {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 600px;
-    padding: 10px; /* Reduced padding */
-}
-
-.grid-container-vertical {
+.grid-container, .grid-container-centered, .grid-container-vertical {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,35 +58,41 @@ main {
     gap: 10px;
     width: 100%;
     max-width: 600px;
-    padding: 10px; /* Reduced padding */
-    overflow-y: visible; /* Allow content to overflow */
+    padding: 20px;
+    overflow-y: visible;
+    margin-top: 0;
 }
 
-.grid-item {
+.grid-item, .subclass-button, .guideline-button {
     background-color: #0052aa;
     color: white;
     border: none;
-    padding: 10px 20px; /* Reduced padding */
-    font-size: 16px; /* Reduced font size */
+    padding: 15px 30px;
+    font-size: 18px;
     cursor: pointer;
-    width: 160px; /* Reduced width */
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     margin: 10px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.grid-item:hover {
+.grid-item:hover, .subclass-button:hover, .guideline-button:hover {
     transform: scale(1.05);
+    background-color: #003f7f;
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
 
 .navigation {
     display: flex;
     justify-content: flex-end;
     padding: 0 10px; /* Reduced padding */
     margin-bottom: 10px;
+    position: fixed;
+    top: 70px; /* Position below the header */
+    right: 10px; /* Align to the right */
+    z-index: 1001; /* Ensure it is above other content */
 }
 
 .navbar {
@@ -131,40 +121,24 @@ main {
     background-color: #0052aa;
 }
 
-.subclass-button, .guideline-button {
-    background-color: #0052aa;
-    color: white;
-    border: none;
-    padding: 10px 20px; /* Reduced padding */
-    font-size: 14px; /* Reduced font size */
-    cursor: pointer;
-    width: auto;
-    height: auto;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
-    margin: 8px;
-    transition: transform 0.3s ease-in-out;
-}
-
 .accordion {
     background-color: #0052aa;
     color: white;
     cursor: pointer;
-    padding: 10px 20px; /* Reduced padding */
+    padding: 15px;
     width: 100%;
     border: none;
     text-align: center;
     outline: none;
-    font-size: 14px; /* Reduced font size */
-    transition: 0.4s;
+    font-size: 16px;
+    transition: 0.4s, background-color 0.3s ease-in-out;
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.25);
     margin: 8px 0;
 }
 
 .accordion:hover, .accordion.active {
-    background-color: #004080;
+    background-color: #003f7f;
 }
 
 .active {
@@ -201,7 +175,7 @@ main {
 .drug-details {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    padding: 15px; /* Reduced padding */
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     margin-bottom: 15px;
@@ -212,15 +186,23 @@ main {
     overflow: auto;
 }
 
+.drug-attributes h4 {
+    font-size: 14px;
+    color: #0052aa;
+    margin-bottom: 5px;
+}
+
 .drug-attributes p {
-    margin: 10px 0;
+    font-size: 12px;
+    color: #000000;
+    margin: 5px 0;
 }
 
 .pie-chart {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 .header-container, 
@@ -252,6 +234,33 @@ footer,
     footer {
         padding: 10px; /* Reduce padding to half */
         font-size: 0.8em; /* Adjust font size if needed */
+    }
+    .grid-item, .subclass-button, .guideline-button {
+        font-size: 16px;
+        padding: 10px 20px;
+        width: 150px;
+    }
+
+    .accordion {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+    .drug-details {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+    header {
+        height: 60px;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    footer {
+        height: 40px;
+        padding: 15px;
+        font-size: 14px;
     }
 }
 
