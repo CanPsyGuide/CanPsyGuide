@@ -156,6 +156,7 @@ function toggleDrugDetails(drug, drugLink) {
     }
 }
 
+
 function drawChart(canvas, loe) {
     canvas.width = 60;  // Increased size to allow for padding
     canvas.height = 60; // Increased size to allow for padding

@@ -11,27 +11,25 @@ html, body {
 header {
     text-align: center;
     width: 100%;
-    height: 75px;
+    height: 60px; /* Reduced height */
     background-color: #0052aa;
     color: white;
-    padding: 20px;
-    position:relative;
+    padding: 10px; /* Reduced padding */
+    position: sticky;
     top: 0;
     z-index: 1000;
-    margin-bottom: 0;
 }
 
 footer {
     text-align: center;
     width: 100%;
-    height: 45px;
-    padding: 20px;
+    height: 40px; /* Reduced height */
+    padding: 10px; /* Reduced padding */
     background-color: #f3f3f3;
     color: black;
     position: sticky;
     bottom: 0;
     z-index: 1000;
-    margin-bottom:15px;
 }
 
 main {
@@ -41,7 +39,7 @@ main {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    padding: 20px;
+    padding: 10px; /* Reduced padding */
     overflow-y: auto; /* Allow main content to scroll */
 }
 
@@ -54,7 +52,6 @@ main {
     width: 100%;
     max-width: 600px;
     overflow-y: auto;
-    margin-top:0;
 }
 
 .grid-container-centered {
@@ -66,7 +63,7 @@ main {
     gap: 20px;
     width: 100%;
     max-width: 600px;
-    padding: 20px;
+    padding: 10px; /* Reduced padding */
 }
 
 .grid-container-vertical {
@@ -77,20 +74,18 @@ main {
     gap: 10px;
     width: 100%;
     max-width: 600px;
-    padding: 20px;
+    padding: 10px; /* Reduced padding */
     overflow-y: visible; /* Allow content to overflow */
-    margin-top:0;
-    
 }
 
 .grid-item {
     background-color: #0052aa;
     color: white;
     border: none;
-    padding: 15px 30px;
-    font-size: 18px;
+    padding: 10px 20px; /* Reduced padding */
+    font-size: 16px; /* Reduced font size */
     cursor: pointer;
-    width: 180px;
+    width: 160px; /* Reduced width */
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -103,31 +98,27 @@ main {
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-
-
 .navigation {
     display: flex;
     justify-content: flex-end;
-    padding: 0 20px;
+    padding: 0 10px; /* Reduced padding */
     margin-bottom: 10px;
 }
 
 .navbar {
     margin-bottom: 1rem; /* Responsive unit */
-  }
-  
-  .main-content {
-    margin-top: 1rem; /* Responsive unit */
-  }
-  
+}
 
+.main-content {
+    margin-top: 1rem; /* Responsive unit */
+}
 
 .back-button {
     margin-top: 10px;
     background-color: #00aa03;
     color: white;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 8px 16px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
     border: none;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
@@ -144,8 +135,8 @@ main {
     background-color: #0052aa;
     color: white;
     border: none;
-    padding: 12px 25px;
-    font-size: 16px;
+    padding: 10px 20px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
     cursor: pointer;
     width: auto;
     height: auto;
@@ -160,12 +151,12 @@ main {
     background-color: #0052aa;
     color: white;
     cursor: pointer;
-    padding: 12px 25px;
+    padding: 10px 20px; /* Reduced padding */
     width: 100%;
     border: none;
     text-align: center;
     outline: none;
-    font-size: 16px;
+    font-size: 14px; /* Reduced font size */
     transition: 0.4s;
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.25);
@@ -201,7 +192,6 @@ main {
     box-shadow: 0 1px 2px rgba(0,0,0,0.1);
     margin-top: 2px;
     border-radius: 5px;
-
 }
 
 .drug-menu-item:hover {
@@ -211,7 +201,7 @@ main {
 .drug-details {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: 15px; /* Reduced padding */
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     margin-bottom: 15px;
@@ -220,39 +210,18 @@ main {
     height: auto;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     overflow: auto;
-
 }
-
-
-/* .drug-details {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    margin-top: 10px;
-    width: 100%;
-    max-width: 600px;
-} */
-
-
 
 .drug-attributes p {
     margin: 10px 0;
 }
 
-.drug-details {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 20px;
-    box-shadow: 2 3px 6px rgba(0,0,0,0.1);
-    width: 100%;
-    overflow: hidden;
+.pie-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
 }
-
-
-
-
 
 .header-container, 
 main, 
@@ -263,7 +232,6 @@ footer,
     width: 100vw; /* Ensure elements take full viewport width */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
-
 
 @media (max-height: 720px) {
     main {
@@ -287,8 +255,6 @@ footer,
     }
 }
 
-
 * {
     box-sizing: border-box;
-  }
-  
+}
