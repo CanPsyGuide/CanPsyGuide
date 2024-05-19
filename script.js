@@ -17,6 +17,8 @@ function loadMainConditions() {
 
     const backButton = document.getElementById('back-button');
     backButton.style.display = 'none';
+    const backToSubclassesButton = document.getElementById('back-to-subclasses-button');
+    backToSubclassesButton.style.display = 'none';
 }
 
 function loadSubclasses(condition) {
@@ -43,7 +45,7 @@ function loadSubclasses(condition) {
                 button.className = 'subclass-button';
                 button.innerText = subclass.name;
                 button.onclick = () => {
-                    loadGuidelines(subclass.guidelines, subclass.name);
+                    loadGuidelines(subclass.guidelines, subclass.name, condition);
                     updateHeaderTitle(subclass.name);
                 };
                 container.appendChild(button);
@@ -57,7 +59,7 @@ function loadSubclasses(condition) {
 
 document.addEventListener('DOMContentLoaded', loadMainConditions);
 
-function loadGuidelines(guidelines, subclass) {
+function loadGuidelines(guidelines, subclass, condition) {
     const container = document.getElementById('grid-container');
     container.innerHTML = '';
 
@@ -71,8 +73,8 @@ function loadGuidelines(guidelines, subclass) {
     const backToSubclassesButton = document.getElementById('back-to-subclasses-button');
     backToSubclassesButton.style.display = 'block';
     backToSubclassesButton.onclick = () => {
-        loadSubclasses(subclass);
-        updateHeaderTitle(subclass);
+        loadSubclasses(condition);
+        updateHeaderTitle(condition.charAt(0).toUpperCase() + condition.slice(1));
     };
 
     guidelines.forEach(guide => {
