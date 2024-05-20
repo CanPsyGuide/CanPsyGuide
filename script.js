@@ -161,7 +161,7 @@ function toggleDrugDetails(drug, drugLink, event) {
         addSwipeListeners(drugDetailsContainer);
 
         setTimeout(() => {
-            drugDetailsContainer.style.maxHeight = drugDetailsContainer.scrollHeight + "px";
+            drugDetailsContainer.style.maxHeight = "300px"; // Set max height
             drugDetailsContainer.style.padding = '20px'; // Adjust padding for transition
             adjustHeight(drugLink);
         }, 10); // Allow a brief pause to apply the maxHeight
@@ -175,6 +175,15 @@ function toggleDrugDetails(drug, drugLink, event) {
         }
     }
 }
+
+function adjustHeight(drugLink) {
+    const parentPanel = drugLink.closest('.panel');
+    const guidelineButton = parentPanel.previousElementSibling;
+    parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
+    guidelineButton.classList.add('active');
+}
+
+
 
 function drawChart(canvas, loe) {
     canvas.width = 60;  // Increased size to allow for padding

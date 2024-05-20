@@ -6,6 +6,11 @@ html, body {
     flex-direction: column;
     font-family: Arial, sans-serif;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+}
+
+body {
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 header {
@@ -44,7 +49,8 @@ main {
     align-items: center;
     width: 100%;
     padding: 20px;
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     background: #f3f3f3;
     margin-top: 0;
 }
@@ -52,13 +58,14 @@ main {
 .grid-container, .grid-container-centered, .grid-container-vertical {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
     width: 100%;
     max-width: 600px;
     padding: 20px;
     overflow-y: visible;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     margin-top: 0;
 }
 
@@ -179,9 +186,9 @@ main {
     margin-bottom: 15px;
     width: 100%;
     max-width: 600px;
-    height: auto;
+    max-height: 300px; /* Set max height for the details container */
+    overflow-y: auto; /* Enable vertical scrolling for drug details */
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    overflow: auto;
 }
 
 .drug-attributes h4 {
@@ -209,8 +216,8 @@ footer,
 .grid-container, 
 .grid-container-centered, 
 .grid-container-vertical {
-    width: 100vw; /* Ensure elements take full viewport width */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 @media (max-height: 720px) {
@@ -225,13 +232,13 @@ footer,
     }
 
     header {
-        padding: 10px; /* Reduce padding to half */
-        font-size: 0.8em; /* Adjust font size if needed */
+        padding: 10px;
+        font-size: 0.8em;
     }
 
     footer {
-        padding: 10px; /* Reduce padding to half */
-        font-size: 0.8em; /* Adjust font size if needed */
+        padding: 10px;
+        font-size: 0.8em;
     }
     .grid-item, .subclass-button, .guideline-button {
         font-size: 16px;
