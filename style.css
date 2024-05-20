@@ -196,6 +196,39 @@ main {
 }
 
 /* Container for drug details */
+/* Adjust the drug-attribute to display each item on its own row */
+.drug-attribute {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%; /* Ensure it takes up the full width */
+    margin-bottom: 5px;
+}
+
+.drug-attribute .title {
+    font-weight: bold;
+    margin-right: 5px;
+    white-space: nowrap;
+    color: #003f7f;
+}
+
+.drug-attribute .value {
+    flex: 1;
+    text-align: left;
+}
+
+/* Ensure the sections are displayed correctly */
+.section {
+    margin-bottom: 15px;
+}
+
+
+.attributes-container {
+    display: flex;
+    flex-direction: column; /* Ensure all attributes are in a single column */
+    gap: 5px;
+}
+
 .drug-details {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -210,65 +243,34 @@ main {
     overflow: auto;
 }
 
-.drug-header {
+.drug-header, .section-title {
     text-align: center;
     text-decoration: underline;
-    margin: 10px 0;
-    font-size: 20px;
-    color:#003f7f;
-}
-.section {
-    margin-bottom: 10px; /* Space between sections */
-}
-
-.section-title {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color:#003f7f;
-}
-
-.attributes-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px; /* Reduce gap for closer spacing */
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    max-width: 50%; /* Ensure two columns */
-}
-
-.drug-attribute {
-    display: flex;
-    align-items: center; /* Align items in the center vertically */
-    margin-bottom: 5px;
-    font-size: 14px; /* Adjust font size for better readability */
-}
-
-.drug-attribute .title {
-    font-weight: bold;
-    margin-right: 5px;
-    white-space: nowrap;
+    margin-bottom: 15px;
     color: #003f7f;
-    display: inline-block; 
 }
 
-.drug-attribute .value {
-    flex: 1;
-    text-align: left;
-    display: inline-block;
-    color:#003f7f;
-}
-
+/* Styling for the pie chart and thumbs up/down icons */
 .pie-chart {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    vertical-align: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
+
+.thumbs-up, .thumbs-down {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.thumbs-up {
+    color: green;
+}
+
+.thumbs-down {
+    color: red;
+}
+
 
 .pie-chart canvas {
     width: 100%; /* Ensure canvas fits the container */

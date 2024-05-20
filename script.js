@@ -131,7 +131,7 @@ function createElementForKeyAndValue(key, value) {
 
     const title = document.createElement('span');
     title.className = 'title';
-    title.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}: `;
+    title.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}  `;
     element.appendChild(title);
 
     const valueSpan = document.createElement('span');
