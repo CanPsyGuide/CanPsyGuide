@@ -292,7 +292,11 @@ function drawChart(canvas, loe) {
 
 function updateHeaderTitle(title) {
     const header = document.querySelector('header h1');
-    header.textContent = title;
+    if (title.length > 25) { 
+        header.textContent = title.slice(0, 25) + '...'; 
+    } else {
+        header.textContent = title;
+    }
 }
 
 function addSwipeListeners(element) {
