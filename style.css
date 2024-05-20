@@ -5,26 +5,21 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    width: 100%;
-}
-
-body {
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden;
 }
 
 header {
     text-align: center;
     width: 100%;
     height: 75px;
-    background: linear-gradient(90deg, #0052aa, #003f7f);
+    background: linear-gradient(90deg, #0052aa, #003f7f); /* Gradient background */
     color: white;
     padding: 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
     margin-bottom: 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
 }
 
 footer {
@@ -32,14 +27,15 @@ footer {
     width: 100%;
     height: 45px;
     padding: 20px;
-    background: linear-gradient(90deg, #f3f3f3, #d0d0d0);
+    background: linear-gradient(90deg, #f3f3f3, #d0d0d0); /* Gradient background */
     color: black;
     position: sticky;
     bottom: 0;
     z-index: 1000;
     margin-top: 0;
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
 }
+
 
 main {
     flex: 1;
@@ -50,22 +46,20 @@ main {
     width: 100%;
     padding: 20px;
     overflow-y: auto;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    background: #f3f3f3;
-    margin-top: 0;
+    background: #f3f3f3; /* Light background for contrast */
+    margin-top: 0; /* Add margin to separate from header */
 }
 
 .grid-container, .grid-container-centered, .grid-container-vertical {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     width: 100%;
     max-width: 600px;
     padding: 20px;
     overflow-y: visible;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
     margin-top: 0;
 }
 
@@ -89,31 +83,32 @@ main {
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
+
 .navigation {
     display: flex;
     justify-content: flex-end;
-    padding: 0 10px;
+    padding: 0 10px; /* Reduced padding */
     margin-bottom: 10px;
     position: fixed;
-    top: 70px;
-    right: 10px;
-    z-index: 1001;
+    top: 70px; /* Position below the header */
+    right: 10px; /* Align to the right */
+    z-index: 1001; /* Ensure it is above other content */
 }
 
 .navbar {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Responsive unit */
 }
 
 .main-content {
-    margin-top: 1rem;
+    margin-top: 1rem; /* Responsive unit */
 }
 
 .back-button {
     margin-top: 10px;
     background-color: #00aa03;
     color: white;
-    padding: 8px 16px;
-    font-size: 14px;
+    padding: 8px 16px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
     border: none;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
@@ -186,9 +181,9 @@ main {
     margin-bottom: 15px;
     width: 100%;
     max-width: 600px;
-    max-height: 300px; /* Set max height for the details container */
-    overflow-y: auto; /* Enable vertical scrolling for drug details */
+    height: auto;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    overflow: auto;
 }
 
 .drug-attributes h4 {
@@ -216,8 +211,8 @@ footer,
 .grid-container, 
 .grid-container-centered, 
 .grid-container-vertical {
-    width: 100%;
-    box-sizing: border-box;
+    width: 100vw; /* Ensure elements take full viewport width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 @media (max-height: 720px) {
@@ -232,13 +227,13 @@ footer,
     }
 
     header {
-        padding: 10px;
-        font-size: 0.8em;
+        padding: 10px; /* Reduce padding to half */
+        font-size: 0.8em; /* Adjust font size if needed */
     }
 
     footer {
-        padding: 10px;
-        font-size: 0.8em;
+        padding: 10px; /* Reduce padding to half */
+        font-size: 0.8em; /* Adjust font size if needed */
     }
     .grid-item, .subclass-button, .guideline-button {
         font-size: 16px;

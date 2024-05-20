@@ -161,7 +161,7 @@ function toggleDrugDetails(drug, drugLink, event) {
         addSwipeListeners(drugDetailsContainer);
 
         setTimeout(() => {
-            drugDetailsContainer.style.maxHeight = "300px"; // Set max height
+            drugDetailsContainer.style.maxHeight = drugDetailsContainer.scrollHeight + "px";
             drugDetailsContainer.style.padding = '20px'; // Adjust padding for transition
             adjustHeight(drugLink);
         }, 10); // Allow a brief pause to apply the maxHeight
@@ -182,7 +182,6 @@ function adjustHeight(drugLink) {
     parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
     guidelineButton.classList.add('active');
 }
-
 
 
 function drawChart(canvas, loe) {
