@@ -5,7 +5,12 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+}
+
+body {
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 header {
@@ -36,7 +41,6 @@ footer {
     box-shadow: 0 -2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
 }
 
-
 main {
     flex: 1;
     display: flex;
@@ -53,7 +57,7 @@ main {
 .grid-container, .grid-container-centered, .grid-container-vertical {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
     width: 100%;
@@ -82,7 +86,6 @@ main {
     background-color: #003f7f;
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
-
 
 .navigation {
     display: flex;
@@ -211,7 +214,7 @@ footer,
 .grid-container, 
 .grid-container-centered, 
 .grid-container-vertical {
-    width: 100vw; /* Ensure elements take full viewport width */
+    width: 100%; /* Ensure elements take full viewport width */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
