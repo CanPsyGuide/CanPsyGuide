@@ -17,14 +17,11 @@
                             "Cognitive Dysfunction": "2",
                             "Fatigue": "2",
                             "notes": "Monitor QTc",
-                            "Efficacy": "",
                             "Acceptability": "1",
                             "Drug Interactions": "1",
                             "Discontinuation Syndrome": "1",
-                            "Sedation": "",
                             "Weight Gain": "1",
-                            "Sexual Dysfunction": "-1",
-                            "Other Tolerability": ""
+                            "Sexual Dysfunction": "-1"
                         },
                         {
                             "name": "Escitalopram",
@@ -33,7 +30,6 @@
                             "LOE": "1",
                             "Cognitive Dysfunction": "2",
                             "Fatigue": "2",
-                            "notes": "",
                             "Efficacy": "1",
                             "Acceptability": "1",
                             "Drug Interactions": "1",
@@ -50,7 +46,6 @@
                             "LOE": "1",
                             "Cognitive Dysfunction": "2",
                             "Fatigue": "2",
-                            "notes": "",
                             "Efficacy": "1",
                             "Acceptability": "-1",
                             "Drug Interactions": "1",
@@ -67,15 +62,12 @@
                             "LOE": "1",
                             "Cognitive Dysfunction": "2",
                             "Fatigue": "2",
-                            "notes": "",
-                            "Efficacy": "",
                             "Acceptability": "-1",
                             "Drug Interactions": "1",
                             "Discontinuation Syndrome": "1",
                             "Sedation": "1",
                             "Weight Gain": "-1",
-                            "Sexual Dysfunction": "1",
-                            "Other Tolerability": ""
+                            "Sexual Dysfunction": "1"
                         },
                         {
                             "name": "Paroxetine",
@@ -84,15 +76,12 @@
                             "LOE": "1",
                             "Cognitive Dysfunction": "2",
                             "Fatigue": "2",
-                            "notes": "",
                             "Efficacy": "1",
-                            "Acceptability": "",
                             "Drug Interactions": "-1",
                             "Discontinuation Syndrome": "-1",
                             "Sedation": "-1",
                             "Weight Gain": "-1",
-                            "Sexual Dysfunction": "-1",
-                            "Other Tolerability": ""
+                            "Sexual Dysfunction": "-1"
                         },
                         {
                             "name": "Sertraline",
@@ -101,15 +90,11 @@
                             "LOE": "1",
                             "Cognitive Dysfunction": "2",
                             "Fatigue": "2",
-                            "notes": "",
                             "Efficacy": "1",
                             "Acceptability": "1",
-                            "Drug Interactions": "",
                             "Discontinuation Syndrome": "1",
-                            "Sedation": "",
                             "Weight Gain": "1",
-                            "Sexual Dysfunction": "1",
-                            "Other Tolerability": ""
+                            "Sexual Dysfunction": "1"
                         },
                         {
                             "name": "Desvenlafaxine",
@@ -117,15 +102,13 @@
                             "dose": "50-100 mg",
                             "LOE": "1",
                             "Pain": "2",
-                            "notes": "",
                             "Efficacy": "1",
                             "Acceptability": "1",
                             "Drug Interactions": "1",
                             "Discontinuation Syndrome": "1",
                             "Sedation": "1",
                             "Weight Gain": "1",
-                            "Sexual Dysfunction": "1",
-                            "Other Tolerability": ""
+                            "Sexual Dysfunction": "1"
                         },
                         {
                             "name": "Duloxetine",
@@ -135,15 +118,10 @@
                             "Pain": "1",
                             "Fatigue": "2",
                             "Cognitive Dysfunction": "2",
-                            "notes": "",
                             "Efficacy": "1",
                             "Acceptability": "1",
                             "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "-1",
-                            "Sedation": "",
-                            "Weight Gain": "",
-                            "Sexual Dysfunction": "",
-                            "Other Tolerability": ""
+                            "Discontinuation Syndrome": "-1"
                         },
                         {
                             "name": "Levomilnacipran",
@@ -155,11 +133,7 @@
                             "Efficacy": "1",
                             "Acceptability": "1",
                             "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "1",
-                            "Sedation": "",
-                            "Weight Gain": "",
-                            "Sexual Dysfunction": "",
-                            "Other Tolerability": ""
+                            "Discontinuation Syndrome": "1"
                         },
                         {
                             "name": "Venlafaxine-XR",

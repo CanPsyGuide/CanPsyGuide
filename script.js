@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', loadMainConditions);
+
+function updateHeaderTitle(title) {
+    const header = document.querySelector('header h1');
+    if (title.length > 25) { 
+        header.textContent = title.slice(0, 25) + '...'; 
+    } else {
+        header.textContent = title;
+    }
+}
+
 function loadMainConditions() {
     const container = document.getElementById('grid-container');
     container.className = 'grid-container grid-container-centered';
@@ -57,8 +68,6 @@ function loadSubclasses(condition) {
         });
 }
 
-document.addEventListener('DOMContentLoaded', loadMainConditions);
-
 function loadGuidelines(guidelines, subclass, condition) {
     const container = document.getElementById('grid-container');
     container.innerHTML = '';
@@ -109,12 +118,114 @@ function loadGuidelines(guidelines, subclass, condition) {
     });
 }
 
+const categories = {
+    '': ['drugclass', 'dose', 'LOE'],
+    'Specific Symptom Treatment': ['Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction'],
+    'Other': ['Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability'],
+    'Notes': ['notes']
+};
+
+function createElementForKeyAndValue(key, value) {
+    const element = document.createElement('div');
+    element.className = 'drug-attribute';
+
+    const title = document.createElement('span');
+    title.className = 'title';
+    title.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)} - `;
+    element.appendChild(title);
+
+    const valueSpan = document.createElement('span');
+    valueSpan.className = 'value';
+    if (['LOE', 'Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction'].includes(key)) {
+        const pieChart = document.createElement('div');
+        pieChart.className = 'pie-chart';
+        const pieChartCanvas = document.createElement('canvas');
+        pieChartCanvas.width = 60;
+        pieChartCanvas.height = 60;
+        pieChart.appendChild(pieChartCanvas);
+        valueSpan.appendChild(pieChart);
+        drawChart(pieChartCanvas, value);
+    } else if (['Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability'].includes(key)) {
+        const icon = document.createElement('span');
+        icon.className = value > 0 ? 'fa fa-thumbs-up thumbs-up' : 'fa fa-thumbs-down thumbs-down';
+        valueSpan.appendChild(icon);
+    } else {
+        valueSpan.textContent = value;
+    }
+
+    element.appendChild(valueSpan);
+    return element;
+}
+
+function appendWithHeaders(container, elements, categories) {
+    for (const [category, keys] of Object.entries(categories)) {
+        let section = document.createElement('div');
+        section.className = 'section';
+
+        if (category) {
+            const header = document.createElement('h3');
+            header.textContent = category;
+            header.className = 'section-title';
+            section.appendChild(header);
+        }
+
+        const attributesContainer = document.createElement('div');
+        attributesContainer.className = 'attributes-container';
+
+        const column1 = document.createElement('div');
+        column1.className = 'column';
+        const column2 = document.createElement('div');
+        column2.className = 'column';
+
+        let count = 0;
+        keys.forEach(key => {
+            if (elements[key]) {
+                if (count % 2 === 0) {
+                    column1.appendChild(elements[key]);
+                } else {
+                    column2.appendChild(elements[key]);
+                }
+                count++;
+                delete elements[key];
+            }
+        });
+
+        attributesContainer.appendChild(column1);
+        attributesContainer.appendChild(column2);
+        section.appendChild(attributesContainer);
+        container.appendChild(section);
+    }
+
+    // Append any remaining elements
+    Object.values(elements).forEach(element => container.appendChild(element));
+}
+
+function renderDrugDetails(drug) {
+    let elements = {};
+    for (const [key, value] of Object.entries(drug)) {
+        elements[key] = createElementForKeyAndValue(key, value);
+    }
+
+    const container = document.createElement('div');
+    container.className = 'drug-details drug-details-container';
+
+    // Create the header for the drug name
+    const drugHeader = document.createElement('h2');
+    drugHeader.textContent = drug.name;
+    drugHeader.className = 'drug-header'; // Add a class for styling
+    container.appendChild(drugHeader);
+
+    appendWithHeaders(container, elements, categories);
+
+    return container;
+}
+
 function toggleDrugDetails(drug, drugLink, event) {
-    if (event.type === 'click' && !event.target.closest('.drug-details')) {  // Ensure click is not from inside the details
+    if (event.type === 'click' && !event.target.closest('.drug-details')) {  
         let existingDetails = drugLink.nextElementSibling;
         if (existingDetails && existingDetails.classList.contains('drug-details')) {
-            existingDetails.style.maxHeight = 0; // Start the transition
-            existingDetails.style.padding = '0 20px'; // Adjust padding for transition
+            existingDetails.style.maxHeight = 0;
+            existingDetails.style.padding = '0 20px';
             existingDetails.addEventListener('transitionend', function handleTransitionEnd() {
                 existingDetails.remove();
                 existingDetails.removeEventListener('transitionend', handleTransitionEnd);
@@ -122,56 +233,14 @@ function toggleDrugDetails(drug, drugLink, event) {
             return;
         }
 
-        const drugDetailsContainer = document.createElement('div');
-        drugDetailsContainer.className = 'drug-details';
-        drugDetailsContainer.style.maxHeight = 0; // Start with zero height for animation
-        drugDetailsContainer.style.padding = '0 20px'; // Adjust padding for transition
-
-        const drugAttributes = document.createElement('div');
-        drugAttributes.className = 'drug-attributes';
-
-        const attributes = ['drugclass', 'dose', 'LOE', 'Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction', 'Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability'];
-        attributes.forEach(attr => {
-            if (drug[attr] !== undefined) {
-                const attributeContainer = document.createElement('div');
-                attributeContainer.className = 'drug-attribute';
-
-                const title = document.createElement('h4');
-                title.textContent = `${attr.charAt(0).toUpperCase() + attr.slice(1)}`;
-                attributeContainer.appendChild(title);
-
-                if (attr === 'LOE' || attr === 'Sleep' || attr === 'Pain' || attr === 'Fatigue' || attr === 'Cognitive Dysfunction') {
-                    const pieChart = document.createElement('div');
-                    pieChart.className = 'pie-chart';
-                    const pieChartCanvas = document.createElement('canvas');
-                    pieChartCanvas.width = 60;
-                    pieChartCanvas.height = 60;
-                    pieChart.appendChild(pieChartCanvas);
-                    attributeContainer.appendChild(pieChart);
-
-                    drawChart(pieChartCanvas, drug[attr]);
-                } else if (['Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability'].includes(attr)) {
-                    const icon = document.createElement('span');
-                    icon.className = drug[attr] > 0 ? 'fa fa-thumbs-up thumbs-up' : 'fa fa-thumbs-down thumbs-down';
-                    attributeContainer.appendChild(icon);
-                } else {
-                    const detailItem = document.createElement('p');
-                    detailItem.textContent = drug[attr];
-                    attributeContainer.appendChild(detailItem);
-                }
-
-                drugAttributes.appendChild(attributeContainer);
-            }
-        });
-
-        drugDetailsContainer.appendChild(drugAttributes);
+        const drugDetailsContainer = renderDrugDetails(drug);
         drugLink.after(drugDetailsContainer);
 
         setTimeout(() => {
-            drugDetailsContainer.style.maxHeight = "300px"; // Set max height
-            drugDetailsContainer.style.padding = '20px'; // Adjust padding for transition
+            drugDetailsContainer.style.maxHeight = "300px";
+            drugDetailsContainer.style.padding = '20px';
             adjustHeight(drugLink);
-        }, 10); // Allow a brief pause to apply the maxHeight
+        }, 10);
 
         var panel = drugLink.nextElementSibling;
         if (panel.style.maxHeight) {
@@ -183,13 +252,18 @@ function toggleDrugDetails(drug, drugLink, event) {
     }
 }
 
-
+function adjustHeight(drugLink) {
+    const parentPanel = drugLink.closest('.panel');
+    const guidelineButton = parentPanel.previousElementSibling;
+    parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
+    guidelineButton.classList.add('active');
+}
 
 function drawChart(canvas, value) {
     const ctx = canvas.getContext('2d');
     const width = canvas.width;
     const height = canvas.height;
-    const radius = width / 2 - 2; // Adjust radius to allow for padding
+    const radius = width / 2 - 2;
     const centerX = width / 2;
     const centerY = height / 2;
 
@@ -271,164 +345,4 @@ function drawChart(canvas, value) {
         ctx.strokeStyle = '#ff0000';
         ctx.stroke();
     }
-}
-
-
-
-function adjustHeight(drugLink) {
-    const parentPanel = drugLink.closest('.panel');
-    const guidelineButton = parentPanel.previousElementSibling;
-    parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
-    guidelineButton.classList.add('active');
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.drug-menu-item').forEach(item => {
-        item.addEventListener('click', function(event) {
-            toggleDrugDetails(drug, this, event);
-        });
-    });
-});
-
-
-function drawChart(canvas, loe) {
-    canvas.width = 60;  // Increased size to allow for padding
-    canvas.height = 60; // Increased size to allow for padding
-
-    const ctx = canvas.getContext('2d');
-    const width = canvas.width;
-    const height = canvas.height;
-    const radius = width / 2 - 2; // Adjust radius to allow for padding
-    const centerX = width / 2;
-    const centerY = height / 2;
-
-    // Convert LOE to a number
-    const loeValue = parseInt(loe, 10);
-
-    ctx.clearRect(0, 0, width, height);
-
-    if (loeValue > 0) {
-        ctx.beginPath();
-        ctx.moveTo(centerX, centerY);
-
-        switch (loeValue) {
-            case 1:
-                // Full circle
-                ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
-                break;
-            case 2:
-                // Three-quarters circle (leave out top right quadrant)
-                ctx.arc(centerX, centerY, radius, 0, 1.5 * Math.PI);
-                break;
-            case 3:
-                // Half circle (leave out right half)
-                ctx.arc(centerX, centerY, radius, 0.5 * Math.PI, 1.5 * Math.PI);
-                break;
-            case 4:
-                // Quarter circle (leave out top right and bottom right quadrants, fill top left)
-                ctx.arc(centerX, centerY, radius, 0.5 * Math.PI, -0.5 * Math.PI);
-                break;
-        }
-
-        ctx.lineTo(centerX, centerY);
-        ctx.fillStyle = '#00aa03';
-        ctx.fill();
-
-        // Draw the outline
-        ctx.beginPath();
-        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
-        ctx.lineWidth = 2;
-        ctx.strokeStyle = '#00aa03';
-        ctx.stroke();
-    } else {
-        ctx.beginPath();
-        switch (loeValue) {
-            case -1:
-                // Full square
-                ctx.rect(0, 0, width, height);
-                ctx.fillStyle = '#ff0000';
-                ctx.fill();
-                break;
-            case -2:
-                // Exclude the bottom right quadrant
-                ctx.moveTo(centerX, centerY);
-                ctx.lineTo(width, centerY);
-                ctx.lineTo(width, height);
-                ctx.lineTo(0, height);
-                ctx.lineTo(0, 0);
-                ctx.lineTo(centerX, 0);
-                ctx.closePath();
-                ctx.fillStyle = '#ff0000';
-                ctx.fill();
-                break;
-            case -3:
-                // Exclude the bottom half
-                ctx.moveTo(centerX, centerY);
-                ctx.lineTo(width, centerY);
-                ctx.lineTo(width, height);
-                ctx.lineTo(0, height);
-                ctx.lineTo(0, centerY);
-                ctx.closePath();
-                ctx.fillStyle = '#ff0000';
-                ctx.fill();
-                break;
-            case -4:
-                // Only the top left quadrant
-                ctx.moveTo(centerX, centerY);
-                ctx.lineTo(centerX, 0);
-                ctx.lineTo(0, 0);
-                ctx.lineTo(0, centerY);
-                ctx.closePath();
-                ctx.fillStyle = '#ff0000';
-                ctx.fill();
-                break;
-        }
-        // Draw the outline
-        ctx.beginPath();
-        ctx.rect(0, 0, width, height);
-        ctx.lineWidth = 2;
-        ctx.strokeStyle = '#ff0000';
-        ctx.stroke();
-    }
-}
-
-function updateHeaderTitle(title) {
-    const header = document.querySelector('header h1');
-    if (title.length > 25) { 
-        header.textContent = title.slice(0, 25) + '...'; 
-    } else {
-        header.textContent = title;
-    }
-}
-
-function addSwipeListeners(element) {
-    let touchstartX = 0;
-    let touchendX = 0;
-
-    element.addEventListener('touchstart', function(event) {
-        touchstartX = event.changedTouches[0].screenX;
-    }, false);
-
-    element.addEventListener('touchend', function(event) {
-        touchendX = event.changedTouches[0].screenX;
-        handleSwipe();
-    }, false);
-
-    function handleSwipe() {
-        if (touchendX < touchstartX || touchendX > touchstartX) {
-            element.style.maxHeight = 0; // Start the transition
-            element.style.padding = '0 20px'; // Adjust padding for transition
-            element.addEventListener('transitionend', function handleTransitionEnd() {
-                element.remove();
-                element.removeEventListener('transitionend', handleTransitionEnd);
-            });
-        }
-    }
-}
-
-function adjustHeight(drugLink) {
-    const parentPanel = drugLink.closest('.panel');
-    const guidelineButton = parentPanel.previousElementSibling;
-    parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
-    guidelineButton.classList.add('active');
 }
