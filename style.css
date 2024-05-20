@@ -215,6 +215,7 @@ main {
     text-decoration: underline;
     margin: 10px 0;
     font-size: 20px;
+    color:#003f7f;
 }
 .section {
     margin-bottom: 10px; /* Space between sections */
@@ -251,14 +252,15 @@ main {
     font-weight: bold;
     margin-right: 5px;
     white-space: nowrap;
-    color: black;
+    color: #003f7f;
     display: inline-block; 
 }
 
 .drug-attribute .value {
     flex: 1;
     text-align: left;
-    display: inline-block
+    display: inline-block;
+    color:#003f7f;
 }
 
 .pie-chart {

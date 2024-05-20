@@ -253,13 +253,7 @@
                             "LOE": "1",
                             "notes": "Not Available in Canada",
                             "Efficacy": "1",
-                            "Acceptability": "1",
-                            "Drug Interactions": "",
-                            "Discontinuation Syndrome": "",
-                            "Sedation": "",
-                            "Weight Gain": "",
-                            "Sexual Dysfunction": "",
-                            "Other Tolerability": ""
+                            "Acceptability": "1"
                         }
                     ]
                 },
@@ -472,12 +466,10 @@
                     "drugs": [
                         {
                             "name": "Other antidepressants including TCA",
-                            "dose": "",
                             "LOE": "3"
                         },
                         {
                             "name": "Stimulants",
-                            "dose": "",
                             "LOE": "3"
                         },
                         {
@@ -487,7 +479,6 @@
                         },
                         {
                             "name": "Non-IV racemic ketamine",
-                            "dose": "",
                             "LOE": "3"
                         },
                         {
@@ -507,7 +498,6 @@
                     "drugs": [
                         {
                             "name": "Psychedelic-assisted psychotherapy",
-                            "dose": "",
                             "LOE": "3"
                         }
                     ]
@@ -517,8 +507,7 @@
                     "drugs": [
                         {
                             "name": "Cannabis",
-                            "dose": "n/a",
-                            "LOE": ""
+                            "dose": "n/a"
                         }
                     ]
                 }
@@ -625,24 +614,20 @@
                         {
                             "name": "Light Therapy",
                             "indication": "Mild MDE",
-                            "details": "",
                             "LOE": "2"
                         },
                         {
                             "name": "Adjunctive Exercise",
                             "indication": "Moderate MDE",
-                            "details": "",
                             "LOE": "2"
                         },
                         {
                             "name": "Adjunctive Light Therapy",
                             "indication": "Moderate MDE",
-                            "details": "",
                             "LOE": "2"
                         },
                         {
                             "name": "Adjunctive Sleep Hygiene & CBT-I",
-                            "indication": "",
                             "details": "Varied diet with high content of fruit, vegetables, and fibre, and low content of saturated fat and carbohydrates",
                             "LOE": "3"
                         }
@@ -653,20 +638,14 @@
                     "drugs": [
                         {
                             "name": "Adjunctive Healthy Diet",
-                            "indication": "",
-                            "details": "",
                             "LOE": "3"
                         },
                         {
                             "name": "Adjunctive Mediterranean Diet",
-                            "indication": "",
-                            "details": "",
                             "LOE": "3"
                         },
                         {
                             "name": "Adjunctive Sleep Deprivation",
-                            "indication": "",
-                            "details": "",
                             "LOE": "3"
                         }
                     ]
@@ -675,10 +654,7 @@
                     "level": "Insufficient Evidence",
                     "drugs": [
                         {
-                            "name": "Probiotics",
-                            "indication": "",
-                            "details": "",
-                            "LOE": ""
+                            "name": "Probiotics"
                         }
                     ]
                 }
@@ -695,14 +671,11 @@
                         {
                             "name": "Good Days Ahead",
                             "RCT": "Yes",
-                            "notes": "",
                             "description": "Program designed for use by a CBT therapist to provide additional CBT instruction outside of the session.",
                             "comments": "Two large RCTs showed this program reduced the need for face-to-face CBT by half, with equivalent clinical outcomes."
                         },
                         {
                             "name": "BounceBack",
-                            "RCT": "",
-                            "notes": "",
                             "description": "Free online CBT program with various formats: self-directed version, or with telephone-delivered lay coaching.",
                             "comments": "No RCT but a large prospective study was positive in MDD; available free in several Canadian provinces, managed by the Canadian Mental Health Association."
                         },
@@ -715,8 +688,6 @@
                         },
                         {
                             "name": "MoodBeacon",
-                            "RCT": "",
-                            "notes": "",
                             "description": "Online guided CBT program; guidance provided by trained therapists.",
                             "comments": "Although there is no published study, this DHI was reviewed and approved for use by the Province of Ontario in 2021."
                         },
@@ -734,22 +705,17 @@
                     "drugs": [
                         {
                             "name": "Catch It",
-                            "RCT": "",
-                            "notes": "",
                             "description": "Free CBT-based mobile app, primarily uses automatic thought records and reflection exercises to address anxiety and depressive symptoms.",
                             "comments": "Developed jointly by the Universities of Liverpool and Manchester; includes a mood tracker and diary; and has an observational trial of users showing benefits."
                         },
                         {
                             "name": "Headspace",
-                            "RCT": "",
-                            "notes": "",
                             "description": "Popular mobile app with self-guided meditation and mindfulness techniques and some CBT approaches.",
                             "comments": "Designed for a wide variety of stress, depression and anxiety symptoms; extensively studied with good outcomes in many conditions (of mild severity), but not specifically in MDD."
                         },
                         {
                             "name": "MoodGYM",
                             "RCT": "Yes",
-                            "notes": "",
                             "description": "Internet-based CBT self-help program, with very structured modules.",
                             "comments": "Most widely used platform; initially developed by Australian National University; extensively studied with good outcomes in mild depression."
                         },
@@ -773,11 +739,7 @@
                     "level": "Insufficient Evidence",
                     "drugs": [
                         {
-                            "name": "Probiotics",
-                            "RCT": "",
-                            "notes": "",
-                            "description": "",
-                            "comments": ""
+                            "name": "Probiotics"
                         }
                     ]
                 }

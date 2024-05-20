@@ -162,13 +162,6 @@ function appendWithHeaders(container, elements, categories) {
         let section = document.createElement('div');
         section.className = 'section';
 
-        if (category) {
-            const header = document.createElement('h3');
-            header.textContent = category;
-            header.className = 'section-title';
-            section.appendChild(header);
-        }
-
         const attributesContainer = document.createElement('div');
         attributesContainer.className = 'attributes-container';
 
@@ -178,6 +171,8 @@ function appendWithHeaders(container, elements, categories) {
         column2.className = 'column';
 
         let count = 0;
+        let attributesExist = false;
+
         keys.forEach(key => {
             if (elements[key]) {
                 if (count % 2 === 0) {
@@ -186,14 +181,24 @@ function appendWithHeaders(container, elements, categories) {
                     column2.appendChild(elements[key]);
                 }
                 count++;
+                attributesExist = true;
                 delete elements[key];
             }
         });
 
         attributesContainer.appendChild(column1);
         attributesContainer.appendChild(column2);
-        section.appendChild(attributesContainer);
-        container.appendChild(section);
+
+        if (attributesExist) {
+            if (category) {
+                const header = document.createElement('h3');
+                header.textContent = category;
+                header.className = 'section-title';
+                section.appendChild(header);
+            }
+            section.appendChild(attributesContainer);
+            container.appendChild(section);
+        }
     }
 
     // Append any remaining elements
@@ -203,7 +208,10 @@ function appendWithHeaders(container, elements, categories) {
 function renderDrugDetails(drug) {
     let elements = {};
     for (const [key, value] of Object.entries(drug)) {
-        elements[key] = createElementForKeyAndValue(key, value);
+        // Skip adding name to the elements
+        if (key !== 'name') {
+            elements[key] = createElementForKeyAndValue(key, value);
+        }
     }
 
     const container = document.createElement('div');
