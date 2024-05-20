@@ -14,6 +14,9 @@ body {
 }
 
 header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     width: 100%;
     height: 75px;
@@ -216,6 +219,20 @@ footer,
 .grid-container-vertical {
     width: 100%; /* Ensure elements take full viewport width */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 60px;
+        padding: 10px;
+        font-size: 0.8em; /* Adjust font size if needed */
+    }
+
+    footer {
+        height: 40px;
+        padding: 10px;
+        font-size: 0.8em; /* Adjust font size if needed */
+    }
 }
 
 @media (max-height: 720px) {
