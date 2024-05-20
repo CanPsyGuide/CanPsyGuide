@@ -408,6 +408,549 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Adjust Pharmacotherapy", 
+            "description": "",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {
+                            "name": "Aripiprazole",
+                            "dose": "2-10 mg",
+                            "LOE": "1"
+                        },
+                        {
+                            "name": "Brexpiprazole",
+                            "dose": "0.5-2 mg",
+                            "LOE": "1"
+                        }
+                    ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {
+                            "name": "Bupropion",
+                            "dose": "150-450 mg",
+                            "LOE": "1"
+                        },
+                        {
+                            "name": "Intranasal esketamine",
+                            "dose": "56-84 mg",
+                            "LOE": "1"
+                        },
+                        {
+                            "name": "IV racemic ketamine",
+                            "dose": "0.5-1.0 mg/kg",
+                            "LOE": "1"
+                        },
+                        {
+                            "name": "Olanzapine",
+                            "dose": "2.5-10 mg",
+                            "LOE": "1"
+                        },
+                        {
+                            "name": "Quetiapine-XR",
+                            "dose": "150-300 mg",
+                            "LOE": "1"
+                        },
+                        {
+                            "name": "Risperidone",
+                            "dose": "1-3 mg",
+                            "LOE": "1"
+                        },
+                        {
+                            "name": "Lithium",
+                            "dose": "600-1200 mg (0.5-0.8 mmol/L)",
+                            "LOE": "1"
+                        },
+                        {
+                            "name": "Cariprazine",
+                            "dose": "1.5-3 mg",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "Mirtazapine",
+                            "dose": "30-60 mg",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "Mianserin",
+                            "dose": "30-90 mg",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "Modafinil",
+                            "dose": "100-400 mg",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "Triiodothyronine",
+                            "dose": "25-50 mcg",
+                            "LOE": "2"
+                        }
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {
+                            "name": "Other antidepressants including TCA",
+                            "dose": "",
+                            "LOE": "3"
+                        },
+                        {
+                            "name": "Stimulants",
+                            "dose": "",
+                            "LOE": "3"
+                        },
+                        {
+                            "name": "Lamotrigine",
+                            "dose": "100-300 mg",
+                            "LOE": "3"
+                        },
+                        {
+                            "name": "Non-IV racemic ketamine",
+                            "dose": "",
+                            "LOE": "3"
+                        },
+                        {
+                            "name": "Pramipexole",
+                            "dose": "1-2 mg BID",
+                            "LOE": "3"
+                        },
+                        {
+                            "name": "Ziprasidone",
+                            "dose": "20-80 mg BID",
+                            "LOE": "3"
+                        }
+                    ]
+                },
+                {
+                    "level": "Investigational",
+                    "drugs": [
+                        {
+                            "name": "Psychedelic-assisted psychotherapy",
+                            "dose": "",
+                            "LOE": "3"
+                        }
+                    ]
+                },
+                {
+                    "level": "Not Recommended",
+                    "drugs": [
+                        {
+                            "name": "Cannabis",
+                            "dose": "n/a",
+                            "LOE": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Psychotherapy",
+            "description": "",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {
+                            "name": "Cognitive-Behavioural Therapy (CBT)",
+                            "LOE": "1"
+                        },
+                        {
+                            "name": "Interpersonal Therapy (IPT)",
+                            "LOE": "1"
+                        },
+                        {
+                            "name": "Behavioural Activation (BA)",
+                            "LOE": "1"
+                        }
+                    ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {
+                            "name": "Cognitive Behavioural Analysis System of Psychotherapy (CBASP)",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "Mindfulness-Based Cognitive Therapy (MBCT)",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "Problem-Solving Therapy (PST)",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "Short-term Psychodynamic Psychotherapy (STPP)",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "Transdiagnostic Psychological Treatment of Emotional Disorders",
+                            "LOE": "2"
+                        }
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {
+                            "name": "Acceptance & Commitment Therapy (ACT)",
+                            "LOE": "3"
+                        },
+                        {
+                            "name": "Long-term Psychodynamic Psychotherapy (PDT)",
+                            "LOE": "3"
+                        },
+                        {
+                            "name": "Metacognitive Therapy (MCT)",
+                            "LOE": "3"
+                        }
+                    ]
+                },
+                {
+                    "level": "Fourth Line",
+                    "drugs": [
+                        {
+                            "name": "Motivational Interviewing",
+                            "LOE": "4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Lifestyle",
+            "description": "",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {
+                            "name": "Supervised Exercise",
+                            "indication": "Mild MDE",
+                            "details": "Low-Moderate Intensity, 3-4/week, minimum 9 weeks",
+                            "LOE": "1"
+                        },
+                        {
+                            "name": "Light Therapy",
+                            "indication": "Seasonal (Winter) MDE",
+                            "details": "10,000 lux for 30 min daily",
+                            "LOE": "1"
+                        }
+                    ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {
+                            "name": "Light Therapy",
+                            "indication": "Mild MDE",
+                            "details": "",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "Adjunctive Exercise",
+                            "indication": "Moderate MDE",
+                            "details": "",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "Adjunctive Light Therapy",
+                            "indication": "Moderate MDE",
+                            "details": "",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "Adjunctive Sleep Hygiene & CBT-I",
+                            "indication": "",
+                            "details": "Varied diet with high content of fruit, vegetables, and fibre, and low content of saturated fat and carbohydrates",
+                            "LOE": "3"
+                        }
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {
+                            "name": "Adjunctive Healthy Diet",
+                            "indication": "",
+                            "details": "",
+                            "LOE": "3"
+                        },
+                        {
+                            "name": "Adjunctive Mediterranean Diet",
+                            "indication": "",
+                            "details": "",
+                            "LOE": "3"
+                        },
+                        {
+                            "name": "Adjunctive Sleep Deprivation",
+                            "indication": "",
+                            "details": "",
+                            "LOE": "3"
+                        }
+                    ]
+                },
+                {
+                    "level": "Insufficient Evidence",
+                    "drugs": [
+                        {
+                            "name": "Probiotics",
+                            "indication": "",
+                            "details": "",
+                            "LOE": ""
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "name": "Digital Health Interventions",
+            "description": "Various digital health interventions for mental health treatment.",
+            "guidelines": [
+                {
+                    "level": "Guided",
+                    "drugs": [
+                        {
+                            "name": "Good Days Ahead",
+                            "RCT": "Yes",
+                            "notes": "",
+                            "description": "Program designed for use by a CBT therapist to provide additional CBT instruction outside of the session.",
+                            "comments": "Two large RCTs showed this program reduced the need for face-to-face CBT by half, with equivalent clinical outcomes."
+                        },
+                        {
+                            "name": "BounceBack",
+                            "RCT": "",
+                            "notes": "",
+                            "description": "Free online CBT program with various formats: self-directed version, or with telephone-delivered lay coaching.",
+                            "comments": "No RCT but a large prospective study was positive in MDD; available free in several Canadian provinces, managed by the Canadian Mental Health Association."
+                        },
+                        {
+                            "name": "Deprexis",
+                            "RCT": "Yes",
+                            "notes": "Not Available in Canada",
+                            "description": "Online CBT program with tailored guidance provided by an AI conversational agent; includes BA and mindfulness techniques.",
+                            "comments": "Structured 12-week program designed for 90-day use; available in many countries in several languages; tested in multiple clinical trials, with a positive meta-analysis. Available in Europe and the USA."
+                        },
+                        {
+                            "name": "MoodBeacon",
+                            "RCT": "",
+                            "notes": "",
+                            "description": "Online guided CBT program; guidance provided by trained therapists.",
+                            "comments": "Although there is no published study, this DHI was reviewed and approved for use by the Province of Ontario in 2021."
+                        },
+                        {
+                            "name": "Pacifica/Sanvello",
+                            "RCT": "Yes",
+                            "notes": "Not Available in Canada",
+                            "description": "Mobile- and web-based apps intended to assist users in relieving stress, anxiety, and depression. Free; offers in-app purchases.",
+                            "comments": "Uses blend of CBT, mindfulness, and relaxation tools; suitable for adults and adolescents; guidance is through peer discussion in chat groups; has positive results from an RCT. Available in the USA."
+                        }
+                    ]
+                },
+                {
+                    "level": "Unguided",
+                    "drugs": [
+                        {
+                            "name": "Catch It",
+                            "RCT": "",
+                            "notes": "",
+                            "description": "Free CBT-based mobile app, primarily uses automatic thought records and reflection exercises to address anxiety and depressive symptoms.",
+                            "comments": "Developed jointly by the Universities of Liverpool and Manchester; includes a mood tracker and diary; and has an observational trial of users showing benefits."
+                        },
+                        {
+                            "name": "Headspace",
+                            "RCT": "",
+                            "notes": "",
+                            "description": "Popular mobile app with self-guided meditation and mindfulness techniques and some CBT approaches.",
+                            "comments": "Designed for a wide variety of stress, depression and anxiety symptoms; extensively studied with good outcomes in many conditions (of mild severity), but not specifically in MDD."
+                        },
+                        {
+                            "name": "MoodGYM",
+                            "RCT": "Yes",
+                            "notes": "",
+                            "description": "Internet-based CBT self-help program, with very structured modules.",
+                            "comments": "Most widely used platform; initially developed by Australian National University; extensively studied with good outcomes in mild depression."
+                        },
+                        {
+                            "name": "MoodKit",
+                            "RCT": "Yes",
+                            "notes": "Not Available in Canada",
+                            "description": "CBT-based toolkit app with detailed instructions on how to use thought records and BA.",
+                            "comments": "Teaches multiple aspects of CBT and is well-integrated with mood monitoring and optional journaling. Available in the USA."
+                        },
+                        {
+                            "name": "Spark Direct",
+                            "RCT": "Yes",
+                            "notes": "Not Available in Canada",
+                            "description": "A mobile app providing core elements of CBT and BA in a 5-week program.",
+                            "comments": "Designed for youth depression; uses interactive tasks and rewards; tested in an RCT with positive findings. Available in the USA."
+                        }
+                    ]
+                },
+                {
+                    "level": "Insufficient Evidence",
+                    "drugs": [
+                        {
+                            "name": "Probiotics",
+                            "RCT": "",
+                            "notes": "",
+                            "description": "",
+                            "comments": ""
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "name": "Complementary & Alternative",
+            "description": "Complementary and alternative treatments for mental health disorders.",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {
+                            "name": "St. John's Wort",
+                            "indication": "Mild MDE",
+                            "LOE": "1"
+                        }
+                    ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {
+                            "name": "Acupuncture",
+                            "indication": "Mild MDE",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "St. John's Wort",
+                            "indication": "Moderate MDE",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "Adjunctive Acupuncture",
+                            "indication": "Moderate MDE",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "Adjunctive L-methyl folate",
+                            "indication": "Mild-Moderate MDE",
+                            "LOE": "2"
+                        }
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {
+                            "name": "Adjunctive SAM-e",
+                            "indication": "Mild-Moderate MDE",
+                            "LOE": "2"
+                        },
+                        {
+                            "name": "DHEA",
+                            "indication": "Mild MDE",
+                            "LOE": "3"
+                        },
+                        {
+                            "name": "Omega-3 Fatty Acids",
+                            "indication": "Mild MDE",
+                            "LOE": "3"
+                        },
+                        {
+                            "name": "Saffron, Lavendar, or Roseroot",
+                            "indication": "Mild MDE",
+                            "LOE": "3"
+                        }
+                    ]
+                }
+            ]
+        },
+
+
+        {
+            "name": "Neuromodulation",
+            "description": "Neuromodulation treatments for mental health disorders.",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {
+                            "name": "ECT",
+                            "indication": "Severe MDE",
+                            "acuteLOE": "1",
+                            "maintenanceLOE": "1"
+                        },
+                        {
+                            "name": "rTMS",
+                            "indication": "TRD",
+                            "acuteLOE": "1",
+                            "maintenanceLOE": "3"
+                        }
+                    ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {
+                            "name": "ECT",
+                            "indication": "DTD",
+                            "acuteLOE": "1",
+                            "maintenanceLOE": "3"
+                        }
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {
+                            "name": "Adjunctive tDCS",
+                            "indication": "Mild-Moderate MDE",
+                            "acuteLOE": "2",
+                            "maintenanceLOE": "3"
+                        },
+                        {
+                            "name": "VNS",
+                            "indication": "DTD",
+                            "acuteLOE": "3",
+                            "maintenanceLOE": "3"
+                        }
+                    ]
+                },
+                {
+                    "level": "Investigational",
+                    "drugs": [
+                        {
+                            "name": "DBS",
+                            "indication": "DTD",
+                            "acuteLOE": "3",
+                            "maintenanceLOE": "-"
+                        },
+                        {
+                            "name": "MST",
+                            "indication": "DTD",
+                            "acuteLOE": "3",
+                            "maintenanceLOE": "-"
+                        }
+                    ]
+                }
+            ]
         }
+        
+        
+        
+        
+        
+        
     ]
 }
