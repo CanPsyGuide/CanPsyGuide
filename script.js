@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', loadMainConditions);
 
 function updateHeaderTitle(title) {
     const header = document.querySelector('header h1');
-    if (title.length > 25) { 
-        header.textContent = title.slice(0, 25) + '...'; 
+    if (title.length > 25) {
+        header.textContent = title.slice(0, 25) + '...';
     } else {
         header.textContent = title;
     }
@@ -105,7 +105,7 @@ function loadGuidelines(guidelines, subclass, condition) {
 
         container.appendChild(drugsContainer);
 
-        guidelineButton.addEventListener("click", function() {
+        guidelineButton.addEventListener("click", function () {
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
             if (panel.style.maxHeight) {
@@ -131,7 +131,7 @@ function createElementForKeyAndValue(key, value) {
 
     const title = document.createElement('span');
     title.className = 'title';
-    title.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)} - `;
+    title.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}: `;
     element.appendChild(title);
 
     const valueSpan = document.createElement('span');
@@ -165,29 +165,15 @@ function appendWithHeaders(container, elements, categories) {
         const attributesContainer = document.createElement('div');
         attributesContainer.className = 'attributes-container';
 
-        const column1 = document.createElement('div');
-        column1.className = 'column';
-        const column2 = document.createElement('div');
-        column2.className = 'column';
-
-        let count = 0;
         let attributesExist = false;
 
         keys.forEach(key => {
             if (elements[key]) {
-                if (count % 2 === 0) {
-                    column1.appendChild(elements[key]);
-                } else {
-                    column2.appendChild(elements[key]);
-                }
-                count++;
+                attributesContainer.appendChild(elements[key]);
                 attributesExist = true;
                 delete elements[key];
             }
         });
-
-        attributesContainer.appendChild(column1);
-        attributesContainer.appendChild(column2);
 
         if (attributesExist) {
             if (category) {
@@ -229,7 +215,7 @@ function renderDrugDetails(drug) {
 }
 
 function toggleDrugDetails(drug, drugLink, event) {
-    if (event.type === 'click' && !event.target.closest('.drug-details')) {  
+    if (event.type === 'click' && !event.target.closest('.drug-details')) {
         let existingDetails = drugLink.nextElementSibling;
         if (existingDetails && existingDetails.classList.contains('drug-details')) {
             existingDetails.style.maxHeight = 0;
