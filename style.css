@@ -45,11 +45,11 @@ footer {
     justify-content: center;
     text-align: center;
     width: 100%;
-    height: 90px;
-    padding: 20px;
+    height: 100%;
+    padding: 0;
     background: linear-gradient(90deg, #f3f3f3, #d0d0d0); /* Gradient background */
     color: black;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     z-index: 1000;
     margin-top: 0;
