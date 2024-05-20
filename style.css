@@ -45,8 +45,7 @@ footer {
     justify-content: center;
     text-align: center;
     width: 100%;
-    height: auto;
-    padding: 0;
+    padding: 10px 20px;
     background: linear-gradient(90deg, #f3f3f3, #d0d0d0); /* Gradient background */
     color: black;
     position: fixed;
@@ -54,10 +53,12 @@ footer {
     z-index: 1000;
     margin-top: 0;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    min-height:45px;
 }
 
 footer p {
     margin: 0; /* Remove margin to avoid content being pushed down */
+    line-height: 1.2;
 }
 
 main {
