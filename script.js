@@ -110,8 +110,7 @@ function loadGuidelines(guidelines, subclass, condition) {
 }
 
 function toggleDrugDetails(drug, drugLink, event) {
-    // Prevent the toggle if the click was part of a scroll
-    if (event.type === 'click') {
+    if (event.type === 'click' && !event.target.closest('.drug-details')) {  // Ensure click is not from inside the details
         let existingDetails = drugLink.nextElementSibling;
         if (existingDetails && existingDetails.classList.contains('drug-details')) {
             existingDetails.style.maxHeight = 0; // Start the transition
@@ -161,7 +160,7 @@ function toggleDrugDetails(drug, drugLink, event) {
         addSwipeListeners(drugDetailsContainer);
 
         setTimeout(() => {
-            drugDetailsContainer.style.maxHeight = drugDetailsContainer.scrollHeight + "px";
+            drugDetailsContainer.style.maxHeight = "300px"; // Set max height
             drugDetailsContainer.style.padding = '20px'; // Adjust padding for transition
             adjustHeight(drugLink);
         }, 10); // Allow a brief pause to apply the maxHeight
@@ -182,6 +181,14 @@ function adjustHeight(drugLink) {
     parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
     guidelineButton.classList.add('active');
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.drug-menu-item').forEach(item => {
+        item.addEventListener('click', function(event) {
+            toggleDrugDetails(drug, this, event);
+        });
+    });
+});
 
 
 function drawChart(canvas, loe) {
