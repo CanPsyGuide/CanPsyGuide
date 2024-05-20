@@ -157,8 +157,6 @@ function toggleDrugDetails(drug, drugLink, event) {
 
         drawChart(pieChartCanvas, drug.LOE);
 
-        addSwipeListeners(drugDetailsContainer);
-
         setTimeout(() => {
             drugDetailsContainer.style.maxHeight = "300px"; // Set max height
             drugDetailsContainer.style.padding = '20px'; // Adjust padding for transition
