@@ -207,26 +207,88 @@ main {
     height: auto;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.drug-details {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    overflow: auto;
+}
+
+.drug-attributes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    column-gap: 20px;
+    row-gap: 10px;
+    width: 100%;
 }
 
 .drug-attributes h4 {
     font-size: 14px;
     color: #0052aa;
-    margin-bottom: 5px;
+    margin: 0;
 }
 
 .drug-attributes p {
     font-size: 12px;
     color: #000000;
-    margin: 5px 0;
+    margin: 0;
+}
+
+.drug-attributes .attribute-item {
+    display: contents;
 }
 
 .pie-chart {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
+    justify-content: left;
+    align-items: left;
+    margin: 10px 10px; /* Add margin for spacing */
 }
+
+
+.thumbs-up, .thumbs-down {
+    font-size: 20px; 
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 10px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.2s, background-color 0.2s; 
+    cursor: pointer; 
+}
+
+.thumbs-up {
+    color: white; 
+    background-color: green; 
+}
+
+.thumbs-down {
+    color: white; 
+    background-color: red;
+}
+
+.thumbs-up:hover, .thumbs-down:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.thumbs-up:active, .thumbs-down:active {
+    transform: scale(0.9); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+
 
 .header-container, 
 main, 

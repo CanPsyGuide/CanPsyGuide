@@ -130,32 +130,42 @@ function toggleDrugDetails(drug, drugLink, event) {
         const drugAttributes = document.createElement('div');
         drugAttributes.className = 'drug-attributes';
 
-        for (const [key, value] of Object.entries(drug)) {
-            if (key !== 'name' && key !== 'LOE') {
-                const title = document.createElement('h4');
-                title.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}`;
-                const detailItem = document.createElement('p');
-                detailItem.textContent = value;
-                drugAttributes.appendChild(title);
-                drugAttributes.appendChild(detailItem);
-            }
-        }
+        const attributes = ['drugclass', 'dose', 'LOE', 'Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction', 'Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability'];
+        attributes.forEach(attr => {
+            if (drug[attr] !== undefined) {
+                const attributeContainer = document.createElement('div');
+                attributeContainer.className = 'drug-attribute';
 
-        const loeTitle = document.createElement('h4');
-        loeTitle.textContent = 'Level of Evidence';
-        const pieChart = document.createElement('div');
-        pieChart.className = 'pie-chart';
-        const pieChartCanvas = document.createElement('canvas');
-        pieChartCanvas.width = 50;
-        pieChartCanvas.height = 50;
-        pieChart.appendChild(pieChartCanvas);
-        drugAttributes.appendChild(loeTitle);
-        drugAttributes.appendChild(pieChart);
+                const title = document.createElement('h4');
+                title.textContent = `${attr.charAt(0).toUpperCase() + attr.slice(1)}`;
+                attributeContainer.appendChild(title);
+
+                if (attr === 'LOE' || attr === 'Sleep' || attr === 'Pain' || attr === 'Fatigue' || attr === 'Cognitive Dysfunction') {
+                    const pieChart = document.createElement('div');
+                    pieChart.className = 'pie-chart';
+                    const pieChartCanvas = document.createElement('canvas');
+                    pieChartCanvas.width = 60;
+                    pieChartCanvas.height = 60;
+                    pieChart.appendChild(pieChartCanvas);
+                    attributeContainer.appendChild(pieChart);
+
+                    drawChart(pieChartCanvas, drug[attr]);
+                } else if (['Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability'].includes(attr)) {
+                    const icon = document.createElement('span');
+                    icon.className = drug[attr] > 0 ? 'fa fa-thumbs-up thumbs-up' : 'fa fa-thumbs-down thumbs-down';
+                    attributeContainer.appendChild(icon);
+                } else {
+                    const detailItem = document.createElement('p');
+                    detailItem.textContent = drug[attr];
+                    attributeContainer.appendChild(detailItem);
+                }
+
+                drugAttributes.appendChild(attributeContainer);
+            }
+        });
 
         drugDetailsContainer.appendChild(drugAttributes);
         drugLink.after(drugDetailsContainer);
-
-        drawChart(pieChartCanvas, drug.LOE);
 
         setTimeout(() => {
             drugDetailsContainer.style.maxHeight = "300px"; // Set max height
@@ -172,6 +182,98 @@ function toggleDrugDetails(drug, drugLink, event) {
         }
     }
 }
+
+
+
+function drawChart(canvas, value) {
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+    const radius = width / 2 - 2; // Adjust radius to allow for padding
+    const centerX = width / 2;
+    const centerY = height / 2;
+
+    ctx.clearRect(0, 0, width, height);
+
+    const numericValue = parseInt(value, 10);
+
+    if (numericValue > 0) {
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+
+        switch (numericValue) {
+            case 1:
+                ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+                break;
+            case 2:
+                ctx.arc(centerX, centerY, radius, 0, 1.5 * Math.PI);
+                break;
+            case 3:
+                ctx.arc(centerX, centerY, radius, 0.5 * Math.PI, 1.5 * Math.PI);
+                break;
+            case 4:
+                ctx.arc(centerX, centerY, radius, 0.5 * Math.PI, -0.5 * Math.PI);
+                break;
+        }
+
+        ctx.lineTo(centerX, centerY);
+        ctx.fillStyle = '#00aa03';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = '#00aa03';
+        ctx.stroke();
+    } else {
+        ctx.beginPath();
+        switch (numericValue) {
+            case -1:
+                ctx.rect(0, 0, width, height);
+                ctx.fillStyle = '#ff0000';
+                ctx.fill();
+                break;
+            case -2:
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(width, centerY);
+                ctx.lineTo(width, height);
+                ctx.lineTo(0, height);
+                ctx.lineTo(0, 0);
+                ctx.lineTo(centerX, 0);
+                ctx.closePath();
+                ctx.fillStyle = '#ff0000';
+                ctx.fill();
+                break;
+            case -3:
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(width, centerY);
+                ctx.lineTo(width, height);
+                ctx.lineTo(0, height);
+                ctx.lineTo(0, centerY);
+                ctx.closePath();
+                ctx.fillStyle = '#ff0000';
+                ctx.fill();
+                break;
+            case -4:
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(centerX, 0);
+                ctx.lineTo(0, 0);
+                ctx.lineTo(0, centerY);
+                ctx.closePath();
+                ctx.fillStyle = '#ff0000';
+                ctx.fill();
+                break;
+        }
+
+        ctx.beginPath();
+        ctx.rect(0, 0, width, height);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = '#ff0000';
+        ctx.stroke();
+    }
+}
+
+
 
 function adjustHeight(drugLink) {
     const parentPanel = drugLink.closest('.panel');
