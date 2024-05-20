@@ -1,55 +1,62 @@
 {
-    "conditions": [
+    "condition": "Depression",
+    "description": "Overview of treatment options for Depression.",
+    "subclasses": [
         {
-            "condition": "Depression",
-            "description": "Overview of treatment options for Depression.",
-            "subclasses": [
+            "name": "Pharmacotherapy",
+            "description": "Detailed information about Pharmacotherapy treatments for Depression.",
+            "guidelines": [
                 {
-                    "name": "Pharmacotherapy",
-                    "description": "Detailed information about Pharmacotherapy treatments for Depression.",
-                    "guidelines": [
+                    "level": "First Line",
+                    "drugs": [
                         {
-                            "level": "First Line",
-                            "drugs": [
-                                {
-                                    "name": "Citalopram",
-                                    "id": "citalopram",
-                                    "drugclass": "SSRI",
-                                    "dose": "20-40 mg",
-                                    "LOE": "1"
-                                }
-                            ]
+                            "name": "Citalopram",
+                            "id": "citalopram",
+                            "drugclass": "SSRI",
+                            "dose": "20-40 mg",
+                            "LOE": "1"
                         }
                     ]
                 }
             ]
         },
         {
-            "condition": "Anxiety",
-            "description": "Overview of treatment options for Anxiety.",
-            "subclasses": [
+            "name": "Psychotherapy",
+            "description": "Exploring cognitive behavioral therapy and other psychological treatments.",
+            "guidelines": [
                 {
-                    "name": "Pharmacotherapy",
-                    "description": "Detailed information about Pharmacotherapy treatments for Anxiety.",
-                    "guidelines": [
+                    "level": "Recommended",
+                    "therapies": [
                         {
-                            "level": "First Line",
-                            "drugs": [
-                                {
-                                    "name": "Escitalopram",
-                                    "id": "escitalopram",
-                                    "drugclass": "SSRI",
-                                    "dose": "10-20 mg",
-                                    "LOE": "1"
-                                },
-                                {
-                                    "name": "Sertraline",
-                                    "id": "sertraline",
-                                    "drugclass": "SSRI",
-                                    "dose": "25-200 mg",
-                                    "LOE": "1"
-                                }
-                            ]
+                            "name": "Cognitive Behavioral Therapy",
+                            "effectiveness": "High",
+                            "notes": "No side effects and long-term benefits"
+                        },
+                        {
+                            "name": "Interpersonal Therapy",
+                            "effectiveness": "Moderate",
+                            "notes": "Useful in treating relationship-focused issues"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Alternative Treatments",
+            "description": "Use of natural and alternative methods for managing depression.",
+            "guidelines": [
+                {
+                    "level": "Supplementary",
+                    "treatments": [
+                        {
+                            "name": "St. John’s Wort",
+                            "effectiveness": "Varied",
+                            "notes": "Conflicts with several pharmaceuticals"
+                        },
+                        {
+                            "name": "Exercise",
+                            "effectiveness": "High",
+                            "notes": "Improves mood and physical health"
                         }
                     ]
                 }
