@@ -56,6 +56,10 @@ footer {
     box-shadow: 0 -2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
 }
 
+footer p {
+    margin: 0; /* Remove margin to avoid content being pushed down */
+}
+
 main {
     flex: 1;
     display: flex;
