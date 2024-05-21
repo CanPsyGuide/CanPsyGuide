@@ -112,11 +112,13 @@ function loadGuidelines(guidelines, subclass, condition) {
                 panel.style.maxHeight = null;
             } else {
                 panel.style.maxHeight = panel.scrollHeight + "px";
+                panel.style.padding = "15px";
                 panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
 }
+
 
 const categories = {
     '': ['drugclass', 'dose', 'LOE'],
