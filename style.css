@@ -4,9 +4,10 @@ html, body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     overflow-x: hidden;
     width: 100%;
+    background-color: #f9f9f9;
 }
 
 body {
@@ -41,7 +42,7 @@ header h1 {
 
 footer {
     display: flex;
-    align-items: flex-start; 
+    align-items: center; 
     justify-content: center;
     text-align: center;
     width: 100%;
@@ -53,7 +54,7 @@ footer {
     z-index: 1000;
     margin-top: 0;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
-    min-height:45px;
+    min-height: 45px;
 }
 
 footer p {
@@ -70,7 +71,7 @@ main {
     width: 100%;
     padding: 20px;
     overflow-y: auto;
-    background: #f3f3f3;
+    background: #ffffff;
     margin-top: 0;
 }
 
@@ -81,7 +82,7 @@ main {
     align-items: center;
     gap: 10px;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     padding: 20px;
     overflow-y: visible;
     margin-top: 0;
@@ -98,13 +99,38 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     margin: 10px;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .grid-item:hover, .subclass-button:hover, .guideline-button:hover {
     transform: scale(1.05);
     background-color: #003f7f;
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.subclass-button, .guideline-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.subclass-button::after, .guideline-button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.subclass-button:hover::after, .guideline-button:hover::after {
+    width: 300%;
+    height: 300%;
 }
 
 .navigation {
@@ -118,16 +144,7 @@ main {
     z-index: 1001;
 }
 
-.navbar {
-    margin-bottom: 1rem;
-}
-
-.main-content {
-    margin-top: 1rem;
-}
-
 .back-button {
-    margin-top: 10px;
     background-color: #00aa03;
     color: white;
     padding: 8px 16px;
@@ -162,10 +179,6 @@ main {
 
 .accordion:hover, .accordion.active {
     background-color: #003f7f;
-}
-
-.active {
-    background-color: #ccc;
 }
 
 .panel {
@@ -222,7 +235,6 @@ main {
     margin-bottom: 15px;
 }
 
-
 .attributes-container {
     display: flex;
     flex-direction: column; /* Ensure all attributes are in a single column */
@@ -232,12 +244,12 @@ main {
 .drug-details {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     margin-bottom: 15px;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     height: auto;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     overflow: auto;
@@ -271,7 +283,6 @@ main {
     color: red;
 }
 
-
 .pie-chart canvas {
     width: 100%; /* Ensure canvas fits the container */
     height: 100%; /* Ensure canvas fits the container */
@@ -296,7 +307,7 @@ main,
 footer, 
 .grid-container, 
 .grid-container-centered, 
-.grid-container-vertical {
+grid-container-vertical {
     width: 100%; /* Ensure elements take full viewport width */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
@@ -339,91 +350,6 @@ footer,
     footer {
         padding: 10px; /* Reduce padding to half */
         font-size: 0.8em; /* Adjust font size if needed */
-    }
-    .grid-item, .subclass-button, .guideline-button {
-        font-size: 16px;
-        padding: 10px 20px;
-        width: 150px;
-    }
-
-    .accordion {
-        font-size: 14px;
-        padding: 12px 20px;
-    }
-
-    .drug-details {
-        padding: 15px;
-        margin-bottom: 10px;
-    }
-
-    header {
-        height: 60px;
-        padding: 15px;
-        font-size: 18px;
-    }
-
-    footer {
-        height: 40px;
-        padding: 15px;
-        font-size: 14px;
-    }
-}
-
-* {
-    box-sizing: border-box;
-}
-
-
-
-
-.header-container, 
-main, 
-footer, 
-.grid-container, 
-.grid-container-centered, 
-.grid-container-vertical {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-@media (max-width: 768px) {
-    header {
-        height: 60px;
-        padding: 10px;
-        font-size: 0.8em;
-    }
-    header h1 {
-        font-size: 1.5em;
-    }
-    footer {
-        height: 40px;
-        padding: 10px;
-        font-size: 0.8em;
-    }
-}
-
-@media (max-height: 720px) {
-    main {
-        justify-content: center;
-    }
-    .grid-container {
-        gap: 10px;
-    }
-    .grid-item {
-        padding: 15px;
-    }
-
-    header {
-        padding: 10px;
-        font-size: 0.8em;
-    }
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    footer {
-        padding: 10px;
-        font-size: 0.8em;
     }
     .grid-item, .subclass-button, .guideline-button {
         font-size: 16px;
