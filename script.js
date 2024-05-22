@@ -108,12 +108,13 @@ function loadGuidelines(guidelines, subclass, condition) {
         guidelineButton.addEventListener("click", function () {
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
+            if (panel.style.maxHeight && panel.style.maxHeight !== "0px") {
+                panel.style.maxHeight = "0px";
+                panel.style.padding = "0 15px";
             } else {
                 panel.style.maxHeight = panel.scrollHeight + "px";
                 panel.style.padding = "15px";
-                panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
         });
     });
@@ -250,10 +251,9 @@ function toggleDrugDetails(drug, drugLink, event) {
 
 function adjustHeight(drugLink) {
     const parentPanel = drugLink.closest('.panel');
-    const guidelineButton = parentPanel.previousElementSibling;
     parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
-    guidelineButton.classList.add('active');
 }
+
 
 function drawChart(canvas, value) {
     const ctx = canvas.getContext('2d');

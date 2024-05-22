@@ -202,10 +202,9 @@ main {
 }
 
 .panel {
-    padding: 0 15px;
     background-color: white;
     max-height: 0;
-    overflow: hidden;
+    overflow: scroll;
     transition: max-height 0.5s ease-out, padding 0.5s ease-out;
     width: 100%;
     border-left: 3px solid #0052aa;
@@ -213,10 +212,12 @@ main {
     border-bottom: 3px solid #0052aa;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    padding: 0 15px; /* Initial padding set to 0 */
 }
 
 .panel.show {
     padding: 15px;
+
 }
 
 .drug-menu-item {
@@ -237,7 +238,6 @@ main {
 .drug-menu-item:hover {
     background-color: #d0d0d0;
 }
-
 
 
 /* Container for drug details */
