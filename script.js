@@ -11,19 +11,24 @@ function updateHeaderTitle(title) {
 
 function loadMainConditions() {
     const container = document.getElementById('grid-container');
-    container.className = 'grid-container grid-container-centered';
+    container.className = 'grid-container grid-container-centered row';
     container.innerHTML = '';
 
     const conditions = ['depression', 'anxiety', 'bipolar', 'schizophrenia'];
     conditions.forEach(condition => {
+        const colDiv = document.createElement('div');
+        colDiv.className = 'col-md-3 my-2';
+
         const button = document.createElement('button');
-        button.className = 'grid-item';
+        button.className = 'btn btn-primary grid-item w-100';
         button.innerText = condition.charAt(0).toUpperCase() + condition.slice(1);
         button.onclick = () => {
             loadSubclasses(condition);
             updateHeaderTitle(condition.charAt(0).toUpperCase() + condition.slice(1));
         };
-        container.appendChild(button);
+
+        colDiv.appendChild(button);
+        container.appendChild(colDiv);
     });
 
     const backButton = document.getElementById('back-button');
@@ -53,7 +58,7 @@ function loadSubclasses(condition) {
 
             data.subclasses.forEach(subclass => {
                 const button = document.createElement('button');
-                button.className = 'subclass-button';
+                button.className = 'btn btn-primary subclass-button my-2 w-100';
                 button.innerText = subclass.name;
                 button.onclick = () => {
                     loadGuidelines(subclass.guidelines, subclass.name, condition);
@@ -70,13 +75,19 @@ function loadSubclasses(condition) {
 
 function loadGuidelines(guidelines, subclass, condition) {
     const container = document.getElementById('grid-container');
-    container.innerHTML = '';
+    container.style.display = 'none';
+
+    const accordionContainer = document.getElementById('accordion-container');
+    accordionContainer.style.display = 'block';
+    accordionContainer.innerHTML = '';
 
     const backButton = document.getElementById('back-button');
     backButton.style.display = 'block';
     backButton.onclick = () => {
         loadMainConditions();
         updateHeaderTitle('CanPsyGuide');
+        accordionContainer.style.display = 'none';
+        container.style.display = 'block';
     };
 
     const backToSubclassesButton = document.getElementById('back-to-subclasses-button');
@@ -84,42 +95,122 @@ function loadGuidelines(guidelines, subclass, condition) {
     backToSubclassesButton.onclick = () => {
         loadSubclasses(condition);
         updateHeaderTitle(condition.charAt(0).toUpperCase() + condition.slice(1));
+        accordionContainer.style.display = 'none';
+        container.style.display = 'block';
     };
 
-    guidelines.forEach(guide => {
-        const guidelineButton = document.createElement('button');
-        guidelineButton.className = 'accordion';
-        guidelineButton.innerText = guide.level;
-        container.appendChild(guidelineButton);
+    guidelines.forEach((guide, index) => {
+        const card = document.createElement('div');
+        card.className = 'card';
 
-        const drugsContainer = document.createElement('div');
-        drugsContainer.className = 'panel';
+        const cardHeader = document.createElement('div');
+        cardHeader.className = 'card-header';
+        cardHeader.id = `heading-${index}`;
+        cardHeader.setAttribute('data-toggle', 'collapse');
+        cardHeader.setAttribute('data-target', `#collapse-${index}`);
+        cardHeader.setAttribute('aria-expanded', 'true');
+        cardHeader.setAttribute('aria-controls', `collapse-${index}`);
+
+        const h5 = document.createElement('h5');
+        h5.className = 'mb-0';
+
+        const button = document.createElement('button');
+        button.className = 'btn btn-link';
+        button.type = 'button';
+        button.innerText = guide.level;
+        button.style.pointerEvents = 'none'; // Prevent pointer events on button itself
+
+        h5.appendChild(button);
+        cardHeader.appendChild(h5);
+        card.appendChild(cardHeader);
+
+        const collapseDiv = document.createElement('div');
+        collapseDiv.id = `collapse-${index}`;
+        collapseDiv.className = 'collapse';
+        collapseDiv.setAttribute('aria-labelledby', `heading-${index}`);
+        collapseDiv.setAttribute('data-parent', '#accordion-container');
+
+        const cardBody = document.createElement('div');
+        cardBody.className = 'card-body';
 
         guide.drugs.forEach(drug => {
             const drugLink = document.createElement('div');
-            drugLink.className = 'drug-menu-item';
+            drugLink.className = 'drug-menu-item my-1';
             drugLink.innerText = drug.name;
             drugLink.onclick = (event) => toggleDrugDetails(drug, drugLink, event);
-            drugsContainer.appendChild(drugLink);
+            cardBody.appendChild(drugLink);
         });
 
-        container.appendChild(drugsContainer);
-
-        guidelineButton.addEventListener("click", function () {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight && panel.style.maxHeight !== "0px") {
-                panel.style.maxHeight = "0px";
-                panel.style.padding = "0 15px";
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-                panel.style.padding = "15px";
-                panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
-        });
+        collapseDiv.appendChild(cardBody);
+        card.appendChild(collapseDiv);
+        accordionContainer.appendChild(card);
     });
 }
 
+function toggleDrugDetails(drug, drugLink, event) {
+    if (event.type === 'click' && !event.target.closest('.drug-details')) {
+        let existingDetails = drugLink.nextElementSibling;
+        if (existingDetails && existingDetails.classList.contains('drug-details')) {
+            existingDetails.style.maxHeight = '0px';
+            existingDetails.style.padding = '0 20px';
+            existingDetails.addEventListener('transitionend', function handleTransitionEnd() {
+                existingDetails.remove();
+                existingDetails.removeEventListener('transitionend', handleTransitionEnd);
+            });
+            return;
+        }
+
+        const drugDetailsContainer = renderDrugDetails(drug);
+        drugLink.after(drugDetailsContainer);
+
+        setTimeout(() => {
+            drugDetailsContainer.style.maxHeight = "300px";
+            drugDetailsContainer.style.padding = '20px';
+            adjustHeight(drugLink);
+        }, 10);
+
+        var panel = drugLink.nextElementSibling;
+        if (panel && panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else if (panel) {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+}
+
+function adjustHeight(drugLink) {
+    const parentPanel = drugLink.closest('.panel');
+    if (parentPanel) {
+        parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
+    }
+}
+
+function renderDrugDetails(drug) {
+    let elements = {};
+    for (const [key, value] of Object.entries(drug)) {
+        // Skip adding name to the elements
+        if (key !== 'name') {
+            elements[key] = createElementForKeyAndValue(key, value);
+        }
+    }
+
+    const container = document.createElement('div');
+    container.className = 'drug-details drug-details-container card my-2';
+
+    // Create the header for the drug name
+    const drugHeader = document.createElement('h2');
+    drugHeader.textContent = drug.name;
+    drugHeader.className = 'drug-header card-header text-center'; // Add a class for styling
+    container.appendChild(drugHeader);
+
+    const cardBody = document.createElement('div');
+    cardBody.className = 'card-body';
+    appendWithHeaders(cardBody, elements, categories);
+    container.appendChild(cardBody);
+
+    return container;
+}
 
 const categories = {
     '': ['drugclass', 'dose', 'LOE'],
@@ -193,67 +284,6 @@ function appendWithHeaders(container, elements, categories) {
     // Append any remaining elements
     Object.values(elements).forEach(element => container.appendChild(element));
 }
-
-function renderDrugDetails(drug) {
-    let elements = {};
-    for (const [key, value] of Object.entries(drug)) {
-        // Skip adding name to the elements
-        if (key !== 'name') {
-            elements[key] = createElementForKeyAndValue(key, value);
-        }
-    }
-
-    const container = document.createElement('div');
-    container.className = 'drug-details drug-details-container';
-
-    // Create the header for the drug name
-    const drugHeader = document.createElement('h2');
-    drugHeader.textContent = drug.name;
-    drugHeader.className = 'drug-header'; // Add a class for styling
-    container.appendChild(drugHeader);
-
-    appendWithHeaders(container, elements, categories);
-
-    return container;
-}
-
-function toggleDrugDetails(drug, drugLink, event) {
-    if (event.type === 'click' && !event.target.closest('.drug-details')) {
-        let existingDetails = drugLink.nextElementSibling;
-        if (existingDetails && existingDetails.classList.contains('drug-details')) {
-            existingDetails.style.maxHeight = 0;
-            existingDetails.style.padding = '0 20px';
-            existingDetails.addEventListener('transitionend', function handleTransitionEnd() {
-                existingDetails.remove();
-                existingDetails.removeEventListener('transitionend', handleTransitionEnd);
-            });
-            return;
-        }
-
-        const drugDetailsContainer = renderDrugDetails(drug);
-        drugLink.after(drugDetailsContainer);
-
-        setTimeout(() => {
-            drugDetailsContainer.style.maxHeight = "300px";
-            drugDetailsContainer.style.padding = '20px';
-            adjustHeight(drugLink);
-        }, 10);
-
-        var panel = drugLink.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-}
-
-function adjustHeight(drugLink) {
-    const parentPanel = drugLink.closest('.panel');
-    parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
-}
-
 
 function drawChart(canvas, value) {
     const ctx = canvas.getContext('2d');
