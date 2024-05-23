@@ -11,16 +11,16 @@ function updateHeaderTitle(title) {
 
 function loadMainConditions() {
     const container = document.getElementById('grid-container');
-    container.className = 'grid-container grid-container-centered row';
+    container.className = 'grid-container grid-container-centered';
     container.innerHTML = '';
 
     const conditions = ['depression', 'anxiety', 'bipolar', 'schizophrenia'];
     conditions.forEach(condition => {
         const colDiv = document.createElement('div');
-        colDiv.className = 'col-md-3 my-2';
+        colDiv.className = 'col-md-3 my-2 d-flex justify-content-center';
 
         const button = document.createElement('button');
-        button.className = 'btn btn-primary grid-item w-100';
+        button.className = 'btn btn-primary grid-item';
         button.innerText = condition.charAt(0).toUpperCase() + condition.slice(1);
         button.onclick = () => {
             loadSubclasses(condition);
@@ -36,6 +36,7 @@ function loadMainConditions() {
     const backToSubclassesButton = document.getElementById('back-to-subclasses-button');
     backToSubclassesButton.style.display = 'none';
 }
+
 
 function loadSubclasses(condition) {
     const filePath = `guidelines/${condition}.json`;
@@ -128,7 +129,7 @@ function loadGuidelines(guidelines, subclass, condition) {
         collapseDiv.id = `collapse-${index}`;
         collapseDiv.className = 'collapse';
         collapseDiv.setAttribute('aria-labelledby', `heading-${index}`);
-        collapseDiv.setAttribute('data-parent', '#accordion-container');
+
 
         const cardBody = document.createElement('div');
         cardBody.className = 'card-body';
@@ -273,7 +274,7 @@ function appendWithHeaders(container, elements, categories) {
             if (category) {
                 const header = document.createElement('h3');
                 header.textContent = category;
-                header.className = 'section-title';
+                header.className = 'header-title'; // Use the shared class for section headers
                 section.appendChild(header);
             }
             section.appendChild(attributesContainer);
