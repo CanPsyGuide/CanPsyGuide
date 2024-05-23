@@ -14,7 +14,7 @@ function loadMainConditions() {
     container.className = 'grid-container grid-container-centered';
     container.innerHTML = '';
 
-    const conditions = ['depression', 'anxiety', 'bipolar', 'schizophrenia'];
+    const conditions = ['depression', 'anxiety', 'bipolar'];
     conditions.forEach(condition => {
         const colDiv = document.createElement('div');
         colDiv.className = 'col-md-3 my-2 d-flex justify-content-center';
@@ -74,6 +74,7 @@ function loadSubclasses(condition) {
         });
 }
 
+
 function loadGuidelines(guidelines, subclass, condition) {
     const container = document.getElementById('grid-container');
     container.style.display = 'none';
@@ -129,7 +130,6 @@ function loadGuidelines(guidelines, subclass, condition) {
         collapseDiv.id = `collapse-${index}`;
         collapseDiv.className = 'collapse';
         collapseDiv.setAttribute('aria-labelledby', `heading-${index}`);
-
 
         const cardBody = document.createElement('div');
         cardBody.className = 'card-body';
@@ -214,10 +214,10 @@ function renderDrugDetails(drug) {
 }
 
 const categories = {
-    '': ['drugclass', 'dose', 'LOE'],
+    '': ['Drug Class', 'Dose', 'LOE'],
     'Specific Symptom Treatment': ['Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction'],
     'Other': ['Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability'],
-    'Notes': ['notes']
+    'Notes': ['Notes']
 };
 
 function createElementForKeyAndValue(key, value) {

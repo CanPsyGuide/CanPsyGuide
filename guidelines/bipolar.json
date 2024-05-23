@@ -1,58 +1,839 @@
 {
-    "condition": "Bipolar",
+    "condition": "Bipolar Disorder",
     "description": "Overview of treatment options for Bipolar Disorder.",
     "subclasses": [
         {
-            "name": "General Treatment",
-            "description": "Treatment options for Bipolar Disorder.",
+            "name": "BD1 Acute Mania",
+            "description": "Detailed information about BD1 Acute Mania treatments for Bipolar Disorder.",
             "guidelines": [
                 {
-                    "level": "First Line",
+                    "level": "First Line - Combination",
                     "drugs": [
-                        {"name": "Citalopram", "drugclass": "SSRI", "dose": "20-40 mg", "LOE": "1", "cognitive_dysfunction": "2", "fatigue": "2"},
-                        {"name": "Escitalopram", "drugclass": "SSRI", "dose": "10-20 mg", "LOE": "1", "cognitive_dysfunction": "2", "fatigue": "2"},
-                        {"name": "Fluoxetine", "drugclass": "SSRI", "dose": "20-60 mg", "LOE": "1", "cognitive_dysfunction": "2", "fatigue": "2"},
-                        {"name": "Fluvoxamine", "drugclass": "SSRI", "dose": "100-300 mg", "LOE": "1", "cognitive_dysfunction": "2", "fatigue": "2"},
-                        {"name": "Paroxetine", "drugclass": "SSRI", "dose": "20-50 mg", "LOE": "1", "cognitive_dysfunction": "2", "fatigue": "2"},
-                        {"name": "Sertraline", "drugclass": "SSRI", "dose": "50-200 mg", "LOE": "1", "cognitive_dysfunction": "2", "fatigue": "2"},
-                        {"name": "Desvenlafaxine", "drugclass": "SNRI", "dose": "50-100 mg", "LOE": "1", "pain": "2"},
-                        {"name": "Duloxetine", "drugclass": "SNRI", "dose": "60-120 mg", "LOE": "1", "pain": "1", "fatigue": "2", "cognitive_dysfunction": "2"},
-                        {"name": "Levomilnacipran", "drugclass": "SNRI", "dose": "40-120 mg", "LOE": "1", "pain": "2"},
-                        {"name": "Venlafaxine-XR", "drugclass": "SNRI", "dose": "75-225 mg", "LOE": "1", "pain": "2"},
-                        {"name": "Bupropion", "drugclass": "NDRI", "dose": "150-450 mg", "LOE": "1", "fatigue": "1", "cognitive_dysfunction": "2"},
-                        {"name": "Mirtazapine", "drugclass": "α2 antagonist; 5-HT2 antagonist", "dose": "30-60 mg", "LOE": "1", "sleep": "2"},
-                        {"name": "Vilazodone", "drugclass": "SRI; 5-HT1A agonist", "dose": "20-40 mg", "LOE": "1"},
-                        {"name": "Vortioxetine", "drugclass": "SRI; 5-HT1A, 5-HT1B agonist; 5-HT1D, 5-HT3A, 5-HT7 antagonist", "dose": "10-20 mg", "LOE": "1", "cognitive_dysfunction": "1"},
-                        {"name": "Agomelatine", "drugclass": "MT1, MT2 agonist; 5-HT2 antagonist", "dose": "25-50 mg", "LOE": "1", "sleep": "1"},
-                        {"name": "Mianserin", "drugclass": "α2 antagonist; 5-HT2 antagonist", "dose": "30-90 mg", "LOE": "1"},
-                        {"name": "Milnacipran", "drugclass": "SNRI", "dose": "30-90 mg", "LOE": "1"}
+                        {
+                            "name": "Quetiapine+Li/DVP",
+                            "LOE": 4.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "+++",
+                            "Mainttol": "++",
+                            "Switchrisk": "-",
+                            "Notes": "No controlled trials; however, clinical experience suggests that it is a useful strategy. Divalproex should be used with caution in women of childbearing age."
+                        },
+                        {
+                            "name": "Aripiprazole+Li/DVP",
+                            "LOE": 4.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "+",
+                            "Maintsafety": "++",
+                            "Mainttol": "++",
+                            "Switchrisk": "-",
+                            "Notes": "Did not separate from placebo in those with index mania; no studies available in index depression. Divalproex should be used with caution in women of childbearing age."
+                        },
+                        {
+                            "name": "Risperidone+Li/DVP",
+                            "LOE": 4.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "+++",
+                            "Mainttol": "++",
+                            "Switchrisk": "-",
+                            "Notes": "Divalproex should be used with caution in women of childbearing age."
+                        },
+                        {
+                            "name": "Asenapine+Li/DVP",
+                            "LOE": 4.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "+",
+                            "Maintsafety": "++",
+                            "Mainttol": "+",
+                            "Switchrisk": "-",
+                            "Notes": "Divalproex should be used with caution in women of childbearing age."
+                        }
+                    ]
+                },
+                {
+                    "level": "First Line - Monotherapy",
+                    "drugs": [
+                        {
+                            "name": "Lithium",
+                            "LOE": 2.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "+",
+                            "Maintsafety": "++",
+                            "Mainttol": "++",
+                            "Switchrisk": "-"
+                        },
+                        {
+                            "name": "Quetiapine",
+                            "LOE": 1.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "++",
+                            "Mainttol": "++",
+                            "Switchrisk": "-"
+                        },
+                        {
+                            "name": "Divalproex",
+                            "LOE": 2.0,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "++",
+                            "Mainttol": "+",
+                            "Switchrisk": "-",
+                            "Notes": "Divalproex should be used with caution in women of childbearing age."
+                        },
+                        {
+                            "name": "Asenapine",
+                            "LOE": 0.0,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "-",
+                            "Mainttol": "+",
+                            "Switchrisk": "-"
+                        },
+                        {
+                            "name": "Aripiprazole",
+                            "LOE": -1.0,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "-",
+                            "Mainttol": "+",
+                            "Switchrisk": "-"
+                        },
+                        {
+                            "name": "Paliperidone (>6 mg)",
+                            "LOE": 0.0,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "+",
+                            "Mainttol": "++",
+                            "Switchrisk": "-"
+                        },
+                        {
+                            "name": "Risperidone",
+                            "LOE": 0.0,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "+",
+                            "Mainttol": "++",
+                            "Switchrisk": "-"
+                        },
+                        {
+                            "name": "Cariprazine",
+                            "LOE": 1.0,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "-",
+                            "Mainttol": "-",
+                            "Switchrisk": "-"
+                        }
                     ]
                 },
                 {
                     "level": "Second Line",
                     "drugs": [
-                        {"name": "Amitryptyline", "drugclass": "TCA", "dose": "75-300 mg", "LOE": "1"},
-                        {"name": "Clomipramine", "drugclass": "TCA", "dose": "150-300 mg", "LOE": "1"},
-                        {"name": "Desipramine", "drugclass": "TCA", "dose": "100-300 mg", "LOE": "1"},
-                        {"name": "Doxepin", "drugclass": "TCA", "dose": "75-300 mg", "LOE": "1"},
-                        {"name": "Imipramine", "drugclass": "TCA", "dose": "75-300 mg", "LOE": "1"},
-                        {"name": "Nortryptyline", "drugclass": "TCA", "dose": "75-150 mg", "LOE": "1"},
-                        {"name": "Protriptyline", "drugclass": "TCA", "dose": "30-60 mg", "LOE": "1"},
-                        {"name": "Trimipramine", "drugclass": "TCA", "dose": "75-300 mg", "LOE": "1"},
-                        {"name": "Moclobemide", "drugclass": "RIMA", "dose": "150-450 mg", "LOE": "1"},
-                        {"name": "Trazodone", "drugclass": "SRI; 5-HT2 antagonist", "dose": "150-400 mg", "LOE": "1", "sleep": "2"},
-                        {"name": "Quetiapine", "drugclass": "DA, 5-HT, α1 & α2 antagonist; NRI", "dose": "150-300 mg", "LOE": "1", "sleep": "2"},
-                        {"name": "Dextromethorphan-Bupropion", "drugclass": "NMDA antagonist; NDRI, sigma-1 agonist", "dose": "45/105-90/210 mg", "LOE": "2"},
-                        {"name": "Nefazodone", "drugclass": "SRI, 5-HT2 antagonist", "dose": "300-600 mg", "LOE": "1"},
-                        {"name": "Selegiline transdermal", "drugclass": "MAO-B inhibitor", "dose": "6-12 mg", "LOE": "2"}
+                        {
+                            "name": "Olanzapine",
+                            "LOE": 1.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "+++",
+                            "Mainttol": "++",
+                            "Switchrisk": "-",
+                            "Notes": "Did not separate from placebo on core symptoms of depression."
+                        },
+                        {
+                            "name": "Carbamazepine",
+                            "LOE": 3.0,
+                            "Acutesafety": "++",
+                            "Acutetol": "+",
+                            "Maintsafety": "++",
+                            "Mainttol": "++",
+                            "Switchrisk": "-",
+                            "Notes": "Carbamazepine should be used with caution in women of childbearing age."
+                        },
+                        {
+                            "name": "Olanzapine+Li/DVP",
+                            "LOE": 0.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "+++",
+                            "Mainttol": "++",
+                            "Switchrisk": "-",
+                            "Notes": "Divalproex should be used with caution in women of childbearing age."
+                        },
+                        {
+                            "name": "Lithium+DVP",
+                            "LOE": 0.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "++",
+                            "Mainttol": "++",
+                            "Switchrisk": "-",
+                            "Notes": "Divalproex should be used with caution in women of childbearing age."
+                        },
+                        {
+                            "name": "Ziprasidone",
+                            "LOE": -1.0,
+                            "Acutesafety": "++",
+                            "Acutetol": "++",
+                            "Maintsafety": "++",
+                            "Mainttol": "+",
+                            "Switchrisk": "-"
+                        },
+                        {
+                            "name": "Haloperidol",
+                            "LOE": 0.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "+++",
+                            "Mainttol": "++",
+                            "Switchrisk": "++"
+                        },
+                        {
+                            "name": "ECT",
+                            "LOE": 4.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "+",
+                            "Mainttol": "++",
+                            "Switchrisk": "-",
+                            "Notes": "Divalproex and Carbamazepine should be used with caution in women of childbearing age."
+                        }
                     ]
                 },
                 {
                     "level": "Third Line",
                     "drugs": [
-                        {"name": "Phenelzine", "drugclass": "MAO inhibitor", "dose": "45-90 mg", "LOE": "1"},
-                        {"name": "Tranylcypromine", "drugclass": "MAO inhibitor", "dose": "30-60 mg", "LOE": "1"},
-                        {"name": "Reboxetine", "drugclass": "NRI", "dose": "8-12 mg", "LOE": "1"}
+                        {
+                            "name": "Chlorpromazine",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "Clonazepam",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "Clozapine",
+                            "LOE": 4
+                        },
+                        {
+                            "name": "Haloperidol + Li/DVP",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "rTMS",
+                            "LOE": 3
+                        },
+                        {
+                            "name": "Tamoxifen",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "Tamoxifen + Li/DVP",
+                            "LOE": 2
+                        }
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {
+                            "name": "Carbamazepine/Oxcarbazepine + Li/DVP",
+                            "LOE": 3
+                        }
+                    ]
+                },
+                {
+                    "level": "Not Recommended ",
+                    "drugs": [
+                        {
+                            "name": "Allopurinol",
+                            "LOE": -1
+                        },
+                        {
+                            "name": "Eslicarbazepine/Licarbazepine",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Gabapentin",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Lamotrigine",
+                            "LOE": -1
+                        },
+                        {
+                            "name": "Omega-3 Fatty Acids",
+                            "LOE": -1
+                        },
+                        {
+                            "name": "Topirimate",
+                            "LOE": -1
+                        },
+                        {
+                            "name": "Valnoctamide",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Zonisamide",
+                            "LOE": -2
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "BD1 Acute Depression",
+            "description": "Detailed information about BD1 Acute Depression treatments for Bipolar Disorder.",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {
+                            "name": "Quetiapine",
+                            "LOE": 1,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "++",
+                            "Mainttol": "++",
+                            "Switchrisk": "-"
+                        },
+                        {
+                            "name": "Lurasidone+Li/DVP",
+                            "LOE": 0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "++",
+                            "Mainttol": "++/+",
+                            "Switchrisk": "-",
+                            "Other Notes": "Divalproex should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "Lithium",
+                            "LOE": 1,
+                            "Acutesafety": "+",
+                            "Acutetol": "+",
+                            "Maintsafety": "++",
+                            "Mainttol": "++",
+                            "Switchrisk": "-"
+                        },
+                        {
+                            "name": "Lamotrigine",
+                            "LOE": -1,
+                            "Acutesafety": "++",
+                            "Acutetol": "-",
+                            "Maintsafety": "-",
+                            "Mainttol": "-",
+                            "Switchrisk": "-"
+                        },
+                        {
+                            "name": "Lurasidone",
+                            "LOE": 0,
+                            "Acutesafety": "-",
+                            "Acutetol": "-",
+                            "Maintsafety": "-",
+                            "Mainttol": "+",
+                            "Switchrisk": "-"
+                        },
+                        {
+                            "name": "Lamotrigine (adj)",
+                            "LOE": -4,
+                            "Acutesafety": "++",
+                            "Acutetol": "+",
+                            "Maintsafety": "++",
+                            "Mainttol": "++",
+                            "Switchrisk": "-"
+                        }
+                    ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {
+                            "name": "Divalproex",
+                            "LOE": 4,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "++",
+                            "Mainttol": "+",
+                            "Switchrisk": "-",
+                            "Other Notes": "Divalproex should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "SSRIs/bupropion (adj)",
+                            "LOE": 0,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "-",
+                            "Mainttol": "+",
+                            "Switchrisk": "+"
+                        },
+                        {
+                            "name": "ECT",
+                            "LOE": 3,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "+",
+                            "Mainttol": "++",
+                            "Switchrisk": "-"
+                        },
+                        {
+                            "name": "Cariprazine",
+                            "LOE": 1,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "-",
+                            "Mainttol": "-",
+                            "Switchrisk": "-"
+                        },
+                        {
+                            "name": "Olanzapine + Fluoxetine",
+                            "LOE": 0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "+++",
+                            "Mainttol": "+",
+                            "Switchrisk": "+"
+                        }
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {
+                            "name": "Aripiprazole (adj)",
+                            "LOE": 4
+                        },
+                        {
+                            "name": "Armodafinil (adj)",
+                            "LOE": 4
+                        },
+                        {
+                            "name": "Asenapine (adj)",
+                            "LOE": 4
+                        },
+                        {
+                            "name": "Carbamazepine",
+                            "LOE": 2,
+                            "Other Notes": "Carbamazepine should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "EPA (adj)",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "Ketamine IV (adj)",
+                            "LOE": 3
+                        },
+                        {
+                            "name": "Light Therapy +/- Total Sleep Deprivation",
+                            "LOE": 3
+                        },
+                        {
+                            "name": "Levothyroxine (adj)",
+                            "LOE": 3
+                        },
+                        {
+                            "name": "Modafinil (adj)",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "N-acetylcysteine (adj)",
+                            "LOE": 3
+                        },
+                        {
+                            "name": "Olanzapine",
+                            "LOE": 1
+                        },
+                        {
+                            "name": "Pramipexole (adj)",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "rTMS (adj)",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "SNRI/MAOI (adj)",
+                            "LOE": 2
+                        }
+                    ]
+                },
+                {
+                    "level": "Not Recommended",
+                    "drugs": [
+                        {
+                            "name": "Antidepressant Monotherapy",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Aripiprazole",
+                            "LOE": -1
+                        },
+                        {
+                            "name": "Lamotrigine + Folic Acid",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Mifepristone (adj)",
+                            "LOE": -2
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "BD1 Maintenance",
+            "description": "Detailed information about BD1 Maintenance treatments for Bipolar Disorder.",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {
+                            "name": "Lithium",
+                            "LOE": 1.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "+",
+                            "Maintsafety": "++",
+                            "Mainttol": "++"
+                        },
+                        {
+                            "name": "Quetiapine",
+                            "LOE": 1.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "++",
+                            "Mainttol": "++"
+                        },
+                        {
+                            "name": "Divalproex",
+                            "LOE": 1.0,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "++",
+                            "Mainttol": "+",
+                            "Notes": "Divalproex should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "Lamotrigine",
+                            "LOE": -1.0,
+                            "Acutesafety": "++",
+                            "Acutetol": "-",
+                            "Maintsafety": "-",
+                            "Mainttol": "-"
+                        },
+                        {
+                            "name": "Asenapine",
+                            "LOE": 1.0,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "-",
+                            "Mainttol": "+"
+                        },
+                        {
+                            "name": "Quetiapine + Li/DVP",
+                            "LOE": 1.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "+++",
+                            "Mainttol": "++",
+                            "Notes": "Divalproex should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "Aripiprazole + Li/DVP",
+                            "LOE": 2.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "+",
+                            "Maintsafety": "++",
+                            "Mainttol": "++",
+                            "Notes": "Divalproex should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "Aripiprazole",
+                            "LOE": 1.0,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "-",
+                            "Mainttol": "+"
+                        },
+                        {
+                            "name": "Aripirazole LAI",
+                            "LOE": 0.0,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "-",
+                            "Mainttol": "+"
+                        }
+                    ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {
+                            "name": "Olanzapine",
+                            "LOE": 1.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "+++",
+                            "Mainttol": "++"
+                        },
+                        {
+                            "name": "Risperidone LAI",
+                            "LOE": 0.0,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "+",
+                            "Mainttol": "++"
+                        },
+                        {
+                            "name": "Risperidone LAI (adj)",
+                            "LOE": 0.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "+++",
+                            "Mainttol": "++"
+                        },
+                        {
+                            "name": "Carbamazepine",
+                            "LOE": 1.0,
+                            "Acutesafety": "++",
+                            "Acutetol": "++",
+                            "Maintsafety": "+",
+                            "Mainttol": "++",
+                            "Notes": "Carbamazepine should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "Paliperidone (>6 mg)",
+                            "LOE": 1.0,
+                            "Acutesafety": "-",
+                            "Acutetol": "+",
+                            "Maintsafety": "+",
+                            "Mainttol": "++"
+                        },
+                        {
+                            "name": "Lurasidone + Li/DVP",
+                            "LOE": 0.0,
+                            "Acutesafety": "+",
+                            "Acutetol": "++",
+                            "Maintsafety": "++",
+                            "Mainttol": "++/-",
+                            "Notes": "Divalproex should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "Ziprazidone + Li/DVP",
+                            "LOE": -3.0,
+                            "Acutesafety": "++",
+                            "Acutetol": "++",
+                            "Maintsafety": "++",
+                            "Mainttol": "+",
+                            "Notes": "Divalproex should be used with caution in women of child bearing age."
+                        }
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {
+                            "name": "Aripiprazole + Lamotrigine",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "Clozapine",
+                            "LOE": 4
+                        },
+                        {
+                            "name": "Gabapentin",
+                            "LOE": 4
+                        },
+                        {
+                            "name": "Olanzapine + Fluoxetine",
+                            "LOE": 2
+                        }
+                    ]
+                },
+                {
+                    "level": "Not Recommended",
+                    "drugs": [
+                        {
+                            "name": "Perphenazine",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Tricyclic antidepressants",
+                            "LOE": -2
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "BD2 Depression",
+            "description": "Detailed information about BD2 Depression treatments for Bipolar Disorder.",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {
+                            "name": "Quetiapine",
+                            "LOE": 1
+                        }
+                    ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {
+                            "name": "Lithium",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "Lamotrigine",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "Bupropion",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "ECT",
+                            "LOE": 3
+                        },
+                        {
+                            "name": "Sertraline",
+                            "LOE": 2,
+                            "Notes": "For patients with pure depression (non-mixed)."
+                        },
+                        {
+                            "name": "Venlafaxine",
+                            "LOE": 2,
+                            "Notes": "For patients with pure depression (non-mixed)."
+                        }
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {
+                            "name": "Agomelatine (adj)",
+                            "LOE": 4
+                        },
+                        {
+                            "name": "Bupropion (adj)",
+                            "LOE": 4
+                        },
+                        {
+                            "name": "Divaloproex",
+                            "LOE": 4,
+                            "Notes": "Divalproex should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "EPA",
+                            "LOE": 4
+                        },
+                        {
+                            "name": "Fluoxetine",
+                            "LOE": 3,
+                            "Notes": "For patients with pure depression (non-mixed)."
+                        },
+                        {
+                            "name": "Ketamine IV/SL (adj)",
+                            "LOE": 3
+                        },
+                        {
+                            "name": "N-acetylcysteine (adj)",
+                            "LOE": 4
+                        },
+                        {
+                            "name": "Pramipexole",
+                            "LOE": 3
+                        },
+                        {
+                            "name": "T3/T4 thyroid hormones (adj)",
+                            "LOE": 4
+                        },
+                        {
+                            "name": "Tranylcypromine",
+                            "LOE": 3
+                        },
+                        {
+                            "name": "Ziprasidone",
+                            "LOE": 3,
+                            "Notes": "For patients with depression and mixed hypomania."
+                        }
+                    ]
+                },
+                {
+                    "level": "Not Recommended",
+                    "drugs": [
+                        {
+                            "name": "Paroxetine",
+                            "LOE": -2
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "BD2 Maintenance",
+            "description": "Detailed information about BD2 Maintenance treatments for Bipolar Disorder.",
+            "guidelines": [
+                {
+                    "level": "First Line",
+                    "drugs": [
+                        {
+                            "name": "Quetiapine",
+                            "LOE": 1
+                        },
+                        {
+                            "name": "Lithium",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "Lamotrigine",
+                            "LOE": 2
+                        }
+                    ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {
+                            "name": "Venlafaxine",
+                            "LOE": 2
+                        }
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {
+                            "name": "Carbamazepine",
+                            "LOE": 3,
+                            "Notes": "Carbamazepine should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "Divalproex",
+                            "LOE": 3,
+                            "Notes": "Divalproex should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "Escitalopram",
+                            "LOE": 3
+                        },
+                        {
+                            "name": "Fluoxetine",
+                            "LOE": 3
+                        },
+                        {
+                            "name": "Other antidepressants",
+                            "LOE": 3
+                        },
+                        {
+                            "name": "Risperidone",
+                            "LOE": 4,
+                            "Notes": "Primarily for prevention of hypomania"
+                        }
                     ]
                 }
             ]

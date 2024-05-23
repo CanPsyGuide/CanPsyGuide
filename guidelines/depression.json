@@ -4,239 +4,222 @@
     "subclasses": [
         {
             "name": "Pharmacotherapy",
-            "description": "Treatment options for Depression.",
+            "description": "Detailed information about Pharmacotherapy treatments for Depression.",
             "guidelines": [
                 {
                     "level": "First Line",
                     "drugs": [
                         {
                             "name": "Citalopram",
-                            "drugclass": "SSRI",
-                            "dose": "20-40 mg",
-                            "LOE": "1",
-                            "Cognitive Dysfunction": "2",
-                            "Fatigue": "2",
-                            "notes": "Monitor QTc",
-                            "Acceptability": "1",
-                            "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "1",
-                            "Weight Gain": "1",
-                            "Sexual Dysfunction": "-1"
+                            "Drug Class": "SSRI",
+                            "Dose": "20-40 mg",
+                            "LOE": 1,
+                            "Fatigue": 2.0,
+                            "Cognitive Dysfunction": 2.0,
+                            "Acceptability": 1.0,
+                            "Drug Interactions": 1.0,
+                            "Sedation": 1.0,
+                            "Sexual Dysfunction": -1.0,
+                            "Notes": "Monitor QTc"
                         },
                         {
                             "name": "Escitalopram",
-                            "drugclass": "SSRI",
-                            "dose": "10-20 mg",
-                            "LOE": "1",
-                            "Cognitive Dysfunction": "2",
-                            "Fatigue": "2",
-                            "Efficacy": "1",
-                            "Acceptability": "1",
-                            "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "1",
-                            "Sedation": "1",
-                            "Weight Gain": "1",
-                            "Sexual Dysfunction": "-1",
-                            "Other Tolerability": "1"
+                            "Drug Class": "SSRI",
+                            "Dose": "10-20 mg",
+                            "LOE": 1,
+                            "Fatigue": 2.0,
+                            "Cognitive Dysfunction": 2.0,
+                            "Efficacy": 1.0,
+                            "Acceptability": 1.0,
+                            "Drug Interactions": 1.0,
+                            "Sedation": 1.0,
+                            "Weight Gain": 1.0,
+                            "Sexual Dysfunction": -1.0,
+                            "Other Tolerability": 1.0
                         },
                         {
                             "name": "Fluoxetine",
-                            "drugclass": "SSRI",
-                            "dose": "20-60 mg",
-                            "LOE": "1",
-                            "Cognitive Dysfunction": "2",
-                            "Fatigue": "2",
-                            "Efficacy": "1",
-                            "Acceptability": "-1",
-                            "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "1",
-                            "Sedation": "1",
-                            "Weight Gain": "-1",
-                            "Sexual Dysfunction": "1",
-                            "Other Tolerability": "1"
+                            "Drug Class": "SSRI",
+                            "Dose": "20-60 mg",
+                            "LOE": 1,
+                            "Fatigue": 2.0,
+                            "Cognitive Dysfunction": 2.0,
+                            "Acceptability": 1.0,
+                            "Drug Interactions": -1.0,
+                            "Discontinuation Syndrome": 1.0,
+                            "Sedation": 1.0,
+                            "Weight Gain": 1.0,
+                            "Sexual Dysfunction": -1.0,
+                            "Other Tolerability": 1.0
                         },
                         {
                             "name": "Fluvoxamine",
-                            "drugclass": "SSRI",
-                            "dose": "100-300 mg",
-                            "LOE": "1",
-                            "Cognitive Dysfunction": "2",
-                            "Fatigue": "2",
-                            "Acceptability": "-1",
-                            "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "1",
-                            "Sedation": "1",
-                            "Weight Gain": "-1",
-                            "Sexual Dysfunction": "1"
+                            "Drug Class": "SSRI",
+                            "Dose": "100-300 mg",
+                            "LOE": 1,
+                            "Fatigue": 2.0,
+                            "Cognitive Dysfunction": 2.0,
+                            "Drug Interactions": -1.0,
+                            "Sedation": 1.0,
+                            "Weight Gain": 1.0,
+                            "Sexual Dysfunction": -1.0
                         },
                         {
                             "name": "Paroxetine",
-                            "drugclass": "SSRI",
-                            "dose": "20-50 mg",
-                            "LOE": "1",
-                            "Cognitive Dysfunction": "2",
-                            "Fatigue": "2",
-                            "Efficacy": "1",
-                            "Drug Interactions": "-1",
-                            "Discontinuation Syndrome": "-1",
-                            "Sedation": "-1",
-                            "Weight Gain": "-1",
-                            "Sexual Dysfunction": "-1"
+                            "Drug Class": "SSRI",
+                            "Dose": "20-50 mg",
+                            "LOE": 1,
+                            "Fatigue": 2.0,
+                            "Cognitive Dysfunction": 2.0,
+                            "Efficacy": 1.0,
+                            "Drug Interactions": -1.0,
+                            "Discontinuation Syndrome": -1.0,
+                            "Weight Gain": -1.0,
+                            "Sexual Dysfunction": -1.0
                         },
                         {
                             "name": "Sertraline",
-                            "drugclass": "SSRI",
-                            "dose": "50-200 mg",
-                            "LOE": "1",
-                            "Cognitive Dysfunction": "2",
-                            "Fatigue": "2",
-                            "Efficacy": "1",
-                            "Acceptability": "1",
-                            "Discontinuation Syndrome": "1",
-                            "Weight Gain": "1",
-                            "Sexual Dysfunction": "1"
+                            "Drug Class": "SSRI",
+                            "Dose": "50-200 mg",
+                            "LOE": 1,
+                            "Fatigue": 2.0,
+                            "Cognitive Dysfunction": 2.0,
+                            "Efficacy": 1.0,
+                            "Acceptability": 1.0,
+                            "Sedation": 1.0,
+                            "Other Tolerability": 1.0
                         },
                         {
                             "name": "Desvenlafaxine",
-                            "drugclass": "SNRI",
-                            "dose": "50-100 mg",
-                            "LOE": "1",
-                            "Pain": "2",
-                            "Efficacy": "1",
-                            "Acceptability": "1",
-                            "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "1",
-                            "Sedation": "1",
-                            "Weight Gain": "1",
-                            "Sexual Dysfunction": "1"
+                            "Drug Class": "SNRI",
+                            "Dose": "50-100 mg",
+                            "LOE": 1,
+                            "Pain": 2.0,
+                            "Drug Interactions": 1.0,
+                            "Sedation": 1.0,
+                            "Weight Gain": 1.0,
+                            "Sexual Dysfunction": 1.0,
+                            "Other Tolerability": 1.0
                         },
                         {
                             "name": "Duloxetine",
-                            "drugclass": "SNRI",
-                            "dose": "60-120 mg",
-                            "LOE": "1",
-                            "Pain": "1",
-                            "Fatigue": "2",
-                            "Cognitive Dysfunction": "2",
-                            "Efficacy": "1",
-                            "Acceptability": "1",
-                            "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "-1"
+                            "Drug Class": "SNRI",
+                            "Dose": "60-120 mg",
+                            "LOE": 1,
+                            "Pain": 1.0,
+                            "Fatigue": 2.0,
+                            "Cognitive Dysfunction": 2.0,
+                            "Sedation": 1.0,
+                            "Sexual Dysfunction": -1.0
                         },
                         {
                             "name": "Levomilnacipran",
-                            "drugclass": "SNRI",
-                            "dose": "40-120 mg",
-                            "LOE": "1",
-                            "Pain": "2",
-                            "notes": "Not Available in Canada",
-                            "Efficacy": "1",
-                            "Acceptability": "1",
-                            "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "1"
+                            "Drug Class": "SNRI",
+                            "Dose": "40-120 mg",
+                            "LOE": 1,
+                            "Pain": 2.0,
+                            "Drug Interactions": 1.0,
+                            "Sedation": 1.0,
+                            "Weight Gain": 1.0,
+                            "Notes": "Not Available in Canada"
                         },
                         {
                             "name": "Venlafaxine-XR",
-                            "drugclass": "SNRI",
-                            "dose": "75-225 mg",
-                            "LOE": "1",
-                            "Pain": "2",
-                            "Efficacy": "1",
-                            "Acceptability": "-1",
-                            "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "-1",
-                            "Sedation": "-1",
-                            "Weight Gain": "-1"
+                            "Drug Class": "SNRI",
+                            "Dose": "75-225 mg",
+                            "LOE": 1,
+                            "Pain": 2.0,
+                            "Efficacy": 1.0,
+                            "Discontinuation Syndrome": -1.0,
+                            "Sedation": 1.0,
+                            "Sexual Dysfunction": -1.0,
+                            "Other Tolerability": -1.0
                         },
                         {
                             "name": "Bupropion",
-                            "drugclass": "NDRI",
-                            "dose": "150-450 mg",
-                            "LOE": "1",
-                            "Fatigue": "1",
-                            "Cognitive Dysfunction": "2",
-                            "Efficacy": "1",
-                            "Acceptability": "1",
-                            "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "1",
-                            "Sedation": "1",
-                            "Weight Gain": "1",
-                            "Sexual Dysfunction": "1",
-                            "Other Tolerability": "1"
+                            "Drug Class": "NDRI",
+                            "Dose": "150-450 mg",
+                            "LOE": 1,
+                            "Fatigue": 1.0,
+                            "Cognitive Dysfunction": 2.0,
+                            "Efficacy": 1.0,
+                            "Discontinuation Syndrome": 1.0,
+                            "Sedation": 1.0,
+                            "Weight Gain": 1.0,
+                            "Sexual Dysfunction": 1.0,
+                            "Other Tolerability": 1.0
                         },
                         {
                             "name": "Mirtazapine",
-                            "drugclass": "α2 antagonist; 5-HT2 antagonist",
-                            "dose": "30-60 mg",
-                            "LOE": "1",
-                            "Sleep": "2",
-                            "Efficacy": "1",
-                            "Acceptability": "1",
-                            "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "1",
-                            "Sedation": "-1",
-                            "Weight Gain": "-1",
-                            "Sexual Dysfunction": "1"
+                            "Drug Class": "\u03b12 antagonist; 5-HT2 antagonist",
+                            "Dose": "30-60 mg",
+                            "LOE": 1,
+                            "Sleep": 2.0,
+                            "Efficacy": 1.0,
+                            "Acceptability": 1.0,
+                            "Drug Interactions": 1.0,
+                            "Discontinuation Syndrome": 1.0,
+                            "Sedation": -1.0,
+                            "Weight Gain": -1.0,
+                            "Sexual Dysfunction": 1.0
                         },
                         {
                             "name": "Vilazodone",
-                            "drugclass": "SRI; 5-HT1A agonist",
-                            "dose": "20-40 mg",
-                            "LOE": "1",
-                            "Efficacy": "1",
-                            "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "1",
-                            "Sedation": "1",
-                            "Weight Gain": "1",
-                            "Sexual Dysfunction": "1"
+                            "Drug Class": "SRI; 5-HT1A agonist",
+                            "Dose": "20-40 mg",
+                            "LOE": 1,
+                            "Drug Interactions": 1.0,
+                            "Sedation": 1.0,
+                            "Weight Gain": 1.0,
+                            "Sexual Dysfunction": 1.0,
+                            "Other Tolerability": 1.0
                         },
                         {
                             "name": "Vortioxetine",
-                            "drugclass": "SRI; 5-HT1A, 5-HT1B agonist; 5-HT1D, 5-HT3A, 5-HT7 antagonist",
-                            "dose": "10-20 mg",
-                            "LOE": "1",
-                            "Cognitive Dysfunction": "1",
-                            "Efficacy": "1",
-                            "Acceptability": "1",
-                            "Drug Interactions": "1",
-                            "Discontinuation Syndrome": "1",
-                            "Sedation": "1",
-                            "Weight Gain": "1",
-                            "Sexual Dysfunction": "1",
-                            "Other Tolerability": "1"
+                            "Drug Class": "SRI; 5-HT1A, 5-HT1B agonist; 5-HT1D,\n5-HT3A, 5-HT7 antagonist",
+                            "Dose": "10-20 mg",
+                            "LOE": 1,
+                            "Cognitive Dysfunction": 1.0,
+                            "Efficacy": 1.0,
+                            "Acceptability": 1.0,
+                            "Drug Interactions": 1.0,
+                            "Discontinuation Syndrome": 1.0,
+                            "Sedation": 1.0,
+                            "Weight Gain": 1.0,
+                            "Sexual Dysfunction": 1.0
                         },
                         {
                             "name": "Agomelatine",
-                            "drugclass": "MT1, MT2 agonist; 5-HT2 antagonist",
-                            "dose": "25-50 mg",
-                            "LOE": "1",
-                            "Sleep": "1",
-                            "notes": "Not Available in Canada; Monitor LFTs",
-                            "Efficacy": "1",
-                            "Acceptability": "1",
-                            "Drug Interactions": "1",
-                            "Sedation": "1",
-                            "Weight Gain": "1",
-                            "Sexual Dysfunction": "1"
+                            "Drug Class": "MT1, MT2 agonist; \n5-HT2 antagonist",
+                            "Dose": "25-50 mg",
+                            "LOE": 1,
+                            "Sleep": 1.0,
+                            "Efficacy": 1.0,
+                            "Acceptability": 1.0,
+                            "Drug Interactions": 1.0,
+                            "Weight Gain": 1.0,
+                            "Sexual Dysfunction": 1.0,
+                            "Other Tolerability": 1.0,
+                            "Notes": "Not Available in Canada; Monitor LFTs"
                         },
                         {
                             "name": "Mianserin",
-                            "drugclass": "α2 antagonist; 5-HT2 antagonist",
-                            "dose": "30-90 mg",
-                            "LOE": "1",
-                            "notes": "Not Available in Canada",
-                            "Efficacy": "1",
-                            "Drug Interactions": "-1",
-                            "Sexual Dysfunction": "1"
+                            "Drug Class": "\u03b12 antagonist; 5-HT2 antagonist",
+                            "Dose": "30-90 mg",
+                            "LOE": 1,
+                            "Drug Interactions": 1.0,
+                            "Sedation": -1.0,
+                            "Other Tolerability": 1.0,
+                            "Notes": "Not Available in Canada"
                         },
                         {
                             "name": "Milnacipran",
-                            "drugclass": "SNRI",
-                            "dose": "30-90 mg",
-                            "LOE": "1",
-                            "notes": "Not Available in Canada",
-                            "Efficacy": "1",
-                            "Acceptability": "1"
+                            "Drug Class": "SNRI",
+                            "Dose": "30-90 mg",
+                            "LOE": 1,
+                            "Drug Interactions": 1.0,
+                            "Sedation": 1.0,
+                            "Notes": "Not Available in Canada"
                         }
                     ]
                 },
@@ -245,92 +228,92 @@
                     "drugs": [
                         {
                             "name": "Amitryptyline",
-                            "drugclass": "TCA",
-                            "dose": "75-300 mg",
-                            "LOE": "1"
+                            "Drug Class": "TCA",
+                            "Dose": "75-300 mg",
+                            "LOE": 1
                         },
                         {
                             "name": "Clomipramine",
-                            "drugclass": "TCA",
-                            "dose": "150-300 mg",
-                            "LOE": "1"
+                            "Drug Class": "TCA",
+                            "Dose": "150-300 mg",
+                            "LOE": 1
                         },
                         {
                             "name": "Desipramine",
-                            "drugclass": "TCA",
-                            "dose": "100-300 mg",
-                            "LOE": "1"
+                            "Drug Class": "TCA",
+                            "Dose": "100-300 mg",
+                            "LOE": 1
                         },
                         {
                             "name": "Doxepin",
-                            "drugclass": "TCA",
-                            "dose": "75-300 mg",
-                            "LOE": "1"
+                            "Drug Class": "TCA",
+                            "Dose": "75-300 mg",
+                            "LOE": 1
                         },
                         {
                             "name": "Imipramine",
-                            "drugclass": "TCA",
-                            "dose": "75-300 mg",
-                            "LOE": "1"
+                            "Drug Class": "TCA",
+                            "Dose": "75-300 mg",
+                            "LOE": 1
                         },
                         {
                             "name": "Nortryptyline",
-                            "drugclass": "TCA",
-                            "dose": "75-150 mg",
-                            "LOE": "1"
+                            "Drug Class": "TCA",
+                            "Dose": "75-150 mg",
+                            "LOE": 1
                         },
                         {
                             "name": "Protriptyline",
-                            "drugclass": "TCA",
-                            "dose": "30-60 mg",
-                            "LOE": "1"
+                            "Drug Class": "TCA",
+                            "Dose": "30-60 mg",
+                            "LOE": 1
                         },
                         {
                             "name": "Trimipramine",
-                            "drugclass": "TCA",
-                            "dose": "75-300 mg",
-                            "LOE": "1"
+                            "Drug Class": "TCA",
+                            "Dose": "75-300 mg",
+                            "LOE": 1
                         },
                         {
                             "name": "Moclobemide",
-                            "drugclass": "RIMA",
-                            "dose": "150-450 mg",
-                            "LOE": "1"
+                            "Drug Class": "RIMA",
+                            "Dose": "150-450 mg",
+                            "LOE": 1
                         },
                         {
                             "name": "Trazodone",
-                            "drugclass": "SRI; 5-HT2 antagonist",
-                            "dose": "150-400 mg",
-                            "LOE": "1",
-                            "Sleep": "2"
+                            "Drug Class": "SRI; 5-HT2 antagonist",
+                            "Dose": "150-400 mg",
+                            "LOE": 1,
+                            "Sleep": 2.0
                         },
                         {
                             "name": "Quetiapine",
-                            "drugclass": "DA, 5-HT, α1 & α2 antagonist; NRI",
-                            "dose": "150-300 mg",
-                            "LOE": "1",
-                            "Sleep": "2"
+                            "Drug Class": "DA, 5-HT, \u03b11 & \u03b12 antagonist; NRI",
+                            "Dose": "150-300 mg",
+                            "LOE": 1,
+                            "Sleep": 2.0
                         },
                         {
                             "name": "Dextromethorphan-Bupropion",
-                            "drugclass": "NMDA antagonist; NDRI, sigma-1 agonist",
-                            "dose": "45/105-90/210 mg",
-                            "LOE": "2",
-                            "notes": "Not Available in Canada"
+                            "Drug Class": "NMDA antagonist; NDRI, sigma-1 agonist",
+                            "Dose": "45/105-90/210 mg",
+                            "LOE": 2,
+                            "Notes": "Not Available in Canada"
                         },
                         {
                             "name": "Nefazodone",
-                            "drugclass": "SRI, 5-HT2 antagonist",
-                            "dose": "300-600 mg",
-                            "LOE": "1",
-                            "notes": "Not Available in Canada"
+                            "Drug Class": "SRI, 5-HT2 antagonist",
+                            "Dose": "300-600 mg",
+                            "LOE": 1,
+                            "Notes": "Not Available in Canada"
                         },
                         {
                             "name": "Selegiline transdermal",
-                            "drugclass": "MAO-B inhibitor",
-                            "dose": "6-12 mg",
-                            "LOE": "2",
-                            "notes": "Not Available in Canada"
+                            "Drug Class": "MAO-B inhibitor",
+                            "Dose": "6-12 mg",
+                            "LOE": 2,
+                            "Notes": "Not Available in Canada"
                         }
                     ]
                 },
@@ -339,43 +322,43 @@
                     "drugs": [
                         {
                             "name": "Phenelzine",
-                            "drugclass": "MAO inhibitor",
-                            "dose": "45-90 mg",
-                            "LOE": "1"
+                            "Drug Class": "MAO inhibitor",
+                            "Dose": "45-90 mg",
+                            "LOE": 1
                         },
                         {
                             "name": "Tranylcypromine",
-                            "drugclass": "MAO inhibitor",
-                            "dose": "30-60 mg",
-                            "LOE": "1"
+                            "Drug Class": "MAO inhibitor",
+                            "Dose": "30-60 mg",
+                            "LOE": 1
                         },
                         {
                             "name": "Reboxetine",
-                            "drugclass": "NRI",
-                            "dose": "8-12 mg",
-                            "LOE": "1",
-                            "notes": "Not Available in Canada"
+                            "Drug Class": "NRI",
+                            "Dose": "8-12 mg",
+                            "LOE": 1,
+                            "Notes": "Not Available in Canada"
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "Adjust Pharmacotherapy", 
-            "description": "",
+            "name": "Adjunct Pharmacotherapy",
+            "description": "Detailed information about Adjunct Pharmacotherapy treatments for Depression.",
             "guidelines": [
                 {
                     "level": "First Line",
                     "drugs": [
                         {
                             "name": "Aripiprazole",
-                            "dose": "2-10 mg",
-                            "LOE": "1"
+                            "Dose": "2-10 mg",
+                            "LOE": 1.0
                         },
                         {
-                            "name": "Brexpiprazole",
-                            "dose": "0.5-2 mg",
-                            "LOE": "1"
+                            "name": "Brexpiprazile",
+                            "Dose": "0.5-2 mg",
+                            "LOE": 1.0
                         }
                     ]
                 },
@@ -384,63 +367,63 @@
                     "drugs": [
                         {
                             "name": "Bupropion",
-                            "dose": "150-450 mg",
-                            "LOE": "1"
+                            "Dose": "150-450 mg",
+                            "LOE": 1.0
                         },
                         {
                             "name": "Intranasal esketamine",
-                            "dose": "56-84 mg",
-                            "LOE": "1"
+                            "Dose": "56-84 mg",
+                            "LOE": 1.0
                         },
                         {
                             "name": "IV racemic ketamine",
-                            "dose": "0.5-1.0 mg/kg",
-                            "LOE": "1"
+                            "Dose": "0.5-1.0 mg/kg",
+                            "LOE": 1.0
                         },
                         {
                             "name": "Olanzapine",
-                            "dose": "2.5-10 mg",
-                            "LOE": "1"
+                            "Dose": "2.5-10 mg",
+                            "LOE": 1.0
                         },
                         {
                             "name": "Quetiapine-XR",
-                            "dose": "150-300 mg",
-                            "LOE": "1"
+                            "Dose": "150-300 mg",
+                            "LOE": 1.0
                         },
                         {
                             "name": "Risperidone",
-                            "dose": "1-3 mg",
-                            "LOE": "1"
+                            "Dose": "1-3 mg",
+                            "LOE": 1.0
                         },
                         {
                             "name": "Lithium",
-                            "dose": "600-1200 mg (0.5-0.8 mmol/L)",
-                            "LOE": "1"
+                            "Dose": "600-1200 mg (0.5-0.8 mmol/L)",
+                            "LOE": 1.0
                         },
                         {
                             "name": "Cariprazine",
-                            "dose": "1.5-3 mg",
-                            "LOE": "2"
+                            "Dose": "1.5-3 mg",
+                            "LOE": 2.0
                         },
                         {
                             "name": "Mirtazapine",
-                            "dose": "30-60 mg",
-                            "LOE": "2"
+                            "Dose": "30-60 mg",
+                            "LOE": 2.0
                         },
                         {
                             "name": "Mianserin",
-                            "dose": "30-90 mg",
-                            "LOE": "2"
+                            "Dose": "30-90 mg",
+                            "LOE": 2.0
                         },
                         {
                             "name": "Modafinil",
-                            "dose": "100-400 mg",
-                            "LOE": "2"
+                            "Dose": "100-400 mg",
+                            "LOE": 2.0
                         },
                         {
                             "name": "Triiodothyronine",
-                            "dose": "25-50 mcg",
-                            "LOE": "2"
+                            "Dose": "25-50 mcg",
+                            "LOE": 2.0
                         }
                     ]
                 },
@@ -449,30 +432,30 @@
                     "drugs": [
                         {
                             "name": "Other antidepressants including TCA",
-                            "LOE": "3"
+                            "LOE": 3.0
                         },
                         {
                             "name": "Stimulants",
-                            "LOE": "3"
+                            "LOE": 3.0
                         },
                         {
                             "name": "Lamotrigine",
-                            "dose": "100-300 mg",
-                            "LOE": "3"
+                            "Dose": "100-300 mg",
+                            "LOE": 3.0
                         },
                         {
                             "name": "Non-IV racemic ketamine",
-                            "LOE": "3"
+                            "LOE": 3.0
                         },
                         {
                             "name": "Pramipexole",
-                            "dose": "1-2 mg BID",
-                            "LOE": "3"
+                            "Dose": "1-2 mg BID",
+                            "LOE": 3.0
                         },
                         {
                             "name": "Ziprasidone",
-                            "dose": "20-80 mg BID",
-                            "LOE": "3"
+                            "Dose": "20-80 mg BID",
+                            "LOE": 3.0
                         }
                     ]
                 },
@@ -481,7 +464,7 @@
                     "drugs": [
                         {
                             "name": "Psychedelic-assisted psychotherapy",
-                            "LOE": "3"
+                            "LOE": 3.0
                         }
                     ]
                 },
@@ -489,8 +472,7 @@
                     "level": "Not Recommended",
                     "drugs": [
                         {
-                            "name": "Cannabis",
-                            "dose": "n/a"
+                            "name": "Cannabis"
                         }
                     ]
                 }
@@ -498,22 +480,22 @@
         },
         {
             "name": "Psychotherapy",
-            "description": "",
+            "description": "Detailed information about Psychotherapy treatments for Depression.",
             "guidelines": [
                 {
                     "level": "First Line",
                     "drugs": [
                         {
                             "name": "Cognitive-Behavioural Therapy (CBT)",
-                            "LOE": "1"
+                            "LOE": 1
                         },
                         {
                             "name": "Interpersonal Therapy (IPT)",
-                            "LOE": "1"
+                            "LOE": 1
                         },
                         {
                             "name": "Behavioural Activation (BA)",
-                            "LOE": "1"
+                            "LOE": 1
                         }
                     ]
                 },
@@ -522,23 +504,23 @@
                     "drugs": [
                         {
                             "name": "Cognitive Behavioural Analysis System of Psychotherapy (CBASP)",
-                            "LOE": "2"
+                            "LOE": 2
                         },
                         {
                             "name": "Mindfulness-Based Cognitive Therapy (MBCT)",
-                            "LOE": "2"
+                            "LOE": 2
                         },
                         {
                             "name": "Problem-Solving Therapy (PST)",
-                            "LOE": "2"
+                            "LOE": 2
                         },
                         {
                             "name": "Short-term Psychodynamic Psychotherapy (STPP)",
-                            "LOE": "2"
+                            "LOE": 2
                         },
                         {
                             "name": "Transdiagnostic Psychological Treatment of Emotional Disorders",
-                            "LOE": "2"
+                            "LOE": 2
                         }
                     ]
                 },
@@ -547,24 +529,19 @@
                     "drugs": [
                         {
                             "name": "Acceptance & Commitment Therapy (ACT)",
-                            "LOE": "3"
+                            "LOE": 3
                         },
                         {
                             "name": "Long-term Psychodynamic Psychotherapy (PDT)",
-                            "LOE": "3"
+                            "LOE": 3
                         },
                         {
                             "name": "Metacognitive Therapy (MCT)",
-                            "LOE": "3"
-                        }
-                    ]
-                },
-                {
-                    "level": "Fourth Line",
-                    "drugs": [
+                            "LOE": 3
+                        },
                         {
                             "name": "Motivational Interviewing",
-                            "LOE": "4"
+                            "LOE": 4
                         }
                     ]
                 }
@@ -572,22 +549,22 @@
         },
         {
             "name": "Lifestyle",
-            "description": "",
+            "description": "Detailed information about Lifestyle treatments for Depression.",
             "guidelines": [
                 {
                     "level": "First Line",
                     "drugs": [
                         {
                             "name": "Supervised Exercise",
-                            "indication": "Mild MDE",
-                            "details": "Low-Moderate Intensity, 3-4/week, minimum 9 weeks",
-                            "LOE": "1"
+                            "Indication": "Mild MDE",
+                            "Details": "Low-Moderate Intensity, 3-4/week, minimum 9 weeks",
+                            "LOE": 1.0
                         },
                         {
                             "name": "Light Therapy",
-                            "indication": "Seasonal (Winter) MDE",
-                            "details": "10,000 lux for 30 min daily",
-                            "LOE": "1"
+                            "Indication": "Seasonal (Winter) MDE",
+                            "Details": "10,000 lux for 30 min daily",
+                            "LOE": 1.0
                         }
                     ]
                 },
@@ -596,23 +573,23 @@
                     "drugs": [
                         {
                             "name": "Light Therapy",
-                            "indication": "Mild MDE",
-                            "LOE": "2"
+                            "Indication": "Mild MDE",
+                            "LOE": 2.0
                         },
                         {
                             "name": "Adjunctive Exercise",
-                            "indication": "Moderate MDE",
-                            "LOE": "2"
+                            "Indication": "Moderate MDE",
+                            "LOE": 2.0
                         },
                         {
                             "name": "Adjunctive Light Therapy",
-                            "indication": "Moderate MDE",
-                            "LOE": "2"
+                            "Indication": "Moderate MDE",
+                            "LOE": 2.0
                         },
                         {
                             "name": "Adjunctive Sleep Hygiene & CBT-I",
-                            "details": "Varied diet with high content of fruit, vegetables, and fibre, and low content of saturated fat and carbohydrates",
-                            "LOE": "3"
+                            "Details": "Varied diet with high content of fruit, vegetables, and fibre, and low content of saturated fat and carbohydrates",
+                            "LOE": 3.0
                         }
                     ]
                 },
@@ -621,15 +598,15 @@
                     "drugs": [
                         {
                             "name": "Adjunctive Healthy Diet",
-                            "LOE": "3"
+                            "LOE": 3.0
                         },
                         {
                             "name": "Adjunctive Mediterranean Diet",
-                            "LOE": "3"
+                            "LOE": 3.0
                         },
                         {
                             "name": "Adjunctive Sleep Deprivation",
-                            "LOE": "3"
+                            "LOE": 3.0
                         }
                     ]
                 },
@@ -643,43 +620,42 @@
                 }
             ]
         },
-
         {
-            "name": "Digital Health Interventions",
-            "description": "Various digital health interventions for mental health treatment.",
+            "name": "Digital Health Intervention",
+            "description": "Detailed information about Digital Health Intervention treatments for Depression.",
             "guidelines": [
                 {
                     "level": "Guided",
                     "drugs": [
                         {
                             "name": "Good Days Ahead",
-                            "RCT": "Yes",
-                            "description": "Program designed for use by a CBT therapist to provide additional CBT instruction outside of the session.",
-                            "comments": "Two large RCTs showed this program reduced the need for face-to-face CBT by half, with equivalent clinical outcomes."
+                            "Rct": "Yes",
+                            "Description": "Program designed for use by a CBT therapist to provide \nadditional CBT instruction outside of the session.",
+                            "Comments": "Two large RCTs showed this program reduced the need \nfor face-to-face CBT by half, with equivalent clinical \noutcomes."
                         },
                         {
                             "name": "BounceBack",
-                            "description": "Free online CBT program with various formats: self-directed version, or with telephone-delivered lay coaching.",
-                            "comments": "No RCT but a large prospective study was positive in MDD; available free in several Canadian provinces, managed by the Canadian Mental Health Association."
+                            "Description": "Free online CBT program with various formats: \nself-directed version, or with telephone-delivered lay \ncoaching.",
+                            "Comments": "No RCT but a large prospective study was positive in \nMDD; available free in several Canadian provinces, \nmanaged by the Canadian Mental Health Association"
                         },
                         {
                             "name": "Deprexis",
-                            "RCT": "Yes",
-                            "notes": "Not Available in Canada",
-                            "description": "Online CBT program with tailored guidance provided by an AI conversational agent; includes BA and mindfulness techniques.",
-                            "comments": "Structured 12-week program designed for 90-day use; available in many countries in several languages; tested in multiple clinical trials, with a positive meta-analysis. Available in Europe and the USA."
+                            "Rct": "Yes",
+                            "Notes": "Not Available in Canada",
+                            "Description": "Online CBT program with tailored guidance provided by an \nAI conversational agent; includes BA and mindfulness \ntechniques.",
+                            "Comments": "Structured 12-week program designed for 90-day use; \navailable in many countries in several languages; tested \nin multiple clinical trials, with a positive meta-analysis. \nAvailable in Europe and the USA."
                         },
                         {
                             "name": "MoodBeacon",
-                            "description": "Online guided CBT program; guidance provided by trained therapists.",
-                            "comments": "Although there is no published study, this DHI was reviewed and approved for use by the Province of Ontario in 2021."
+                            "Description": "Online guided CBT program; guidance provided by trained \ntherapists.",
+                            "Comments": "Although there is no published study, this DHI was \nreviewed and approved for use by the Province of \nOntario in 2021."
                         },
                         {
                             "name": "Pacifica/Sanvello",
-                            "RCT": "Yes",
-                            "notes": "Not Available in Canada",
-                            "description": "Mobile- and web-based apps intended to assist users in relieving stress, anxiety, and depression. Free; offers in-app purchases.",
-                            "comments": "Uses blend of CBT, mindfulness, and relaxation tools; suitable for adults and adolescents; guidance is through peer discussion in chat groups; has positive results from an RCT. Available in the USA."
+                            "Rct": "Yes",
+                            "Notes": "Not Available in Canada",
+                            "Description": "Mobile- and web-based apps intended to assist users in \nrelieving stress, anxiety, and depression. Free; offers \nin-app purchases",
+                            "Comments": "Uses blend of CBT, mindfulness, and relaxation tools; \nsuitable for adults and adolescents; guidance is through \npeer discussion in chat groups; has positive results \nfrom an RCT. Available in the USA."
                         }
                     ]
                 },
@@ -688,58 +664,49 @@
                     "drugs": [
                         {
                             "name": "Catch It",
-                            "description": "Free CBT-based mobile app, primarily uses automatic thought records and reflection exercises to address anxiety and depressive symptoms.",
-                            "comments": "Developed jointly by the Universities of Liverpool and Manchester; includes a mood tracker and diary; and has an observational trial of users showing benefits."
+                            "Description": "Free CBT-based mobile app, primarily uses automatic \nthought records and reflection exercises to address \nanxiety and depressive symptoms.",
+                            "Comments": "Developed jointly by the Universities of Liverpool and \nManchester; includes a mood tracker and diary; and \nhas an observational trial of users showing benefits."
                         },
                         {
                             "name": "Headspace",
-                            "description": "Popular mobile app with self-guided meditation and mindfulness techniques and some CBT approaches.",
-                            "comments": "Designed for a wide variety of stress, depression and anxiety symptoms; extensively studied with good outcomes in many conditions (of mild severity), but not specifically in MDD."
+                            "Description": "Popular mobile app with self-guided meditation and \nmindfulness techniques and some CBT approaches.",
+                            "Comments": "Designed for a wide variety of stress, depression and \nanxiety symptoms; extensively studied with good \noutcomes in many conditions (of mild severity), but \nnot specifically in MDD."
                         },
                         {
                             "name": "MoodGYM",
-                            "RCT": "Yes",
-                            "description": "Internet-based CBT self-help program, with very structured modules.",
-                            "comments": "Most widely used platform; initially developed by Australian National University; extensively studied with good outcomes in mild depression."
+                            "Rct": "Yes",
+                            "Description": "Internet-based CBT self-help program, with very structured \nmodules.",
+                            "Comments": "Most widely used platform; initially developed by \nAustralian National University; extensively studied \nwith good outcomes in mild depression."
                         },
                         {
                             "name": "MoodKit",
-                            "RCT": "Yes",
-                            "notes": "Not Available in Canada",
-                            "description": "CBT-based toolkit app with detailed instructions on how to use thought records and BA.",
-                            "comments": "Teaches multiple aspects of CBT and is well-integrated with mood monitoring and optional journaling. Available in the USA."
+                            "Rct": "Yes",
+                            "Notes": "Not Available in Canada",
+                            "Description": "CBT-based toolkit app with detailed instructions on how to \nuse thought records and BA.",
+                            "Comments": "Teaches multiple aspects of CBT and is well-integrated \nwith mood monitoring and optional journaling. \nAvailable in the USA."
                         },
                         {
                             "name": "Spark Direct",
-                            "RCT": "Yes",
-                            "notes": "Not Available in Canada",
-                            "description": "A mobile app providing core elements of CBT and BA in a 5-week program.",
-                            "comments": "Designed for youth depression; uses interactive tasks and rewards; tested in an RCT with positive findings. Available in the USA."
-                        }
-                    ]
-                },
-                {
-                    "level": "Insufficient Evidence",
-                    "drugs": [
-                        {
-                            "name": "Probiotics"
+                            "Rct": "Yes",
+                            "Notes": "Not Available in Canada",
+                            "Description": "A mobile app providing core elements of CBT and BA in a \n5-week program.",
+                            "Comments": "Designed for youth depression; uses interactive tasks and \nrewards; tested in an RCTwith positive findings. \nAvailable in the USA."
                         }
                     ]
                 }
             ]
         },
-
         {
             "name": "Complementary & Alternative",
-            "description": "Complementary and alternative treatments for mental health disorders.",
+            "description": "Detailed information about Complementary & Alternative treatments for Depression.",
             "guidelines": [
                 {
                     "level": "First Line",
                     "drugs": [
                         {
                             "name": "St. John's Wort",
-                            "indication": "Mild MDE",
-                            "LOE": "1"
+                            "Indication": "Mild MDE",
+                            "LOE": 1
                         }
                     ]
                 },
@@ -748,23 +715,23 @@
                     "drugs": [
                         {
                             "name": "Acupuncture",
-                            "indication": "Mild MDE",
-                            "LOE": "2"
+                            "Indication": "Mild MDE",
+                            "LOE": 2
                         },
                         {
                             "name": "St. John's Wort",
-                            "indication": "Moderate MDE",
-                            "LOE": "2"
+                            "Indication": "Moderate MDE",
+                            "LOE": 2
                         },
                         {
                             "name": "Adjunctive Acupuncture",
-                            "indication": "Moderate MDE",
-                            "LOE": "2"
+                            "Indication": "Moderate MDE",
+                            "LOE": 2
                         },
                         {
                             "name": "Adjunctive L-methyl folate",
-                            "indication": "Mild-Moderate MDE",
-                            "LOE": "2"
+                            "Indication": "Mild-Moderate MDE",
+                            "LOE": 2
                         }
                     ]
                 },
@@ -773,48 +740,46 @@
                     "drugs": [
                         {
                             "name": "Adjunctive SAM-e",
-                            "indication": "Mild-Moderate MDE",
-                            "LOE": "2"
+                            "Indication": "Mild-Moderate MDE",
+                            "LOE": 2
                         },
                         {
                             "name": "DHEA",
-                            "indication": "Mild MDE",
-                            "LOE": "3"
+                            "Indication": "Mild MDE",
+                            "LOE": 3
                         },
                         {
                             "name": "Omega-3 Fatty Acids",
-                            "indication": "Mild MDE",
-                            "LOE": "3"
+                            "Indication": "Mild MDE",
+                            "LOE": 3
                         },
                         {
                             "name": "Saffron, Lavendar, or Roseroot",
-                            "indication": "Mild MDE",
-                            "LOE": "3"
+                            "Indication": "Mild MDE",
+                            "LOE": 3
                         }
                     ]
                 }
             ]
         },
-
-
         {
             "name": "Neuromodulation",
-            "description": "Neuromodulation treatments for mental health disorders.",
+            "description": "Detailed information about Neuromodulation treatments for Depression.",
             "guidelines": [
                 {
                     "level": "First Line",
                     "drugs": [
                         {
                             "name": "ECT",
-                            "indication": "Severe MDE",
-                            "acuteLOE": "1",
-                            "maintenanceLOE": "1"
+                            "Indication": "Severe MDE",
+                            "Acute Loe": 1,
+                            "Maintenance Loe": 1
                         },
                         {
                             "name": "rTMS",
-                            "indication": "TRD",
-                            "acuteLOE": "1",
-                            "maintenanceLOE": "3"
+                            "Indication": "TRD",
+                            "Acute Loe": 1,
+                            "Maintenance Loe": 3
                         }
                     ]
                 },
@@ -823,9 +788,9 @@
                     "drugs": [
                         {
                             "name": "ECT",
-                            "indication": "DTD",
-                            "acuteLOE": "1",
-                            "maintenanceLOE": "3"
+                            "Indication": "DTD",
+                            "Acute Loe": 1,
+                            "Maintenance Loe": 3
                         }
                     ]
                 },
@@ -834,15 +799,15 @@
                     "drugs": [
                         {
                             "name": "Adjunctive tDCS",
-                            "indication": "Mild-Moderate MDE",
-                            "acuteLOE": "2",
-                            "maintenanceLOE": "3"
+                            "Indication": "Mild-Moderate MDE",
+                            "Acute Loe": 2,
+                            "Maintenance Loe": 3
                         },
                         {
                             "name": "VNS",
-                            "indication": "DTD",
-                            "acuteLOE": "3",
-                            "maintenanceLOE": "3"
+                            "Indication": "DTD",
+                            "Acute Loe": 3,
+                            "Maintenance Loe": 3
                         }
                     ]
                 },
@@ -851,25 +816,19 @@
                     "drugs": [
                         {
                             "name": "DBS",
-                            "indication": "DTD",
-                            "acuteLOE": "3",
-                            "maintenanceLOE": "-"
+                            "Indication": "DTD",
+                            "Acute Loe": 3,
+                            "Maintenance Loe": "-"
                         },
                         {
                             "name": "MST",
-                            "indication": "DTD",
-                            "acuteLOE": "3",
-                            "maintenanceLOE": "-"
+                            "Indication": "DTD",
+                            "Acute Loe": 3,
+                            "Maintenance Loe": "-"
                         }
                     ]
                 }
             ]
         }
-        
-        
-        
-        
-        
-        
     ]
 }
