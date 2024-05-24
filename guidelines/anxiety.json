@@ -52,32 +52,6 @@
                     ]
                 },
                 {
-                    "level": "Not Recommended",
-                    "drugs": [
-                        {
-                            "name": "Buspirone",
-                            "Drug Class": "5HT1A Agonist",
-                            "LOE": -1
-                        },
-                        {
-                            "name": "Propanolol",
-                            "Drug Class": "Beta-Blocker",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Tiagabine",
-                            "Drug Class": "Anticonvulsant",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Trazodone",
-                            "Drug Class": "SARI",
-                            "LOE": -2,
-                            "Notes": "At low doses, antagonizes 5-HT-2A, H1, and alpha-1 receptors; at higher doses antagonizes SERT (SRI) and 5HT2C"
-                        }
-                    ]
-                },
-                {
                     "level": "Second Line",
                     "drugs": [
                         {
@@ -233,6 +207,32 @@
                             "LOE": 3
                         }
                     ]
+                },
+                {
+                    "level": "Not Recommended",
+                    "drugs": [
+                        {
+                            "name": "Buspirone",
+                            "Drug Class": "5HT1A Agonist",
+                            "LOE": -1
+                        },
+                        {
+                            "name": "Propanolol",
+                            "Drug Class": "Beta-Blocker",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Tiagabine",
+                            "Drug Class": "Anticonvulsant",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Trazodone",
+                            "Drug Class": "SARI",
+                            "LOE": -2,
+                            "Notes": "At low doses, antagonizes 5-HT-2A, H1, and alpha-1 receptors; at higher doses antagonizes SERT (SRI) and 5HT2C"
+                        }
+                    ]
                 }
             ]
         },
@@ -277,58 +277,6 @@
                             "name": "Pregabalin",
                             "Drug Class": "Anticonvulsant",
                             "LOE": 1
-                        }
-                    ]
-                },
-                {
-                    "level": "Not Recommended",
-                    "drugs": [
-                        {
-                            "name": "Buspirone",
-                            "Drug Class": "5HT1A Agonist",
-                            "LOE": -1
-                        },
-                        {
-                            "name": "Imipramine",
-                            "Drug Class": "Tricyclic",
-                            "LOE": -3
-                        },
-                        {
-                            "name": "Quetiapine",
-                            "Drug Class": "Antipsychotic",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Atenolol",
-                            "Drug Class": "Beta-Blocker",
-                            "LOE": -1,
-                            "Notes": "Beta-blockers have been used in clinical practice for performance situations such as public speaking."
-                        },
-                        {
-                            "name": "Propranolol",
-                            "Drug Class": "Beta-Blocker",
-                            "LOE": -1,
-                            "Notes": "Beta-blockers have been used in clinical practice for performance situations such as public speaking."
-                        },
-                        {
-                            "name": "Levetiracetam",
-                            "Drug Class": "Anticonvulsant",
-                            "LOE": -2
-                        }
-                    ]
-                },
-                {
-                    "level": "Not Recommended Adjunct",
-                    "drugs": [
-                        {
-                            "name": "Pindolol",
-                            "Drug Class": "Beta-Blocker",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Clonazepam",
-                            "Drug Class": "Benzodiazepine",
-                            "LOE": -2
                         }
                     ]
                 },
@@ -449,6 +397,58 @@
                             "LOE": 3
                         }
                     ]
+                },
+                {
+                    "level": "Not Recommended",
+                    "drugs": [
+                        {
+                            "name": "Buspirone",
+                            "Drug Class": "5HT1A Agonist",
+                            "LOE": -1
+                        },
+                        {
+                            "name": "Imipramine",
+                            "Drug Class": "Tricyclic",
+                            "LOE": -3
+                        },
+                        {
+                            "name": "Quetiapine",
+                            "Drug Class": "Antipsychotic",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Atenolol",
+                            "Drug Class": "Beta-Blocker",
+                            "LOE": -1,
+                            "Notes": "Beta-blockers have been used in clinical practice for performance situations such as public speaking."
+                        },
+                        {
+                            "name": "Propranolol",
+                            "Drug Class": "Beta-Blocker",
+                            "LOE": -1,
+                            "Notes": "Beta-blockers have been used in clinical practice for performance situations such as public speaking."
+                        },
+                        {
+                            "name": "Levetiracetam",
+                            "Drug Class": "Anticonvulsant",
+                            "LOE": -2
+                        }
+                    ]
+                },
+                {
+                    "level": "Not Recommended Adjunct",
+                    "drugs": [
+                        {
+                            "name": "Pindolol",
+                            "Drug Class": "Beta-Blocker",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Clonazepam",
+                            "Drug Class": "Benzodiazepine",
+                            "LOE": -2
+                        }
+                    ]
                 }
             ]
         },
@@ -498,36 +498,6 @@
                             "name": "Pregabalin",
                             "Drug Class": "Anticonvulsant",
                             "LOE": 1
-                        }
-                    ]
-                },
-                {
-                    "level": "Not Recommended",
-                    "drugs": [
-                        {
-                            "name": "Propranolol",
-                            "Drug Class": "Beta-Blocker",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Tiagabine",
-                            "Drug Class": "Anticonvulsant",
-                            "LOE": -1
-                        },
-                        {
-                            "name": "Pexacerfont",
-                            "Drug Class": "CRF1 Antagonist",
-                            "LOE": -2
-                        }
-                    ]
-                },
-                {
-                    "level": "Not Recommended Adjunct",
-                    "drugs": [
-                        {
-                            "name": "Ziprazidone",
-                            "Drug Class": "Antipsychotic",
-                            "LOE": -2
                         }
                     ]
                 },
@@ -659,6 +629,36 @@
                             "LOE": 3
                         }
                     ]
+                },
+                {
+                    "level": "Not Recommended",
+                    "drugs": [
+                        {
+                            "name": "Propranolol",
+                            "Drug Class": "Beta-Blocker",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Tiagabine",
+                            "Drug Class": "Anticonvulsant",
+                            "LOE": -1
+                        },
+                        {
+                            "name": "Pexacerfont",
+                            "Drug Class": "CRF1 Antagonist",
+                            "LOE": -2
+                        }
+                    ]
+                },
+                {
+                    "level": "Not Recommended Adjunct",
+                    "drugs": [
+                        {
+                            "name": "Ziprazidone",
+                            "Drug Class": "Antipsychotic",
+                            "LOE": -2
+                        }
+                    ]
                 }
             ]
         },
@@ -667,217 +667,84 @@
             "description": "Detailed information about OCD treatments for Anxiety.",
             "guidelines": [
                 {
-                    "level": "N/A",
+                    "level": "First Line",
                     "drugs": [
-                        {
-                            "name": "Escitalopram",
-                            "Drug Class": "SSRI",
-                            "LOE": 1
-                        },
-                        {
-                            "name": "Fluoxetine",
-                            "Drug Class": "SSRI",
-                            "LOE": 1
-                        },
-                        {
-                            "name": "Fluvoxamine",
-                            "Drug Class": "SSRI",
-                            "LOE": 1
-                        },
-                        {
-                            "name": "Paroxetine",
-                            "Drug Class": "SSRI",
-                            "LOE": 1
-                        },
-                        {
-                            "name": "Sertraline",
-                            "Drug Class": "SSRI",
-                            "LOE": 1
-                        },
-                        {
-                            "name": "Aripiprazole",
-                            "Drug Class": "Antipsychotic",
-                            "LOE": 1
-                        },
-                        {
-                            "name": "Risperidone",
-                            "Drug Class": "Antipsychotic",
-                            "LOE": 1,
-                            "Notes": "Conflicting Data"
-                        },
-                        {
-                            "name": "Citalopram",
-                            "Drug Class": "SSRI",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Venlafaxine XR",
-                            "Drug Class": "SNRI",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Mirtazapine",
-                            "Drug Class": "NaSSA",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Clomipramine",
-                            "Drug Class": "Tricyclic",
-                            "LOE": 1
-                        },
-                        {
-                            "name": "Quetiapine",
-                            "Drug Class": "Antipsychotic",
-                            "LOE": 1,
-                            "Notes": "Conflicting Data"
-                        },
-                        {
-                            "name": "Topiramate",
-                            "Drug Class": "Anticonvulsant",
-                            "LOE": 1
-                        },
-                        {
-                            "name": "Memantine",
-                            "Drug Class": "NMDA Antagonist",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Citalopram IV",
-                            "Drug Class": "SSRI",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "Duloxetine",
-                            "Drug Class": "SNRI",
-                            "LOE": 4
-                        },
-                        {
-                            "name": "Clomipramine IV",
-                            "Drug Class": "Tricyclic",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Phenelzine",
-                            "Drug Class": "MAOI",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Tranylcypromine",
-                            "Drug Class": "MAOI",
-                            "LOE": 4
-                        },
-                        {
-                            "name": "Tramadol",
-                            "Drug Class": "Opioid",
-                            "LOE": 4
-                        },
-                        {
-                            "name": "Olanzapine",
-                            "Drug Class": "Antipsychotic",
-                            "LOE": 1
-                        },
-                        {
-                            "name": "Haloperidol",
-                            "Drug Class": "Antipsychotic",
-                            "LOE": 2,
-                            "Notes": "Conflicting Data"
-                        },
-                        {
-                            "name": "Amisulpride",
-                            "Drug Class": "Antipsychotic",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "Ziprasidone",
-                            "Drug Class": "Antipsychotic",
-                            "LOE": 4
-                        },
-                        {
-                            "name": "N-Acetylcysteine",
-                            "Drug Class": "Other",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Celexocib",
-                            "Drug Class": "NSAID",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Citalopram",
-                            "Drug Class": "SSRI",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "Mirtazapine",
-                            "Drug Class": "NaSSA",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "Pregabalin",
-                            "Drug Class": "Anticonvulsant",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "Pindolol",
-                            "Drug Class": "Beta-Blocker",
-                            "LOE": 1,
-                            "Notes": "Conflicting Data"
-                        },
-                        {
-                            "name": "Ondansetron",
-                            "Drug Class": "5HT3 Antagonist",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Granisetron",
-                            "Drug Class": "5HT3 Antagonist",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Ketamine IV",
-                            "Drug Class": "NMDA Antagonist",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Riluzole",
-                            "Drug Class": "Other",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "Desipramine",
-                            "Drug Class": "Tricyclic",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Clonazepam",
-                            "Drug Class": "Benzodiazepine",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Clonidine",
-                            "Drug Class": "Alpha 2 Agonist",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Buspirone",
-                            "Drug Class": "5HT1A Agonist",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Clonazepam",
-                            "Drug Class": "Benzodiazepine",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Lithium",
-                            "Drug Class": "Other",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Morphine",
-                            "Drug Class": "Opioid",
-                            "LOE": 2
-                        }
+                        {"name": "Escitalopram", "Drug Class": "SSRI", "LOE": 1},
+                        {"name": "Fluoxetine", "Drug Class": "SSRI", "LOE": 1},
+                        {"name": "Fluvoxamine", "Drug Class": "SSRI", "LOE": 1},
+                        {"name": "Paroxetine", "Drug Class": "SSRI", "LOE": 1},
+                        {"name": "Sertraline", "Drug Class": "SSRI", "LOE": 1}
+                    ]
+                },
+                {
+                    "level": "First Line Adjunctive",
+                    "drugs": [
+                        {"name": "Aripiprazole", "Drug Class": "Antipsychotic", "LOE": 1},
+                        {"name": "Risperidone", "Drug Class": "Antipsychotic", "LOE": 1, "Notes": "Conflicting Data"}
+                    ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {"name": "Citalopram", "Drug Class": "SSRI", "LOE": 2},
+                        {"name": "Venlafaxine XR", "Drug Class": "SNRI", "LOE": 2},
+                        {"name": "Mirtazapine", "Drug Class": "NaSSA", "LOE": 2},
+                        {"name": "Clomipramine", "Drug Class": "Tricyclic", "LOE": 1}
+                    ]
+                },
+                {
+                    "level": "Second Line Adjunctive",
+                    "drugs": [
+                        {"name": "Quetiapine", "Drug Class": "Antipsychotic", "LOE": 1, "Notes": "Conflicting Data"},
+                        {"name": "Topiramate", "Drug Class": "Anticonvulsant", "LOE": 1},
+                        {"name": "Memantine", "Drug Class": "NMDA Antagonist", "LOE": 2}
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {"name": "Citalopram IV", "Drug Class": "SSRI", "LOE": 3},
+                        {"name": "Duloxetine", "Drug Class": "SNRI", "LOE": 4},
+                        {"name": "Clomipramine IV", "Drug Class": "Tricyclic", "LOE": 2},
+                        {"name": "Phenelzine", "Drug Class": "MAOI", "LOE": 2},
+                        {"name": "Tranylcypromine", "Drug Class": "MAOI", "LOE": 4},
+                        {"name": "Tramadol", "Drug Class": "Opioid", "LOE": 4}
+                    ]
+                },
+                {
+                    "level": "Third Line Adjunctive",
+                    "drugs": [
+                        {"name": "Olanzapine", "Drug Class": "Antipsychotic", "LOE": 1},
+                        {"name": "Haloperidol", "Drug Class": "Antipsychotic", "LOE": 2, "Notes": "Conflicting Data"},
+                        {"name": "Amisulpride", "Drug Class": "Antipsychotic", "LOE": 3},
+                        {"name": "Ziprasidone", "Drug Class": "Antipsychotic", "LOE": 4},
+                        {"name": "N-Acetylcysteine", "Drug Class": "Other", "LOE": 2},
+                        {"name": "Celexocib", "Drug Class": "NSAID", "LOE": 2},
+                        {"name": "Citalopram", "Drug Class": "SSRI", "LOE": 3},
+                        {"name": "Mirtazapine", "Drug Class": "NaSSA", "LOE": 3},
+                        {"name": "Pregabalin", "Drug Class": "Anticonvulsant", "LOE": 3},
+                        {"name": "Pindolol", "Drug Class": "Beta-Blocker", "LOE": 1, "Notes": "Conflicting Data"},
+                        {"name": "Ondansetron", "Drug Class": "5HT3 Antagonist", "LOE": 2},
+                        {"name": "Granisetron", "Drug Class": "5HT3 Antagonist", "LOE": 2},
+                        {"name": "Ketamine IV", "Drug Class": "NMDA Antagonist", "LOE": 2},
+                        {"name": "Riluzole", "Drug Class": "Other", "LOE": 3}
+                    ]
+                },
+                {
+                    "level": "Not Recommended",
+                    "drugs": [
+                        {"name": "Desipramine", "Drug Class": "Tricyclic", "LOE": -2},
+                        {"name": "Clonazepam", "Drug Class": "Benzodiazepine", "LOE": -2},
+                        {"name": "Clonidine", "Drug Class": "Alpha 2 Agonist", "LOE": -2}
+                    ]
+                },
+                {
+                    "level": "Not Recommended Adjunct",
+                    "drugs": [
+                        {"name": "Buspirone", "Drug Class": "5HT1A Agonist", "LOE": -2},
+                        {"name": "Clonazepam", "Drug Class": "Benzodiazepine", "LOE": -2},
+                        {"name": "Lithium", "Drug Class": "Other", "LOE": -2},
+                        {"name": "Morphine", "Drug Class": "Opioid", "LOE": 2}
                     ]
                 }
             ]
@@ -910,66 +777,6 @@
                             "name": "Venlafaxine XR",
                             "Drug Class": "SNRI",
                             "LOE": 1
-                        }
-                    ]
-                },
-                {
-                    "level": "Not Recommended",
-                    "drugs": [
-                        {
-                            "name": "Citalopram",
-                            "Drug Class": "SSRI",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Olanzapine",
-                            "Drug Class": "Antipsychotic",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Divalproex",
-                            "Drug Class": "Anticonvulsant",
-                            "LOE": -1
-                        },
-                        {
-                            "name": "Tiagebine",
-                            "Drug Class": "Anticonvulsant",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Alprazolam",
-                            "Drug Class": "Benzodiazepine",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Clonazepam",
-                            "Drug Class": "Benzodiazepine",
-                            "LOE": -3
-                        }
-                    ]
-                },
-                {
-                    "level": "Not Recommended Adjunct",
-                    "drugs": [
-                        {
-                            "name": "Bupropion SR",
-                            "Drug Class": "NDRI",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Guanfacine",
-                            "Drug Class": "Alpha 2 Agonist",
-                            "LOE": -1
-                        },
-                        {
-                            "name": "Topiramate",
-                            "Drug Class": "Anticonvulsant",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Zolpidem",
-                            "Drug Class": "Z Drug",
-                            "LOE": -2
                         }
                     ]
                 },
@@ -1016,7 +823,7 @@
                     ]
                 },
                 {
-                    "level": " Line",
+                    "level": "Third Line",
                     "drugs": [
                         {
                             "name": "Reboxetine",
@@ -1158,6 +965,66 @@
                             "Notes": "LOE as adjunct not reported"
                         }
                     ]
+                },
+                {
+                    "level": "Not Recommended",
+                    "drugs": [
+                        {
+                            "name": "Citalopram",
+                            "Drug Class": "SSRI",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Olanzapine",
+                            "Drug Class": "Antipsychotic",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Divalproex",
+                            "Drug Class": "Anticonvulsant",
+                            "LOE": -1
+                        },
+                        {
+                            "name": "Tiagebine",
+                            "Drug Class": "Anticonvulsant",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Alprazolam",
+                            "Drug Class": "Benzodiazepine",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Clonazepam",
+                            "Drug Class": "Benzodiazepine",
+                            "LOE": -3
+                        }
+                    ]
+                },
+                {
+                    "level": "Not Recommended Adjunct",
+                    "drugs": [
+                        {
+                            "name": "Bupropion SR",
+                            "Drug Class": "NDRI",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Guanfacine",
+                            "Drug Class": "Alpha 2 Agonist",
+                            "LOE": -1
+                        },
+                        {
+                            "name": "Topiramate",
+                            "Drug Class": "Anticonvulsant",
+                            "LOE": -2
+                        },
+                        {
+                            "name": "Zolpidem",
+                            "Drug Class": "Z Drug",
+                            "LOE": -2
+                        }
+                    ]
                 }
             ]
         },
@@ -1191,7 +1058,7 @@
                     ]
                 },
                 {
-                    "level": "Ocd",
+                    "level": "OCD",
                     "drugs": [
                         {
                             "name": "Fluoxetine",
@@ -1236,7 +1103,7 @@
                     ]
                 },
                 {
-                    "level": "Ptsd",
+                    "level": "PTSD",
                     "drugs": [
                         {
                             "name": "Sertraline",
