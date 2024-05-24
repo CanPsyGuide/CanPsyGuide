@@ -772,14 +772,14 @@
                         {
                             "name": "ECT",
                             "Indication": "Severe MDE",
-                            "Acute Loe": 1,
-                            "Maintenance Loe": 1
+                            "Acute LOE": 1,
+                            "Maintenance LOE": 1
                         },
                         {
                             "name": "rTMS",
                             "Indication": "TRD",
-                            "Acute Loe": 1,
-                            "Maintenance Loe": 3
+                            "Acute LOE": 1,
+                            "Maintenance LOE": 3
                         }
                     ]
                 },
@@ -789,8 +789,8 @@
                         {
                             "name": "ECT",
                             "Indication": "DTD",
-                            "Acute Loe": 1,
-                            "Maintenance Loe": 3
+                            "Acute LOE": 1,
+                            "Maintenance LOE": 3
                         }
                     ]
                 },
@@ -800,14 +800,14 @@
                         {
                             "name": "Adjunctive tDCS",
                             "Indication": "Mild-Moderate MDE",
-                            "Acute Loe": 2,
-                            "Maintenance Loe": 3
+                            "Acute LOE": 2,
+                            "Maintenance LOE": 3
                         },
                         {
                             "name": "VNS",
                             "Indication": "DTD",
-                            "Acute Loe": 3,
-                            "Maintenance Loe": 3
+                            "Acute LOE": 3,
+                            "Maintenance LOE": 3
                         }
                     ]
                 },
@@ -817,14 +817,14 @@
                         {
                             "name": "DBS",
                             "Indication": "DTD",
-                            "Acute Loe": 3,
-                            "Maintenance Loe": "-"
+                            "Acute LOE": 3,
+                            "Maintenance LOE": "-"
                         },
                         {
                             "name": "MST",
                             "Indication": "DTD",
-                            "Acute Loe": 3,
-                            "Maintenance Loe": "-"
+                            "Acute LOE": 3,
+                            "Maintenance LOE": "-"
                         }
                     ]
                 }

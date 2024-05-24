@@ -97,7 +97,7 @@ main {
 }
 
 /* Button Styles */
-.btn-primary, .guideline-button, .subclass-button {
+.btn-primary, .guideline-button, .subclass-button, .btn-about {
     background: linear-gradient(135deg, #007acc, #005a99);
     color: white;
     border: none; 
@@ -112,18 +112,32 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-.btn-primary:hover, .guideline-button:hover, .subclass-button:hover {
+.btn-primary:hover, .guideline-button:hover, .subclass-button:hover, .btn-about:hover {
     transform: translateY(-3px); 
     background: linear-gradient(135deg, #005a99, #004070); 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
-.btn-primary:active, .guideline-button:active, .subclass-button:active {
+.btn-primary:active, .guideline-button:active, .subclass-button:active, .btn-about:active {
     transform: translateY(1px); 
     background: linear-gradient(135deg, #004070, #002c5b); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+.btn-about {
+    background: linear-gradient(135deg, #20c997, #17a2b8); 
+    color: white; 
+}
+
+.btn-about:hover {
+    background: linear-gradient(135deg, #17a2b8, #138496); 
+    color: white; 
+}
+
+.btn-about:active {
+    background: linear-gradient(135deg, #138496, #117a8b); 
+    color: white; 
+}
 
 
 

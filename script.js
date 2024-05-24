@@ -14,17 +14,22 @@ function loadMainConditions() {
     container.className = 'grid-container grid-container-centered';
     container.innerHTML = '';
 
-    const conditions = ['depression', 'anxiety', 'bipolar'];
+    const conditions = ['depression', 'anxiety', 'bipolar', 'about'];
     conditions.forEach(condition => {
         const colDiv = document.createElement('div');
         colDiv.className = 'col-md-3 my-2 d-flex justify-content-center';
 
         const button = document.createElement('button');
-        button.className = 'btn btn-primary grid-item';
+        button.className = condition === 'about' ? 'btn btn-about grid-item' : 'btn btn-primary grid-item';
         button.innerText = condition.charAt(0).toUpperCase() + condition.slice(1);
         button.onclick = () => {
-            loadSubclasses(condition);
-            updateHeaderTitle(condition.charAt(0).toUpperCase() + condition.slice(1));
+            if (condition === 'about') {
+                loadAboutSection();
+                updateHeaderTitle('About');
+            } else {
+                loadSubclasses(condition);
+                updateHeaderTitle(condition.charAt(0).toUpperCase() + condition.slice(1));
+            }
         };
 
         colDiv.appendChild(button);
@@ -33,6 +38,44 @@ function loadMainConditions() {
 
     const backButton = document.getElementById('back-button');
     backButton.style.display = 'none';
+    const backToSubclassesButton = document.getElementById('back-to-subclasses-button');
+    backToSubclassesButton.style.display = 'none';
+}
+
+function loadAboutSection() {
+    const container = document.getElementById('grid-container');
+    container.className = 'grid-container grid-container-centered';
+    container.innerHTML = '';
+
+    const aboutText = `
+    <div class="about-section">
+        <h2>About CanPsyGuide</h2>
+        <p>This tool does not provide medical advice and is intended for informational purposes only, specifically to facilitate quick referencing of Canadian treatment guidelines. No information on this site is intended to substitute for professional medical advice, clinical supervision, diagnosis, nor treatment. Always seek the advice of your physician or clinical supervisor with any questions you may have regarding a medical condition or treatment.</p>
+        <p>Be sure to read the full guidelines before using this tool as a quick reference. Remain up-to-date with regards to any guideline updates, as this tool many not reflect the most recent guidelines. Current guidelines referenced:</p>
+        <ul>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/38711351/" target="_blank">Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 Update on Clinical Guidelines for Management of Major Depressive Disorder in Adults</a></li>
+            <li><a href="https://bmcpsychiatry.biomedcentral.com/articles/10.1186/1471-244X-14-S1-S1" target="_blank">Canadian Anxiety Disorders Guidelines Initiative: Clinical practice guidelines for the management of anxiety, posttraumatic stress and obsessive-compulsive disorders</a></li>
+            <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5947163/" target="_blank">Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder</a></li>
+        </ul>
+        <p>If you would like to contribute to the development/updating/maintenance of this clinical tool or if you have any feedback/suggestions, please contact Alexander Levit (<a href="mailto:levit.ubc@gmail.com">levit.ubc@gmail.com</a>).</p>
+        <p>Special thanks to <a href="https://www.linkedin.com/in/rohin-attrey/" target="_blank">Rohin Attrey</a> for developing the first iteration of this tool.</p>
+        <p>This tool is available to you for free through the support of the UBC Department of Psychiatry's PGME CanMEDS Award.</p>
+    </div>
+    `;
+
+    const aboutDiv = document.createElement('div');
+    aboutDiv.className = 'col-12 my-2';
+    aboutDiv.innerHTML = aboutText;
+
+    container.appendChild(aboutDiv);
+
+    const backButton = document.getElementById('back-button');
+    backButton.style.display = 'block';
+    backButton.onclick = () => {
+        loadMainConditions();
+        updateHeaderTitle('CanPsyGuide');
+    };
+
     const backToSubclassesButton = document.getElementById('back-to-subclasses-button');
     backToSubclassesButton.style.display = 'none';
 }
@@ -73,7 +116,6 @@ function loadSubclasses(condition) {
             alert('Failed to load data. Please try again.');
         });
 }
-
 
 function loadGuidelines(guidelines, subclass, condition) {
     const container = document.getElementById('grid-container');
@@ -272,7 +314,7 @@ function createElementForKeyAndValue(key, value) {
         const symbols = value.split('').map(char => {
             const span = document.createElement('span');
             span.className = colorClass;
-            span.textContent = char;
+            textContent = char;
             return span;
         });
         symbols.forEach(span => valueSpan.appendChild(span));
@@ -283,8 +325,6 @@ function createElementForKeyAndValue(key, value) {
     element.appendChild(valueSpan);
     return element;
 }
-
-
 
 function appendWithHeaders(container, elements, categories) {
     for (const [category, keys] of Object.entries(categories)) {
