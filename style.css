@@ -74,7 +74,7 @@ main {
 
 .grid-container, .grid-container-centered, .grid-container-vertical {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 15px;
@@ -124,23 +124,47 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+/* About Button Styles */
 .btn-about {
-    background: linear-gradient(135deg, #20c997, #17a2b8); 
-    color: white; 
+    background: linear-gradient(135deg, #20c997, #17a2b8);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .btn-about:hover {
-    background: linear-gradient(135deg, #17a2b8, #138496); 
-    color: white; 
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #17a2b8, #138496);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 .btn-about:active {
-    background: linear-gradient(135deg, #138496, #117a8b); 
-    color: white; 
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #138496, #117a8b);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-
-
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+}
 
 .navigation {
     display: flex;
@@ -169,8 +193,6 @@ main {
 .back-button:hover {
     background-color: #005a99;
 }
-
-/* Accordion Styles */
 
 /* Accordion Styles */
 .accordion {
@@ -225,12 +247,10 @@ main {
     outline: none;
 }
 
-
 .accordion .card-header:hover, .accordion .card-header:focus {
     background-color: #005a99; 
     transform: scale(1.02); 
 }
-
 
 .accordion .card-header:active {
     background-color: #003f7f;
@@ -238,16 +258,14 @@ main {
     transform: scale(1);
 }
 
-
 .accordion .card-body {
     padding: 10px 20px; 
     margin: 5px 0; 
     font-size: 16px; 
     background-color: #ffffff; 
     border-radius: 8px; 
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
-
 
 /* Drug Menu Item Styles */
 .drug-menu-item {
@@ -292,11 +310,13 @@ main {
     margin-right: 5px;
     white-space: nowrap;
     color: #003f7f;
+    text-align: center; /* Ensure title is centered */
+    flex: 1; /* Ensure title and value take equal space */
 }
 
 .drug-attribute .value {
     flex: 1;
-    text-align: left;
+    text-align: center; /* Ensure value is centered */
 }
 
 .section {
@@ -307,6 +327,19 @@ main {
     display: flex;
     flex-direction: column; /* Ensure all attributes are in a single column */
     gap: 5px;
+}
+
+.row-titles, .row-values {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping of columns */
+}
+
+.attribute-title, .attribute-value {
+    flex: 1;
+    text-align: center;
+    margin: 5px;
+    min-width: calc(100% / 6 - 10px); /* Ensure a maximum of 6 columns */
 }
 
 .drug-details {
@@ -405,8 +438,6 @@ main {
     font-size: 2.0em; /* Increase font size */
     margin: 0 2px; /* Add margin for better spacing */
 }
-
-
 
 .grid-item::after {
     content: '';

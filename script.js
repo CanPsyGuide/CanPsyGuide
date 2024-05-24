@@ -2,11 +2,7 @@ document.addEventListener('DOMContentLoaded', loadMainConditions);
 
 function updateHeaderTitle(title) {
     const header = document.querySelector('header h1');
-    if (title.length > 25) {
-        header.textContent = title.slice(0, 25) + '...';
-    } else {
-        header.textContent = title;
-    }
+    header.textContent = title.length > 25 ? title.slice(0, 25) + '...' : title;
 }
 
 function loadMainConditions() {
@@ -53,11 +49,11 @@ function loadAboutSection() {
         <p>This tool does not provide medical advice and is intended for informational purposes only, specifically to facilitate quick referencing of Canadian treatment guidelines. No information on this site is intended to substitute for professional medical advice, clinical supervision, diagnosis, nor treatment. Always seek the advice of your physician or clinical supervisor with any questions you may have regarding a medical condition or treatment.</p>
         <p>Be sure to read the full guidelines before using this tool as a quick reference. Remain up-to-date with regards to any guideline updates, as this tool many not reflect the most recent guidelines. Current guidelines referenced:</p>
         <ul>
-            <li><a href="https://pubmed.ncbi.nlm.nih.gov/38711351/" target="_blank">Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 Update on Clinical Guidelines for Management of Major Depressive Disorder in Adults</a></li>
+            <li><a href="https://journals.sagepub.com/doi/full/10.1177/07067437241245384" target="_blank">Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 Update on Clinical Guidelines for Management of Major Depressive Disorder in Adults</a></li>
             <li><a href="https://bmcpsychiatry.biomedcentral.com/articles/10.1186/1471-244X-14-S1-S1" target="_blank">Canadian Anxiety Disorders Guidelines Initiative: Clinical practice guidelines for the management of anxiety, posttraumatic stress and obsessive-compulsive disorders</a></li>
             <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5947163/" target="_blank">Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder</a></li>
         </ul>
-        <p>If you would like to contribute to the development/updating/maintenance of this clinical tool or if you have any feedback/suggestions, please contact Alexander Levit (<a href="mailto:levit.ubc@gmail.com">levit.ubc@gmail.com</a>).</p>
+        <p>If you would like to contribute to the development/updating/maintenance of this clinical tool or if you have any feedback/suggestions, please contact <a href="mailto:levit.ubc@gmail.com">Alexander Levit</a>.</p>
         <p>Special thanks to <a href="https://www.linkedin.com/in/rohin-attrey/" target="_blank">Rohin Attrey</a> for developing the first iteration of this tool.</p>
         <p>This tool is available to you for free through the support of the UBC Department of Psychiatry's PGME CanMEDS Award.</p>
     </div>
@@ -79,7 +75,6 @@ function loadAboutSection() {
     const backToSubclassesButton = document.getElementById('back-to-subclasses-button');
     backToSubclassesButton.style.display = 'none';
 }
-
 
 function loadSubclasses(condition) {
     const filePath = `guidelines/${condition}.json`;
@@ -249,18 +244,11 @@ function renderDrugDetails(drug) {
 
     const cardBody = document.createElement('div');
     cardBody.className = 'card-body';
-    appendWithHeaders(cardBody, elements, categories);
+    appendWithHeaders(cardBody, elements);
     container.appendChild(cardBody);
 
     return container;
 }
-
-const categories = {
-    '': ['Drug Class', 'Dose', 'LOE'],
-    'Specific Symptom Treatment': ['Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction'],
-    'Other': ['Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability'],
-    'Notes': ['Notes']
-};
 
 // Helper function to get the Bootstrap Icon class based on the symbol
 // Helper function to get the appropriate color class based on the symbol
@@ -296,7 +284,7 @@ function createElementForKeyAndValue(key, value) {
     const valueSpan = document.createElement('span');
     valueSpan.className = 'value';
 
-    if (['LOE', 'Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction'].includes(key)) {
+    if (['LOE', 'Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction', 'Acute Mania', 'PreventAME', 'Prevent Mania', 'Prevent Depression', 'Acute Depression', 'Acute Tolerance'].includes(key)) {
         const pieChart = document.createElement('div');
         pieChart.className = 'pie-chart';
         const pieChartCanvas = document.createElement('canvas');
@@ -305,7 +293,7 @@ function createElementForKeyAndValue(key, value) {
         pieChart.appendChild(pieChartCanvas);
         valueSpan.appendChild(pieChart);
         drawChart(pieChartCanvas, value);
-    } else if (['Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability'].includes(key)) {
+    } else if (['Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability', 'Acute Safety'].includes(key)) {
         const icon = document.createElement('span');
         icon.className = value > 0 ? 'fa fa-thumbs-up thumbs-up' : 'fa fa-thumbs-down thumbs-down';
         valueSpan.appendChild(icon);
@@ -314,7 +302,7 @@ function createElementForKeyAndValue(key, value) {
         const symbols = value.split('').map(char => {
             const span = document.createElement('span');
             span.className = colorClass;
-            textContent = char;
+            span.textContent = char;
             return span;
         });
         symbols.forEach(span => valueSpan.appendChild(span));
@@ -326,38 +314,197 @@ function createElementForKeyAndValue(key, value) {
     return element;
 }
 
-function appendWithHeaders(container, elements, categories) {
-    for (const [category, keys] of Object.entries(categories)) {
-        let section = document.createElement('div');
-        section.className = 'section';
+function appendWithHeaders(container, elements) {
+    let section = document.createElement('div');
+    section.className = 'section';
 
-        const attributesContainer = document.createElement('div');
-        attributesContainer.className = 'attributes-container';
+    const attributesContainer = document.createElement('div');
+    attributesContainer.className = 'attributes-container';
 
-        let attributesExist = false;
+    let rowTitles = document.createElement('div');
+    rowTitles.className = 'row-titles';
+    let rowValues = document.createElement('div');
+    rowValues.className = 'row-values';
 
-        keys.forEach(key => {
-            if (elements[key]) {
-                attributesContainer.appendChild(elements[key]);
-                attributesExist = true;
-                delete elements[key];
+    let attributesExist = false;
+    let columnCount = 0;
+
+    // Add LOE items
+    ['LOE', 'Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction', 'Acute Mania', 'PreventAME', 'Prevent Mania', 'Prevent Depression', 'Acute Depression', 'Acute Tolerance'].forEach(key => {
+        if (elements[key]) {
+            const element = elements[key];
+            const title = element.querySelector('.title');
+            const value = element.querySelector('.value');
+
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'attribute-title';
+            titleDiv.appendChild(title);
+
+            const valueDiv = document.createElement('div');
+            valueDiv.className = 'attribute-value';
+            valueDiv.appendChild(value);
+
+            rowTitles.appendChild(titleDiv);
+            rowValues.appendChild(valueDiv);
+
+            attributesExist = true;
+            delete elements[key];
+            columnCount++;
+            if (columnCount >= 6) {
+                attributesContainer.appendChild(rowTitles);
+                attributesContainer.appendChild(rowValues);
+                section.appendChild(attributesContainer);
+                container.appendChild(section);
+
+                // Reset for next row
+                rowTitles = document.createElement('div');
+                rowTitles.className = 'row-titles';
+                rowValues = document.createElement('div');
+                rowValues.className = 'row-values';
+                attributesExist = false;
+                columnCount = 0;
             }
-        });
-
-        if (attributesExist) {
-            if (category) {
-                const header = document.createElement('h3');
-                header.textContent = category;
-                header.className = 'header-title'; // Use the shared class for section headers
-                section.appendChild(header);
-            }
-            section.appendChild(attributesContainer);
-            container.appendChild(section);
         }
+    });
+
+    if (attributesExist) {
+        attributesContainer.appendChild(rowTitles);
+        attributesContainer.appendChild(rowValues);
+        section.appendChild(attributesContainer);
+        container.appendChild(section);
+
+        // Reset for next row
+        rowTitles = document.createElement('div');
+        rowTitles.className = 'row-titles';
+        rowValues = document.createElement('div');
+        rowValues.className = 'row-values';
+        attributesExist = false;
+        columnCount = 0;
     }
 
-    // Append any remaining elements
-    Object.values(elements).forEach(element => container.appendChild(element));
+    // Add Thumbs Up/Down items
+    ['Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability', 'Acute Safety'].forEach(key => {
+        if (elements[key]) {
+            const element = elements[key];
+            const title = element.querySelector('.title');
+            const value = element.querySelector('.value');
+
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'attribute-title';
+            titleDiv.appendChild(title);
+
+            const valueDiv = document.createElement('div');
+            valueDiv.className = 'attribute-value';
+            valueDiv.appendChild(value);
+
+            rowTitles.appendChild(titleDiv);
+            rowValues.appendChild(valueDiv);
+
+            attributesExist = true;
+            delete elements[key];
+            columnCount++;
+            if (columnCount >= 6) {
+                attributesContainer.appendChild(rowTitles);
+                attributesContainer.appendChild(rowValues);
+                section.appendChild(attributesContainer);
+                container.appendChild(section);
+
+                // Reset for next row
+                rowTitles = document.createElement('div');
+                rowTitles.className = 'row-titles';
+                rowValues = document.createElement('div');
+                rowValues.className = 'row-values';
+                attributesExist = false;
+                columnCount = 0;
+            }
+        }
+    });
+
+    if (attributesExist) {
+        attributesContainer.appendChild(rowTitles);
+        attributesContainer.appendChild(rowValues);
+        section.appendChild(attributesContainer);
+        container.appendChild(section);
+
+        // Reset for next row
+        rowTitles = document.createElement('div');
+        rowTitles.className = 'row-titles';
+        rowValues = document.createElement('div');
+        rowValues.className = 'row-values';
+        attributesExist = false;
+        columnCount = 0;
+    }
+
+    // Add ++/-- items
+    Object.keys(elements).forEach(key => {
+        if (/^\++$/.test(elements[key].querySelector('.value').textContent) || /^\-+$/.test(elements[key].querySelector('.value').textContent)) {
+            const element = elements[key];
+            const title = element.querySelector('.title');
+            const value = element.querySelector('.value');
+
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'attribute-title';
+            titleDiv.appendChild(title);
+
+            const valueDiv = document.createElement('div');
+            valueDiv.className = 'attribute-value';
+            valueDiv.appendChild(value);
+
+            rowTitles.appendChild(titleDiv);
+            rowValues.appendChild(valueDiv);
+
+            attributesExist = true;
+            delete elements[key];
+            columnCount++;
+            if (columnCount >= 6) {
+                attributesContainer.appendChild(rowTitles);
+                attributesContainer.appendChild(rowValues);
+                section.appendChild(attributesContainer);
+                container.appendChild(section);
+
+                // Reset for next row
+                rowTitles = document.createElement('div');
+                rowTitles.className = 'row-titles';
+                rowValues = document.createElement('div');
+                rowValues.className = 'row-values';
+                attributesExist = false;
+                columnCount = 0;
+            }
+        }
+    });
+
+    if (attributesExist) {
+        attributesContainer.appendChild(rowTitles);
+        attributesContainer.appendChild(rowValues);
+        section.appendChild(attributesContainer);
+        container.appendChild(section);
+
+        // Reset for next row
+        rowTitles = document.createElement('div');
+        rowTitles.className = 'row-titles';
+        rowValues = document.createElement('div');
+        rowValues.className = 'row-values';
+        attributesExist = false;
+        columnCount = 0;
+    }
+
+    // Add remaining items as notes
+    if (Object.keys(elements).length > 0) {
+        let notesSection = document.createElement('div');
+        notesSection.className = 'section';
+
+        const notesHeader = document.createElement('h3');
+        notesHeader.textContent = 'Notes';
+        notesHeader.className = 'header-title'; // Use the shared class for section headers
+        notesSection.appendChild(notesHeader);
+
+        const notesContainer = document.createElement('div');
+        notesContainer.className = 'attributes-container';
+
+        Object.values(elements).forEach(element => notesContainer.appendChild(element));
+        notesSection.appendChild(notesContainer);
+        container.appendChild(notesSection);
+    }
 }
 
 function drawChart(canvas, value) {

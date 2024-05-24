@@ -5,242 +5,175 @@
         {
             "name": "BD1 Acute Mania",
             "description": "Detailed information about BD1 Acute Mania treatments for Bipolar Disorder.",
-            "guidelines": [   
+            "guidelines": [
+                {
+                    "level": "First Line - Combination",
+                    "drugs": [
+                        {
+                            "name": "Quetiapine+Li/DVP",
+                            "Acute Mania": 1,
+                            "PreventAME": 1.0,
+                            "Prevent Mania": 1.0,
+                            "Prevent Depression": 1.0,
+                            "Acute Depression": 4.0,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "-",
+                            "Notes": "No controlled trials; however, clinical experience suggests that it is a useful strategy. Divalproex should be used with caution in women of childbearing age."
+                        },
+                        {
+                            "name": "Aripiprazole+Li/DVP",
+                            "Acute Mania": 2,
+                            "PreventAME": 2.0,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 4.0,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "-",
+                            "Notes": "Did not separate from placebo in those with index mania; no studies available in index depression. Divalproex should be used with caution in women of childbearing age."
+                        },
+                        {
+                            "name": "Risperidone+Li/DVP",
+                            "Acute Mania": 1,
+                            "PreventAME": 4.0,
+                            "Prevent Mania": 4.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 4.0,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "-",
+                            "Notes": "Divalproex should be used with caution in women of childbearing age."
+                        },
+                        {
+                            "name": "Asenapine+Li/DVP",
+                            "Acute Mania": 2,
+                            "PreventAME": 4.0,
+                            "Prevent Mania": 4.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 4.0,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "-",
+                            "Notes": "Divalproex should be used with caution in women of childbearing age."
+                        }
+                    ]
+                },
                 {
                     "level": "First Line - Monotherapy",
                     "drugs": [
                         {
                             "name": "Lithium",
-                            "LOE": 2.0,
+                            "Acute Mania": 1,
+                            "PreventAME": 1.0,
+                            "Prevent Mania": 1.0,
+                            "Prevent Depression": 1.0,
+                            "Acute Depression": 2.0,
                             "Acute Safety": "+",
                             "Acute Tolerance": "+",
                             "Maintenance Safety": "++",
                             "Maintenance Tolerance": "++",
-                            "Manic Switch": "+++"
+                            "Manic Switch": "-"
                         },
                         {
                             "name": "Quetiapine",
-                            "LOE": 1.0,
+                            "Acute Mania": 1,
+                            "PreventAME": 1.0,
+                            "Prevent Mania": 1.0,
+                            "Prevent Depression": 1.0,
+                            "Acute Depression": 1.0,
                             "Acute Safety": "+",
                             "Acute Tolerance": "++",
                             "Maintenance Safety": "++",
                             "Maintenance Tolerance": "++",
-                            "Manic Switch": "+++"
+                            "Manic Switch": "-"
                         },
                         {
                             "name": "Divalproex",
-                            "LOE": 2.0,
-                            "Acute Safety": "+++",
+                            "Acute Mania": 1,
+                            "PreventAME": 1.0,
+                            "Prevent Mania": 3.0,
+                            "Prevent Depression": 2.0,
+                            "Acute Depression": 2.0,
+                            "Acute Safety": "-",
                             "Acute Tolerance": "+",
                             "Maintenance Safety": "++",
                             "Maintenance Tolerance": "+",
-                            "Manic Switch": "+++",
+                            "Manic Switch": "-",
                             "Notes": "Divalproex should be used with caution in women of childbearing age."
                         },
                         {
                             "name": "Asenapine",
-                            "LOE": 0.0,
-                            "Acute Safety": "+++",
+                            "Acute Mania": 1,
+                            "PreventAME": 2.0,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 2.0,
+                            "Acute Depression": 0.0,
+                            "Acute Safety": "-",
                             "Acute Tolerance": "+",
-                            "Maintenance Safety": "+++",
+                            "Maintenance Safety": "-",
                             "Maintenance Tolerance": "+",
-                            "Manic Switch": "+++"
+                            "Manic Switch": "-"
                         },
                         {
                             "name": "Aripiprazole",
-                            "LOE": -1.0,
-                            "Acute Safety": "+++",
+                            "Acute Mania": 1,
+                            "PreventAME": 2.0,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": -1.0,
+                            "Acute Safety": "-",
                             "Acute Tolerance": "+",
-                            "Maintenance Safety": "+++",
+                            "Maintenance Safety": "-",
                             "Maintenance Tolerance": "+",
-                            "Manic Switch": "+++"
+                            "Manic Switch": "-"
                         },
                         {
                             "name": "Paliperidone (>6 mg)",
-                            "LOE": 0.0,
-                            "Acute Safety": "+++",
+                            "Acute Mania": 1,
+                            "PreventAME": 2.0,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 0.0,
+                            "Acute Safety": "-",
                             "Acute Tolerance": "+",
                             "Maintenance Safety": "+",
                             "Maintenance Tolerance": "++",
-                            "Manic Switch": "+++"
+                            "Manic Switch": "-"
                         },
                         {
                             "name": "Risperidone",
-                            "LOE": 0.0,
-                            "Acute Safety": "+++",
+                            "Acute Mania": 1,
+                            "PreventAME": 4.0,
+                            "Prevent Mania": 4.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 0.0,
+                            "Acute Safety": "-",
                             "Acute Tolerance": "+",
                             "Maintenance Safety": "+",
                             "Maintenance Tolerance": "++",
-                            "Manic Switch": "+++"
+                            "Manic Switch": "-"
                         },
                         {
                             "name": "Cariprazine",
-                            "LOE": 1.0,
-                            "Acute Safety": "+++",
+                            "Acute Mania": 1,
+                            "PreventAME": 0.0,
+                            "Prevent Mania": 0.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 1.0,
+                            "Acute Safety": "-",
                             "Acute Tolerance": "+",
-                            "Maintenance Safety": "+++",
-                            "Maintenance Tolerance": "+++",
-                            "Manic Switch": "+++"
-                        }
-                    ]
-                },
-                {
-                "level": "First Line - Combination",
-                "drugs": [
-                    {
-                        "name": "Quetiapine+Li/DVP",
-                        "LOE": 4.0,
-                        "Acute Safety": "+",
-                        "Acute Tolerance": "++",
-                        "Maintenance Safety": "+++",
-                        "Maintenance Tolerance": "++",
-                        "Manic Switch": "+++",
-                        "Notes": "No controlled trials; however, clinical experience suggests that it is a useful strategy. Divalproex should be used with caution in women of childbearing age."
-                    },
-                    {
-                        "name": "Aripiprazole+Li/DVP",
-                        "LOE": 4.0,
-                        "Acute Safety": "+",
-                        "Acute Tolerance": "+",
-                        "Maintenance Safety": "++",
-                        "Maintenance Tolerance": "++",
-                        "Manic Switch": "+++",
-                        "Notes": "Did not separate from placebo in those with index mania; no studies available in index depression. Divalproex should be used with caution in women of childbearing age."
-                    },
-                    {
-                        "name": "Risperidone+Li/DVP",
-                        "LOE": 4.0,
-                        "Acute Safety": "+",
-                        "Acute Tolerance": "++",
-                        "Maintenance Safety": "+++",
-                        "Maintenance Tolerance": "++",
-                        "Manic Switch": "+++",
-                        "Notes": "Divalproex should be used with caution in women of childbearing age."
-                    },
-                    {
-                        "name": "Asenapine+Li/DVP",
-                        "LOE": 4.0,
-                        "Acute Safety": "+",
-                        "Acute Tolerance": "+",
-                        "Maintenance Safety": "++",
-                        "Maintenance Tolerance": "+",
-                        "Manic Switch": "+++",
-                        "Notes": "Divalproex should be used with caution in women of childbearing age."
-                    }
-                ]
-            },
-                {
-                    "level": "Second Line",
-                    "drugs": [
-                        {
-                            "name": "Olanzapine",
-                            "LOE": 1.0,
-                            "Acute Safety": "+",
-                            "Acute Tolerance": "++",
-                            "Maintenance Safety": "+++",
-                            "Maintenance Tolerance": "++",
-                            "Manic Switch": "+++",
-                            "Notes": "Did not separate from placebo on core symptoms of depression."
-                        },
-                        {
-                            "name": "Carbamazepine",
-                            "LOE": 3.0,
-                            "Acute Safety": "++",
-                            "Acute Tolerance": "+",
-                            "Maintenance Safety": "++",
-                            "Maintenance Tolerance": "++",
-                            "Manic Switch": "+++",
-                            "Notes": "Carbamazepine should be used with caution in women of childbearing age."
-                        },
-                        {
-                            "name": "Olanzapine+Li/DVP",
-                            "LOE": 0.0,
-                            "Acute Safety": "+",
-                            "Acute Tolerance": "++",
-                            "Maintenance Safety": "+++",
-                            "Maintenance Tolerance": "++",
-                            "Manic Switch": "+++",
-                            "Notes": "Divalproex should be used with caution in women of childbearing age."
-                        },
-                        {
-                            "name": "Lithium+DVP",
-                            "LOE": 0.0,
-                            "Acute Safety": "+",
-                            "Acute Tolerance": "++",
-                            "Maintenance Safety": "++",
-                            "Maintenance Tolerance": "++",
-                            "Manic Switch": "+++",
-                            "Notes": "Divalproex should be used with caution in women of childbearing age."
-                        },
-                        {
-                            "name": "Ziprasidone",
-                            "LOE": -1.0,
-                            "Acute Safety": "++",
-                            "Acute Tolerance": "++",
-                            "Maintenance Safety": "++",
-                            "Maintenance Tolerance": "+",
-                            "Manic Switch": "+++"
-                        },
-                        {
-                            "name": "Haloperidol",
-                            "LOE": 0.0,
-                            "Acute Safety": "+",
-                            "Acute Tolerance": "++",
-                            "Maintenance Safety": "+++",
-                            "Maintenance Tolerance": "++",
-                            "Manic Switch": "++"
-                        },
-                        {
-                            "name": "ECT",
-                            "LOE": 4.0,
-                            "Acute Safety": "+",
-                            "Acute Tolerance": "++",
-                            "Maintenance Safety": "+",
-                            "Maintenance Tolerance": "++",
-                            "Manic Switch": "+++",
-                            "Notes": "Divalproex and Carbamazepine should be used with caution in women of childbearing age."
-                        }
-                    ]
-                },
-                {
-                    "level": "Third Line",
-                    "drugs": [
-                        {
-                            "name": "Chlorpromazine",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Clonazepam",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Clozapine",
-                            "LOE": 4
-                        },
-                        {
-                            "name": "Haloperidol + Li/DVP",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "rTMS",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "Tamoxifen",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Tamoxifen + Li/DVP",
-                            "LOE": 2
-                        }
-                    ]
-                },
-                {
-                    "level": "Third Line",
-                    "drugs": [
-                        {
-                            "name": "Carbamazepine/Oxcarbazepine + Li/DVP",
-                            "LOE": 3
+                            "Maintenance Safety": "-",
+                            "Maintenance Tolerance": "-",
+                            "Manic Switch": "-"
                         }
                     ]
                 },
@@ -249,35 +182,178 @@
                     "drugs": [
                         {
                             "name": "Allopurinol",
-                            "LOE": -1
+                            "Acute Mania": -1
                         },
                         {
                             "name": "Eslicarbazepine/Licarbazepine",
-                            "LOE": -2
+                            "Acute Mania": -2
                         },
                         {
                             "name": "Gabapentin",
-                            "LOE": -2
+                            "Acute Mania": -2
                         },
                         {
                             "name": "Lamotrigine",
-                            "LOE": -1
+                            "Acute Mania": -1
                         },
                         {
                             "name": "Omega-3 Fatty Acids",
-                            "LOE": -1
+                            "Acute Mania": -1
                         },
                         {
                             "name": "Topirimate",
-                            "LOE": -1
+                            "Acute Mania": -1
                         },
                         {
                             "name": "Valnoctamide",
-                            "LOE": -2
+                            "Acute Mania": -2
                         },
                         {
                             "name": "Zonisamide",
-                            "LOE": -2
+                            "Acute Mania": -2
+                        }
+                    ]
+                },
+                {
+                    "level": "Second Line",
+                    "drugs": [
+                        {
+                            "name": "Olanzapine",
+                            "Acute Mania": 1,
+                            "PreventAME": 1.0,
+                            "Prevent Mania": 1.0,
+                            "Prevent Depression": 1.0,
+                            "Acute Depression": 1.0,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "-",
+                            "Notes": "Did not separate from placebo on core symptoms of depression."
+                        },
+                        {
+                            "name": "Carbamazepine",
+                            "Acute Mania": 1,
+                            "PreventAME": 2.0,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 2.0,
+                            "Acute Depression": 3.0,
+                            "Acute Safety": "++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "-",
+                            "Notes": "Carbamazepine should be used with caution in women of childbearing age."
+                        },
+                        {
+                            "name": "Olanzapine+Li/DVP",
+                            "Acute Mania": 1,
+                            "PreventAME": 4.0,
+                            "Prevent Mania": 4.0,
+                            "Prevent Depression": 4.0,
+                            "Acute Depression": 0.0,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "-",
+                            "Notes": "Divalproex should be used with caution in women of childbearing age."
+                        },
+                        {
+                            "name": "Lithium+DVP",
+                            "Acute Mania": 3,
+                            "PreventAME": 3.0,
+                            "Prevent Mania": 3.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 0.0,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "-",
+                            "Notes": "Divalproex should be used with caution in women of childbearing age."
+                        },
+                        {
+                            "name": "Ziprasidone",
+                            "Acute Mania": 1,
+                            "PreventAME": 4.0,
+                            "Prevent Mania": 4.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": -1.0,
+                            "Acute Safety": "++",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "-"
+                        },
+                        {
+                            "name": "Haloperidol",
+                            "Acute Mania": 1,
+                            "PreventAME": 0.0,
+                            "Prevent Mania": 4.0,
+                            "Prevent Depression": -4.0,
+                            "Acute Depression": 0.0,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "++"
+                        },
+                        {
+                            "name": "ECT",
+                            "Acute Mania": 3,
+                            "PreventAME": 4.0,
+                            "Prevent Mania": 4.0,
+                            "Prevent Depression": 4.0,
+                            "Acute Depression": 4.0,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "-",
+                            "Notes": "Divalproex and Carbamazepine should be used with caution in women of childbearing age."
+                        }
+                    ]
+                },
+                {
+                    "level": "Third",
+                    "drugs": [
+                        {
+                            "name": "Chlorpromazine",
+                            "Acute Mania": 2
+                        },
+                        {
+                            "name": "Clonazepam",
+                            "Acute Mania": 2
+                        },
+                        {
+                            "name": "Clozapine",
+                            "Acute Mania": 4
+                        },
+                        {
+                            "name": "Haloperidol + Li/DVP",
+                            "Acute Mania": 2
+                        },
+                        {
+                            "name": "rTMS",
+                            "Acute Mania": 3
+                        },
+                        {
+                            "name": "Tamoxifen",
+                            "Acute Mania": 2
+                        },
+                        {
+                            "name": "Tamoxifen + Li/DVP",
+                            "Acute Mania": 2
+                        }
+                    ]
+                },
+                {
+                    "level": "Third Line",
+                    "drugs": [
+                        {
+                            "name": "Carbamazepine/Oxcarbazepine + Li/DVP",
+                            "Acute Mania": 3
                         }
                     ]
                 }
@@ -288,175 +364,86 @@
             "description": "Detailed information about BD1 Acute Depression treatments for Bipolar Disorder.",
             "guidelines": [
                 {
-                    "level": "First Line",
+                    "level": "First",
                     "drugs": [
                         {
                             "name": "Quetiapine",
-                            "LOE": 1,
+                            "Acute Mania": 1.0,
+                            "PreventAME": 1.0,
+                            "Prevent Mania": 1.0,
+                            "Prevent Depression": 1.0,
+                            "Acute Depression": 1,
                             "Acute Safety": "+",
                             "Acute Tolerance": "++",
                             "Maintenance Safety": "++",
                             "Maintenance Tolerance": "++",
-                            "Manic Switch": "+++"
+                            "Manic Switch": "-"
                         },
                         {
                             "name": "Lurasidone+Li/DVP",
-                            "LOE": 0,
+                            "Acute Mania": 0.0,
+                            "PreventAME": 3.0,
+                            "Prevent Mania": 3.0,
+                            "Prevent Depression": 3.0,
+                            "Acute Depression": 1,
                             "Acute Safety": "+",
                             "Acute Tolerance": "++",
                             "Maintenance Safety": "++",
                             "Maintenance Tolerance": "++/+",
-                            "Manic Switch": "+++",
-                            "Other Notes": "Divalproex should be used with caution in women of child bearing age."
+                            "Manic Switch": "-",
+                            "Notes": "Divalproex should be used with caution in women of child bearing age."
                         },
                         {
                             "name": "Lithium",
-                            "LOE": 1,
+                            "Acute Mania": 1.0,
+                            "PreventAME": 1.0,
+                            "Prevent Mania": 1.0,
+                            "Prevent Depression": 1.0,
+                            "Acute Depression": 2,
                             "Acute Safety": "+",
                             "Acute Tolerance": "+",
                             "Maintenance Safety": "++",
                             "Maintenance Tolerance": "++",
-                            "Manic Switch": "+++"
+                            "Manic Switch": "-"
                         },
                         {
                             "name": "Lamotrigine",
-                            "LOE": -1,
+                            "Acute Mania": -1.0,
+                            "PreventAME": 1.0,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 1.0,
+                            "Acute Depression": 2,
                             "Acute Safety": "++",
-                            "Acute Tolerance": "+++",
-                            "Maintenance Safety": "+++",
-                            "Maintenance Tolerance": "+++",
-                            "Manic Switch": "+++"
+                            "Acute Tolerance": "-",
+                            "Maintenance Safety": "-",
+                            "Maintenance Tolerance": "-",
+                            "Manic Switch": "-"
                         },
                         {
                             "name": "Lurasidone",
-                            "LOE": 0,
-                            "Acute Safety": "+++",
-                            "Acute Tolerance": "+++",
-                            "Maintenance Safety": "+++",
+                            "Acute Mania": 0.0,
+                            "PreventAME": 4.0,
+                            "Prevent Mania": 4.0,
+                            "Prevent Depression": 4.0,
+                            "Acute Depression": 2,
+                            "Acute Safety": "-",
+                            "Acute Tolerance": "-",
+                            "Maintenance Safety": "-",
                             "Maintenance Tolerance": "+",
-                            "Manic Switch": "+++"
+                            "Manic Switch": "-"
                         },
                         {
                             "name": "Lamotrigine (adj)",
-                            "LOE": -4,
+                            "Acute Mania": -4.0,
+                            "PreventAME": 4.0,
+                            "Prevent Mania": 4.0,
+                            "Prevent Depression": 4.0,
+                            "Acute Depression": 2,
                             "Acute Safety": "++",
                             "Acute Tolerance": "+",
                             "Maintenance Safety": "++",
                             "Maintenance Tolerance": "++",
-                            "Manic Switch": "+++"
-                        }
-                    ]
-                },
-                {
-                    "level": "Second Line",
-                    "drugs": [
-                        {
-                            "name": "Divalproex",
-                            "LOE": 4,
-                            "Acute Safety": "+++",
-                            "Acute Tolerance": "+",
-                            "Maintenance Safety": "++",
-                            "Maintenance Tolerance": "+",
-                            "Manic Switch": "+++",
-                            "Other Notes": "Divalproex should be used with caution in women of child bearing age."
-                        },
-                        {
-                            "name": "SSRIs/bupropion (adj)",
-                            "LOE": 0,
-                            "Acute Safety": "+++",
-                            "Acute Tolerance": "+",
-                            "Maintenance Safety": "+++",
-                            "Maintenance Tolerance": "+",
-                            "Manic Switch": "+"
-                        },
-                        {
-                            "name": "ECT",
-                            "LOE": 3,
-                            "Acute Safety": "+",
-                            "Acute Tolerance": "++",
-                            "Maintenance Safety": "+",
-                            "Maintenance Tolerance": "++",
-                            "Manic Switch": "+++"
-                        },
-                        {
-                            "name": "Cariprazine",
-                            "LOE": 1,
-                            "Acute Safety": "+++",
-                            "Acute Tolerance": "+",
-                            "Maintenance Safety": "+++",
-                            "Maintenance Tolerance": "+++",
-                            "Manic Switch": "+++"
-                        },
-                        {
-                            "name": "Olanzapine + Fluoxetine",
-                            "LOE": 0,
-                            "Acute Safety": "+",
-                            "Acute Tolerance": "++",
-                            "Maintenance Safety": "+++",
-                            "Maintenance Tolerance": "+",
-                            "Manic Switch": "+"
-                        }
-                    ]
-                },
-                {
-                    "level": "Third Line",
-                    "drugs": [
-                        {
-                            "name": "Aripiprazole (adj)",
-                            "LOE": 4
-                        },
-                        {
-                            "name": "Armodafinil (adj)",
-                            "LOE": 4
-                        },
-                        {
-                            "name": "Asenapine (adj)",
-                            "LOE": 4
-                        },
-                        {
-                            "name": "Carbamazepine",
-                            "LOE": 2,
-                            "Other Notes": "Carbamazepine should be used with caution in women of child bearing age."
-                        },
-                        {
-                            "name": "EPA (adj)",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Ketamine IV (adj)",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "Light Therapy +/- Total Sleep Deprivation",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "Levothyroxine (adj)",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "Modafinil (adj)",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "N-acetylcysteine (adj)",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "Olanzapine",
-                            "LOE": 1
-                        },
-                        {
-                            "name": "Pramipexole (adj)",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "rTMS (adj)",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "SNRI/MAOI (adj)",
-                            "LOE": 2
+                            "Manic Switch": "-"
                         }
                     ]
                 },
@@ -465,19 +452,152 @@
                     "drugs": [
                         {
                             "name": "Antidepressant Monotherapy",
-                            "LOE": -2
+                            "Acute Depression": -2
                         },
                         {
                             "name": "Aripiprazole",
-                            "LOE": -1
+                            "Acute Depression": -1
                         },
                         {
                             "name": "Lamotrigine + Folic Acid",
-                            "LOE": -2
+                            "Acute Depression": -2
                         },
                         {
                             "name": "Mifepristone (adj)",
-                            "LOE": -2
+                            "Acute Depression": -2
+                        }
+                    ]
+                },
+                {
+                    "level": "Second",
+                    "drugs": [
+                        {
+                            "name": "Divalproex",
+                            "Acute Mania": 4.0,
+                            "PreventAME": 1.0,
+                            "Prevent Mania": 3.0,
+                            "Prevent Depression": 2.0,
+                            "Acute Depression": 2,
+                            "Acute Safety": "-",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "-",
+                            "Notes": "Divalproex should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "SSRIs/bupropion (adj)",
+                            "Acute Mania": 0.0,
+                            "PreventAME": 0.0,
+                            "Prevent Mania": 0.0,
+                            "Prevent Depression": 4.0,
+                            "Acute Depression": 1,
+                            "Acute Safety": "-",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "-",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "+"
+                        },
+                        {
+                            "name": "ECT",
+                            "Acute Mania": 3.0,
+                            "PreventAME": 4.0,
+                            "Prevent Mania": 4.0,
+                            "Prevent Depression": 4.0,
+                            "Acute Depression": 4,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "-"
+                        },
+                        {
+                            "name": "Cariprazine",
+                            "Acute Mania": 1.0,
+                            "PreventAME": 0.0,
+                            "Prevent Mania": 0.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 1,
+                            "Acute Safety": "-",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "-",
+                            "Maintenance Tolerance": "-",
+                            "Manic Switch": "-"
+                        },
+                        {
+                            "name": "Olanzapine + Fluoxetine",
+                            "Acute Mania": 0.0,
+                            "PreventAME": 0.0,
+                            "Prevent Mania": 0.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 2,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "+"
+                        }
+                    ]
+                },
+                {
+                    "level": "Third",
+                    "drugs": [
+                        {
+                            "name": "Aripiprazole (adj)",
+                            "Acute Depression": 4
+                        },
+                        {
+                            "name": "Armodafinil (adj)",
+                            "Acute Depression": 4
+                        },
+                        {
+                            "name": "Asenapine (adj)",
+                            "Acute Depression": 4
+                        },
+                        {
+                            "name": "Carbamazepine",
+                            "Acute Depression": 2,
+                            "Notes": "Carbamazepine should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "EPA (adj)",
+                            "Acute Depression": 2
+                        },
+                        {
+                            "name": "Ketamine IV (adj)",
+                            "Acute Depression": 3
+                        },
+                        {
+                            "name": "Light Therapy +/- Total Sleep Deprivation",
+                            "Acute Depression": 3
+                        },
+                        {
+                            "name": "Levothyroxine (adj)",
+                            "Acute Depression": 3
+                        },
+                        {
+                            "name": "Modafinil (adj)",
+                            "Acute Depression": 2
+                        },
+                        {
+                            "name": "N-acetylcysteine (adj)",
+                            "Acute Depression": 3
+                        },
+                        {
+                            "name": "Olanzapine",
+                            "Acute Depression": 1
+                        },
+                        {
+                            "name": "Pramipexole (adj)",
+                            "Acute Depression": 2
+                        },
+                        {
+                            "name": "rTMS (adj)",
+                            "Acute Depression": 2
+                        },
+                        {
+                            "name": "SNRI/MAOI (adj)",
+                            "Acute Depression": 2
                         }
                     ]
                 }
@@ -488,11 +608,15 @@
             "description": "Detailed information about BD1 Maintenance treatments for Bipolar Disorder.",
             "guidelines": [
                 {
-                    "level": "First Line",
+                    "level": "First",
                     "drugs": [
                         {
                             "name": "Lithium",
-                            "LOE": 1.0,
+                            "Acute Mania": 1.0,
+                            "PreventAME": 1,
+                            "Prevent Mania": 1.0,
+                            "Prevent Depression": 1.0,
+                            "Acute Depression": 2.0,
                             "Acute Safety": "+",
                             "Acute Tolerance": "+",
                             "Maintenance Safety": "++",
@@ -500,7 +624,11 @@
                         },
                         {
                             "name": "Quetiapine",
-                            "LOE": 1.0,
+                            "Acute Mania": 1.0,
+                            "PreventAME": 1,
+                            "Prevent Mania": 1.0,
+                            "Prevent Depression": 1.0,
+                            "Acute Depression": 1.0,
                             "Acute Safety": "+",
                             "Acute Tolerance": "++",
                             "Maintenance Safety": "++",
@@ -508,8 +636,12 @@
                         },
                         {
                             "name": "Divalproex",
-                            "LOE": 1.0,
-                            "Acute Safety": "+++",
+                            "Acute Mania": 1.0,
+                            "PreventAME": 1,
+                            "Prevent Mania": 3.0,
+                            "Prevent Depression": 2.0,
+                            "Acute Depression": 2.0,
+                            "Acute Safety": "-",
                             "Acute Tolerance": "+",
                             "Maintenance Safety": "++",
                             "Maintenance Tolerance": "+",
@@ -517,23 +649,35 @@
                         },
                         {
                             "name": "Lamotrigine",
-                            "LOE": -1.0,
+                            "Acute Mania": -1.0,
+                            "PreventAME": 1,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 1.0,
+                            "Acute Depression": 1.0,
                             "Acute Safety": "++",
-                            "Acute Tolerance": "+++",
-                            "Maintenance Safety": "+++",
-                            "Maintenance Tolerance": "+++"
+                            "Acute Tolerance": "-",
+                            "Maintenance Safety": "-",
+                            "Maintenance Tolerance": "-"
                         },
                         {
                             "name": "Asenapine",
-                            "LOE": 1.0,
-                            "Acute Safety": "+++",
+                            "Acute Mania": 1.0,
+                            "PreventAME": 2,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 2.0,
+                            "Acute Depression": 0.0,
+                            "Acute Safety": "-",
                             "Acute Tolerance": "+",
-                            "Maintenance Safety": "+++",
+                            "Maintenance Safety": "-",
                             "Maintenance Tolerance": "+"
                         },
                         {
                             "name": "Quetiapine + Li/DVP",
-                            "LOE": 1.0,
+                            "Acute Mania": 1.0,
+                            "PreventAME": 1,
+                            "Prevent Mania": 1.0,
+                            "Prevent Depression": 1.0,
+                            "Acute Depression": 4.0,
                             "Acute Safety": "+",
                             "Acute Tolerance": "++",
                             "Maintenance Safety": "+++",
@@ -542,7 +686,11 @@
                         },
                         {
                             "name": "Aripiprazole + Li/DVP",
-                            "LOE": 2.0,
+                            "Acute Mania": 2.0,
+                            "PreventAME": 2,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 4.0,
                             "Acute Safety": "+",
                             "Acute Tolerance": "+",
                             "Maintenance Safety": "++",
@@ -551,28 +699,53 @@
                         },
                         {
                             "name": "Aripiprazole",
-                            "LOE": 1.0,
-                            "Acute Safety": "+++",
+                            "Acute Mania": 1.0,
+                            "PreventAME": 2,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": -1.0,
+                            "Acute Safety": "-",
                             "Acute Tolerance": "+",
-                            "Maintenance Safety": "+++",
+                            "Maintenance Safety": "-",
                             "Maintenance Tolerance": "+"
                         },
                         {
                             "name": "Aripirazole LAI",
-                            "LOE": 0.0,
-                            "Acute Safety": "+++",
+                            "Acute Mania": 0.0,
+                            "PreventAME": 2,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 0.0,
+                            "Acute Safety": "-",
                             "Acute Tolerance": "+",
-                            "Maintenance Safety": "+++",
+                            "Maintenance Safety": "-",
                             "Maintenance Tolerance": "+"
                         }
                     ]
                 },
                 {
-                    "level": "Second Line",
+                    "level": "Not Recommended",
+                    "drugs": [
+                        {
+                            "name": "Perphenazine",
+                            "PreventAME": -2
+                        },
+                        {
+                            "name": "Tricyclic antidepressants",
+                            "PreventAME": -2
+                        }
+                    ]
+                },
+                {
+                    "level": "Second",
                     "drugs": [
                         {
                             "name": "Olanzapine",
-                            "LOE": 1.0,
+                            "Acute Mania": 1.0,
+                            "PreventAME": 1,
+                            "Prevent Mania": 1.0,
+                            "Prevent Depression": 1.0,
+                            "Acute Depression": 1.0,
                             "Acute Safety": "+",
                             "Acute Tolerance": "++",
                             "Maintenance Safety": "+++",
@@ -580,15 +753,23 @@
                         },
                         {
                             "name": "Risperidone LAI",
-                            "LOE": 0.0,
-                            "Acute Safety": "+++",
+                            "Acute Mania": 0.0,
+                            "PreventAME": 1,
+                            "Prevent Mania": 1.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 0.0,
+                            "Acute Safety": "-",
                             "Acute Tolerance": "+",
                             "Maintenance Safety": "+",
                             "Maintenance Tolerance": "++"
                         },
                         {
                             "name": "Risperidone LAI (adj)",
-                            "LOE": 0.0,
+                            "Acute Mania": 0.0,
+                            "PreventAME": 2,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 4.0,
+                            "Acute Depression": 0.0,
                             "Acute Safety": "+",
                             "Acute Tolerance": "++",
                             "Maintenance Safety": "+++",
@@ -596,7 +777,11 @@
                         },
                         {
                             "name": "Carbamazepine",
-                            "LOE": 1.0,
+                            "Acute Mania": 1.0,
+                            "PreventAME": 2,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 2.0,
+                            "Acute Depression": 3.0,
                             "Acute Safety": "++",
                             "Acute Tolerance": "++",
                             "Maintenance Safety": "+",
@@ -605,24 +790,36 @@
                         },
                         {
                             "name": "Paliperidone (>6 mg)",
-                            "LOE": 1.0,
-                            "Acute Safety": "+++",
+                            "Acute Mania": 1.0,
+                            "PreventAME": 2,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 0.0,
+                            "Acute Safety": "-",
                             "Acute Tolerance": "+",
                             "Maintenance Safety": "+",
                             "Maintenance Tolerance": "++"
                         },
                         {
                             "name": "Lurasidone + Li/DVP",
-                            "LOE": 0.0,
+                            "Acute Mania": 0.0,
+                            "PreventAME": 3,
+                            "Prevent Mania": 4.0,
+                            "Prevent Depression": 3.0,
+                            "Acute Depression": 2.0,
                             "Acute Safety": "+",
                             "Acute Tolerance": "++",
                             "Maintenance Safety": "++",
-                            "Maintenance Tolerance": "++/+++",
+                            "Maintenance Tolerance": "++/-",
                             "Notes": "Divalproex should be used with caution in women of child bearing age."
                         },
                         {
                             "name": "Ziprazidone + Li/DVP",
-                            "LOE": -3.0,
+                            "Acute Mania": -3.0,
+                            "PreventAME": 2,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": -2.0,
                             "Acute Safety": "++",
                             "Acute Tolerance": "++",
                             "Maintenance Safety": "++",
@@ -632,36 +829,23 @@
                     ]
                 },
                 {
-                    "level": "Third Line",
+                    "level": "Third",
                     "drugs": [
                         {
                             "name": "Aripiprazole + Lamotrigine",
-                            "LOE": 2
+                            "PreventAME": 2
                         },
                         {
                             "name": "Clozapine",
-                            "LOE": 4
+                            "PreventAME": 4
                         },
                         {
                             "name": "Gabapentin",
-                            "LOE": 4
+                            "PreventAME": 4
                         },
                         {
                             "name": "Olanzapine + Fluoxetine",
-                            "LOE": 2
-                        }
-                    ]
-                },
-                {
-                    "level": "Not Recommended",
-                    "drugs": [
-                        {
-                            "name": "Perphenazine",
-                            "LOE": -2
-                        },
-                        {
-                            "name": "Tricyclic antidepressants",
-                            "LOE": -2
+                            "PreventAME": 2
                         }
                     ]
                 }
@@ -672,94 +856,10 @@
             "description": "Detailed information about BD2 Depression treatments for Bipolar Disorder.",
             "guidelines": [
                 {
-                    "level": "First Line",
+                    "level": "First",
                     "drugs": [
                         {
-                            "name": "Quetiapine",
-                            "LOE": 1
-                        }
-                    ]
-                },
-                {
-                    "level": "Second Line",
-                    "drugs": [
-                        {
-                            "name": "Lithium",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Lamotrigine",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "Bupropion",
-                            "LOE": 2
-                        },
-                        {
-                            "name": "ECT",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "Sertraline",
-                            "LOE": 2,
-                            "Notes": "For patients with pure depression (non-mixed)."
-                        },
-                        {
-                            "name": "Venlafaxine",
-                            "LOE": 2,
-                            "Notes": "For patients with pure depression (non-mixed)."
-                        }
-                    ]
-                },
-                {
-                    "level": "Third Line",
-                    "drugs": [
-                        {
-                            "name": "Agomelatine (adj)",
-                            "LOE": 4
-                        },
-                        {
-                            "name": "Bupropion (adj)",
-                            "LOE": 4
-                        },
-                        {
-                            "name": "Divaloproex",
-                            "LOE": 4,
-                            "Notes": "Divalproex should be used with caution in women of child bearing age."
-                        },
-                        {
-                            "name": "EPA",
-                            "LOE": 4
-                        },
-                        {
-                            "name": "Fluoxetine",
-                            "LOE": 3,
-                            "Notes": "For patients with pure depression (non-mixed)."
-                        },
-                        {
-                            "name": "Ketamine IV/SL (adj)",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "N-acetylcysteine (adj)",
-                            "LOE": 4
-                        },
-                        {
-                            "name": "Pramipexole",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "T3/T4 thyroid hormones (adj)",
-                            "LOE": 4
-                        },
-                        {
-                            "name": "Tranylcypromine",
-                            "LOE": 3
-                        },
-                        {
-                            "name": "Ziprasidone",
-                            "LOE": 3,
-                            "Notes": "For patients with depression and mixed hypomania."
+                            "name": "Quetiapine"
                         }
                     ]
                 },
@@ -767,8 +867,73 @@
                     "level": "Not Recommended",
                     "drugs": [
                         {
-                            "name": "Paroxetine",
-                            "LOE": -2
+                            "name": "Paroxetine"
+                        }
+                    ]
+                },
+                {
+                    "level": "Second",
+                    "drugs": [
+                        {
+                            "name": "Lithium"
+                        },
+                        {
+                            "name": "Lamotrigine"
+                        },
+                        {
+                            "name": "Bupropion"
+                        },
+                        {
+                            "name": "ECT"
+                        },
+                        {
+                            "name": "Sertraline",
+                            "Notes": "For patients with pure depression (non-mixed)."
+                        },
+                        {
+                            "name": "Venlafaxine",
+                            "Notes": "For patients with pure depression (non-mixed)."
+                        }
+                    ]
+                },
+                {
+                    "level": "Third",
+                    "drugs": [
+                        {
+                            "name": "Agomelatine (adj)"
+                        },
+                        {
+                            "name": "Bupropion (adj)"
+                        },
+                        {
+                            "name": "Divaloproex",
+                            "Notes": "Divalproex should be used with caution in women of child bearing age."
+                        },
+                        {
+                            "name": "EPA"
+                        },
+                        {
+                            "name": "Fluoxetine",
+                            "Notes": "For patients with pure depression (non-mixed)."
+                        },
+                        {
+                            "name": "Ketamine IV/SL (adj)"
+                        },
+                        {
+                            "name": "N-acetylcysteine (adj)"
+                        },
+                        {
+                            "name": "Pramipexole"
+                        },
+                        {
+                            "name": "T3/T4 thyroid hormones (adj)"
+                        },
+                        {
+                            "name": "Tranylcypromine"
+                        },
+                        {
+                            "name": "Ziprasidone",
+                            "Notes": "For patients with depression and mixed hypomania."
                         }
                     ]
                 }
@@ -779,59 +944,49 @@
             "description": "Detailed information about BD2 Maintenance treatments for Bipolar Disorder.",
             "guidelines": [
                 {
-                    "level": "First Line",
+                    "level": "First",
                     "drugs": [
                         {
-                            "name": "Quetiapine",
-                            "LOE": 1
+                            "name": "Quetiapine"
                         },
                         {
-                            "name": "Lithium",
-                            "LOE": 2
+                            "name": "Lithium"
                         },
                         {
-                            "name": "Lamotrigine",
-                            "LOE": 2
+                            "name": "Lamotrigine"
                         }
                     ]
                 },
                 {
-                    "level": "Second Line",
+                    "level": "Second",
                     "drugs": [
                         {
-                            "name": "Venlafaxine",
-                            "LOE": 2
+                            "name": "Venlafaxine"
                         }
                     ]
                 },
                 {
-                    "level": "Third Line",
+                    "level": "Third",
                     "drugs": [
                         {
                             "name": "Carbamazepine",
-                            "LOE": 3,
                             "Notes": "Carbamazepine should be used with caution in women of child bearing age."
                         },
                         {
                             "name": "Divalproex",
-                            "LOE": 3,
                             "Notes": "Divalproex should be used with caution in women of child bearing age."
                         },
                         {
-                            "name": "Escitalopram",
-                            "LOE": 3
+                            "name": "Escitalopram"
                         },
                         {
-                            "name": "Fluoxetine",
-                            "LOE": 3
+                            "name": "Fluoxetine"
                         },
                         {
-                            "name": "Other antidepressants",
-                            "LOE": 3
+                            "name": "Other antidepressants"
                         },
                         {
                             "name": "Risperidone",
-                            "LOE": 4,
                             "Notes": "Primarily for prevention of hypomania"
                         }
                     ]
