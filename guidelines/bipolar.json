@@ -12,75 +12,75 @@
                         {
                             "name": "Lithium",
                             "LOE": 2.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "+",
-                            "Maintsafety": "++",
-                            "Mainttol": "++",
-                            "Switchrisk": "-"
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "+++"
                         },
                         {
                             "name": "Quetiapine",
                             "LOE": 1.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "++",
-                            "Mainttol": "++",
-                            "Switchrisk": "-"
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "+++"
                         },
                         {
                             "name": "Divalproex",
                             "LOE": 2.0,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "++",
-                            "Mainttol": "+",
-                            "Switchrisk": "-",
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "+++",
                             "Notes": "Divalproex should be used with caution in women of childbearing age."
                         },
                         {
                             "name": "Asenapine",
                             "LOE": 0.0,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "-",
-                            "Mainttol": "+",
-                            "Switchrisk": "-"
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "+++"
                         },
                         {
                             "name": "Aripiprazole",
                             "LOE": -1.0,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "-",
-                            "Mainttol": "+",
-                            "Switchrisk": "-"
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "+++"
                         },
                         {
                             "name": "Paliperidone (>6 mg)",
                             "LOE": 0.0,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "+",
-                            "Mainttol": "++",
-                            "Switchrisk": "-"
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "+",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "+++"
                         },
                         {
                             "name": "Risperidone",
                             "LOE": 0.0,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "+",
-                            "Mainttol": "++",
-                            "Switchrisk": "-"
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "+",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "+++"
                         },
                         {
                             "name": "Cariprazine",
                             "LOE": 1.0,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "-",
-                            "Mainttol": "-",
-                            "Switchrisk": "-"
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "+++",
+                            "Manic Switch": "+++"
                         }
                     ]
                 },
@@ -90,41 +90,41 @@
                     {
                         "name": "Quetiapine+Li/DVP",
                         "LOE": 4.0,
-                        "Acutesafety": "+",
-                        "Acutetol": "++",
-                        "Maintsafety": "+++",
-                        "Mainttol": "++",
-                        "Switchrisk": "-",
+                        "Acute Safety": "+",
+                        "Acute Tolerance": "++",
+                        "Maintenance Safety": "+++",
+                        "Maintenance Tolerance": "++",
+                        "Manic Switch": "+++",
                         "Notes": "No controlled trials; however, clinical experience suggests that it is a useful strategy. Divalproex should be used with caution in women of childbearing age."
                     },
                     {
                         "name": "Aripiprazole+Li/DVP",
                         "LOE": 4.0,
-                        "Acutesafety": "+",
-                        "Acutetol": "+",
-                        "Maintsafety": "++",
-                        "Mainttol": "++",
-                        "Switchrisk": "-",
+                        "Acute Safety": "+",
+                        "Acute Tolerance": "+",
+                        "Maintenance Safety": "++",
+                        "Maintenance Tolerance": "++",
+                        "Manic Switch": "+++",
                         "Notes": "Did not separate from placebo in those with index mania; no studies available in index depression. Divalproex should be used with caution in women of childbearing age."
                     },
                     {
                         "name": "Risperidone+Li/DVP",
                         "LOE": 4.0,
-                        "Acutesafety": "+",
-                        "Acutetol": "++",
-                        "Maintsafety": "+++",
-                        "Mainttol": "++",
-                        "Switchrisk": "-",
+                        "Acute Safety": "+",
+                        "Acute Tolerance": "++",
+                        "Maintenance Safety": "+++",
+                        "Maintenance Tolerance": "++",
+                        "Manic Switch": "+++",
                         "Notes": "Divalproex should be used with caution in women of childbearing age."
                     },
                     {
                         "name": "Asenapine+Li/DVP",
                         "LOE": 4.0,
-                        "Acutesafety": "+",
-                        "Acutetol": "+",
-                        "Maintsafety": "++",
-                        "Mainttol": "+",
-                        "Switchrisk": "-",
+                        "Acute Safety": "+",
+                        "Acute Tolerance": "+",
+                        "Maintenance Safety": "++",
+                        "Maintenance Tolerance": "+",
+                        "Manic Switch": "+++",
                         "Notes": "Divalproex should be used with caution in women of childbearing age."
                     }
                 ]
@@ -135,69 +135,69 @@
                         {
                             "name": "Olanzapine",
                             "LOE": 1.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "+++",
-                            "Mainttol": "++",
-                            "Switchrisk": "-",
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "+++",
                             "Notes": "Did not separate from placebo on core symptoms of depression."
                         },
                         {
                             "name": "Carbamazepine",
                             "LOE": 3.0,
-                            "Acutesafety": "++",
-                            "Acutetol": "+",
-                            "Maintsafety": "++",
-                            "Mainttol": "++",
-                            "Switchrisk": "-",
+                            "Acute Safety": "++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "+++",
                             "Notes": "Carbamazepine should be used with caution in women of childbearing age."
                         },
                         {
                             "name": "Olanzapine+Li/DVP",
                             "LOE": 0.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "+++",
-                            "Mainttol": "++",
-                            "Switchrisk": "-",
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "+++",
                             "Notes": "Divalproex should be used with caution in women of childbearing age."
                         },
                         {
                             "name": "Lithium+DVP",
                             "LOE": 0.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "++",
-                            "Mainttol": "++",
-                            "Switchrisk": "-",
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "+++",
                             "Notes": "Divalproex should be used with caution in women of childbearing age."
                         },
                         {
                             "name": "Ziprasidone",
                             "LOE": -1.0,
-                            "Acutesafety": "++",
-                            "Acutetol": "++",
-                            "Maintsafety": "++",
-                            "Mainttol": "+",
-                            "Switchrisk": "-"
+                            "Acute Safety": "++",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "+++"
                         },
                         {
                             "name": "Haloperidol",
                             "LOE": 0.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "+++",
-                            "Mainttol": "++",
-                            "Switchrisk": "++"
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "++"
                         },
                         {
                             "name": "ECT",
                             "LOE": 4.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "+",
-                            "Mainttol": "++",
-                            "Switchrisk": "-",
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "+++",
                             "Notes": "Divalproex and Carbamazepine should be used with caution in women of childbearing age."
                         }
                     ]
@@ -293,57 +293,57 @@
                         {
                             "name": "Quetiapine",
                             "LOE": 1,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "++",
-                            "Mainttol": "++",
-                            "Switchrisk": "-"
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "+++"
                         },
                         {
                             "name": "Lurasidone+Li/DVP",
                             "LOE": 0,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "++",
-                            "Mainttol": "++/+",
-                            "Switchrisk": "-",
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++/+",
+                            "Manic Switch": "+++",
                             "Other Notes": "Divalproex should be used with caution in women of child bearing age."
                         },
                         {
                             "name": "Lithium",
                             "LOE": 1,
-                            "Acutesafety": "+",
-                            "Acutetol": "+",
-                            "Maintsafety": "++",
-                            "Mainttol": "++",
-                            "Switchrisk": "-"
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "+++"
                         },
                         {
                             "name": "Lamotrigine",
                             "LOE": -1,
-                            "Acutesafety": "++",
-                            "Acutetol": "-",
-                            "Maintsafety": "-",
-                            "Mainttol": "-",
-                            "Switchrisk": "-"
+                            "Acute Safety": "++",
+                            "Acute Tolerance": "+++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "+++",
+                            "Manic Switch": "+++"
                         },
                         {
                             "name": "Lurasidone",
                             "LOE": 0,
-                            "Acutesafety": "-",
-                            "Acutetol": "-",
-                            "Maintsafety": "-",
-                            "Mainttol": "+",
-                            "Switchrisk": "-"
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "+++"
                         },
                         {
                             "name": "Lamotrigine (adj)",
                             "LOE": -4,
-                            "Acutesafety": "++",
-                            "Acutetol": "+",
-                            "Maintsafety": "++",
-                            "Mainttol": "++",
-                            "Switchrisk": "-"
+                            "Acute Safety": "++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "+++"
                         }
                     ]
                 },
@@ -353,48 +353,48 @@
                         {
                             "name": "Divalproex",
                             "LOE": 4,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "++",
-                            "Mainttol": "+",
-                            "Switchrisk": "-",
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "+++",
                             "Other Notes": "Divalproex should be used with caution in women of child bearing age."
                         },
                         {
                             "name": "SSRIs/bupropion (adj)",
                             "LOE": 0,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "-",
-                            "Mainttol": "+",
-                            "Switchrisk": "+"
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "+"
                         },
                         {
                             "name": "ECT",
                             "LOE": 3,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "+",
-                            "Mainttol": "++",
-                            "Switchrisk": "-"
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "+++"
                         },
                         {
                             "name": "Cariprazine",
                             "LOE": 1,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "-",
-                            "Mainttol": "-",
-                            "Switchrisk": "-"
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "+++",
+                            "Manic Switch": "+++"
                         },
                         {
                             "name": "Olanzapine + Fluoxetine",
                             "LOE": 0,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "+++",
-                            "Mainttol": "+",
-                            "Switchrisk": "+"
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "+"
                         }
                     ]
                 },
@@ -493,77 +493,77 @@
                         {
                             "name": "Lithium",
                             "LOE": 1.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "+",
-                            "Maintsafety": "++",
-                            "Mainttol": "++"
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++"
                         },
                         {
                             "name": "Quetiapine",
                             "LOE": 1.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "++",
-                            "Mainttol": "++"
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++"
                         },
                         {
                             "name": "Divalproex",
                             "LOE": 1.0,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "++",
-                            "Mainttol": "+",
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "+",
                             "Notes": "Divalproex should be used with caution in women of child bearing age."
                         },
                         {
                             "name": "Lamotrigine",
                             "LOE": -1.0,
-                            "Acutesafety": "++",
-                            "Acutetol": "-",
-                            "Maintsafety": "-",
-                            "Mainttol": "-"
+                            "Acute Safety": "++",
+                            "Acute Tolerance": "+++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "+++"
                         },
                         {
                             "name": "Asenapine",
                             "LOE": 1.0,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "-",
-                            "Mainttol": "+"
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "+"
                         },
                         {
                             "name": "Quetiapine + Li/DVP",
                             "LOE": 1.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "+++",
-                            "Mainttol": "++",
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "++",
                             "Notes": "Divalproex should be used with caution in women of child bearing age."
                         },
                         {
                             "name": "Aripiprazole + Li/DVP",
                             "LOE": 2.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "+",
-                            "Maintsafety": "++",
-                            "Mainttol": "++",
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++",
                             "Notes": "Divalproex should be used with caution in women of child bearing age."
                         },
                         {
                             "name": "Aripiprazole",
                             "LOE": 1.0,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "-",
-                            "Mainttol": "+"
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "+"
                         },
                         {
                             "name": "Aripirazole LAI",
                             "LOE": 0.0,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "-",
-                            "Mainttol": "+"
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "+"
                         }
                     ]
                 },
@@ -573,60 +573,60 @@
                         {
                             "name": "Olanzapine",
                             "LOE": 1.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "+++",
-                            "Mainttol": "++"
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "++"
                         },
                         {
                             "name": "Risperidone LAI",
                             "LOE": 0.0,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "+",
-                            "Mainttol": "++"
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "+",
+                            "Maintenance Tolerance": "++"
                         },
                         {
                             "name": "Risperidone LAI (adj)",
                             "LOE": 0.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "+++",
-                            "Mainttol": "++"
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "++"
                         },
                         {
                             "name": "Carbamazepine",
                             "LOE": 1.0,
-                            "Acutesafety": "++",
-                            "Acutetol": "++",
-                            "Maintsafety": "+",
-                            "Mainttol": "++",
+                            "Acute Safety": "++",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+",
+                            "Maintenance Tolerance": "++",
                             "Notes": "Carbamazepine should be used with caution in women of child bearing age."
                         },
                         {
                             "name": "Paliperidone (>6 mg)",
                             "LOE": 1.0,
-                            "Acutesafety": "-",
-                            "Acutetol": "+",
-                            "Maintsafety": "+",
-                            "Mainttol": "++"
+                            "Acute Safety": "+++",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "+",
+                            "Maintenance Tolerance": "++"
                         },
                         {
                             "name": "Lurasidone + Li/DVP",
                             "LOE": 0.0,
-                            "Acutesafety": "+",
-                            "Acutetol": "++",
-                            "Maintsafety": "++",
-                            "Mainttol": "++/-",
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++/+++",
                             "Notes": "Divalproex should be used with caution in women of child bearing age."
                         },
                         {
                             "name": "Ziprazidone + Li/DVP",
                             "LOE": -3.0,
-                            "Acutesafety": "++",
-                            "Acutetol": "++",
-                            "Maintsafety": "++",
-                            "Mainttol": "+",
+                            "Acute Safety": "++",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "+",
                             "Notes": "Divalproex should be used with caution in women of child bearing age."
                         }
                     ]

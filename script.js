@@ -220,6 +220,28 @@ const categories = {
     'Notes': ['Notes']
 };
 
+// Helper function to get the Bootstrap Icon class based on the symbol
+// Helper function to get the appropriate color class based on the symbol
+function getSymbolColorClass(symbol) {
+    switch (symbol) {
+        case '+':
+            return 'text-success'; // Green
+        case '++':
+            return 'text-warning'; // Yellow
+        case '+++':
+            return 'text-danger'; // Red
+        case '-':
+            return 'text-success'; // Green
+        case '--':
+            return 'text-warning'; // Yellow
+        case '---':
+            return 'text-danger'; // Red
+        default:
+            return '';
+    }
+}
+
+// Updated createElementForKeyAndValue function to handle symbols
 function createElementForKeyAndValue(key, value) {
     const element = document.createElement('div');
     element.className = 'drug-attribute';
@@ -231,6 +253,7 @@ function createElementForKeyAndValue(key, value) {
 
     const valueSpan = document.createElement('span');
     valueSpan.className = 'value';
+
     if (['LOE', 'Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction'].includes(key)) {
         const pieChart = document.createElement('div');
         pieChart.className = 'pie-chart';
@@ -244,6 +267,15 @@ function createElementForKeyAndValue(key, value) {
         const icon = document.createElement('span');
         icon.className = value > 0 ? 'fa fa-thumbs-up thumbs-up' : 'fa fa-thumbs-down thumbs-down';
         valueSpan.appendChild(icon);
+    } else if (/^\++$/.test(value) || /^\-+$/.test(value)) {
+        const colorClass = getSymbolColorClass(value);
+        const symbols = value.split('').map(char => {
+            const span = document.createElement('span');
+            span.className = colorClass;
+            span.textContent = char;
+            return span;
+        });
+        symbols.forEach(span => valueSpan.appendChild(span));
     } else {
         valueSpan.textContent = value;
     }
@@ -251,6 +283,8 @@ function createElementForKeyAndValue(key, value) {
     element.appendChild(valueSpan);
     return element;
 }
+
+
 
 function appendWithHeaders(container, elements, categories) {
     for (const [category, keys] of Object.entries(categories)) {

@@ -369,6 +369,31 @@ main {
     margin-top: 4px;
 }
 
+.bi-plus-circle-fill, .bi-dash-circle-fill {
+    font-size: 1.5em;  /* Increase icon size */
+    margin: 5px;       /* Add some margin for spacing */
+}
+
+.text-success {
+    color: green !important;
+    font-size: 2.0em; /* Increase font size */
+    margin: 0 2px; /* Add margin for better spacing */
+}
+
+.text-warning {
+    color: yellow !important;
+    font-size: 2.0em; /* Increase font size */
+    margin: 0 2px; /* Add margin for better spacing */
+}
+
+.text-danger {
+    color: red !important;
+    font-size: 2.0em; /* Increase font size */
+    margin: 0 2px; /* Add margin for better spacing */
+}
+
+
+
 .grid-item::after {
     content: '';
     position: absolute;
