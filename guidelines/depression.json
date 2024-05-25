@@ -20,7 +20,8 @@
                             "Drug Interactions": 1.0,
                             "Sedation": 1.0,
                             "Sexual Dysfunction": -1.0,
-                            "Notes": "Monitor QTc"
+                            "Notes": "Monitor QTc",
+                            "url": "https://www.uptodate.com/contents/citalopram-drug-information"
                         },
                         {
                             "name": "Escitalopram",
@@ -35,7 +36,8 @@
                             "Sedation": 1.0,
                             "Weight Gain": 1.0,
                             "Sexual Dysfunction": -1.0,
-                            "Other Tolerability": 1.0
+                            "Other Tolerability": 1.0,
+                            "url":"https://www.uptodate.com/contents/escitalopram-drug-information"
                         },
                         {
                             "name": "Fluoxetine",
@@ -50,7 +52,8 @@
                             "Sedation": 1.0,
                             "Weight Gain": 1.0,
                             "Sexual Dysfunction": -1.0,
-                            "Other Tolerability": 1.0
+                            "Other Tolerability": 1.0,
+                            "url":"https://www.uptodate.com/contents/fluoxetine-drug-information"
                         },
                         {
                             "name": "Fluvoxamine",
@@ -62,7 +65,8 @@
                             "Drug Interactions": -1.0,
                             "Sedation": 1.0,
                             "Weight Gain": 1.0,
-                            "Sexual Dysfunction": -1.0
+                            "Sexual Dysfunction": -1.0,
+                            "url":"https://www.uptodate.com/contents/fluvoxamine-drug-information"
                         },
                         {
                             "name": "Paroxetine",
@@ -75,7 +79,8 @@
                             "Drug Interactions": -1.0,
                             "Discontinuation Syndrome": -1.0,
                             "Weight Gain": -1.0,
-                            "Sexual Dysfunction": -1.0
+                            "Sexual Dysfunction": -1.0,
+                            "url":"https://www.uptodate.com/contents/paroxetine-drug-information"
                         },
                         {
                             "name": "Sertraline",
@@ -87,7 +92,8 @@
                             "Efficacy": 1.0,
                             "Acceptability": 1.0,
                             "Sedation": 1.0,
-                            "Other Tolerability": 1.0
+                            "Other Tolerability": 1.0,
+                            "url": "https://www.uptodate.com/contents/sertraline-drug-information"
                         },
                         {
                             "name": "Desvenlafaxine",
@@ -99,7 +105,8 @@
                             "Sedation": 1.0,
                             "Weight Gain": 1.0,
                             "Sexual Dysfunction": 1.0,
-                            "Other Tolerability": 1.0
+                            "Other Tolerability": 1.0,
+                            "url": "https://www.uptodate.com/contents/desvenlafaxine-drug-information"
                         },
                         {
                             "name": "Duloxetine",
@@ -110,7 +117,8 @@
                             "Fatigue": 2.0,
                             "Cognitive Dysfunction": 2.0,
                             "Sedation": 1.0,
-                            "Sexual Dysfunction": -1.0
+                            "Sexual Dysfunction": -1.0,
+                            "url": "https://www.uptodate.com/contents/duloxetine-drug-information"
                         },
                         {
                             "name": "Levomilnacipran",
@@ -121,7 +129,8 @@
                             "Drug Interactions": 1.0,
                             "Sedation": 1.0,
                             "Weight Gain": 1.0,
-                            "Notes": "Not Available in Canada"
+                            "Notes": "Not Available in Canada",
+                            "url":"https://www.uptodate.com/contents/levomilnacipran-drug-information"
                         },
                         {
                             "name": "Venlafaxine-XR",
@@ -133,7 +142,8 @@
                             "Discontinuation Syndrome": -1.0,
                             "Sedation": 1.0,
                             "Sexual Dysfunction": -1.0,
-                            "Other Tolerability": -1.0
+                            "Other Tolerability": -1.0,
+                            "url":"https://www.uptodate.com/contents/venlafaxine-drug-information"
                         },
                         {
                             "name": "Bupropion",
@@ -147,7 +157,8 @@
                             "Sedation": 1.0,
                             "Weight Gain": 1.0,
                             "Sexual Dysfunction": 1.0,
-                            "Other Tolerability": 1.0
+                            "Other Tolerability": 1.0,
+                            "url":"https://www.uptodate.com/contents/bupropion-drug-information"
                         },
                         {
                             "name": "Mirtazapine",
@@ -161,7 +172,8 @@
                             "Discontinuation Syndrome": 1.0,
                             "Sedation": -1.0,
                             "Weight Gain": -1.0,
-                            "Sexual Dysfunction": 1.0
+                            "Sexual Dysfunction": 1.0,
+                            "url":"https://www.uptodate.com/contents/mirtazapine-drug-information"
                         },
                         {
                             "name": "Vilazodone",
@@ -172,7 +184,8 @@
                             "Sedation": 1.0,
                             "Weight Gain": 1.0,
                             "Sexual Dysfunction": 1.0,
-                            "Other Tolerability": 1.0
+                            "Other Tolerability": 1.0,
+                            "url":"https://www.uptodate.com/contents/vilazodone-drug-information"
                         },
                         {
                             "name": "Vortioxetine",
@@ -186,7 +199,8 @@
                             "Discontinuation Syndrome": 1.0,
                             "Sedation": 1.0,
                             "Weight Gain": 1.0,
-                            "Sexual Dysfunction": 1.0
+                            "Sexual Dysfunction": 1.0,
+                            "url":"https://www.uptodate.com/contents/vortioxetine-drug-information"
                         },
                         {
                             "name": "Agomelatine",
@@ -200,7 +214,8 @@
                             "Weight Gain": 1.0,
                             "Sexual Dysfunction": 1.0,
                             "Other Tolerability": 1.0,
-                            "Notes": "Not Available in Canada; Monitor LFTs"
+                            "Notes": "Not Available in Canada; Monitor LFTs",
+                            "url": "https://www.uptodate.com/contents/agomelatine-drug-information"
                         },
                         {
                             "name": "Mianserin",
@@ -210,7 +225,8 @@
                             "Drug Interactions": 1.0,
                             "Sedation": -1.0,
                             "Other Tolerability": 1.0,
-                            "Notes": "Not Available in Canada"
+                            "Notes": "Not Available in Canada",
+                            "url": "https://www.uptodate.com/contents/mianserin-drug-information"
                         },
                         {
                             "name": "Milnacipran",
@@ -219,7 +235,8 @@
                             "LOE": 1,
                             "Drug Interactions": 1.0,
                             "Sedation": 1.0,
-                            "Notes": "Not Available in Canada"
+                            "Notes": "Not Available in Canada",
+                            "url":"https://www.uptodate.com/contents/milnacipran-drug-information"
                         }
                     ]
                 },

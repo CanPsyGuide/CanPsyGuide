@@ -298,25 +298,72 @@ main {
 /* Drug Details Container */
 .drug-attribute {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column; /* Stack the title and value vertically */
+    justify-content: center;
     align-items: center;
-    width: 100%; 
-    margin-bottom: 5px;
-    height: auto;
+    margin-bottom: 5px; 
+    padding: 5px; 
+    background: #f0f8ff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    height: 90px; 
+    min-width: 90px; 
+    box-sizing: border-box;
+    text-align: center; 
 }
 
 .drug-attribute .title {
     font-weight: bold;
-    margin-right: 5px;
-    white-space: nowrap;
-    color: #003f7f;
-    text-align: center; /* Ensure title is centered */
-    flex: 1; /* Ensure title and value take equal space */
+    margin-bottom: 5px; 
+    white-space: normal; 
+    text-align: center; 
+    color: #003f7f; 
 }
 
 .drug-attribute .value {
-    flex: 1;
-    text-align: center; /* Ensure value is centered */
+    word-wrap: break-word; 
+    word-break: break-all; 
+    margin-top: 5px; 
+}
+
+.section {
+    margin-bottom: 20px; 
+}
+
+.section-header {
+    font-size: 1.5rem;
+    margin-bottom: 10px; 
+    text-align: center; 
+    color: #0052aa; 
+}
+
+.notes-section .section-header {
+    text-align: left; 
+}
+
+.notes-section .drug-attribute {
+    background: none; 
+    box-shadow: none; 
+    padding: 0; 
+}
+
+.drug-header a {
+    color: white;
+    text-decoration: none;
+}
+
+.drug-header a:hover,
+.drug-header a:focus,
+.drug-header a:active {
+    color: white; /* Keep the color white on hover, focus, and active states */
+    text-decoration: underline; /* Optionally, add underline on hover/focus for better accessibility */
+}
+
+
+.attributes-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px; /* Space between elements */
 }
 
 .section {
@@ -523,6 +570,29 @@ main {
         font-size: 14px;
     }
 }
+
+
+/* Adjust text size and padding for smaller screens */
+@media (max-width: 576px) {
+
+    .drug-attribute {
+        margin-bottom: 15px;
+        padding: 8px;
+    }
+
+    .drug-details .card-body {
+        padding: 10px;
+    }
+    
+    .drug-attribute .title, .drug-attribute .value {
+        font-size: 0.875rem; 
+    }
+    
+    .drug-header {
+        font-size: 1.25rem; 
+    }
+}
+
 
 * {
     box-sizing: border-box;

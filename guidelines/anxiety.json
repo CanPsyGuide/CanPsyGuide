@@ -12,27 +12,32 @@
                         {
                             "name": "Citalopram",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/citalopram-drug-information"
                         },
                         {
                             "name": "Escitalopram",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/escitalopram-drug-information"
                         },
                         {
                             "name": "Fluoxetine",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/fluoxetine-drug-information"
                         },
                         {
                             "name": "Fluvoxamine",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/fluvoxamine-drug-information"
                         },
                         {
                             "name": "Paroxetine",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/paroxetine-drug-information"
                         },
                         {
                             "name": "Paroxetine CR",
@@ -42,12 +47,14 @@
                         {
                             "name": "Sertraline",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/sertraline-drug-information"
                         },
                         {
                             "name": "Venlafaxine XR",
                             "Drug Class": "SNRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/venlafaxine-drug-information"
                         }
                     ]
                 },
@@ -62,7 +69,8 @@
                         {
                             "name": "Mirtazapine",
                             "Drug Class": "NaSSA",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/mirtazapine-drug-information"
                         },
                         {
                             "name": "Clomipramine",
