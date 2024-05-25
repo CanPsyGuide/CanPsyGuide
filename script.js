@@ -53,8 +53,8 @@ function loadAboutSection() {
             <li><a href="https://bmcpsychiatry.biomedcentral.com/articles/10.1186/1471-244X-14-S1-S1" target="_blank">Canadian Anxiety Disorders Guidelines Initiative: Clinical practice guidelines for the management of anxiety, posttraumatic stress and obsessive-compulsive disorders</a></li>
             <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5947163/" target="_blank">Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder</a></li>
         </ul>
-        <p>If you would like to contribute to the development/updating/maintenance of this clinical tool or if you have any feedback/suggestions, please contact <a href="mailto:levit.ubc@gmail.com">Alexander Levit</a>.</p>
-        <p>Special thanks to <a href="https://www.linkedin.com/in/rohin-attrey/" target="_blank">Rohin Attrey</a> for developing the first iteration of this tool.</p>
+        <p>If you would like to contribute to the development/updating/maintenance of this clinical tool or if you have any feedback/suggestions, please contact <a href="mailto:canpsyguide@gmail.com">Alexander Levit or Victor Li</a>.</p>
+        <p>Special thanks to <a href="https://www.linkedin.com/in/rohin-attrey/" target="_blank">Rohin Attrey</a> for developing this tool.</p>
         <p>This tool is available to you for free through the support of the UBC Department of Psychiatry's PGME CanMEDS Award.</p>
     </div>
     `;
