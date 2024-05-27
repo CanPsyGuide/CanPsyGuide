@@ -45,18 +45,20 @@ function loadAboutSection() {
 
     const aboutText = `
     <div class="about-section">
-        <h2>About CanPsyGuide</h2>
-        <p>This tool does not provide medical advice and is intended for informational purposes only, specifically to facilitate quick referencing of Canadian treatment guidelines. No information on this site is intended to substitute for professional medical advice, clinical supervision, diagnosis, nor treatment. Always seek the advice of your physician or clinical supervisor with any questions you may have regarding a medical condition or treatment.</p>
-        <p>Be sure to read the full guidelines before using this tool as a quick reference. Remain up-to-date with regards to any guideline updates, as this tool many not reflect the most recent guidelines. Current guidelines referenced:</p>
-        <ul>
-            <li><a href="https://journals.sagepub.com/doi/full/10.1177/07067437241245384" target="_blank">Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 Update on Clinical Guidelines for Management of Major Depressive Disorder in Adults</a></li>
-            <li><a href="https://bmcpsychiatry.biomedcentral.com/articles/10.1186/1471-244X-14-S1-S1" target="_blank">Canadian Anxiety Disorders Guidelines Initiative: Clinical practice guidelines for the management of anxiety, posttraumatic stress and obsessive-compulsive disorders</a></li>
-            <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5947163/" target="_blank">Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder</a></li>
-        </ul>
-        <p>If you would like to contribute to the development/updating/maintenance of this clinical tool or if you have any feedback/suggestions, please contact <a href="mailto:canpsyguide@gmail.com">Alexander Levit or Victor Li</a>.</p>
-        <p>Special thanks to <a href="https://www.linkedin.com/in/rohin-attrey/" target="_blank">Rohin Attrey</a> for the development this application.</p>
-        <p>This tool is available to you for free through the support of the UBC Department of Psychiatry's PGME CanMEDS Award.</p>
-    </div>
+    <h2>About CanPsyGuide</h2>
+    <p>This tool does not provide medical advice and is intended for informational purposes only, specifically to facilitate quick referencing of Canadian treatment guidelines. No information on this site is intended to substitute for professional medical advice, clinical supervision, diagnosis, or treatment. Always seek the advice of your physician or clinical supervisor with any questions you may have regarding a medical condition or treatment.</p>
+    <p>Be sure to read the full guidelines before using this tool as a quick reference. Remain up-to-date with regards to any guideline updates, as this tool may not reflect the most recent guidelines. Current guidelines referenced:</p>
+    <ul>
+        <li><a href="https://journals.sagepub.com/doi/full/10.1177/07067437241245384" target="_blank">Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 Update on Clinical Guidelines for Management of Major Depressive Disorder in Adults</a></li>
+        <li><a href="https://bmcpsychiatry.biomedcentral.com/articles/10.1186/1471-244X-14-S1-S1" target="_blank">Canadian Anxiety Disorders Guidelines Initiative: Clinical practice guidelines for the management of anxiety, posttraumatic stress, and obsessive-compulsive disorders</a></li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5947163/" target="_blank">Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder</a></li>
+    </ul>
+    <p>If you would like to contribute to the development, updating, or maintenance of this clinical tool or if you have any feedback or suggestions, please contact <a href="mailto:canpsyguide@gmail.com">Alexander Levit or Victor Li</a>.</p>
+    <p>Special thanks to <a href="https://www.linkedin.com/in/rohin-attrey/" target="_blank">Rohin Attrey</a> for developing this application.</p>
+    <p>This tool is available to you for free through the support of the UBC Department of Psychiatry's PGME CanMEDS Award.</p>
+    <p>If you are interested in the source code or would like to contribute, visit our <a href="https://github.com/CanPsyGuide/CanPsyGuide" target="_blank">GitHub repository</a>.</p>
+</div>
+
     `;
 
     const aboutDiv = document.createElement('div');

@@ -6,67 +6,7 @@
             "name": "BD1 Acute Mania",
             "description": "Detailed information about BD1 Acute Mania treatments for Bipolar Disorder.",
             "guidelines": [
-                {
-                    "level": "First Line - Combination",
-                    "drugs": [
-                        {
-                            "name": "Quetiapine+Li/DVP",
-                            "Acute Mania": 1,
-                            "PreventAME": 1.0,
-                            "Prevent Mania": 1.0,
-                            "Prevent Depression": 1.0,
-                            "Acute Depression": 4.0,
-                            "Acute Safety": "+",
-                            "Acute Tolerance": "++",
-                            "Maintenance Safety": "+++",
-                            "Maintenance Tolerance": "++",
-                            "Manic Switch": "-",
-                            "Notes": "No controlled trials; however, clinical experience suggests that it is a useful strategy. Divalproex should be used with caution in women of childbearing age."
-                        },
-                        {
-                            "name": "Aripiprazole+Li/DVP",
-                            "Acute Mania": 2,
-                            "PreventAME": 2.0,
-                            "Prevent Mania": 2.0,
-                            "Prevent Depression": 0.0,
-                            "Acute Depression": 4.0,
-                            "Acute Safety": "+",
-                            "Acute Tolerance": "+",
-                            "Maintenance Safety": "++",
-                            "Maintenance Tolerance": "++",
-                            "Manic Switch": "-",
-                            "Notes": "Did not separate from placebo in those with index mania; no studies available in index depression. Divalproex should be used with caution in women of childbearing age."
-                        },
-                        {
-                            "name": "Risperidone+Li/DVP",
-                            "Acute Mania": 1,
-                            "PreventAME": 4.0,
-                            "Prevent Mania": 4.0,
-                            "Prevent Depression": 0.0,
-                            "Acute Depression": 4.0,
-                            "Acute Safety": "+",
-                            "Acute Tolerance": "++",
-                            "Maintenance Safety": "+++",
-                            "Maintenance Tolerance": "++",
-                            "Manic Switch": "-",
-                            "Notes": "Divalproex should be used with caution in women of childbearing age."
-                        },
-                        {
-                            "name": "Asenapine+Li/DVP",
-                            "Acute Mania": 2,
-                            "PreventAME": 4.0,
-                            "Prevent Mania": 4.0,
-                            "Prevent Depression": 0.0,
-                            "Acute Depression": 4.0,
-                            "Acute Safety": "+",
-                            "Acute Tolerance": "+",
-                            "Maintenance Safety": "++",
-                            "Maintenance Tolerance": "+",
-                            "Manic Switch": "-",
-                            "Notes": "Divalproex should be used with caution in women of childbearing age."
-                        }
-                    ]
-                },
+
                 {
                     "level": "First Line - Monotherapy",
                     "drugs": [
@@ -178,39 +118,63 @@
                     ]
                 },
                 {
-                    "level": "Not Recommended ",
+                    "level": "First Line - Combination",
                     "drugs": [
                         {
-                            "name": "Allopurinol",
-                            "Acute Mania": -1
+                            "name": "Quetiapine+Li/DVP",
+                            "Acute Mania": 1,
+                            "PreventAME": 1.0,
+                            "Prevent Mania": 1.0,
+                            "Prevent Depression": 1.0,
+                            "Acute Depression": 4.0,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "-",
+                            "Notes": "No controlled trials; however, clinical experience suggests that it is a useful strategy. Divalproex should be used with caution in women of childbearing age."
                         },
                         {
-                            "name": "Eslicarbazepine/Licarbazepine",
-                            "Acute Mania": -2
+                            "name": "Aripiprazole+Li/DVP",
+                            "Acute Mania": 2,
+                            "PreventAME": 2.0,
+                            "Prevent Mania": 2.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 4.0,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "-",
+                            "Notes": "Did not separate from placebo in those with index mania; no studies available in index depression. Divalproex should be used with caution in women of childbearing age."
                         },
                         {
-                            "name": "Gabapentin",
-                            "Acute Mania": -2
+                            "name": "Risperidone+Li/DVP",
+                            "Acute Mania": 1,
+                            "PreventAME": 4.0,
+                            "Prevent Mania": 4.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 4.0,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "++",
+                            "Maintenance Safety": "+++",
+                            "Maintenance Tolerance": "++",
+                            "Manic Switch": "-",
+                            "Notes": "Divalproex should be used with caution in women of childbearing age."
                         },
                         {
-                            "name": "Lamotrigine",
-                            "Acute Mania": -1
-                        },
-                        {
-                            "name": "Omega-3 Fatty Acids",
-                            "Acute Mania": -1
-                        },
-                        {
-                            "name": "Topirimate",
-                            "Acute Mania": -1
-                        },
-                        {
-                            "name": "Valnoctamide",
-                            "Acute Mania": -2
-                        },
-                        {
-                            "name": "Zonisamide",
-                            "Acute Mania": -2
+                            "name": "Asenapine+Li/DVP",
+                            "Acute Mania": 2,
+                            "PreventAME": 4.0,
+                            "Prevent Mania": 4.0,
+                            "Prevent Depression": 0.0,
+                            "Acute Depression": 4.0,
+                            "Acute Safety": "+",
+                            "Acute Tolerance": "+",
+                            "Maintenance Safety": "++",
+                            "Maintenance Tolerance": "+",
+                            "Manic Switch": "-",
+                            "Notes": "Divalproex should be used with caution in women of childbearing age."
                         }
                     ]
                 },
@@ -316,8 +280,12 @@
                     ]
                 },
                 {
-                    "level": "Third",
+                    "level": "Third Line",
                     "drugs": [
+                        {
+                            "name": "Carbamazepine/Oxcarbazepine + Li/DVP",
+                            "Acute Mania": 3
+                        },
                         {
                             "name": "Chlorpromazine",
                             "Acute Mania": 2
@@ -349,11 +317,39 @@
                     ]
                 },
                 {
-                    "level": "Third Line",
+                    "level": "Not Recommended ",
                     "drugs": [
                         {
-                            "name": "Carbamazepine/Oxcarbazepine + Li/DVP",
-                            "Acute Mania": 3
+                            "name": "Allopurinol",
+                            "Acute Mania": -1
+                        },
+                        {
+                            "name": "Eslicarbazepine/Licarbazepine",
+                            "Acute Mania": -2
+                        },
+                        {
+                            "name": "Gabapentin",
+                            "Acute Mania": -2
+                        },
+                        {
+                            "name": "Lamotrigine",
+                            "Acute Mania": -1
+                        },
+                        {
+                            "name": "Omega-3 Fatty Acids",
+                            "Acute Mania": -1
+                        },
+                        {
+                            "name": "Topirimate",
+                            "Acute Mania": -1
+                        },
+                        {
+                            "name": "Valnoctamide",
+                            "Acute Mania": -2
+                        },
+                        {
+                            "name": "Zonisamide",
+                            "Acute Mania": -2
                         }
                     ]
                 }

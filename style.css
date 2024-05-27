@@ -302,9 +302,10 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: 5px; 
+    margin-top: 5px; 
     padding: 5px; 
     background: #f0f8ff; 
-    border-radius: 8px; 
+    border-radius: 5px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     height: 90px; 
     min-width: 90px; 
@@ -403,7 +404,6 @@ main {
     text-align: center;
     text-decoration: none;
     box-sizing: border-box; 
-    margin-bottom: 10px; 
 }
 
 .header-title:hover {
@@ -444,37 +444,27 @@ main {
     vertical-align: middle;
 }
 
-.thumbs-up {
-    color: green;
-    margin-bottom: 4px;
-}
 
-.thumbs-down {
-    color: red;
-    margin-top: 4px;
-}
 
 .bi-plus-circle-fill, .bi-dash-circle-fill {
-    font-size: 1.5em;  /* Increase icon size */
-    margin: 5px;       /* Add some margin for spacing */
+    font-size: 1.5em;  
+    margin: 5px;       
 }
 
 .text-success {
     color: green !important;
-    font-size: 2.0em; /* Increase font size */
-    margin: 0 2px; /* Add margin for better spacing */
-}
+    font-size: 2.0em; 
+    margin: 0 2px; 
 
 .text-warning {
     color: yellow !important;
-    font-size: 2.0em; /* Increase font size */
-    margin: 0 2px; /* Add margin for better spacing */
-}
+    font-size: 2.0em; 
+    margin: 0 2px;
 
 .text-danger {
     color: red !important;
-    font-size: 2.0em; /* Increase font size */
-    margin: 0 2px; /* Add margin for better spacing */
+    font-size: 2.0em; 
+    margin: 0 2px; 
 }
 
 .grid-item::after {
@@ -494,6 +484,58 @@ main {
     height: 300%;
 }
 
+/*About Section */
+.about-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.about-section h2 {
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.about-section ul {
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+.about-section li {
+    margin-bottom: 8px;
+}
+
+.about-section a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.about-section a:hover {
+    text-decoration: underline;
+}
+
+.about-section a:focus {
+    outline: none;
+    box-shadow: 0 0 4px #007BFF;
+}
+
+.about-section a:active {
+    color: #0056b3;
+}
+
+
 @media (max-width: 768px) {
     header {
         height: 60px;
@@ -501,12 +543,12 @@ main {
         font-size: 0.8em; 
     }
     header h1 {
-        font-size: 1.5em; /* Adjust for smaller screens */
+        font-size: 1.5em;
     }
     footer {
         height: 40px;
         padding: 10px;
-        font-size: 0.8em; /* Adjust font size if needed */
+        font-size: 0.8em; 
     }
 }
 
@@ -522,16 +564,16 @@ main {
     }
 
     header {
-        padding: 10px; /* Reduce padding to half */
-        font-size: 0.8em; /* Adjust font size if needed */
+        padding: 10px; 
+        font-size: 0.8em; 
     }
     header h1 {
-        font-size: 1.5em; /* Adjust for smaller screens */
+        font-size: 1.5em; 
     }
 
     footer {
-        padding: 10px; /* Reduce padding to half */
-        font-size: 0.8em; /* Adjust font size if needed */
+        padding: 10px; 
+        font-size: 0.8em;
     }
     .grid-item, .subclass-button, .guideline-button {
         font-size: 16px;
@@ -568,7 +610,7 @@ main {
 
     .drug-attribute {
         margin-bottom: 15px;
-        padding: 8px;
+        padding: 5px;
     }
 
     .drug-details .card-body {
@@ -576,11 +618,11 @@ main {
     }
     
     .drug-attribute .title, .drug-attribute .value {
-        font-size: 0.75rem; 
+        font-size: 0.8rem; 
     }
     
     .drug-header {
-        font-size: 1.25rem; 
+        font-size: 1.10rem; 
     }
 }
 
