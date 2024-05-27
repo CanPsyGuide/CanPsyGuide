@@ -225,96 +225,6 @@ function adjustHeight(drugLink) {
 }
 
 
-function renderDrugDetails(drug) {
-    const sectionMapping = {
-        'Overview':['Drug Class', 'Dose'],
-        'Primary Effects': ['LOE', 'Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction'],
-        'Advantages & Disadvantages': ['Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability', 'Acute Safety'],
-        'Treatment Considerations': [],
-        'Notes': ['Notes']
-    };
-
-    let sections = {};
-    for (const sectionName in sectionMapping) {
-        sections[sectionName] = [];
-    }
-
-    for (const [key, value] of Object.entries(drug)) {
-        if (key !== 'name' && key !== 'url') { // Exclude 'url' from being added as an element
-            const element = createElementForKeyAndValue(key, value);
-            let found = false;
-            for (const sectionName in sectionMapping) {
-                if (sectionMapping[sectionName].includes(key)) {
-                    sections[sectionName].push(element);
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) {
-                sections['Others'].push(element); // Default to 'Others' if key not found in any mapping
-            }
-        }
-    }
-
-    const container = document.createElement('div');
-    container.className = 'drug-details drug-details-container card my-2';
-
-    const drugHeader = document.createElement('h2');
-    drugHeader.className = 'drug-header card-header text-center';
-
-    // Create an anchor element if the URL exists
-    if (drug.url) {
-        const link = document.createElement('a');
-        link.href = drug.url;
-        link.target = '_blank'; // Open in a new tab
-        link.textContent = drug.name;
-        drugHeader.appendChild(link);
-    } else {
-        drugHeader.textContent = drug.name;
-    }
-
-    container.appendChild(drugHeader);
-
-    const cardBody = document.createElement('div');
-    cardBody.className = 'card-body';
-
-    // Helper function to create a section with a header
-    const createSection = (title, elementsArray, isNotes = false) => {
-        if (elementsArray.length === 0) return null; // Skip empty sections
-
-        const section = document.createElement('div');
-        section.className = 'section' + (isNotes ? ' notes-section' : '');
-
-        const header = document.createElement('h3');
-        header.className = 'section-header';
-        header.textContent = title;
-        section.appendChild(header);
-
-        const gridRow = document.createElement('div');
-        gridRow.className = isNotes ? '' : 'row'; // Use a different class for notes
-
-        elementsArray.forEach(element => {
-            const colDiv = document.createElement('div');
-            colDiv.className = isNotes ? 'col-12' : 'col-6 col-md-4 col-lg-2'; // Full width for notes
-            colDiv.appendChild(element);
-            gridRow.appendChild(colDiv);
-        });
-
-        section.appendChild(gridRow);
-        return section;
-    };
-
-    // Append sections to the card body
-    for (const sectionName in sections) {
-        const section = createSection(sectionName, sections[sectionName], sectionName === 'Notes');
-        if (section) cardBody.appendChild(section);
-    }
-
-    container.appendChild(cardBody);
-
-    return container;
-}
-
 
 function getPriority(key) {
     if (['LOE', 'Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction', 'Acute Mania', 'PreventAME', 'Prevent Mania', 'Prevent Depression', 'Acute Depression'].includes(key)) {
@@ -328,9 +238,42 @@ function getPriority(key) {
     }
 }
 
+const sectionMapping = {
+    '': ['Drug Class', 'Dose', 'LOE'],
+    'Primary Effects': ['Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction'],
+    'Advantages': [],
+    'Disadvantages': [],
+    'Maintenance': ['Prevent Mania', 'Acute Mania', 'PreventAME', 'Prevent Depression', 'Acute Depression'],
+    'Treatment Considerations': ['Maintenance Safety'],
+    ' ': ['Notes']
+};
+
+const advantagesConditions = {
+    'Efficacy': 'up',
+    'Acceptability': 'up',
+    'Drug Interactions': 'down',
+    'Discontinuation Syndrome': 'down',
+    'Sedation': 'down',
+    'Weight Gain': 'down',
+    'Sexual Dysfunction': 'down',
+    'Other Tolerability': 'up'
+};
+
+const disadvantagesConditions = {
+    'Efficacy': 'down',
+    'Acceptability': 'down',
+    'Drug Interactions': 'up',
+    'Discontinuation Syndrome': 'up',
+    'Sedation': 'up',
+    'Weight Gain': 'up',
+    'Sexual Dysfunction': 'up',
+    'Other Tolerability': 'down'
+};
+
 function createElementForKeyAndValue(key, value) {
     const element = document.createElement('div');
     element.className = 'drug-attribute';
+    element.setAttribute('data-key', key);
 
     const title = document.createElement('div');
     title.className = 'title';
@@ -349,9 +292,15 @@ function createElementForKeyAndValue(key, value) {
         pieChart.appendChild(pieChartCanvas);
         valueSpan.appendChild(pieChart);
         drawChart(pieChartCanvas, value);
-    } else if (['Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability', 'Acute Safety'].includes(key)) {
+    } else if (advantagesConditions[key] || disadvantagesConditions[key]) {
         const icon = document.createElement('span');
-        icon.className = value > 0 ? 'fa fa-thumbs-up thumbs-up' : 'fa fa-thumbs-down thumbs-down';
+        if (value > 0) {
+            icon.className = 'fa fa-arrow-up arrow-up';
+            element.setAttribute('data-category', advantagesConditions[key] === 'up' ? 'Advantages' : 'Disadvantages');
+        } else {
+            icon.className = 'fa fa-arrow-down arrow-down';
+            element.setAttribute('data-category', disadvantagesConditions[key] === 'down' ? 'Disadvantages' : 'Advantages');
+        }
         valueSpan.appendChild(icon);
     } else if (/^\++$/.test(value) || /^\-+$/.test(value)) {
         const colorClass = getSymbolColorClass(value);
@@ -369,6 +318,92 @@ function createElementForKeyAndValue(key, value) {
     element.appendChild(valueSpan);
     return element;
 }
+
+function renderDrugDetails(drug) {
+    let sections = {};
+    for (const sectionName in sectionMapping) {
+        sections[sectionName] = [];
+    }
+
+    for (const [key, value] of Object.entries(drug)) {
+        if (key !== 'name' && key !== 'url') {
+            const element = createElementForKeyAndValue(key, value);
+            const category = element.getAttribute('data-category') || '';
+            if (category) {
+                sections[category].push(element);
+            } else {
+                let found = false;
+                for (const sectionName in sectionMapping) {
+                    if (sectionMapping[sectionName].includes(key)) {
+                        sections[sectionName].push(element);
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found) {
+                    sections['Treatment Considerations'].push(element);
+                }
+            }
+        }
+    }
+
+    const container = document.createElement('div');
+    container.className = 'drug-details drug-details-container card my-2';
+
+    const drugHeader = document.createElement('h2');
+    drugHeader.className = 'drug-header card-header text-center';
+
+    if (drug.url) {
+        const link = document.createElement('a');
+        link.href = drug.url;
+        link.target = '_blank';
+        link.textContent = drug.name;
+        drugHeader.appendChild(link);
+    } else {
+        drugHeader.textContent = drug.name;
+    }
+
+    container.appendChild(drugHeader);
+
+    const cardBody = document.createElement('div');
+    cardBody.className = 'card-body';
+
+    const createSection = (title, elementsArray, isNotes = false) => {
+        if (elementsArray.length === 0) return null;
+
+        const section = document.createElement('div');
+        section.className = 'section' + (isNotes ? ' notes-section' : '');
+
+        const header = document.createElement('h3');
+        header.className = 'section-header';
+        header.textContent = title;
+        section.appendChild(header);
+
+        const gridRow = document.createElement('div');
+        gridRow.className = isNotes ? '' : 'row';
+
+        elementsArray.forEach(element => {
+            const colDiv = document.createElement('div');
+            colDiv.className = isNotes ? 'col-12' : 'col-6 col-md-4 col-lg-2';
+            colDiv.appendChild(element);
+            gridRow.appendChild(colDiv);
+        });
+
+        section.appendChild(gridRow);
+        return section;
+    };
+
+    for (const sectionName in sections) {
+        const section = createSection(sectionName, sections[sectionName], sectionName === ' ');
+        if (section) cardBody.appendChild(section);
+    }
+
+    container.appendChild(cardBody);
+
+    return container;
+}
+
+
 
 
 
@@ -391,51 +426,6 @@ function getSymbolColorClass(symbol) {
             return '';
     }
 }
-
-// Updated createElementForKeyAndValue function to handle symbols
-function createElementForKeyAndValue(key, value) {
-    const element = document.createElement('div');
-    element.className = 'drug-attribute';
-
-    const title = document.createElement('div');
-    title.className = 'title';
-    title.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}`;
-    element.appendChild(title);
-
-    const valueSpan = document.createElement('div');
-    valueSpan.className = 'value';
-
-    if (['LOE', 'Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction', 'Acute Mania', 'PreventAME', 'Prevent Mania', 'Prevent Depression', 'Acute Depression'].includes(key)) {
-        const pieChart = document.createElement('div');
-        pieChart.className = 'pie-chart';
-        const pieChartCanvas = document.createElement('canvas');
-        pieChartCanvas.width = 60;
-        pieChartCanvas.height = 60;
-        pieChart.appendChild(pieChartCanvas);
-        valueSpan.appendChild(pieChart);
-        drawChart(pieChartCanvas, value);
-    } else if (['Efficacy', 'Acceptability', 'Drug Interactions', 'Discontinuation Syndrome', 'Sedation', 'Weight Gain', 'Sexual Dysfunction', 'Other Tolerability', 'Acute Safety'].includes(key)) {
-        const icon = document.createElement('span');
-        icon.className = value > 0 ? 'fa fa-thumbs-up thumbs-up' : 'fa fa-thumbs-down thumbs-down';
-        valueSpan.appendChild(icon);
-    } else if (/^\++$/.test(value) || /^\-+$/.test(value)) {
-        const colorClass = getSymbolColorClass(value);
-        const symbols = value.split('').map(char => {
-            const span = document.createElement('span');
-            span.className = colorClass;
-            span.textContent = char;
-            return span;
-        });
-        symbols.forEach(span => valueSpan.appendChild(span));
-    } else {
-        valueSpan.textContent = value;
-    }
-
-    element.appendChild(valueSpan);
-    return element;
-}
-
-
 
 
 

@@ -314,28 +314,27 @@ main {
 
 .drug-attribute .title {
     font-weight: bold;
-    margin-bottom: 5px; 
+    margin-bottom: 3px; /* Reduced margin */
     white-space: normal; 
     text-align: center; 
     color: #003f7f; 
+    font-size: 0.75rem; /* Reduced font size */
 }
 
 .drug-attribute .value {
     word-wrap: break-word; 
     word-break: break-all; 
-    margin-top: 5px; 
+    margin-top: 3px; /* Reduced margin */
+    font-size: 0.75rem; /* Reduced font size */
 }
 
-.section {
-    margin-bottom: 20px; 
-}
 
 .section-header {
-    font-size: 1.5rem;
-    margin-bottom: 10px; 
+    font-size: 1.0rem;
     text-align: center; 
     color: #0052aa; 
 }
+
 
 .notes-section .section-header {
     text-align: left; 
@@ -356,25 +355,20 @@ main {
 .drug-header a:focus,
 .drug-header a:active {
     color: white; /* Keep the color white on hover, focus, and active states */
-    text-decoration: underline; /* Optionally, add underline on hover/focus for better accessibility */
+    text-decoration: underline; 
 }
 
 
 .attributes-container {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    gap: 15px; /* Space between elements */
+    flex-direction: column; 
+    gap: 1px; /* Space between elements */
 }
 
 .section {
     margin-bottom: 15px;
 }
 
-.attributes-container {
-    display: flex;
-    flex-direction: column; /* Ensure all attributes are in a single column */
-    gap: 5px;
-}
 
 .row-titles, .row-values {
     display: flex;
@@ -382,12 +376,6 @@ main {
     flex-wrap: wrap; /* Allow wrapping of columns */
 }
 
-.attribute-title, .attribute-value {
-    flex: 1;
-    text-align: center;
-    margin: 5px;
-    min-width: calc(100% / 6 - 10px); /* Ensure a maximum of 6 columns */
-}
 
 .drug-details {
     background-color: #f9f9f9;
@@ -402,6 +390,7 @@ main {
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     overflow: auto;
 }
+
 
 /* Header Title Styling */
 .header-title {
@@ -429,19 +418,21 @@ main {
     margin-right: 5px;
 }
 
-.thumbs-up, .thumbs-down {
-    font-size: 20px;
-    display: inline-block;
-    margin-left: 5px;
-}
 
-.thumbs-up {
+.arrow-up {
     color: green;
+    font-size: 22px;
+    vertical-align: middle;
+    margin-bottom: 4px;
 }
 
-.thumbs-down {
+.arrow-down {
     color: red;
+    font-size: 22px;
+    vertical-align: middle;
+    margin-top: 4px;
 }
+
 
 .pie-chart canvas {
     width: 100%; 
@@ -585,7 +576,7 @@ main {
     }
     
     .drug-attribute .title, .drug-attribute .value {
-        font-size: 0.875rem; 
+        font-size: 0.75rem; 
     }
     
     .drug-header {
