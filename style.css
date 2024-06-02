@@ -681,6 +681,12 @@ main {
         overflow: hidden;
     }
 
+    .section-header a {
+        font-size: 1.2rem; /* Larger font size for better readability */
+        padding: 10px; /* Touch-friendly padding */
+        display: inline-block; /* Ensures padding affects the clickable area */
+        color: #007bff; /* Reinforce color for better visibility */
+    }
 }
 
 @media (max-height: 720px) {
@@ -762,81 +768,25 @@ main {
 }
 
 
-@media (max-width: 768px) {
-    .section-header a {
-        font-size: 1.2rem; 
-        padding: 10px; 
-        display: inline-block; 
-        color: #007bff;
-    }
-
-    .section-header a:hover, .section-header a:focus {
-        color: #0056b3;
-        text-decoration: underline;
-    }
-
-    .section-header a:visited {
-        color: #4b0082;
-    }
-
-    .section-header a:active {
-        color: #003366;
-    }
-}
-
-
 * {
     box-sizing: border-box;
 }
 
-
-.drug-details-container {
-    overflow: hidden;
-    transition: max-height 0.5s ease, padding 0.5s ease;
+a::after {
+    content: '🔗'; 
+    font-size: 0.8em;
+    margin-left: 5px;
+    color: inherit;
 }
 
-.collapse {
-    transition: max-height 0.5s ease;
+a:hover::after, a:focus::after {
+    color: inherit; 
 }
 
-.first-section-container {
-    max-height: 300px;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-}
-
-/* General styles for links */
-a {
-    color: #007bff; /* Default blue color for links */
-    text-decoration: none;
-}
-
-a:hover {
-    color: #0056b3; /* Darker blue on hover */
-    text-decoration: underline; /* Underline on hover to indicate it's a link */
-}
-
-a:visited {
-    color: #4b0082; /* Different shade for visited links */
-}
 
 /* Specific styles for section headers with links */
 .section-header a {
     color: #007bff;
     font-weight: bold; /* Make links in headers bold */
     transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for color and text decoration changes */
-}
-
-.section-header a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-.section-header a:visited {
-    color: #4b0082;
-}
-
-.section-header a:active {
-    color: #003366; /* Even darker blue when the link is active (clicked) */
-    text-decoration: underline;
 }

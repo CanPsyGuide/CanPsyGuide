@@ -423,13 +423,14 @@ function renderDrugDetails(drug) {
         const isNotes = sectionName.toLowerCase().includes('notes');
         const section = createSection(sectionName, sections[sectionName], isFirstSection, isNotes);
         if (section) cardBody.appendChild(section);
-        isFirstSection = false;
+        isFirstSection = false; 
     }
 
     container.appendChild(cardBody);
 
     return container;
 }
+
 
 function toggleDrugDetails(drug, drugLink, event) {
     if (event.type === 'click' && !event.target.closest('.drug-details')) {
