@@ -249,10 +249,9 @@ function getPriority(key) {
 
 const sectionMapping = {
     '': ['Drug Class', 'Dose', 'LOE'],
-    'Primary Effects': ['Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction'],
+    'Treatment Considerations': ['Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction', 'Maintenance Safety'],
     'Advantages': [],
     'Disadvantages': [],
-    'Maintenance': ['Prevent Mania', 'Acute Mania', 'PreventAME', 'Prevent Depression', 'Acute Depression'],
     'Treatment Considerations': ['Maintenance Safety'],
     'Notes': ['Notes']
 };
