@@ -209,13 +209,20 @@ function toggleDrugDetails(drug, drugLink, event) {
             adjustHeight(drugLink);
         }, 10);
 
-        var panel = drugLink.nextElementSibling;
+        const panel = drugLink.nextElementSibling;
         if (panel && panel.style.maxHeight) {
             panel.style.maxHeight = null;
         } else if (panel) {
             panel.style.maxHeight = panel.scrollHeight + "px";
             panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+    }
+}
+
+function adjustHeight(drugLink) {
+    const parentPanel = drugLink.closest('.panel');
+    if (parentPanel) {
+        parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
     }
 }
 
@@ -247,7 +254,7 @@ const sectionMapping = {
     'Disadvantages': [],
     'Maintenance': ['Prevent Mania', 'Acute Mania', 'PreventAME', 'Prevent Depression', 'Acute Depression'],
     'Treatment Considerations': ['Maintenance Safety'],
-    ' ': ['Notes']
+    'Notes': ['Notes']
 };
 
 const advantagesConditions = {
@@ -272,15 +279,17 @@ const disadvantagesConditions = {
     'Other Tolerability': 'down'
 };
 
-function createElementForKeyAndValue(key, value) {
+function createElementForKeyAndValue(key, value, isNotes = false) {
     const element = document.createElement('div');
     element.className = 'drug-attribute';
     element.setAttribute('data-key', key);
 
-    const title = document.createElement('div');
-    title.className = 'title';
-    title.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}`;
-    element.appendChild(title);
+    if (!isNotes) {
+        const title = document.createElement('div');
+        title.className = 'title';
+        title.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}`;
+        element.appendChild(title);
+    }
 
     const valueSpan = document.createElement('div');
     valueSpan.className = 'value';
@@ -303,8 +312,14 @@ function createElementForKeyAndValue(key, value) {
             icon.className = 'fa fa-arrow-down arrow-down';
             element.setAttribute('data-category', disadvantagesConditions[key] === 'down' ? 'Disadvantages' : 'Advantages');
         }
+        if (element.getAttribute('data-category') === 'Advantages') {
+            icon.classList.add('arrow-advantage');
+        } else if (element.getAttribute('data-category') === 'Disadvantages') {
+            icon.classList.add('arrow-disadvantage');
+        }
         valueSpan.appendChild(icon);
     } else if (/^\++$/.test(value) || /^\-+$/.test(value)) {
+        element.classList.add('plus-minus-attribute'); // Add specific class for ++/---
         const colorClass = getSymbolColorClass(value);
         const symbols = value.split('').map(char => {
             const span = document.createElement('span');
@@ -321,6 +336,9 @@ function createElementForKeyAndValue(key, value) {
     return element;
 }
 
+
+
+
 function renderDrugDetails(drug) {
     let sections = {};
     for (const sectionName in sectionMapping) {
@@ -329,7 +347,8 @@ function renderDrugDetails(drug) {
 
     for (const [key, value] of Object.entries(drug)) {
         if (key !== 'name' && key !== 'url') {
-            const element = createElementForKeyAndValue(key, value);
+            const isNotes = sectionMapping['Notes'] && sectionMapping['Notes'].includes(key);
+            const element = createElementForKeyAndValue(key, value, isNotes);
             const category = element.getAttribute('data-category') || '';
             if (category) {
                 sections[category].push(element);
@@ -338,6 +357,9 @@ function renderDrugDetails(drug) {
                 for (const sectionName in sectionMapping) {
                     if (sectionMapping[sectionName].includes(key)) {
                         sections[sectionName].push(element);
+                        if (sectionName === Object.keys(sectionMapping)[0]) {
+                            element.classList.add('first-section-attribute'); // Add specific class
+                        }
                         found = true;
                         break;
                     }
@@ -360,6 +382,7 @@ function renderDrugDetails(drug) {
         link.href = drug.url;
         link.target = '_blank';
         link.textContent = drug.name;
+        link.title = 'Click for more information'; // Tooltip text
         drugHeader.appendChild(link);
     } else {
         drugHeader.textContent = drug.name;
@@ -370,11 +393,11 @@ function renderDrugDetails(drug) {
     const cardBody = document.createElement('div');
     cardBody.className = 'card-body';
 
-    const createSection = (title, elementsArray, isNotes = false) => {
+    const createSection = (title, elementsArray, isFirstSection = false, isNotes = false) => {
         if (elementsArray.length === 0) return null;
 
         const section = document.createElement('div');
-        section.className = 'section' + (isNotes ? ' notes-section' : '');
+        section.className = 'section' + (isFirstSection ? ' first-section' : '') + (isNotes ? ' notes-section' : '');
 
         const header = document.createElement('h3');
         header.className = 'section-header';
@@ -382,11 +405,11 @@ function renderDrugDetails(drug) {
         section.appendChild(header);
 
         const gridRow = document.createElement('div');
-        gridRow.className = isNotes ? '' : 'row';
+        gridRow.className = isFirstSection ? 'first-section-container' : 'row';
 
         elementsArray.forEach(element => {
             const colDiv = document.createElement('div');
-            colDiv.className = isNotes ? 'col-12' : 'col-6 col-md-4 col-lg-2';
+            colDiv.className = isFirstSection ? 'col-12' : (isNotes ? 'col-12' : 'col-6 col-md-4 col-lg-2');
             colDiv.appendChild(element);
             gridRow.appendChild(colDiv);
         });
@@ -395,14 +418,56 @@ function renderDrugDetails(drug) {
         return section;
     };
 
+    let isFirstSection = true;
     for (const sectionName in sections) {
-        const section = createSection(sectionName, sections[sectionName], sectionName === ' ');
+        const isNotes = sectionName.toLowerCase().includes('notes');
+        const section = createSection(sectionName, sections[sectionName], isFirstSection, isNotes);
         if (section) cardBody.appendChild(section);
+        isFirstSection = false;
     }
 
     container.appendChild(cardBody);
 
     return container;
+}
+
+function toggleDrugDetails(drug, drugLink, event) {
+    if (event.type === 'click' && !event.target.closest('.drug-details')) {
+        let existingDetails = drugLink.nextElementSibling;
+        if (existingDetails && existingDetails.classList.contains('drug-details')) {
+            existingDetails.style.maxHeight = '0px';
+            existingDetails.style.padding = '0 20px';
+            existingDetails.addEventListener('transitionend', function handleTransitionEnd() {
+                existingDetails.remove();
+                existingDetails.removeEventListener('transitionend', handleTransitionEnd);
+            });
+            return;
+        }
+
+        const drugDetailsContainer = renderDrugDetails(drug);
+        drugLink.after(drugDetailsContainer);
+
+        setTimeout(() => {
+            drugDetailsContainer.style.maxHeight = "300px";
+            drugDetailsContainer.style.padding = '20px';
+            adjustHeight(drugLink);
+        }, 10);
+
+        const panel = drugLink.nextElementSibling;
+        if (panel && panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else if (panel) {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+}
+
+function adjustHeight(drugLink) {
+    const parentPanel = drugLink.closest('.panel');
+    if (parentPanel) {
+        parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
+    }
 }
 
 

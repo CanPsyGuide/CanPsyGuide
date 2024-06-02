@@ -296,49 +296,9 @@ main {
 }
 
 /* Drug Details Container */
-.drug-attribute {
-    display: flex;
-    flex-direction: column; /* Stack the title and value vertically */
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px; 
-    margin-top: 5px; 
-    padding: 5px; 
-    background: #f0f8ff; 
-    border-radius: 5px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    height: 90px; 
-    min-width: 90px; 
-    box-sizing: border-box;
-    text-align: center; 
-}
 
-.drug-attribute .title {
-    font-weight: bold;
-    margin-bottom: 3px; /* Reduced margin */
-    white-space: normal; 
-    text-align: center; 
-    color: #003f7f; 
-    font-size: 0.75rem; /* Reduced font size */
-}
-
-.drug-attribute .value {
-    word-wrap: break-word; 
-    word-break: break-all; 
-    margin-top: 3px; /* Reduced margin */
-    font-size: 0.75rem; /* Reduced font size */
-}
-
-
-.section-header {
-    font-size: 1.0rem;
-    text-align: center; 
-    color: #0052aa; 
-}
-
-
-.notes-section .section-header {
-    text-align: left; 
+.notes-section {
+    font-size: 1rem;
 }
 
 .notes-section .drug-attribute {
@@ -346,6 +306,128 @@ main {
     box-shadow: none; 
     padding: 0; 
 }
+
+.drug-attribute {
+    padding: 5px; /* General padding */
+    margin: 5px;
+    background: #f0f8ff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center;
+}
+
+
+
+.first-section-attribute .title {
+    flex: 0 0 50px; 
+    text-align: left;
+    font-size: 0.8rem; 
+    font-weight: bold; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    justify-content: flex-start;
+}
+
+.first-section-attribute .value {
+    margin: 0;
+    text-align: center;
+    white-space: wrap;
+
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    flex-grow: 1;
+    font-size:1.0rem;
+
+}
+
+/* Ensure all value elements are displayed left to right */
+.value {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipses; 
+    max-width: 100%; 
+}
+
+.first-section-attribute .title {
+    flex: 1;
+}
+
+/* Ensure all titles are styled consistently */
+.drug-attribute .title {
+    font-size: 0.6rem;
+    font-weight: bold;
+    margin-bottom: 3px;
+    white-space: normal;
+    text-align: center;
+    color: #003f7f;
+}
+
+
+
+/* Ensure pie charts are properly sized and centered */
+.pie-chart {
+    width: 20px;
+    height: 20px;
+    margin: 5px 0; /* Add vertical margin for spacing */
+}
+
+.pie-chart canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Center align the ++/--- attributes */
+
+.plus-minus-attribute .title {
+    text-align: center;
+
+    font-weight: bold; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-bottom: 5px; /* Space between title and value */
+}
+
+.plus-minus-attribute .value {
+    text-align: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipses;
+}
+
+.plus-minus-attribute .value span {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    margin: 0 2px; 
+}
+
+.text-success {
+    color: green !important;
+}
+
+.text-warning {
+    color: yellow !important;
+}
+
+.text-danger {
+    color: red !important;
+}
+
+
+
 
 .drug-header a {
     color: white;
@@ -367,8 +449,20 @@ main {
 }
 
 .section {
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
+
+.section-header {
+    font-size: 0.9rem; 
+    font-weight: bold;
+    color: #333; 
+    text-align: center;
+    background-color: #ffffff; 
+    padding: 5px 10px; 
+    border-radius: 3px; 
+}
+
+
 
 
 .row-titles, .row-values {
@@ -383,7 +477,6 @@ main {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    margin-bottom: 15px;
     width: 100%;
     max-width: 800px;
     height: auto;
@@ -410,6 +503,7 @@ main {
     box-shadow: 0 5px 10px rgba(0,0,0,0.3); 
 }
 
+
 /* Pie Chart and Thumbs Up/Down Styles */
 .pie-chart {
     width: 20px;
@@ -430,6 +524,14 @@ main {
     font-size: 22px;
     vertical-align: middle;
     margin-top: 4px;
+}
+
+.arrow-advantage {
+    color: green; 
+}
+
+.arrow-disadvantage {
+    color: red; 
 }
 
 
@@ -551,6 +653,34 @@ main {
         padding: 10px;
         font-size: 0.8em; 
     }
+
+    
+    .first-section-attribute .value {
+        margin: 0;
+        text-align: center;
+        white-space: nowrap;
+        overflow-x: auto;
+        text-overflow: ellipsis;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-grow: 1;
+        font-size: 0.8rem;
+        max-width: calc(100% - 70px);
+    }
+
+    .first-section-attribute.drug-attribute {
+        padding: 8px; 
+        margin: 5px;
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+        height: 45px;
+        max-width: 150px;
+        overflow: hidden;
+    }
+
 }
 
 @media (max-height: 720px) {
@@ -632,6 +762,81 @@ main {
 }
 
 
+@media (max-width: 768px) {
+    .section-header a {
+        font-size: 1.2rem; 
+        padding: 10px; 
+        display: inline-block; 
+        color: #007bff;
+    }
+
+    .section-header a:hover, .section-header a:focus {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+    .section-header a:visited {
+        color: #4b0082;
+    }
+
+    .section-header a:active {
+        color: #003366;
+    }
+}
+
+
 * {
     box-sizing: border-box;
+}
+
+
+.drug-details-container {
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.collapse {
+    transition: max-height 0.5s ease;
+}
+
+.first-section-container {
+    max-height: 300px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+/* General styles for links */
+a {
+    color: #007bff; /* Default blue color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover to indicate it's a link */
+}
+
+a:visited {
+    color: #4b0082; /* Different shade for visited links */
+}
+
+/* Specific styles for section headers with links */
+.section-header a {
+    color: #007bff;
+    font-weight: bold; /* Make links in headers bold */
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for color and text decoration changes */
+}
+
+.section-header a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.section-header a:visited {
+    color: #4b0082;
+}
+
+.section-header a:active {
+    color: #003366; /* Even darker blue when the link is active (clicked) */
+    text-decoration: underline;
 }

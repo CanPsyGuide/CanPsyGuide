@@ -64,7 +64,8 @@
                         {
                             "name": "Reboxetine",
                             "Drug Class": "NRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/reboxetine-drug-information"
                         },
                         {
                             "name": "Mirtazapine",
@@ -75,32 +76,38 @@
                         {
                             "name": "Clomipramine",
                             "Drug Class": "Tricyclic",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/clomipramine-drug-information"
                         },
                         {
                             "name": "Imipramine",
                             "Drug Class": "Tricyclic",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/imipramine-drug-information"
                         },
                         {
                             "name": "Alprazolam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/alprazolam-drug-information"
                         },
                         {
                             "name": "Clonazepam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/clonazepam-drug-information"
                         },
                         {
                             "name": "Diazepam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/diazepam-drug-information"
                         },
                         {
                             "name": "Lorazepam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/lorazepam-drug-information"
                         }
                     ]
                 },
@@ -110,7 +117,8 @@
                         {
                             "name": "Clonazepam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/clonazepam-drug-information"
                         },
                         {
                             "name": "Alprazolam ODT",
@@ -131,27 +139,32 @@
                         {
                             "name": "Duloxetine",
                             "Drug Class": "SNRI",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/duloxetine-drug-information"
                         },
                         {
                             "name": "Milnacipran",
                             "Drug Class": "SNRI",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/milnacipran-drug-information"
                         },
                         {
                             "name": "Risperidone",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/risperidone-drug-information"
                         },
                         {
                             "name": "Quetiapine",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/quetiapine-drug-information"
                         },
                         {
                             "name": "Olanzapine",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/olanzapine-drug-information"
                         },
                         {
                             "name": "Divalproex",
@@ -161,28 +174,33 @@
                         {
                             "name": "Levetiracetam",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/levetiracetam-drug-information"
                         },
                         {
                             "name": "Gabapentin",
                             "Drug Class": "Anticonvulsant",
                             "LOE": -2,
-                            "Notes": "No significant superiority over placebo in overall population, but significant benefits in subgroup of more severly ill patients"
+                            "Notes": "No significant superiority over placebo in overall population, but significant benefits in subgroup of more severly ill patients",
+                            "url": "https://www.uptodate.com/contents/gabapentin-drug-information"
                         },
                         {
                             "name": "Moclobemide",
                             "Drug Class": "MAOI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/moclobemide-drug-information"
                         },
                         {
                             "name": "Phenelzine",
                             "Drug Class": "MAOI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/phenelzine-drug-information"
                         },
                         {
                             "name": "Tranylcypromine",
                             "Drug Class": "MAOI",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/tranylcypromine-drug-information"
                         }
                     ]
                 },
@@ -192,22 +210,26 @@
                         {
                             "name": "Pindolol",
                             "Drug Class": "Beta-Blocker",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/pindolol-drug-information"
                         },
                         {
                             "name": "Aripiprazole",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/aripiprazole-drug-information"
                         },
                         {
                             "name": "Olanzapine",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/olanzapine-drug-information"
                         },
                         {
                             "name": "Risperidone",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/risperidone-drug-information"
                         },
                         {
                             "name": "Divalproex",
@@ -222,7 +244,8 @@
                         {
                             "name": "Buspirone",
                             "Drug Class": "5HT1A Agonist",
-                            "LOE": -1
+                            "LOE": -1,
+                            "url": "https://www.uptodate.com/contents/buspirone-drug-information"
                         },
                         {
                             "name": "Propanolol",
@@ -232,13 +255,15 @@
                         {
                             "name": "Tiagabine",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/tiagabine-drug-information"
                         },
                         {
                             "name": "Trazodone",
                             "Drug Class": "SARI",
                             "LOE": -2,
-                            "Notes": "At low doses, antagonizes 5-HT-2A, H1, and alpha-1 receptors; at higher doses antagonizes SERT (SRI) and 5HT2C"
+                            "Notes": "At low doses, antagonizes 5-HT-2A, H1, and alpha-1 receptors; at higher doses antagonizes SERT (SRI) and 5HT2C",
+                            "url": "https://www.uptodate.com/contents/trazodone-drug-information"
                         }
                     ]
                 }
@@ -254,7 +279,8 @@
                         {
                             "name": "Escitalopram",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/escitalopram-drug-information"
                         },
                         {
                             "name": "Fluvoxamine (IR/CR)",
@@ -264,12 +290,14 @@
                         {
                             "name": "Sertraline",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/sertraline-drug-information"
                         },
                         {
                             "name": "Paroxetine",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/paroxetine-drug-information"
                         },
                         {
                             "name": "Paroxetine CR",
@@ -279,12 +307,14 @@
                         {
                             "name": "Venlafaxine XR",
                             "Drug Class": "SNRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/venlafaxine-drug-information"
                         },
                         {
                             "name": "Pregabalin",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/pregabalin-drug-information"
                         }
                     ]
                 },
@@ -294,32 +324,38 @@
                         {
                             "name": "Citalopram",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/citalopram-drug-information"
                         },
                         {
                             "name": "Phenelzine",
                             "Drug Class": "MAOI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/phenelzine-drug-information"
                         },
                         {
                             "name": "Gabapentin",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/gabapentin-drug-information"
                         },
                         {
                             "name": "Clonazepam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/clonazepam-drug-information"
                         },
                         {
                             "name": "Alprazolam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/alprazolam-drug-information"
                         },
                         {
                             "name": "Bromazepam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/bromazepam-drug-information"
                         }
                     ]
                 },
@@ -330,18 +366,21 @@
                             "name": "Fluoxetine",
                             "Drug Class": "SSRI",
                             "LOE": 1,
-                            "Notes": "Conflicting Data"
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/fluoxetine-drug-information"
                         },
                         {
                             "name": "Mirtazapine",
                             "Drug Class": "NaSSA",
                             "LOE": 1,
-                            "Notes": "Conflicting Data"
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/mirtazapine-drug-information"
                         },
                         {
                             "name": "Atomoxetine",
                             "Drug Class": "NRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/atomoxetine-drug-information"
                         },
                         {
                             "name": "Bupropion SR",
@@ -351,18 +390,21 @@
                         {
                             "name": "Clomipramine",
                             "Drug Class": "Tricyclic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/clomipramine-drug-information"
                         },
                         {
                             "name": "Moclobemide",
                             "Drug Class": "MAOI",
                             "LOE": 1,
-                            "Notes": "Conflicting Data"
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/moclobemide-drug-information"
                         },
                         {
                             "name": "Selegiline",
                             "Drug Class": "MAOI",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/selegiline-drug-information"
                         },
                         {
                             "name": "Divalproex",
@@ -372,12 +414,14 @@
                         {
                             "name": "Tiagabine",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/tiagabine-drug-information"
                         },
                         {
                             "name": "Topiramate",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/topiramate-drug-information"
                         }
                     ]
                 },
@@ -387,22 +431,26 @@
                         {
                             "name": "Paroxetine",
                             "Drug Class": "SSRI",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/paroxetine-drug-information"
                         },
                         {
                             "name": "Buspirone",
                             "Drug Class": "5HT1A Agonist",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/buspirone-drug-information"
                         },
                         {
                             "name": "Aripiprazole",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/aripiprazole-drug-information"
                         },
                         {
                             "name": "Risperidone",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/risperidone-drug-information"
                         }
                     ]
                 },
@@ -412,34 +460,40 @@
                         {
                             "name": "Buspirone",
                             "Drug Class": "5HT1A Agonist",
-                            "LOE": -1
+                            "LOE": -1,
+                            "url": "https://www.uptodate.com/contents/buspirone-drug-information"
                         },
                         {
                             "name": "Imipramine",
                             "Drug Class": "Tricyclic",
-                            "LOE": -3
+                            "LOE": -3,
+                            "url": "https://www.uptodate.com/contents/imipramine-drug-information"
                         },
                         {
                             "name": "Quetiapine",
                             "Drug Class": "Antipsychotic",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/quetiapine-drug-information"
                         },
                         {
                             "name": "Atenolol",
                             "Drug Class": "Beta-Blocker",
                             "LOE": -1,
-                            "Notes": "Beta-blockers have been used in clinical practice for performance situations such as public speaking."
+                            "Notes": "Beta-blockers have been used in clinical practice for performance situations such as public speaking.",
+                            "url": "https://www.uptodate.com/contents/atenolol-drug-information"
                         },
                         {
                             "name": "Propranolol",
                             "Drug Class": "Beta-Blocker",
                             "LOE": -1,
-                            "Notes": "Beta-blockers have been used in clinical practice for performance situations such as public speaking."
+                            "Notes": "Beta-blockers have been used in clinical practice for performance situations such as public speaking.",
+                            "url": "https://www.uptodate.com/contents/propranolol-drug-information"
                         },
                         {
                             "name": "Levetiracetam",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/levetiracetam-drug-information"
                         }
                     ]
                 },
@@ -449,12 +503,14 @@
                         {
                             "name": "Pindolol",
                             "Drug Class": "Beta-Blocker",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/pindolol-drug-information"
                         },
                         {
                             "name": "Clonazepam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/clonazepam-drug-information"
                         }
                     ]
                 }
@@ -470,17 +526,20 @@
                         {
                             "name": "Escitalopram",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/escitalopram-drug-information"
                         },
                         {
                             "name": "Sertraline",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/sertraline-drug-information"
                         },
                         {
                             "name": "Paroxetine",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/paroxetine-drug-information"
                         },
                         {
                             "name": "Paroxetine CR",
@@ -490,22 +549,26 @@
                         {
                             "name": "Venlafaxine XR",
                             "Drug Class": "SNRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/venlafaxine-drug-information"
                         },
                         {
                             "name": "Duloxetine",
                             "Drug Class": "SNRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/duloxetine-drug-information"
                         },
                         {
                             "name": "Agomelatine",
                             "Drug Class": "Melatonin Receptor Agonist",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/agomelatine-drug-information"
                         },
                         {
                             "name": "Pregabalin",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/pregabalin-drug-information"
                         }
                     ]
                 },
@@ -516,12 +579,14 @@
                             "name": "Vortioxetine",
                             "Drug Class": "Sertonin Modulator",
                             "LOE": 1,
-                            "Notes": "Conflicting Data"
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/vortioxetine-drug-information"
                         },
                         {
                             "name": "Buspirone",
                             "Drug Class": "5HT1A Agonist",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/buspirone-drug-information"
                         },
                         {
                             "name": "Bupropion XL",
@@ -531,37 +596,44 @@
                         {
                             "name": "Imipramine",
                             "Drug Class": "Tricyclic",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/imipramine-drug-information"
                         },
                         {
                             "name": "Quetiapine XR",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/quetiapine-drug-information"
                         },
                         {
                             "name": "Hydroxyzine",
                             "Drug Class": "H1 Antagonist",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/hydroxyzine-drug-information"
                         },
                         {
                             "name": "Alprazolam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/alprazolam-drug-information"
                         },
                         {
                             "name": "Bromazepam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/bromazepam-drug-information"
                         },
                         {
                             "name": "Diazepam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/diazepam-drug-information"
                         },
                         {
                             "name": "Lorazepam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/lorazepam-drug-information"
                         }
                     ]
                 },
@@ -571,7 +643,8 @@
                         {
                             "name": "Pregabalin",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/pregabalin-drug-information"
                         }
                     ]
                 },
@@ -581,23 +654,27 @@
                         {
                             "name": "Citalopram",
                             "Drug Class": "SSRI",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/citalopram-drug-information"
                         },
                         {
                             "name": "Fluoxetine",
                             "Drug Class": "SSRI",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/fluoxetine-drug-information"
                         },
                         {
                             "name": "Mirtazapine",
                             "Drug Class": "NaSSA",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/mirtazapine-drug-information"
                         },
                         {
                             "name": "Trazodone",
                             "Drug Class": "SARI",
                             "LOE": 2,
-                            "Notes": "At low doses, antagonizes 5-HT-2A, H1, and alpha-1 receptors; at higher doses antagonizes SERT (SRI) and 5HT2C"
+                            "Notes": "At low doses, antagonizes 5-HT-2A, H1, and alpha-1 receptors; at higher doses antagonizes SERT (SRI) and 5HT2C",
+                            "url": "https://www.uptodate.com/contents/trazodone-drug-information"
                         },
                         {
                             "name": "Divaloproex Chrono",
@@ -613,28 +690,33 @@
                             "name": "Quetiapine",
                             "Drug Class": "Antipsychotic",
                             "LOE": 1,
-                            "Notes": "Conflicting Data"
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/quetiapine-drug-information"
                         },
                         {
                             "name": "Risperidone",
                             "Drug Class": "Antipsychotic",
                             "LOE": 1,
-                            "Notes": "Conflicting Data"
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/risperidone-drug-information"
                         },
                         {
                             "name": "Olanzapine",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/olanzapine-drug-information"
                         },
                         {
                             "name": "Aripiprazole",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/aripiprazole-drug-information"
                         },
                         {
                             "name": "Quetiapine XR",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/quetiapine-drug-information"
                         }
                     ]
                 },
@@ -644,12 +726,14 @@
                         {
                             "name": "Propranolol",
                             "Drug Class": "Beta-Blocker",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/propranolol-drug-information"
                         },
                         {
                             "name": "Tiagabine",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": -1
+                            "LOE": -1,
+                            "url": "https://www.uptodate.com/contents/tiagabine-drug-information"
                         },
                         {
                             "name": "Pexacerfont",
@@ -664,7 +748,8 @@
                         {
                             "name": "Ziprazidone",
                             "Drug Class": "Antipsychotic",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/ziprazidone-drug-information"
                         }
                     ]
                 }
@@ -677,82 +762,288 @@
                 {
                     "level": "First Line",
                     "drugs": [
-                        {"name": "Escitalopram", "Drug Class": "SSRI", "LOE": 1},
-                        {"name": "Fluoxetine", "Drug Class": "SSRI", "LOE": 1},
-                        {"name": "Fluvoxamine", "Drug Class": "SSRI", "LOE": 1},
-                        {"name": "Paroxetine", "Drug Class": "SSRI", "LOE": 1},
-                        {"name": "Sertraline", "Drug Class": "SSRI", "LOE": 1}
+                        {
+                            "name": "Escitalopram",
+                            "Drug Class": "SSRI",
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/escitalopram-drug-information"
+                        },
+                        {
+                            "name": "Fluoxetine",
+                            "Drug Class": "SSRI",
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/fluoxetine-drug-information"
+                        },
+                        {
+                            "name": "Fluvoxamine",
+                            "Drug Class": "SSRI",
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/fluvoxamine-drug-information"
+                        },
+                        {
+                            "name": "Paroxetine",
+                            "Drug Class": "SSRI",
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/paroxetine-drug-information"
+                        },
+                        {
+                            "name": "Sertraline",
+                            "Drug Class": "SSRI",
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/sertraline-drug-information"
+                        }
                     ]
                 },
                 {
                     "level": "First Line Adjunctive",
                     "drugs": [
-                        {"name": "Aripiprazole", "Drug Class": "Antipsychotic", "LOE": 1},
-                        {"name": "Risperidone", "Drug Class": "Antipsychotic", "LOE": 1, "Notes": "Conflicting Data"}
+                        {
+                            "name": "Aripiprazole",
+                            "Drug Class": "Antipsychotic",
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/aripiprazole-drug-information"
+                        },
+                        {
+                            "name": "Risperidone",
+                            "Drug Class": "Antipsychotic",
+                            "LOE": 1,
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/risperidone-drug-information"
+                        }
                     ]
                 },
                 {
                     "level": "Second Line",
                     "drugs": [
-                        {"name": "Citalopram", "Drug Class": "SSRI", "LOE": 2},
-                        {"name": "Venlafaxine XR", "Drug Class": "SNRI", "LOE": 2},
-                        {"name": "Mirtazapine", "Drug Class": "NaSSA", "LOE": 2},
-                        {"name": "Clomipramine", "Drug Class": "Tricyclic", "LOE": 1}
+                        {
+                            "name": "Citalopram",
+                            "Drug Class": "SSRI",
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/citalopram-drug-information"
+                        },
+                        {
+                            "name": "Venlafaxine XR",
+                            "Drug Class": "SNRI",
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/venlafaxine-drug-information"
+                        },
+                        {
+                            "name": "Mirtazapine",
+                            "Drug Class": "NaSSA",
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/mirtazapine-drug-information"
+                        },
+                        {
+                            "name": "Clomipramine",
+                            "Drug Class": "Tricyclic",
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/clomipramine-drug-information"
+                        }
                     ]
                 },
                 {
                     "level": "Second Line Adjunctive",
                     "drugs": [
-                        {"name": "Quetiapine", "Drug Class": "Antipsychotic", "LOE": 1, "Notes": "Conflicting Data"},
-                        {"name": "Topiramate", "Drug Class": "Anticonvulsant", "LOE": 1},
-                        {"name": "Memantine", "Drug Class": "NMDA Antagonist", "LOE": 2}
+                        {
+                            "name": "Quetiapine",
+                            "Drug Class": "Antipsychotic",
+                            "LOE": 1,
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/quetiapine-drug-information"
+                        },
+                        {
+                            "name": "Topiramate",
+                            "Drug Class": "Anticonvulsant",
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/topiramate-drug-information"
+                        },
+                        {
+                            "name": "Memantine",
+                            "Drug Class": "NMDA Antagonist",
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/memantine-drug-information"
+                        }
                     ]
                 },
                 {
                     "level": "Third Line",
                     "drugs": [
-                        {"name": "Citalopram IV", "Drug Class": "SSRI", "LOE": 3},
-                        {"name": "Duloxetine", "Drug Class": "SNRI", "LOE": 4},
-                        {"name": "Clomipramine IV", "Drug Class": "Tricyclic", "LOE": 2},
-                        {"name": "Phenelzine", "Drug Class": "MAOI", "LOE": 2},
-                        {"name": "Tranylcypromine", "Drug Class": "MAOI", "LOE": 4},
-                        {"name": "Tramadol", "Drug Class": "Opioid", "LOE": 4}
+                        {
+                            "name": "Citalopram IV",
+                            "Drug Class": "SSRI",
+                            "LOE": 3
+                        },
+                        {
+                            "name": "Duloxetine",
+                            "Drug Class": "SNRI",
+                            "LOE": 4,
+                            "url": "https://www.uptodate.com/contents/duloxetine-drug-information"
+                        },
+                        {
+                            "name": "Clomipramine IV",
+                            "Drug Class": "Tricyclic",
+                            "LOE": 2
+                        },
+                        {
+                            "name": "Phenelzine",
+                            "Drug Class": "MAOI",
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/phenelzine-drug-information"
+                        },
+                        {
+                            "name": "Tranylcypromine",
+                            "Drug Class": "MAOI",
+                            "LOE": 4,
+                            "url": "https://www.uptodate.com/contents/tranylcypromine-drug-information"
+                        },
+                        {
+                            "name": "Tramadol",
+                            "Drug Class": "Opioid",
+                            "LOE": 4,
+                            "url": "https://www.uptodate.com/contents/tramadol-drug-information"
+                        }
                     ]
                 },
                 {
                     "level": "Third Line Adjunctive",
                     "drugs": [
-                        {"name": "Olanzapine", "Drug Class": "Antipsychotic", "LOE": 1},
-                        {"name": "Haloperidol", "Drug Class": "Antipsychotic", "LOE": 2, "Notes": "Conflicting Data"},
-                        {"name": "Amisulpride", "Drug Class": "Antipsychotic", "LOE": 3},
-                        {"name": "Ziprasidone", "Drug Class": "Antipsychotic", "LOE": 4},
-                        {"name": "N-Acetylcysteine", "Drug Class": "Other", "LOE": 2},
-                        {"name": "Celexocib", "Drug Class": "NSAID", "LOE": 2},
-                        {"name": "Citalopram", "Drug Class": "SSRI", "LOE": 3},
-                        {"name": "Mirtazapine", "Drug Class": "NaSSA", "LOE": 3},
-                        {"name": "Pregabalin", "Drug Class": "Anticonvulsant", "LOE": 3},
-                        {"name": "Pindolol", "Drug Class": "Beta-Blocker", "LOE": 1, "Notes": "Conflicting Data"},
-                        {"name": "Ondansetron", "Drug Class": "5HT3 Antagonist", "LOE": 2},
-                        {"name": "Granisetron", "Drug Class": "5HT3 Antagonist", "LOE": 2},
-                        {"name": "Ketamine IV", "Drug Class": "NMDA Antagonist", "LOE": 2},
-                        {"name": "Riluzole", "Drug Class": "Other", "LOE": 3}
+                        {
+                            "name": "Olanzapine",
+                            "Drug Class": "Antipsychotic",
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/olanzapine-drug-information"
+                        },
+                        {
+                            "name": "Haloperidol",
+                            "Drug Class": "Antipsychotic",
+                            "LOE": 2,
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/haloperidol-drug-information"
+                        },
+                        {
+                            "name": "Amisulpride",
+                            "Drug Class": "Antipsychotic",
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/amisulpride-drug-information"
+                        },
+                        {
+                            "name": "Ziprasidone",
+                            "Drug Class": "Antipsychotic",
+                            "LOE": 4
+                        },
+                        {
+                            "name": "N-Acetylcysteine",
+                            "Drug Class": "Other",
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/acetylcysteine-drug-information"
+                        },
+                        {
+                            "name": "Celexocib",
+                            "Drug Class": "NSAID",
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/celexocib-drug-information"
+                        },
+                        {
+                            "name": "Citalopram",
+                            "Drug Class": "SSRI",
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/citalopram-drug-information"
+                        },
+                        {
+                            "name": "Mirtazapine",
+                            "Drug Class": "NaSSA",
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/mirtazapine-drug-information"
+                        },
+                        {
+                            "name": "Pregabalin",
+                            "Drug Class": "Anticonvulsant",
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/pregabalin-drug-information"
+                        },
+                        {
+                            "name": "Pindolol",
+                            "Drug Class": "Beta-Blocker",
+                            "LOE": 1,
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/pindolol-drug-information"
+                        },
+                        {
+                            "name": "Ondansetron",
+                            "Drug Class": "5HT3 Antagonist",
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/ondansetron-drug-information"
+                        },
+                        {
+                            "name": "Granisetron",
+                            "Drug Class": "5HT3 Antagonist",
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/granisetron-drug-information"
+                        },
+                        {
+                            "name": "Ketamine IV",
+                            "Drug Class": "NMDA Antagonist",
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/ketamine-drug-information"
+                        },
+                        {
+                            "name": "Riluzole",
+                            "Drug Class": "Other",
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/riluzole-drug-information"
+                        }
                     ]
                 },
                 {
                     "level": "Not Recommended",
                     "drugs": [
-                        {"name": "Desipramine", "Drug Class": "Tricyclic", "LOE": -2},
-                        {"name": "Clonazepam", "Drug Class": "Benzodiazepine", "LOE": -2},
-                        {"name": "Clonidine", "Drug Class": "Alpha 2 Agonist", "LOE": -2}
+                        {
+                            "name": "Desipramine",
+                            "Drug Class": "Tricyclic",
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/desipramine-drug-information"
+                        },
+                        {
+                            "name": "Clonazepam",
+                            "Drug Class": "Benzodiazepine",
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/clonazepam-drug-information"
+                        },
+                        {
+                            "name": "Clonidine",
+                            "Drug Class": "Alpha 2 Agonist",
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/clonidine-drug-information"
+                        }
                     ]
                 },
                 {
                     "level": "Not Recommended Adjunct",
                     "drugs": [
-                        {"name": "Buspirone", "Drug Class": "5HT1A Agonist", "LOE": -2},
-                        {"name": "Clonazepam", "Drug Class": "Benzodiazepine", "LOE": -2},
-                        {"name": "Lithium", "Drug Class": "Other", "LOE": -2},
-                        {"name": "Morphine", "Drug Class": "Opioid", "LOE": 2}
+                        {
+                            "name": "Buspirone",
+                            "Drug Class": "5HT1A Agonist",
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/buspirone-drug-information"
+                        },
+                        {
+                            "name": "Clonazepam",
+                            "Drug Class": "Benzodiazepine",
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/clonazepam-drug-information"
+                        },
+                        {
+                            "name": "Lithium",
+                            "Drug Class": "Other",
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/lithium-drug-information"
+                        },
+                        {
+                            "name": "Morphine",
+                            "Drug Class": "Opioid",
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/morphine-drug-information"
+                        }
                     ]
                 }
             ]
@@ -767,24 +1058,28 @@
                         {
                             "name": "Paroxetine",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/paroxetine-drug-information"
                         },
                         {
                             "name": "Fluoxetine",
                             "Drug Class": "SSRI",
                             "LOE": 1,
-                            "Notes": "Conflicting Data"
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/fluoxetine-drug-information"
                         },
                         {
                             "name": "Sertraline",
                             "Drug Class": "SSRI",
                             "LOE": 1,
-                            "Notes": "Conflicting Data"
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/sertraline-drug-information"
                         },
                         {
                             "name": "Venlafaxine XR",
                             "Drug Class": "SNRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/venlafaxine-drug-information"
                         }
                     ]
                 },
@@ -794,18 +1089,21 @@
                         {
                             "name": "Fluvoxamine",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/fluvoxamine-drug-information"
                         },
                         {
                             "name": "Mirtazapine",
                             "Drug Class": "NaSSA",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/mirtazapine-drug-information"
                         },
                         {
                             "name": "Phenelzine",
                             "Drug Class": "MAOI",
                             "LOE": 1,
-                            "Notes": "Conflicting Data"
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/phenelzine-drug-information"
                         }
                     ]
                 },
@@ -816,17 +1114,20 @@
                             "name": "Risperidone",
                             "Drug Class": "Antipsychotic",
                             "LOE": 1,
-                            "Notes": "Conflicting Data"
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/risperidone-drug-information"
                         },
                         {
                             "name": "Olanzapine",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/olanzapine-drug-information"
                         },
                         {
                             "name": "Eszopiclone",
                             "Drug Class": "Z-Drug",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/eszopiclone-drug-information"
                         }
                     ]
                 },
@@ -836,17 +1137,20 @@
                         {
                             "name": "Reboxetine",
                             "Drug Class": "NRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/reboxetine-drug-information"
                         },
                         {
                             "name": "Escitalopram",
                             "Drug Class": "SSRI",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/escitalopram-drug-information"
                         },
                         {
                             "name": "Duloxetine",
                             "Drug Class": "SNRI",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/duloxetine-drug-information"
                         },
                         {
                             "name": "Bupropion SR",
@@ -856,7 +1160,8 @@
                         {
                             "name": "Imipramine",
                             "Drug Class": "Tricyclic",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/imipramine-drug-information"
                         },
                         {
                             "name": "Amitryptiline",
@@ -867,43 +1172,51 @@
                             "name": "Desipramine",
                             "Drug Class": "Tricyclic",
                             "LOE": 2,
-                            "Notes": "Conflicting Data"
+                            "Notes": "Conflicting Data",
+                            "url": "https://www.uptodate.com/contents/desipramine-drug-information"
                         },
                         {
                             "name": "Tianeptine",
                             "Drug Class": "Tricyclic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/tianeptine-international-drug-information"
                         },
                         {
                             "name": "Trazodone",
                             "Drug Class": "SARI",
                             "LOE": 4,
-                            "Notes": "At low doses, antagonizes 5-HT-2A, H1, and alpha-1 receptors; at higher doses antagonizes SERT (SRI) and 5HT2C"
+                            "Notes": "At low doses, antagonizes 5-HT-2A, H1, and alpha-1 receptors; at higher doses antagonizes SERT (SRI) and 5HT2C",
+                            "url": "https://www.uptodate.com/contents/trazodone-drug-information"
                         },
                         {
                             "name": "Buspirone",
                             "Drug Class": "5HT1A Agonist",
-                            "LOE": 4
+                            "LOE": 4,
+                            "url": "https://www.uptodate.com/contents/buspirone-drug-information"
                         },
                         {
                             "name": "Moclobemide",
                             "Drug Class": "MAOI",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/moclobemide-drug-information"
                         },
                         {
                             "name": "Risperidone",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/risperidone-drug-information"
                         },
                         {
                             "name": "Aripiprazole",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/aripiprazole-drug-information"
                         },
                         {
                             "name": "Quetiapine",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/quetiapine-drug-information"
                         },
                         {
                             "name": "Topirimate",
@@ -914,17 +1227,20 @@
                         {
                             "name": "Lamotrigine",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/lamotrigine-drug-information"
                         },
                         {
                             "name": "Carbamazepine",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/carbamazepine-drug-information"
                         },
                         {
                             "name": "Memantine",
                             "Drug Class": "NMDA Antagonist",
-                            "LOE": 4
+                            "LOE": 4,
+                            "url": "https://www.uptodate.com/contents/memantine-drug-information"
                         }
                     ]
                 },
@@ -934,27 +1250,32 @@
                         {
                             "name": "Aripiprazole",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/aripiprazole-drug-information"
                         },
                         {
                             "name": "Quetiapine",
                             "Drug Class": "Antipsychotic",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/quetiapine-drug-information"
                         },
                         {
                             "name": "Clonidine",
                             "Drug Class": "Alpha 2 Agonist",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/clonidine-drug-information"
                         },
                         {
                             "name": "Gabapentin",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": 4
+                            "LOE": 4,
+                            "url": "https://www.uptodate.com/contents/gabapentin-drug-information"
                         },
                         {
                             "name": "Pregabalin",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": 4
+                            "LOE": 4,
+                            "url": "https://www.uptodate.com/contents/pregabalin-drug-information"
                         },
                         {
                             "name": "Leviteracetam ",
@@ -964,13 +1285,15 @@
                         {
                             "name": "Tiagabine",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": 4
+                            "LOE": 4,
+                            "url": "https://www.uptodate.com/contents/tiagabine-drug-information"
                         },
                         {
                             "name": "Reboxetine",
                             "Drug Class": "NRI",
                             "LOE": "?",
-                            "Notes": "LOE as adjunct not reported"
+                            "Notes": "LOE as adjunct not reported",
+                            "url": "https://www.uptodate.com/contents/reboxetine-drug-information"
                         }
                     ]
                 },
@@ -980,12 +1303,14 @@
                         {
                             "name": "Citalopram",
                             "Drug Class": "SSRI",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/citalopram-drug-information"
                         },
                         {
                             "name": "Olanzapine",
                             "Drug Class": "Antipsychotic",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/olanzapine-drug-information"
                         },
                         {
                             "name": "Divalproex",
@@ -1000,12 +1325,14 @@
                         {
                             "name": "Alprazolam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/alprazolam-drug-information"
                         },
                         {
                             "name": "Clonazepam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": -3
+                            "LOE": -3,
+                            "url": "https://www.uptodate.com/contents/clonazepam-drug-information"
                         }
                     ]
                 },
@@ -1020,17 +1347,20 @@
                         {
                             "name": "Guanfacine",
                             "Drug Class": "Alpha 2 Agonist",
-                            "LOE": -1
+                            "LOE": -1,
+                            "url": "https://www.uptodate.com/contents/guanfacine-drug-information"
                         },
                         {
                             "name": "Topiramate",
                             "Drug Class": "Anticonvulsant",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/topiramate-drug-information"
                         },
                         {
                             "name": "Zolpidem",
                             "Drug Class": "Z Drug",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/zolpidem-drug-information"
                         }
                     ]
                 }
@@ -1046,22 +1376,26 @@
                         {
                             "name": "Fluoxetine",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/fluoxetine-drug-information"
                         },
                         {
                             "name": "Fluvoxamine",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/fluvoxamine-drug-information"
                         },
                         {
                             "name": "Sertraline",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/sertraline-drug-information"
                         },
                         {
                             "name": "Alprazolam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/alprazolam-drug-information"
                         }
                     ]
                 },
@@ -1071,32 +1405,38 @@
                         {
                             "name": "Fluoxetine",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/fluoxetine-drug-information"
                         },
                         {
                             "name": "Citalopram",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/citalopram-drug-information"
                         },
                         {
                             "name": "Fluvoxamine",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/fluvoxamine-drug-information"
                         },
                         {
                             "name": "Paroxetine",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/paroxetine-drug-information"
                         },
                         {
                             "name": "Sertraline",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/sertraline-drug-information"
                         },
                         {
                             "name": "Clomipramine",
                             "Drug Class": "Tricyclic",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/clomipramine-drug-information"
                         },
                         {
                             "name": "Adjunctive Aripiprazole",
@@ -1106,7 +1446,8 @@
                         {
                             "name": "Riluzole",
                             "Drug Class": "Other",
-                            "LOE": 4
+                            "LOE": 4,
+                            "url": "https://www.uptodate.com/contents/riluzole-drug-information"
                         }
                     ]
                 },
@@ -1116,7 +1457,8 @@
                         {
                             "name": "Sertraline",
                             "Drug Class": "SSRI",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/sertraline-drug-information"
                         },
                         {
                             "name": "Adjunctive Sertraline",
@@ -1131,12 +1473,14 @@
                         {
                             "name": "Clonazepam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 4
+                            "LOE": 4,
+                            "url": "https://www.uptodate.com/contents/clonazepam-drug-information"
                         },
                         {
                             "name": "Alprazolam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": 4
+                            "LOE": 4,
+                            "url": "https://www.uptodate.com/contents/alprazolam-drug-information"
                         }
                     ]
                 },
@@ -1146,7 +1490,8 @@
                         {
                             "name": "Citalopram",
                             "Drug Class": "SSRI",
-                            "LOE": 4
+                            "LOE": 4,
+                            "url": "https://www.uptodate.com/contents/citalopram-drug-information"
                         },
                         {
                             "name": "Adjunctive Imipramine",
@@ -1156,7 +1501,8 @@
                         {
                             "name": "Alprazolam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/alprazolam-drug-information"
                         }
                     ]
                 },
@@ -1166,17 +1512,20 @@
                         {
                             "name": "Fluoxetine",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/fluoxetine-drug-information"
                         },
                         {
                             "name": "Fluvoxamine",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/fluvoxamine-drug-information"
                         },
                         {
                             "name": "Clonazepam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/clonazepam-drug-information"
                         }
                     ]
                 },
@@ -1186,42 +1535,50 @@
                         {
                             "name": "Fluoxetine",
                             "Drug Class": "SSRI",
-                            "LOE": 1
+                            "LOE": 1,
+                            "url": "https://www.uptodate.com/contents/fluoxetine-drug-information"
                         },
                         {
                             "name": "Fluvoxamine",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/fluvoxamine-drug-information"
                         },
                         {
                             "name": "Paroxetine",
                             "Drug Class": "SSRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/paroxetine-drug-information"
                         },
                         {
                             "name": "Escitalopram",
                             "Drug Class": "SSRI",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/escitalopram-drug-information"
                         },
                         {
                             "name": "Sertraline",
                             "Drug Class": "SSRI",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/sertraline-drug-information"
                         },
                         {
                             "name": "Venlafaxine XR",
                             "Drug Class": "SNRI",
-                            "LOE": 2
+                            "LOE": 2,
+                            "url": "https://www.uptodate.com/contents/venlafaxine-drug-information"
                         },
                         {
                             "name": "Mirtazapine",
                             "Drug Class": "NaSSA",
-                            "LOE": 3
+                            "LOE": 3,
+                            "url": "https://www.uptodate.com/contents/mirtazapine-drug-information"
                         },
                         {
                             "name": "Alprazolam",
                             "Drug Class": "Benzodiazepine",
-                            "LOE": -2
+                            "LOE": -2,
+                            "url": "https://www.uptodate.com/contents/alprazolam-drug-information"
                         }
                     ]
                 }
