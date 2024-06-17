@@ -323,29 +323,6 @@ main {
 
 
 
-.first-section-attribute .title {
-    flex: 0 0 50px; 
-    text-align: left;
-    font-size: 0.8rem; 
-    font-weight: bold; 
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
-    justify-content: flex-start;
-}
-
-.first-section-attribute .value {
-    margin: 0;
-    text-align: center;
-    white-space: wrap;
-
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start; 
-    flex-grow: 1;
-    font-size:1.0rem;
-
-}
 
 /* Ensure all value elements are displayed left to right */
 .value {
@@ -359,13 +336,39 @@ main {
     max-width: 100%; 
 }
 
-.first-section-attribute .title {
-    flex: 1;
+
+.first-section-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Ensure items are on one row */
 }
+
+/* Override styles for first section attributes */
+.first-section-attribute {
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Center the content horizontally */
+    padding: 0;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+}
+
+
+
+
+.first-section-attribute .title, .first-section-attribute .value {
+    margin: 0 10px; /* Add some horizontal spacing */
+    display: inline-block;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: visible; /* Ensure the text is fully visible */
+}
+
+
 
 /* Ensure all titles are styled consistently */
 .drug-attribute .title {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     font-weight: bold;
     margin-bottom: 3px;
     white-space: normal;
@@ -513,14 +516,12 @@ main {
 
 
 .arrow-up {
-    color: green;
     font-size: 22px;
     vertical-align: middle;
     margin-bottom: 4px;
 }
 
 .arrow-down {
-    color: red;
     font-size: 22px;
     vertical-align: middle;
     margin-top: 4px;
@@ -655,31 +656,9 @@ main {
     }
 
     
-    .first-section-attribute .value {
-        margin: 0;
-        text-align: center;
-        white-space: nowrap;
-        overflow-x: auto;
-        text-overflow: ellipsis;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-grow: 1;
-        font-size: 0.8rem;
-        max-width: calc(100% - 70px);
-    }
 
-    .first-section-attribute.drug-attribute {
-        padding: 8px; 
-        margin: 5px;
-        display: flex;
-        flex-direction: row; 
-        justify-content: center;
-        align-items: center;
-        height: 45px;
-        max-width: 150px;
-        overflow: hidden;
-    }
+
+
 
     .section-header a {
         font-size: 1.2rem; /* Larger font size for better readability */

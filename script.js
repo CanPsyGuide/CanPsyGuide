@@ -219,12 +219,6 @@ function toggleDrugDetails(drug, drugLink, event) {
     }
 }
 
-function adjustHeight(drugLink) {
-    const parentPanel = drugLink.closest('.panel');
-    if (parentPanel) {
-        parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
-    }
-}
 
 function adjustHeight(drugLink) {
     const parentPanel = drugLink.closest('.panel');
@@ -293,6 +287,10 @@ function createElementForKeyAndValue(key, value, isNotes = false) {
     const valueSpan = document.createElement('div');
     valueSpan.className = 'value';
 
+    if (['Drug Class', 'Dose', 'LOE'].includes(key)) {
+        element.classList.add('first-section-attribute'); // Add specific class for first section attributes
+    }
+
     if (['LOE', 'Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction', 'Acute Mania', 'PreventAME', 'Prevent Mania', 'Prevent Depression', 'Acute Depression'].includes(key)) {
         const pieChart = document.createElement('div');
         pieChart.className = 'pie-chart';
@@ -309,7 +307,7 @@ function createElementForKeyAndValue(key, value, isNotes = false) {
             element.setAttribute('data-category', advantagesConditions[key] === 'up' ? 'Advantages' : 'Disadvantages');
         } else {
             icon.className = 'fa fa-arrow-down arrow-down';
-            element.setAttribute('data-category', disadvantagesConditions[key] === 'down' ? 'Disadvantages' : 'Advantages');
+            element.setAttribute('data-category', disadvantagesConditions[key] === 'up' ? 'Disadvantages' : 'Advantages');
         }
         if (element.getAttribute('data-category') === 'Advantages') {
             icon.classList.add('arrow-advantage');
@@ -334,6 +332,7 @@ function createElementForKeyAndValue(key, value, isNotes = false) {
     element.appendChild(valueSpan);
     return element;
 }
+
 
 
 
@@ -408,7 +407,7 @@ function renderDrugDetails(drug) {
 
         elementsArray.forEach(element => {
             const colDiv = document.createElement('div');
-            colDiv.className = isFirstSection ? 'col-12' : (isNotes ? 'col-12' : 'col-6 col-md-4 col-lg-2');
+            colDiv.className = isFirstSection ? 'col-4 first-section-item' : (isNotes ? 'col-12' : 'col-6 col-md-4 col-lg-2');
             colDiv.appendChild(element);
             gridRow.appendChild(colDiv);
         });
@@ -429,6 +428,9 @@ function renderDrugDetails(drug) {
 
     return container;
 }
+
+
+
 
 
 function toggleDrugDetails(drug, drugLink, event) {
