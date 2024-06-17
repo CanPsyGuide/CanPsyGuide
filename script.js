@@ -246,30 +246,21 @@ const sectionMapping = {
     'Treatment Considerations': ['Sleep', 'Pain', 'Fatigue', 'Cognitive Dysfunction', 'Maintenance Safety'],
     'Advantages': [],
     'Disadvantages': [],
-    'Treatment Considerations': ['Maintenance Safety'],
     'Notes': ['Notes']
 };
 
 const advantagesConditions = {
     'Efficacy': 'up',
     'Acceptability': 'up',
-    'Drug Interactions': 'down',
-    'Discontinuation Syndrome': 'down',
-    'Sedation': 'down',
-    'Weight Gain': 'down',
-    'Sexual Dysfunction': 'down',
     'Other Tolerability': 'up'
 };
 
 const disadvantagesConditions = {
-    'Efficacy': 'down',
-    'Acceptability': 'down',
-    'Drug Interactions': 'up',
-    'Discontinuation Syndrome': 'up',
-    'Sedation': 'up',
-    'Weight Gain': 'up',
-    'Sexual Dysfunction': 'up',
-    'Other Tolerability': 'down'
+    'Drug Interactions': 'down',
+    'Discontinuation Syndrome': 'down',
+    'Sedation': 'down',
+    'Weight Gain': 'down',
+    'Sexual Dysfunction': 'down'
 };
 
 function createElementForKeyAndValue(key, value, isNotes = false) {
@@ -304,15 +295,22 @@ function createElementForKeyAndValue(key, value, isNotes = false) {
         const icon = document.createElement('span');
         if (value > 0) {
             icon.className = 'fa fa-arrow-up arrow-up';
-            element.setAttribute('data-category', advantagesConditions[key] === 'up' ? 'Advantages' : 'Disadvantages');
-        } else {
+            if (advantagesConditions[key] === 'up') {
+                element.setAttribute('data-category', 'Advantages');
+                icon.classList.add('arrow-advantage');
+            } else if (disadvantagesConditions[key] === 'down') {
+                element.setAttribute('data-category', 'Disadvantages');
+                icon.classList.add('arrow-disadvantage');
+            }
+        } else if (value < 0) {
             icon.className = 'fa fa-arrow-down arrow-down';
-            element.setAttribute('data-category', disadvantagesConditions[key] === 'up' ? 'Disadvantages' : 'Advantages');
-        }
-        if (element.getAttribute('data-category') === 'Advantages') {
-            icon.classList.add('arrow-advantage');
-        } else if (element.getAttribute('data-category') === 'Disadvantages') {
-            icon.classList.add('arrow-disadvantage');
+            if (disadvantagesConditions[key] === 'down') {
+                element.setAttribute('data-category', 'Advantages');
+                icon.classList.add('arrow-advantage');
+            } else if (advantagesConditions[key] === 'up') {
+                element.setAttribute('data-category', 'Disadvantages');
+                icon.classList.add('arrow-disadvantage');
+            }
         }
         valueSpan.appendChild(icon);
     } else if (/^\++$/.test(value) || /^\-+$/.test(value)) {
@@ -332,10 +330,6 @@ function createElementForKeyAndValue(key, value, isNotes = false) {
     element.appendChild(valueSpan);
     return element;
 }
-
-
-
-
 
 function renderDrugDetails(drug) {
     let sections = {};
@@ -429,6 +423,14 @@ function renderDrugDetails(drug) {
     return container;
 }
 
+function getSymbolColorClass(value) {
+    if (/^\++$/.test(value)) {
+        return 'positive-symbol';
+    } else if (/^\-+$/.test(value)) {
+        return 'negative-symbol';
+    }
+    return '';
+}
 
 
 
