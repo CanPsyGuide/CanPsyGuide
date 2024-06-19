@@ -291,25 +291,23 @@ function createElementForKeyAndValue(key, value, isNotes = false) {
         pieChart.appendChild(pieChartCanvas);
         valueSpan.appendChild(pieChart);
         drawChart(pieChartCanvas, value);
-    } else if (advantagesConditions[key] || disadvantagesConditions[key]) {
+    } else if (key in advantagesConditions || key in disadvantagesConditions) {
         const icon = document.createElement('span');
         if (value > 0) {
-            icon.className = 'fa fa-arrow-up arrow-up';
-            if (advantagesConditions[key] === 'up') {
+            if (advantagesConditions[key]) {
+                icon.className = 'fa fa-arrow-up arrow-up arrow-advantage';
                 element.setAttribute('data-category', 'Advantages');
-                icon.classList.add('arrow-advantage');
-            } else if (disadvantagesConditions[key] === 'down') {
-                element.setAttribute('data-category', 'Disadvantages');
-                icon.classList.add('arrow-disadvantage');
+            } else if (disadvantagesConditions[key]) {
+                icon.className = 'fa fa-arrow-down arrow-down arrow-advantage';
+                element.setAttribute('data-category', 'Advantages');
             }
         } else if (value < 0) {
-            icon.className = 'fa fa-arrow-down arrow-down';
-            if (disadvantagesConditions[key] === 'down') {
-                element.setAttribute('data-category', 'Advantages');
-                icon.classList.add('arrow-advantage');
-            } else if (advantagesConditions[key] === 'up') {
+            if (advantagesConditions[key]) {
+                icon.className = 'fa fa-arrow-down arrow-down arrow-disadvantage';
                 element.setAttribute('data-category', 'Disadvantages');
-                icon.classList.add('arrow-disadvantage');
+            } else if (disadvantagesConditions[key]) {
+                icon.className = 'fa fa-arrow-up arrow-up arrow-disadvantage';
+                element.setAttribute('data-category', 'Disadvantages');
             }
         }
         valueSpan.appendChild(icon);
@@ -432,71 +430,6 @@ function getSymbolColorClass(value) {
     return '';
 }
 
-
-
-
-function toggleDrugDetails(drug, drugLink, event) {
-    if (event.type === 'click' && !event.target.closest('.drug-details')) {
-        let existingDetails = drugLink.nextElementSibling;
-        if (existingDetails && existingDetails.classList.contains('drug-details')) {
-            existingDetails.style.maxHeight = '0px';
-            existingDetails.style.padding = '0 20px';
-            existingDetails.addEventListener('transitionend', function handleTransitionEnd() {
-                existingDetails.remove();
-                existingDetails.removeEventListener('transitionend', handleTransitionEnd);
-            });
-            return;
-        }
-
-        const drugDetailsContainer = renderDrugDetails(drug);
-        drugLink.after(drugDetailsContainer);
-
-        setTimeout(() => {
-            drugDetailsContainer.style.maxHeight = "300px";
-            drugDetailsContainer.style.padding = '20px';
-            adjustHeight(drugLink);
-        }, 10);
-
-        const panel = drugLink.nextElementSibling;
-        if (panel && panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else if (panel) {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-}
-
-function adjustHeight(drugLink) {
-    const parentPanel = drugLink.closest('.panel');
-    if (parentPanel) {
-        parentPanel.style.maxHeight = parentPanel.scrollHeight + "px";
-    }
-}
-
-
-
-
-
-// Helper function to get the appropriate color class based on the symbol
-function getSymbolColorClass(symbol) {
-    switch (symbol) {
-        case '+':
-            return 'text-success'; // Green
-        case '++':
-            return 'text-warning'; // Yellow
-        case '+++':
-            return 'text-danger'; // Red
-        case '-':
-            return 'text-success'; // Green
-        case '--':
-            return 'text-warning'; // Yellow
-        case '---':
-            return 'text-danger'; // Red
-        default:
-            return '';
-    }
-}
 
 
 
